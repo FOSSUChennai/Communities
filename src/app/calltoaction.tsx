@@ -11,7 +11,7 @@ const CallToAction = () => {
               Know a tech event? Share it to help others find and join by adding yours to the list!
             </h3>
             <div className="flex justify-center md:justify-start flex-wrap gap-4">
-              <button className="px-6 py-2 bg-black text-white rounded-md hover:bg-gray-800 transition-colors" onClick={() => window.open("https://github.com/FOSSUChennai/Communities")}>
+              <button className="px-6 py-2 bg-black text-white rounded-md hover:bg-gray-800 transition-colors" onClick={() => window.open("https://github.com/FOSSUChennai/Communities/blob/main/CONTRIBUTING.md")}>
                 Contribute
               </button>
               <button className="px-6 py-2 bg-transparent border-2 border-white text-white rounded-md hover:bg-white/10 transition-colors" onClick={() => window.open("https://fossunited.org/c/chennai")}>

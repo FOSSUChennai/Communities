@@ -52,7 +52,7 @@ const Events = () => {
                     }}
                 />
                 <div 
-                    className="hover:shadow-md transition-shadow bg-white rounded-lg p-4 shadow-sm relative overflow-hidden h-full border-2 border-[rgb(229,231,235)] hover:border-[rgb(255,255,255,0.5)]"
+                    className="hover:shadow-md transition-shadow bg-white  dark:bg-dark-cards rounded-lg p-4 shadow-sm relative overflow-hidden h-full border-2 border-[rgb(229,231,235)] dark:border-dark-buttons hover:border-[rgb(255,255,255,0.5)]"
                 >
                     <div 
                         className="pointer-events-none absolute -inset-px opacity-0 group-hover:opacity-50 transition-opacity duration-300"
@@ -77,7 +77,7 @@ const Events = () => {
                         {communityName}
                     </div>
 
-                    <h3 className="text-xl text-black font-medium mt-3 mb-2 line-clamp-2 group-hover:line-clamp-none transition-all duration-300" 
+                    <h3 className="text-xl text-black dark:text-white font-medium mt-3 mb-2 line-clamp-2 group-hover:line-clamp-none transition-all duration-300" 
                         title={title}>
                         {title}
                     </h3>
@@ -92,7 +92,7 @@ const Events = () => {
                             </span>
                         </div>
 
-                        <span className="text-xs flex items-start pt-8 mb-2">
+                        <span className="text-xs dark:text-slate-300 flex items-start pt-8 mb-2">
                             <MapPin size={16} />
                             {venue}
                         </span>
@@ -122,10 +122,10 @@ const Events = () => {
     
 
     return (
-        <main className="p-4 mx-4 md:mx-8 lg:mx-16 bg-white rounded-xl">
+        <main className="p-4 mx-4 md:mx-8 lg:mx-16 bg-white dark:bg-dark-content rounded-xl">
             <section>
                 <h2 className="text-lg font-normal mb-3 ">
-                    <span className='text-black font-semibold text-[30px]'>this month</span>
+                    <span className='text-black dark:text-white font-semibold text-[30px]'>this month</span>
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {monthlyEvents.length > 0 ? (
@@ -149,7 +149,7 @@ const Events = () => {
 
             <section className="mt-12">
                 <h2 className="text-lg font-normal mb-3 ">
-                    <span className='text-black font-semibold text-[30px]'>upcoming</span>
+                    <span className='text-black dark:text-white font-semibold text-[30px]'>upcoming</span>
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {upcomingEvents.length > 0 ? (

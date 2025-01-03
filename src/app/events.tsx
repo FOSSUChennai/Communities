@@ -15,6 +15,21 @@ type EventCardProps = {
     logo?: string;
 };
 
+enum Month {
+    January,
+    February,
+    March,
+    April,
+    May,
+    June,
+    July,
+    August,
+    September,
+    October,
+    November,
+    December
+}
+
 const Events = () => {
     const EventCard: React.FC<EventCardProps> = ({ communityName, title, date, location, venue, link, logo }) => {
         const [mousePosition, setMousePosition] = React.useState<{ x: number; y: number } | null>(null);
@@ -73,11 +88,11 @@ const Events = () => {
                             />
                         </div>
                     )}
-                    <div className="inline-block bg-white border-2 border-black text-black text-xs px-2 py-1 rounded-md">
+                    <div className="inline-block bg-white border-2 border-black text-black text-xs px-2 py-1 rounded-md text-nowrap">
                         {communityName}
                     </div>
 
-                    <h3 className="text-xl text-black font-medium mt-3 mb-2 line-clamp-2 group-hover:line-clamp-none transition-all duration-300" 
+                    <h3 className="text-xl text-black font-medium mt-3 mb-2 line-clamp-2 transition-all duration-300"
                         title={title}>
                         {title}
                     </h3>
@@ -119,13 +134,13 @@ const Events = () => {
 
         return (eventYear === currentYear && eventMonth > currentMonth) || (eventYear > currentYear);
     });
-    
+    const getCurrentMonth = Month[new Date().getMonth()];
 
     return (
         <main className="p-4 mx-4 md:mx-8 lg:mx-16 bg-white rounded-xl">
             <section>
                 <h2 className="text-lg font-normal mb-3 ">
-                    <span className='text-black font-semibold text-[30px]'>this month</span>
+                    <span className='text-black font-semibold text-[30px]'>{getCurrentMonth}</span>
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {monthlyEvents.length > 0 ? (
@@ -149,7 +164,7 @@ const Events = () => {
 
             <section className="mt-12">
                 <h2 className="text-lg font-normal mb-3 ">
-                    <span className='text-black font-semibold text-[30px]'>upcoming</span>
+                    <span className='text-black font-semibold text-[30px]'>Upcoming</span>
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {upcomingEvents.length > 0 ? (

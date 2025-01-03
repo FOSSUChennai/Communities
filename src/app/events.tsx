@@ -36,7 +36,7 @@ const Events = () => {
                 href={link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="cursor-pointer relative block p-[2px] rounded-lg group transition-all duration-300 "
+                className="cursor-pointer relative block p-[2px] rounded-lg group transition-all duration-300 h-64 hover:scale-105"
                 onMouseMove={handleMouseMove}
                 onMouseLeave={handleMouseLeave}
             >

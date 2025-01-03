@@ -133,7 +133,7 @@ const Events = () => {
         <main className="p-4 mx-4 md:mx-8 lg:mx-16 bg-white rounded-xl">
             <section>
                 <h2 className="text-lg font-normal mb-3 ">
-                    <span className='text-black font-semibold text-[30px]'>this month</span>
+                    <span className='text-black font-semibold text-[30px] capitalize'>this month</span>
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {monthlyEvents.length > 0 ? (
@@ -157,7 +157,7 @@ const Events = () => {
 
             <section className="mt-12">
                 <h2 className="text-lg font-normal mb-3 ">
-                    <span className='text-black font-semibold text-[30px]'>upcoming</span>
+                    <span className='text-black font-semibold text-[30px] capitalize'>upcoming months</span>
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {upcomingEvents.length > 0 ? (

@@ -16,9 +16,9 @@ const Hero = () => {
           Dont miss your <br />
           next community
           <br />
-          <span className="text-[#03b051] italic">meetup</span>
+          <span className="text-[#03b051] italic uppercase">meetup</span>
         </h1>
-        <p className="mt-4 text-gray-600 text-[20px]">
+        <p className="mt-4 text-gray-600 text-[20px] capitalize">
           meet. network. share
         </p>
         </div>

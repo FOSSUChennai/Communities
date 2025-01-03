@@ -1,5 +1,5 @@
 "use client"
-import React from 'react';
+import React, { useEffect, useState } from "react";
 import events from '../data/events.json';
 import { MapPin } from 'phosphor-react';
 import EmptyEventCard from '../components/EmptyEventCard'
@@ -13,10 +13,11 @@ type EventCardProps = {
     venue: string;
     link: string;
     logo?: string;
+    maplink:string;
 };
 
 const Events = () => {
-    const EventCard: React.FC<EventCardProps> = ({ communityName, title, date, location, venue, link, logo }) => {
+    const EventCard: React.FC<EventCardProps> = ({ communityName, title, date, location, venue, link, logo ,maplink}) => {
         const [mousePosition, setMousePosition] = React.useState<{ x: number; y: number } | null>(null);
 
         const handleMouseMove = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -62,6 +63,17 @@ const Events = () => {
                                 : 'none'
                         }}
                     />
+                    <div className='bg-[#4CAF50] flex justify-center items-center z-10 absolute -mt-4 -ml-4 w-full h-full transition-opacity duration-300 opacity-0 group-hover:opacity-100'>
+                        <div className="flex flex-col justify-center  gap-4">
+                            <button className="px-6 py-2 bg-black text-white rounded-md hover:bg-gray-800 transition-colors" onClick={() => window.open(maplink)}>
+                                View on map
+                            </button>
+                            <button className="px-6 py-2 bg-transparent border-2 border-white text-white rounded-md hover:bg-white/10 transition-colors" onClick={() => window.open(link)}>
+                                Register now
+                            </button>
+                        </div>
+                    </div>
+
                     {logo && (
                         <div className="absolute top-3 right-3">
                             <Image 
@@ -81,7 +93,6 @@ const Events = () => {
                         title={title}>
                         {title}
                     </h3>
-
                     <div className="flex-row items-center text-sm text-gray-600 space-y-2">
                         <div className='flex items-center space-x-2'>
                             <span className="bg-green-100 text-green-800 px-2 py-0.5 rounded text-xs">
@@ -91,8 +102,9 @@ const Events = () => {
                                 {date}
                             </span>
                         </div>
-
-                        <span className="text-xs flex items-start pt-8 mb-2">
+                        <Countdown  eventDate={date} />
+                        
+                        <span className="text-xs flex items-start pt-4 mb-2" onClick={() => window.open(maplink)}>
                             <MapPin size={16} />
                             {venue}
                         </span>
@@ -101,6 +113,36 @@ const Events = () => {
             </a>
         );
     };
+
+    interface CountdownProps {
+        eventDate: string;
+      }
+      
+      const Countdown: React.FC<CountdownProps> = ({ eventDate }) => {
+        const [daysLeft, setDaysLeft] = useState<number>(0);
+      
+        useEffect(() => {
+          const calculateDaysLeft = () => {
+            const event = new Date(eventDate);
+            const today = new Date();
+            const diffTime = event.getTime() - today.getTime();
+            const days = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+            setDaysLeft(days > 0 ? days : 0);
+          };
+          calculateDaysLeft();
+          //interval to update daily
+          const timer = setInterval(calculateDaysLeft, 1000 * 60 * 60 * 24);
+      
+
+          return () => clearInterval(timer);
+        }, []);  
+      
+        return (
+          <p className="text-green-800 font-medium">
+            Starts in <span className="font-bold">{daysLeft === 0 ? "Today!" : `${daysLeft} days`}</span>
+          </p>
+        );
+      };
 
     const monthlyEvents = events.filter(event => {
         const currentDate = new Date();
@@ -139,6 +181,7 @@ const Events = () => {
                                 venue={event.eventVenue}
                                 link={event.eventLink}
                                 logo={event.communityLogo}
+                                maplink={event.map}
                             />
                         ))
                     ) : (
@@ -163,6 +206,7 @@ const Events = () => {
                                 venue={event.eventVenue}
                                 link={event.eventLink}
                                 logo={event.communityLogo}
+                                maplink={event.map}
                             />
                         ))
                     ) : (

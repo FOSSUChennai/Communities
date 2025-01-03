@@ -9,7 +9,8 @@
     "eventLink": "https://geekcoders-community.pages.dev/register",
     "location": "Chennai",
     "communityName": "Geek Coders",
-    "communityLogo": "https://geekcoders-community.pages.dev/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.5594d213.png&w=3840&q=75"
+    "communityLogo": "https://geekcoders-community.pages.dev/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.5594d213.png&w=3840&q=75",
+    "map":"https://maps.app.goo.gl/cy6L4PkFhgfjExMRA"
   },
   {
     "eventName": "Unlocking the Power of Satellite Data with Deep Learning",
@@ -20,7 +21,8 @@
     "eventLink": "https://www.meetup.com/chennai-microsoft-azure-user-group/events/304826160/?eventOrigin=group_upcoming_events",
     "location": "Chennai",
     "communityName": "Microsoft Azure User Group-Chennai",
-    "communityLogo": "https://globalazure.in/assets/img/community/chennai-aug.png"
+    "communityLogo": "https://globalazure.in/assets/img/community/chennai-aug.png",
+    "map":"https://maps.app.goo.gl/HqttVfSjxhcbd1bF9"
   },
   {
     "eventName": "Microsoft Azure Skillup Tamilnadu Session 1",
@@ -31,9 +33,10 @@
     "eventLink": "https://www.meetup.com/azure-developer-community-chennai/events/305016506/?eventOrigin=home_page_upcoming_events",
     "location": "Chennai",
     "communityName": "Azure Developer Community TamilNadu",
-    "communityLogo": "https://secure.meetupstatic.com/photos/event/c/d/2/clean_496503282.webp"
+    "communityLogo": "https://secure.meetupstatic.com/photos/event/c/d/2/clean_496503282.webp",
+    "map":"https://maps.app.goo.gl/ectmMQvR6QAsSdAR7"
   },
-{
+  {
     "eventName": "Apache Kafka® x Grafana Meetup",
     "eventDescription": "Join us for our first IN PERSON Apache Kafka® meetup on Feb 1st from 10:00 am, hosted by Humbletree Cloud Private Limited in Coimbatore!",
     "eventDate": "2025-02-01",
@@ -42,6 +45,7 @@
     "eventLink": "https://meetu.ps/e/NLPSk/kmD4l/i",
     "location": "Coimbatore",
     "communityName": "Confluent",
-    "communityLogo": "https://secure.meetupstatic.com/photos/event/d/1/3/3/clean_525293555.webp"
+    "communityLogo": "https://secure.meetupstatic.com/photos/event/d/1/3/3/clean_525293555.webp",
+    "map":"https://maps.app.goo.gl/EDMJHPLTzqRV1YKLA"
   }
 ]

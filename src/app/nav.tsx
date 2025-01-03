@@ -1,3 +1,5 @@
+import GitHubButton from "../components/GitHubButton";
+
 const NavBar = () => {
     return (
       <nav
@@ -5,10 +7,7 @@ const NavBar = () => {
       >
         <a href="#" className="text-xl font-semibold">tamilnadu.tech</a>
         <div className="space-x-4">
-
-          <a className="px-4 py-2 text-[#667085] underline rounded-md" href="https://github.com/FOSSUChennai/Communities">
-            Contribute
-          </a>
+        <GitHubButton />
         </div>
       </nav>
     );

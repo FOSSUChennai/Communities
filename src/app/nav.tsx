@@ -26,10 +26,12 @@ const NavBar = () => {
         <a href="#" className="text-xl font-semibold">tamilnadu.tech</a>
         <div className="space-x-4">
 
-          <a className="px-4 py-2 text-[#667085]  border shadow-sm rounded-md" href="https://github.com/FOSSUChennai/Communities">
-            <GithubLogo size={20}  className="inline-block m-2 mb-3 " />
-            {stars !== null ? <span className='text-base'>Contribute {stars} ★</span> : <span className='text-base'>Loading...</span>} 
-          </a>
+            <a className="px-4 py-2 text-[#667085] border shadow-sm rounded-md" href="https://github.com/FOSSUChennai/Communities">
+            <GithubLogo size={20} className="inline-block m-2 mb-3" />
+            <span className="hidden sm:inline">
+              {stars !== null ? <span className='text-base'>Contribute {stars} ★</span> : <span className='text-base'>Loading...</span>}
+            </span>
+            </a>
         </div>
       </nav>
     );

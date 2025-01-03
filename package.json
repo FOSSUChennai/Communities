@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@next/font": "^14.2.15",
+    "@phosphor-icons/react": "^2.1.7",
     "next": "15.1.3",
     "phosphor-react": "^1.4.1",
     "react": "^19.0.0",

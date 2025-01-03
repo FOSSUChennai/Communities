@@ -1,5 +1,5 @@
 "use client"
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import events from '../data/events.json';
 import { MapPin } from 'phosphor-react';
 import EmptyEventCard from '../components/EmptyEventCard'
@@ -16,8 +16,24 @@ type EventCardProps = {
 };
 
 const Events = () => {
-    const EventCard: React.FC<EventCardProps> = ({ communityName, title, date, location, venue, link, logo }) => {
-        const [mousePosition, setMousePosition] = React.useState<{ x: number; y: number } | null>(null);
+	const EventCard: React.FC<EventCardProps> = ({ communityName, title, date, location, venue, link, logo }) => {
+    const [mousePosition, setMousePosition] = React.useState<{ x: number; y: number } | null>(null);
+	const [isOverflowing, setIsOverflowing] = useState(false);
+	const communityNameRef = useRef<HTMLSpanElement>(null);
+
+    useEffect(() => {
+        const checkOverflow = () => {
+        if (communityNameRef.current) {
+            setIsOverflowing(
+            communityNameRef.current.scrollWidth > communityNameRef.current.clientWidth
+            );
+        }
+        };
+
+        checkOverflow();
+        window.addEventListener('resize', checkOverflow);
+        return () => window.removeEventListener('resize', checkOverflow);
+  }, [communityName]);
 
         const handleMouseMove = (e: React.MouseEvent<HTMLAnchorElement>) => {
             const rect = e.currentTarget.getBoundingClientRect();
@@ -52,7 +68,7 @@ const Events = () => {
                     }}
                 />
                 <div 
-                    className="hover:shadow-md transition-shadow bg-white rounded-lg p-4 shadow-sm relative overflow-hidden h-full border-2 border-[rgb(229,231,235)] hover:border-[rgb(255,255,255,0.5)]"
+                    className="hover:shadow-md transition-shadow bg-white rounded-lg p-4 shadow-sm relative  h-full border-2 border-[rgb(229,231,235)] hover:border-[rgb(255,255,255,0.5)]"
                 >
                     <div 
                         className="pointer-events-none absolute -inset-px opacity-0 group-hover:opacity-50 transition-opacity duration-300"
@@ -62,20 +78,30 @@ const Events = () => {
                                 : 'none'
                         }}
                     />
-                    {logo && (
-                        <div className="absolute top-3 right-3">
-                            <Image 
-                                src={logo} 
-                                alt={`${communityName} logo`} 
-                                width={24}
-                                height={24}
-                                className="rounded-full filter grayscale group-hover:filter-none transition-all duration-300 object-cover"
+                     <div className="flex items-center justify-between gap-2 relative">
+                        {isOverflowing ? (
+                            <Tooltip content={communityName}>
+                            <div className="bg-white border-2 border-black text-black text-xs px-2 py-1 rounded-md">
+                                <span ref={communityNameRef} className="block truncate max-w-[200px]">
+                                {communityName}
+                                </span>
+                            </div>
+                            </Tooltip>
+                        ) : (
+                            <div className="bg-white border-2 border-black text-black text-xs px-2 py-1 rounded-md">
+                            <span ref={communityNameRef} className="block truncate max-w-[200px]">
+                                {communityName}
+                            </span>
+                            </div>
+                        )}
+                        {logo && (
+                            <img
+                            src={logo}
+                            alt={`${title} logo`}
+                            className="w-6 h-6 rounded-full filter grayscale hover:filter-none transition-all duration-300 object-cover"
                             />
-                        </div>
-                    )}
-                    <div className="inline-block bg-white border-2 border-black text-black text-xs px-2 py-1 rounded-md">
-                        {communityName}
-                    </div>
+                        )}
+                    </div> 
 
                     <h3 className="text-xl text-black font-medium mt-3 mb-2 line-clamp-2 group-hover:line-clamp-none transition-all duration-300" 
                         title={title}>
@@ -102,6 +128,12 @@ const Events = () => {
         );
     };
 
+
+
+
+
+
+ 
     const monthlyEvents = events.filter(event => {
         const currentDate = new Date();
         const eventDate = new Date(event.eventDate);
@@ -175,3 +207,32 @@ const Events = () => {
 };
 
 export default Events;
+
+
+
+interface TooltipProps {
+  content: string;
+  children: React.ReactNode;
+}
+
+
+function Tooltip({ content, children }: TooltipProps) {
+  const [showTooltip, setShowTooltip] = useState(false);
+
+  return (
+    <div className="relative inline-block">
+      <div
+        onMouseEnter={() => setShowTooltip(true)}
+        onMouseLeave={() => setShowTooltip(false)}
+      >
+        {children}
+      </div>
+      {showTooltip && (
+        <div className="absolute z-50 px-2 py-1 text-xs text-black border-black border-2 bg-grey-100 rounded-md whitespace-nowrap -top-10 shadow-lg left-1/2 transform -translate-x-1/2">
+          {content}
+          <div className="absolute w-2 h-2 bg-green-200 transform rotate-45 -bottom-1 left-1/2 -translate-x-1/2" />
+        </div>
+      )}
+    </div>
+  );
+}

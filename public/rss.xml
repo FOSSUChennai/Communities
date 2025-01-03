@@ -1,0 +1,56 @@
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <rss version="2.0">
+      <channel>
+        <title>Upcoming Events</title>
+        <link>https://tamilnadu.tech/</link>
+        <description>Upcoming events for the community</description>
+        <language>en-us</language>
+        
+      <item>
+        <title>InnovAite</title>
+        <link>https://geekcoders-community.pages.dev/register</link>
+        <description>Unlock the Future with Machine Learning!</description>
+        <pubDate>Sat, 11 Jan 2025 09:00:00 GMT+05:30</pubDate>
+        <guid>https://geekcoders-community.pages.dev/register</guid>
+        <category>Chennai</category>
+        <author>Geek Coders</author>
+        <enclosure url="https://geekcoders-community.pages.dev/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.5594d213.png&w=3840&q=75" type="image/jpeg"/>
+      </item>
+    
+      <item>
+        <title>Unlocking the Power of Satellite Data with Deep Learning</title>
+        <link>https://www.meetup.com/chennai-microsoft-azure-user-group/events/304826160/?eventOrigin=group_upcoming_events</link>
+        <description>Unlocking the Power of Satellite Data with Deep Learning</description>
+        <pubDate>Sat, 11 Jan 2025 09:30:00 GMT+05:30</pubDate>
+        <guid>https://www.meetup.com/chennai-microsoft-azure-user-group/events/304826160/?eventOrigin=group_upcoming_events</guid>
+        <category>Chennai</category>
+        <author>Microsoft Azure User Group-Chennai</author>
+        <enclosure url="https://globalazure.in/assets/img/community/chennai-aug.png" type="image/jpeg"/>
+      </item>
+    
+      <item>
+        <title>Microsoft Azure Skillup Tamilnadu Session 1</title>
+        <link>https://www.meetup.com/azure-developer-community-chennai/events/305016506/?eventOrigin=home_page_upcoming_events</link>
+        <description>Dive into what's next and discover the capabilities of advanced language models like GPT-4o. Experience AI Studio, a user-friendly platform that simplifies building your own AI applications using insights from Microsoft’s Copilots. Learn how vector search, with techniques like retrieval-augmented generation (RAG), is revolutionizing information retrieval for precise results. Explore the Assistants API, which enables developers to create intuitive applications that can analyze data, recommend solutions, and automate tasks with ease. This session is your starting point to understand AI technologies' potential and integrate them into your projects.</description>
+        <pubDate>Sat, 11 Jan 2025 09:30:00 GMT+05:30</pubDate>
+        <guid>https://www.meetup.com/azure-developer-community-chennai/events/305016506/?eventOrigin=home_page_upcoming_events</guid>
+        <category>Chennai</category>
+        <author>Azure Developer Community TamilNadu</author>
+        <enclosure url="https://secure.meetupstatic.com/photos/event/c/d/2/clean_496503282.webp" type="image/jpeg"/>
+      </item>
+    
+      <item>
+        <title>Apache Kafka® x Grafana Meetup</title>
+        <link>https://meetu.ps/e/NLPSk/kmD4l/i</link>
+        <description>Join us for our first IN PERSON Apache Kafka® meetup on Feb 1st from 10:00 am, hosted by Humbletree Cloud Private Limited in Coimbatore!</description>
+        <pubDate>Sat, 01 Feb 2025 10:00:00 GMT+05:30</pubDate>
+        <guid>https://meetu.ps/e/NLPSk/kmD4l/i</guid>
+        <category>Coimbatore</category>
+        <author>Confluent</author>
+        <enclosure url="https://secure.meetupstatic.com/photos/event/d/1/3/3/clean_525293555.webp" type="image/jpeg"/>
+      </item>
+    
+      </channel>
+    </rss>
+  

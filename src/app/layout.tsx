@@ -53,6 +53,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="alternate" type="application/rss+xml" title="Tamilnadu Community Events" href="/rss.xml" />
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body

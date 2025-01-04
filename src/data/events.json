@@ -1,5 +1,4 @@
 [
-
   {
     "eventName": "InnovAite",
     "eventDescription": "Unlock the Future with Machine Learning!",
@@ -33,7 +32,7 @@
     "communityName": "Azure Developer Community TamilNadu",
     "communityLogo": "https://secure.meetupstatic.com/photos/event/c/d/2/clean_496503282.webp"
   },
-{
+  {
     "eventName": "Apache Kafka® x Grafana Meetup",
     "eventDescription": "Join us for our first IN PERSON Apache Kafka® meetup on Feb 1st from 10:00 am, hosted by Humbletree Cloud Private Limited in Coimbatore!",
     "eventDate": "2025-02-01",

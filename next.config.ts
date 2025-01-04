@@ -1,4 +1,4 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
 const config: NextConfig = {
   images: {
@@ -12,12 +12,12 @@ const config: NextConfig = {
         hostname: 'geekcoders-community.pages.dev'
       },
       {
-        protocol: "https",
-        hostname: "globalazure.in"
+        protocol: 'https',
+        hostname: 'globalazure.in'
       },
       {
-        protocol: "https",
-        hostname: "secure.meetupstatic.com"
+        protocol: 'https',
+        hostname: 'secure.meetupstatic.com'
       }
     ]
   }

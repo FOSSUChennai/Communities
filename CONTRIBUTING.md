@@ -20,26 +20,31 @@ Thank you for your interest in contributing to TamilNadu.tech Communities! We ai
 Adding your community events is the most common and easiest way to contribute! Here's a detailed guide:
 
 ### Step 1: Locate the Events File
+
 Navigate to `src/data/events.json` in your forked repository.
 
 ### Step 2: Add Your Event
+
 Add your event to the JSON array using this template:
+
 ```json
 {
   "eventName": "Your Event Name",
   "eventDescription": "Brief description of the event (max 200 characters)",
-  "eventDate": "2024-02-20",        // Format: YYYY-MM-DD
-  "eventTime": "14:30",             // 24-hour format: HH:MM
+  "eventDate": "2024-02-20", // Format: YYYY-MM-DD
+  "eventTime": "14:30", // 24-hour format: HH:MM
   "eventVenue": "Full venue address",
   "eventLink": "https://registration-link.com",
-  "location": "City Name",          
+  "location": "City Name",
   "communityName": "Your Community Name",
   "communityLogo": "https://url-to-your-logo.svg"
 }
 ```
 
 ### Step 3: Validate Your Event Entry
+
 Ensure:
+
 - All dates are in the future
 - All fields are filled out correctly
 - The event is taking place in Tamil Nadu
@@ -47,6 +52,7 @@ Ensure:
 - Your community logo is a high-quality image (preferably SVG)
 
 ### Step 4: Submit Your Changes
+
 1. Commit your changes:
    ```bash
    git add src/data/events.json
@@ -69,6 +75,7 @@ Ensure:
 ## 💡 Feature Requests
 
 Have ideas to make the platform better? Create an issue with:
+
 - Clear title
 - Detailed description
 - Use cases
@@ -91,4 +98,4 @@ Have ideas to make the platform better? Create an issue with:
 
 ## 📝 License
 
-By contributing, you agree that your contributions will be licensed under the GPL 3.0 License. 
+By contributing, you agree that your contributions will be licensed under the GPL 3.0 License.

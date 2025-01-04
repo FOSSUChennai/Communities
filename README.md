@@ -26,12 +26,14 @@ Have an upcoming tech event in Tamil Nadu? Adding it is simple! Check out our [e
 ## 🤝 Getting Started
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/FOSSUChennai/Communities.git
    cd Communities
    ```
 
 2. Install dependencies:
+
    ```bash
    npm install
    # or

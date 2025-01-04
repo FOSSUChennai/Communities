@@ -5,6 +5,7 @@ import Image from 'next/image';
 import githubIcon from "../../public/githubIcon.svg";
 
 const NavBar = () => {
+  
   //to state for the number of stars of the repository
    const [stars,setStars] = useState<number |null> (null)
   //fetching the number of stars of the repository

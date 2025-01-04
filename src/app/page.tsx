@@ -14,7 +14,7 @@ export default function Home() {
         async
         defer
       />
-      <div className="bg-[#fafafa]">
+      <div className="bg-[#fafafa] min-h-screen flex flex-col">
         <div className="max-w-[1120px] mx-auto font-inter">
           <NavBar />
           <Hero />

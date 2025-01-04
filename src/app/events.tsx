@@ -15,6 +15,7 @@ type EventCardProps = {
     logo?: string;
 };
 
+
 enum Month {
     January,
     February,
@@ -29,6 +30,15 @@ enum Month {
     November,
     December
 }
+
+const formatDate = (dateString: string): string => {
+    const date = new Date(dateString);
+    const day = date.getDate().toString().padStart(2, '0');
+    const month = (date.getMonth() + 1).toString().padStart(2, '0');
+    const year = date.getFullYear();
+    return `${day}-${month}-${year}`;
+};
+
 
 const Events = () => {
     const EventCard: React.FC<EventCardProps> = ({ communityName, title, date, location, venue, link, logo }) => {
@@ -103,7 +113,7 @@ const Events = () => {
                                 {location}
                             </span>
                             <span className="bg-blue-100 text-blue-800 px-2 py-0.5 rounded text-xs">
-                                {date}
+                                {formatDate(date)}
                             </span>
                         </div>
 

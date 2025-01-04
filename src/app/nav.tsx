@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import { GithubLogo } from 'phosphor-react'; // Replace 'some-library' with the actual library name
+import Image from 'next/image';
+import githubIcon from "../../public/githubIcon.svg";
 
 const NavBar = () => {
   //to state for the number of stars of the repository
@@ -26,12 +27,19 @@ const NavBar = () => {
         <a href="#" className="text-xl font-semibold">tamilnadu.tech</a>
         <div className="space-x-4">
 
-            <a className="px-4 py-2 text-[#667085] border shadow-sm rounded-md" href="https://github.com/FOSSUChennai/Communities">
-            <GithubLogo size={20} className="inline-block m-2 mb-3" />
-            <span className="hidden sm:inline">
-              {stars !== null ? <span className='text-base'>Contribute {stars} ★</span> : <span className='text-base'>Loading...</span>}
-            </span>
-            </a>
+              <a className="flex items-center px-4 py-2 text-[#667085] border shadow-sm rounded-md hover:bg-gray-100 transition-colors duration-200" href="https://github.com/FOSSUChennai/Communities">
+              <Image
+                src={githubIcon}
+                alt="Github star icon"
+                className="w-5 h-5 mr-2"
+              />
+                <span className="text-sm font-medium hidden sm:inline">
+                {stars !== null ? `Contribute ${stars} ★` : 'Loading...'}
+                </span>
+                <span className="text-sm font-medium sm:hidden">
+                {stars !== null ? `${stars} ★` : 'Loading...'}
+                </span>
+              </a>
         </div>
       </nav>
     );

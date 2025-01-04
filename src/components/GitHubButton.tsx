@@ -4,7 +4,7 @@ import Image from "next/image";
 import githubIcon from "../../public/githubIcon.svg";
 
 const GitHubButton = () => {
-  const [starCount, setStarCount] = useState(null);
+  const [starCount, setStarCount] = useState<number>(null);
   const repoUrl = `https://github.com/FOSSUChennai/Communities`;
 
   useEffect(() => {

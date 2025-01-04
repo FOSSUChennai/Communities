@@ -5,12 +5,10 @@ import Events from '../components/pages/home/events';
 export default function Home() {
   return (
     <>
-      <div>
-        <div className='mx-auto max-w-[1120px] font-inter'>
-          <Hero />
-          <Events />
-          <CallToAction />
-        </div>
+      <div className='mx-auto font-inter'>
+        <Hero />
+        <Events />
+        <CallToAction />
       </div>
     </>
   );

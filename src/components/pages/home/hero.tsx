@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <>
       <div className='z-10 my-16 mb-48 flex items-start bg-[#fafafa] px-4 md:px-8 lg:px-16'>
-        <div className='container mx-auto flex flex-col items-center justify-between px-4 text-center md:flex-row md:text-left'>
+        <div className='container mx-auto flex flex-col items-center justify-evenly gap-10 px-4 text-center md:flex-row md:text-left'>
           <div className='z-10 max-w-2xl'>
             <h1 className='text-4xl font-semibold leading-tight text-black md:text-[68px] lg:text-[74px]'>
               Dont miss your <br />
@@ -18,7 +18,13 @@ const Hero = () => {
             <p className='mt-4 text-[20px] text-gray-600'>meet. network. share</p>
           </div>
           <div className='z-10'>
-            <Image src={RocketImage} alt='Rocket illustration' width={288} height={365} />
+            <Image
+              src={RocketImage}
+              alt='Rocket illustration'
+              width={288}
+              height={365}
+              className='w-40 md:w-full'
+            />
           </div>
         </div>
       </div>

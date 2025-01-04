@@ -18,7 +18,8 @@
     "next-umami": "^0.0.4",
     "phosphor-react": "^1.4.1",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-icons": "^5.4.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.6.1",

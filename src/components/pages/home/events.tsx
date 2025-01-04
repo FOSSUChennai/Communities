@@ -119,22 +119,22 @@ const Events = () => {
             }}
           />
           {logo && (
-            <div className='absolute right-3 top-3'>
+            <div className='absolute right-3 top-3 rounded-full border border-gray-400'>
               <Image
                 src={logo}
                 alt={`${communityName} logo`}
                 width={24}
                 height={24}
-                className='rounded-full object-cover grayscale filter transition-all duration-300 group-hover:filter-none'
+                className='rounded-full object-contain grayscale filter transition-all duration-300 group-hover:filter-none'
               />
             </div>
           )}
-          <div className='inline-block rounded-md border-2 border-black bg-white px-2 py-1 text-xs text-black'>
+          <h3 className='inline-block rounded-md bg-white py-1 text-xs text-black'>
             {communityName}
-          </div>
+          </h3>
 
           <h3
-            className='mb-2 mt-3 text-xl font-medium text-black transition-all duration-300'
+            className='text-md mb-2 mt-3 font-medium text-black transition-all duration-300 md:text-xl'
             style={{
               height: `${isMonthly ? monthlyCardHeight : upcomingCardHeight}px`,
               overflow: 'hidden'
@@ -152,8 +152,8 @@ const Events = () => {
               <span className='rounded bg-blue-100 px-2 py-0.5 text-xs text-blue-800'>{date}</span>
             </div>
             <div className='mt-auto flex flex-grow flex-col justify-end'>
-              <span className='mt-4 flex items-start gap-1 text-xs'>
-                <MapPin size={16} className='mt-0.5 min-w-[16px]' />{' '}
+              <span className='mt-4 flex items-center gap-1 text-xs'>
+                <MapPin size={16} className='min-w-[16px]' />{' '}
                 <span className='break-words'>{venue}</span>{' '}
               </span>
             </div>
@@ -167,7 +167,7 @@ const Events = () => {
     <main className='mx-4 rounded-xl bg-white p-4 md:mx-8 lg:mx-16'>
       <section>
         <h2 className='mb-3 text-lg font-normal'>
-          <span className='text-[30px] font-semibold text-black'>this month</span>
+          <span className='font-semibold text-black'>This month</span>
         </h2>
         <div className='grid grid-cols-1 gap-6 md:grid-cols-3'>
           {monthlyEvents.length > 0 ? (
@@ -192,7 +192,7 @@ const Events = () => {
 
       <section className='mt-12'>
         <h2 className='mb-3 text-lg font-normal'>
-          <span className='text-[30px] font-semibold text-black'>upcoming</span>
+          <span className='font-semibold text-black'>upcoming</span>
         </h2>
         <div className='grid grid-cols-1 gap-6 md:grid-cols-3'>
           {upcomingEvents.length > 0 ? (

@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import { IS_PROD, SITE_URL } from '../lib/constants';
@@ -51,6 +51,13 @@ export const metadata: Metadata = {
     }
   },
   metadataBase: new URL(SITE_URL)
+};
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: 'white' },
+    { media: '(prefers-color-scheme: dark)', color: 'black' }
+  ]
 };
 
 export default function RootLayout({

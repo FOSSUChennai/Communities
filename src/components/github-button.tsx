@@ -29,12 +29,11 @@ const GitHubButton = () => {
       href={repoUrl}
       target='_blank'
       rel='noopener noreferrer'
-      className='inline-flex items-center rounded-lg px-4 py-2 text-black shadow transition duration-200'
+      className='inline-flex items-center rounded-lg px-4 py-2 text-sm text-black shadow transition duration-200'
       style={{ background: '#d9d9d980' }}
     >
-      <Image src={githubIcon} alt='Github star icon' className='h-5 w-5' />
-      <span className='ml-2 font-medium'>Contribute</span>
-      {starCount !== null && <span className='ml-2'>⭐ {starCount}</span>}
+      <Image src={githubIcon} alt='Github star icon' className='h-4 w-4 md:h-5 md:w-5' />
+      {starCount !== null && <span className='ml-2'>{starCount}</span>}
     </a>
   );
 };

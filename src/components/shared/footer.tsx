@@ -4,7 +4,7 @@ export default function Footer() {
       <p className='mb-2 mt-16 text-center text-gray-600'>
         Made with luv from Hari and Justin 💚
         <a href='https://fossunited.org/c/chennai' className='ml-2 text-[#03b051]'>
-          Foss United Chennai
+          FOSS United Chennai
         </a>
       </p>
     </footer>

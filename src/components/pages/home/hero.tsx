@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
 import React from 'react';
-import RocketImage from '../../../../public/rocket.png';
+import RocketImage from '../../../../public/rocket.webp';
 
 const Hero = () => {
   return (

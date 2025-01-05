@@ -35,10 +35,10 @@ const NavBar = () => {
                 className="w-5 h-5 mr-2"
               />
                 <span className="text-sm font-medium hidden sm:inline">
-                {stars !== null ? `Contribute ${stars} ★` : 'Loading...'}
+                {stars !== null ? `Contribute ${stars} ⭐` : 'Loading...'}
                 </span>
                 <span className="text-sm font-medium sm:hidden">
-                {stars !== null ? `${stars} ★` : 'Loading...'}
+                {stars !== null ? `${stars} ⭐` : 'Loading...'}
                 </span>
               </a>
         </div>

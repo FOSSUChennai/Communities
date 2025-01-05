@@ -53,5 +53,16 @@
     "location": "Chennai",
     "communityName": "Grafana and Friends Chennai",
     "communityLogo": "https://secure.meetupstatic.com/photos/event/7/b/2/a/event_525511530.webp"
+  },
+  {
+    "eventName": "AI community day",
+    "eventDescription": "The AI Community Day - Chennai by Microsoft is an exciting event designed to bring together AI enthusiasts, developers, and industry professionals to explore the latest advancements in artificial intelligence and machine learning.",
+    "eventDate": "2025-01-11",
+    "eventTime": "10:00",
+    "eventVenue": "Tata Consultancy Services, 1/G1 SIPCOT IT Park Navalur, Siruseri, Chennai",
+    "eventLink": "https://www.meetup.com/global-ai-community-chennai/events/305183807/?utm_medium=referral&utm_campaign=share-btn_savedevents_share_modal&utm_source=link",
+    "location": "Chennai",
+    "communityName": "Global AI Community - Chennai",
+    "communityLogo": "https://secure.meetupstatic.com/photos/event/d/4/6/8/clean_525054376.webp"
   }
 ]

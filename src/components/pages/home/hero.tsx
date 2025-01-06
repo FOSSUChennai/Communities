@@ -1,15 +1,15 @@
 'use client';
 import Image from 'next/image';
 import React from 'react';
-import RocketImage from '../../../../public/rocket.webp';
+import RocketImage from '../../../../public/rocket2.png';
 
 const Hero = () => {
   return (
     <>
-      <div className='z-10 my-16 mb-48 flex items-start bg-[#fafafa] px-4 md:px-8 lg:px-16'>
+      <div className='z-10 my-16 mb-48 flex items-start bg-[#fafafa] px-4 dark:bg-dark-content md:px-8 lg:px-16'>
         <div className='container mx-auto flex flex-col items-center justify-between px-4 text-center md:flex-row md:text-left'>
           <div className='z-10 max-w-2xl'>
-            <h1 className='text-4xl font-semibold leading-tight text-black md:text-[68px] lg:text-[74px]'>
+            <h1 className='text-4xl font-semibold leading-tight text-black dark:text-white md:text-[68px] lg:text-[74px]'>
               Dont miss your <br />
               next community
               <br />

@@ -64,5 +64,16 @@
     "location": "Chennai",
     "communityName": "OWASP Chennai Chapter",
     "communityLogo": "https://secure.meetupstatic.com/photos/event/7/2/d/5/clean_492389397.webp"
+  },
+  {
+    "eventName": "Grafana and Friends x Kafka Meetup",
+    "eventDescription": "Join us for our first IN PERSON Grafana and Friends meetup on Feb 1st from 10:00 am, hosted by Humbletree Cloud Private Limited in Coimbatore!",
+    "eventDate": "2025-02-01",
+    "eventTime": "10:00",
+    "eventVenue": "Humbletree Cloud, 6, Ground Floor, DVT Towers, nehru nagar west, Coimbatore ",
+    "eventLink": "https://bit.ly/3PqhBAm",
+    "location": "Coimbatore",
+    "communityName": "Grafana",
+    "communityLogo": "https://secure.meetupstatic.com/photos/event/5/1/1/0/highres_525560752.webp"
   }
 ]

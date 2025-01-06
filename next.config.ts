@@ -18,7 +18,11 @@ const config: NextConfig = {
       {
         protocol: 'https',
         hostname: 'secure.meetupstatic.com'
-      }
+      },
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+      },
     ]
   }
 };

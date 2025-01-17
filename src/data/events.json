@@ -64,5 +64,16 @@
     "location": "Chennai",
     "communityName": "Azure Developer Community TamilNadu",
     "communityLogo": "https://secure.meetupstatic.com/photos/event/c/d/2/clean_496503282.webp"
+  },
+  {
+    "eventName": "Chennai React Meetup #8 (Online)",
+    "eventDescription": "Harnessing the Power of React: Building Dynamic Platforms without a Backend",
+    "eventDate": "2025-01-26",
+    "eventTime": "18:00",
+    "eventVenue": "Online",
+    "eventLink": "https://lu.ma/jqmgba7e",
+    "location": "Chennai",
+    "communityName": "Chennai React",
+    "communityLogo": "https://images.lumacdn.com/cdn-cgi/image/format=auto,fit=cover,dpr=2,background=white,quality=75,width=400,height=400/event-covers/sf/e138d777-e13f-4db6-9061-2062641352b5"
   }
 ]

@@ -1,38 +1,5 @@
 [
   {
-    "eventName": "InnovAite",
-    "eventDescription": "Unlock the Future with Machine Learning!",
-    "eventDate": "2025-01-11",
-    "eventTime": "09:00",
-    "eventVenue": "YuniQ, 4th Floor, TICEL BIOPARK, Tharamani, Chennai ",
-    "eventLink": "https://geekcoders-community.pages.dev/register",
-    "location": "Chennai",
-    "communityName": "Geek Coders",
-    "communityLogo": "https://geekcoders-community.pages.dev/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.5594d213.png&w=3840&q=75"
-  },
-  {
-    "eventName": "Unlocking the Power of Satellite Data with Deep Learning",
-    "eventDescription": "Unlocking the Power of Satellite Data with Deep Learning",
-    "eventDate": "2025-01-11",
-    "eventTime": "09:30",
-    "eventVenue": "IITM RESEARCH PARK",
-    "eventLink": "https://www.meetup.com/chennai-microsoft-azure-user-group/events/304826160/?eventOrigin=group_upcoming_events",
-    "location": "Chennai",
-    "communityName": "Microsoft Azure User Group-Chennai",
-    "communityLogo": "https://globalazure.in/assets/img/community/chennai-aug.png"
-  },
-  {
-    "eventName": "Microsoft Azure Skillup Tamilnadu Session 1",
-    "eventDescription": "Dive into what's next and discover the capabilities of advanced language models like GPT-4o. Experience AI Studio, a user-friendly platform that simplifies building your own AI applications using insights from Microsoft’s Copilots. Learn how vector search, with techniques like retrieval-augmented generation (RAG), is revolutionizing information retrieval for precise results. Explore the Assistants API, which enables developers to create intuitive applications that can analyze data, recommend solutions, and automate tasks with ease. This session is your starting point to understand AI technologies' potential and integrate them into your projects.",
-    "eventDate": "2025-01-11",
-    "eventTime": "09:30",
-    "eventVenue": "Microsoft Corporation India Pvt. Ltd.",
-    "eventLink": "https://www.meetup.com/azure-developer-community-chennai/events/305016506/?eventOrigin=home_page_upcoming_events",
-    "location": "Chennai",
-    "communityName": "Azure Developer Community TamilNadu",
-    "communityLogo": "https://secure.meetupstatic.com/photos/event/c/d/2/clean_496503282.webp"
-  },
-  {
     "eventName": "Apache Kafka® x Grafana Meetup",
     "eventDescription": "Join us for our first IN PERSON Apache Kafka® meetup on Feb 1st from 10:00 am, hosted by Humbletree Cloud Private Limited in Coimbatore!",
     "eventDate": "2025-02-01",
@@ -44,25 +11,36 @@
     "communityLogo": "https://secure.meetupstatic.com/photos/event/d/1/3/3/clean_525293555.webp"
   },
   {
-    "eventName": "Grafana Meetup",
-    "eventDescription": "Join us for IN PERSON Grafana labs x Presidio meetup on Jan 25th from 9:30 am, hosted by Presidio in Chennai!",
-    "eventDate": "2025-01-25",
-    "eventTime": "9:30",
-    "eventVenue": "Presidio, Level 7 & 8, Door 51, IndiQube Alpine, Ekkatuthangal, Guindy",
-    "eventLink": "https://www.meetup.com/grafana-and-friends-chennai/events/305394398/?utm_medium=referral&utm_campaign=share-btn_savedevents_share_modal&utm_source=link",
+    "eventName": "Kubernetes Community Days Chennai 2025",
+    "eventDescription": "Kubernetes Community Days Chennai 2025 is a community-organized conference supported by the Cloud Native Computing Foundation (CNCF) to help grow and sustain the Kubernetes and cloud-native community in Chennai. It gathers adopters and technologists from open source and cloud-native communities for education, collaboration, and networking.",
+    "eventDate": "2025-04-26",
+    "eventTime": "08:30",
+    "eventVenue": "Sathyabama University",
+    "eventLink": "https://community.cncf.io/kcd-chennai/",
     "location": "Chennai",
-    "communityName": "Grafana and Friends Chennai",
-    "communityLogo": "https://secure.meetupstatic.com/photos/event/7/b/2/a/event_525511530.webp"
+    "communityName": "KCD Chennai",
+    "communityLogo": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,w_500,h_500,g_center/c_fill,dpr_2.0,f_auto,g_center,q_auto:good/v1/gcs/platform-data-cncf/events/Logo_White_Background_eSFH3vi.png"
   },
   {
-    "eventName": "OWASP Meetup",
-    "eventDescription": "Join us for IN PERSON OWASP meetup on Jan 18th from 10:00 am, hosted by TEKCLAN SOFTWARE SOLUTIONS PVT LTD in Chennai!",
-    "eventDate": "2025-01-18",
-    "eventTime": "10:00",
-    "eventVenue": "TEKCLAN SOFTWARE SOLUTIONS PVT LTD 4th Floor, Phase 2, Ticel Bio Park, 5, CSIR Rd, Tharamani,Chennai",
-    "eventLink": "https://www.meetup.com/chennai-owasp-meetup-group/events/305358664/?eventOrigin=home_page_upcoming_events$all",
+    "eventName": "JSLovers Chennai Meetup 4",
+    "eventDescription": "First Meetup of 2025 from JSLovers Chennai Chapter.",
+    "eventDate": "2025-02-08",
+    "eventTime": "02:00",
+    "eventVenue": "YuniQ, 4th Floor, Ticel Bio Park, Tharamani",
+    "eventLink": "https://www.linkedin.com/posts/thejslovers_jslovers-jsloverschennai-javascript-activity-7286978254719143936-gjse?utm_source=share&utm_medium=member_desktop",
     "location": "Chennai",
-    "communityName": "OWASP Chennai Chapter",
-    "communityLogo": "https://secure.meetupstatic.com/photos/event/7/2/d/5/clean_492389397.webp"
+    "communityName": "JSLovers",
+    "communityLogo": "https://i.ibb.co/89fw9p0/1718639979394.jpg"
+  },
+  {
+    "eventName": "The Global AI Bootcamp",
+    "eventDescription": "The Global AI Bootcamp is an annual event that occurs worldwide, where developers and AI enthusiasts can learn about AI through workshops, sessions, and discussions. Local chapters of the Global AI Community host the events in various locations across the globe.",
+    "eventDate": "2025-03-01",
+    "eventTime": "10:00",
+    "eventVenue": "St Joseph's College Of Engineering Off, Old Mahabalipuram Road, Kamaraj Nagar, Semmancheri, Chennai, Tamil Nadu 600119 · Chennai",
+    "eventLink": "https://www.meetup.com/innovationai-chennai/events/304777565/",
+    "location": "Chennai",
+    "communityName": "Azure Development Community Tamilnadu",
+    "communityLogo": "https://i.ibb.co/PWB3xkp/1731223560054.jpg"
   }
 ]

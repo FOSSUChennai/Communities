@@ -1,10 +1,10 @@
-# TamilNadu.tech Communities
+# tamilnadu.tech
 
-A central hub for discovering and engaging with technology communities and events across Tamil Nadu. Our mission is to foster collaboration, knowledge sharing, and growth within the regional tech and dev ecosystem.
+A central hub for discovering and engaging with technology communities and events across Tamil Nadu. Our aim is to foster collaboration, knowledge sharing, and growth within the regional tech and dev ecosystem.
 
 ## 🎯 About
 
-TamilNadu.tech serves as a bridge connecting various tech communities, events, and enthusiasts throughout Tamil Nadu. Whether you're a student, professional, or tech enthusiast, this platform helps you:
+tamilNadu.tech serves as a bridge connecting various tech communities, events, and enthusiasts throughout Tamil Nadu. Whether you're a student, professional, or tech enthusiast, this platform helps you:
 
 - Discover upcoming tech events, meetups, and workshops
 - Connect with local tech communities
@@ -68,7 +68,22 @@ src/
 
 ## 🤝 Contributing
 
-We welcome contributions from everyone! Check out our [Contributing Guide](CONTRIBUTING.md) to get started.
+We welcome contributions from everyone!
+Check out our [Contributing Guide](CONTRIBUTING.md) to get started.
+Keep an eye on the issues tab for a mix of beginner friendly issues aswell as game changing issues that you can help the community by contributing.
+
+Pointers to keep in mind is:
+
+- if its an UI change, please include Output image
+- if its a bug fix or a minor code change, please describe what your change does.
+- if its a feature request, please provide a detailed description and if UI feature, please do provide a mockup.
+- if updating events.json, please make sure you add the hostname for the image to next.config.ts file in the root directory.
+
+## 🥰 Contributors
+
+<a href="https://github.com/FOSSUChennai/Communities/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=FOSSUChennai/Communities" />
+</a>
 
 ## 📝 License
 

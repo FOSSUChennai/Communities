@@ -31,21 +31,31 @@ const Events = () => {
   const [monthlyCardHeight, setMonthlyCardHeight] = useState<number>(0);
   const [upcomingCardHeight, setUpcomingCardHeight] = useState<number>(0);
 
-  const monthlyEvents = events.filter((event) => {
-    const currentDate = new Date();
-    const eventDate = new Date(event.eventDate);
-    return eventDate.getMonth() === currentDate.getMonth();
-  });
+  const monthlyEvents = events
+    .filter((event) => {
+      const currentDate = new Date();
+      const eventDate = new Date(event.eventDate);
+      return eventDate.getMonth() === currentDate.getMonth();
+    })
+    .sort(
+      (currentEvent, nextEvent) =>
+        new Date(currentEvent.eventDate).getDate() - new Date(nextEvent.eventDate).getDate()
+    );
 
-  const upcomingEvents = events.filter((event) => {
-    const eventDate = new Date(event.eventDate);
-    const currentDate = new Date();
-    const eventYear = eventDate.getFullYear();
-    const currentYear = currentDate.getFullYear();
-    const eventMonth = eventDate.getMonth();
-    const currentMonth = currentDate.getMonth();
-    return (eventYear === currentYear && eventMonth > currentMonth) || eventYear > currentYear;
-  });
+  const upcomingEvents = events
+    .filter((event) => {
+      const eventDate = new Date(event.eventDate);
+      const currentDate = new Date();
+      const eventYear = eventDate.getFullYear();
+      const currentYear = currentDate.getFullYear();
+      const eventMonth = eventDate.getMonth();
+      const currentMonth = currentDate.getMonth();
+      return (eventYear === currentYear && eventMonth > currentMonth) || eventYear > currentYear;
+    })
+    .sort(
+      (currentEvent, nextEvent) =>
+        new Date(currentEvent.eventDate).getDate() - new Date(nextEvent.eventDate).getDate()
+    );
 
   const calculateMaxHeight = (events: Event[]) => {
     if (events.length === 0) return 100;
@@ -100,6 +110,15 @@ const Events = () => {
         x: e.clientX - rect.left,
         y: e.clientY - rect.top
       });
+    };
+
+    const validateAndFormatVenue = (venue: string): string => {
+      // Trim extra spaces and convert to Proper Case
+      return venue
+        .trim()
+        .split(' ')
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+        .join(' ');
     };
 
     const handleMouseLeave = () => {
@@ -189,7 +208,7 @@ const Events = () => {
             <div className='mt-auto flex flex-grow flex-col justify-end'>
               <span className='mt-4 flex items-start gap-1 text-xs'>
                 <MapPin size={16} className='mt-0.5 min-w-[16px]' />{' '}
-                <span className='break-words'>{venue}</span>{' '}
+                <span className='break-words'>{validateAndFormatVenue(venue)}</span>{' '}
               </span>
             </div>
           </div>

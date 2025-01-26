@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
 import React from 'react';
-import RocketImage from '../../../../public/rocket.webp';
+import RocketUpdated from '../../../../public/RocketUpdated.png';
 
 const Hero = () => {
   return (
@@ -18,7 +18,7 @@ const Hero = () => {
             <p className='mt-4 text-[20px] text-gray-600'>meet. network. share</p>
           </div>
           <div className='z-10'>
-            <Image src={RocketImage} alt='Rocket illustration' width={288} height={365} />
+            <Image src={RocketUpdated} alt='Rocket illustration' width={288} height={365} />
           </div>
         </div>
       </div>

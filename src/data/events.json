@@ -42,6 +42,17 @@
     "location": "Chennai",
     "communityName": "Azure Development Community Tamilnadu",
     "communityLogo": "https://i.ibb.co/PWB3xkp/1731223560054.jpg"
+  },  
+  {
+    "eventName": "Winter Data Meetup 2025",
+    "eventDescription": "Data Zen Winter Data Meetup 2025 is coming! Join us for three days of expert-led sessions on AI, LLM, ChatGPT, Big Data, MLOps, and more. This FREE online event is open to data enthusiasts of all levels. Connect, learn, and grow with a global community of data professionals. Register now to shape the future of Data!",
+    "eventDate": "2025-02-18",
+    "eventTime": "09:00",
+    "eventVenue": "Online",
+    "eventLink": "https://datazen.top/ku1kh",
+    "location": "Online",
+    "communityName": "Data Zen Community",
+    "communityLogo": "https://d3373sevsv1jc.cloudfront.net/uploads/communities_production/community/logo/447/23bb9fcc-3181-484b-b85e-8e31b99f3c2b.png"
   },
   {
     "eventName": "FOSS meetup Pondicherry",

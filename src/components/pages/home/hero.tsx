@@ -10,7 +10,7 @@ const Hero = () => {
         <div className='container mx-auto flex flex-col items-center justify-between px-4 text-center md:flex-row md:text-left'>
           <div className='z-10 max-w-2xl'>
             <h1 className='text-4xl font-semibold leading-tight text-black md:text-[68px] lg:text-[74px]'>
-              Dont miss your <br />
+              {`Don't miss your`} <br />
               next community
               <br />
               <span className='italic text-[#03b051]'>meetup</span>

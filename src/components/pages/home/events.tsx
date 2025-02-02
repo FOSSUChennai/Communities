@@ -5,7 +5,6 @@ import { MapPin } from 'phosphor-react';
 import EmptyEventCard from '../../no-events-card';
 import Image from 'next/image';
 import AddToCalendar from '@/components/AddToCalendar';
-
 type Event = {
   communityName: string;
   communityLogo: string;
@@ -26,31 +25,38 @@ type EventCardProps = {
   logo?: string;
   isMonthly: boolean;
 };
-
 const Events = () => {
   const [monthlyCardHeight, setMonthlyCardHeight] = useState<number>(0);
   const [upcomingCardHeight, setUpcomingCardHeight] = useState<number>(0);
+  const [searchLocation, setSearchLocation] = useState('');
+  const [searchDate, setSearchDate] = useState('');
   const today = new Date();
-  // sorts all events first rather than grouping into two types and then sorting
+
   const sortedEvents = events.sort(
-    (a,b) => new Date(a.eventDate).getTime() - new Date(b.eventDate).getTime()
+    (a, b) => new Date(a.eventDate).getTime() - new Date(b.eventDate).getTime()
   );
 
-  const monthlyEvents = sortedEvents.filter((event) => {
-    const eventDate = new Date(event.eventDate);
+  const filteredEvents = sortedEvents.filter(event => {
+    const eventDate = new Date(event.eventDate).toISOString().split('T')[0];
     return (
-      eventDate.getMonth() === today.getMonth() &&                /* we first check for same month*/
-       eventDate.getFullYear() === today.getFullYear() &&         /* then we check for same year*/
-       eventDate >= today         /* and then we check if it happens in the future and not already ended*/
+      (searchLocation === '' || event.location.toLowerCase().includes(searchLocation.toLowerCase())) &&
+      (searchDate === '' || eventDate === searchDate)
     );
   });
 
-  const upcomingEvents = sortedEvents.filter((event) => {
+  const monthlyEvents = filteredEvents.filter(event => {
     const eventDate = new Date(event.eventDate);
-    // filter the future events and then filter evets that doesn't happen in the same month
-    return eventDate > today && (eventDate.getMonth() !== today.getMonth() || eventDate.getFullYear() !== today.getFullYear());
+    return (
+      eventDate.getMonth() === today.getMonth() &&
+      eventDate.getFullYear() === today.getFullYear() &&
+      eventDate >= today
+    );
   });
 
+  const upcomingEvents = filteredEvents.filter(event => {
+    const eventDate = new Date(event.eventDate);
+    return eventDate > today && (eventDate.getMonth() !== today.getMonth() || eventDate.getFullYear() !== today.getFullYear());
+  });
   const calculateMaxHeight = (events: Event[]) => {
     if (events.length === 0) return 100;
     const longestTitle = events.reduce((max, event) => {
@@ -61,12 +67,11 @@ const Events = () => {
     const lines = Math.ceil(longestTitle.length / charsPerLine);
     return Math.max(100, lines * baseHeight);
   };
-
   useEffect(() => {
-    setMonthlyCardHeight(calculateMaxHeight(monthlyEvents));
-    setUpcomingCardHeight(calculateMaxHeight(upcomingEvents));
+    setMonthlyCardHeight(100);
+    setUpcomingCardHeight(100);
   }, [monthlyEvents, upcomingEvents]);
-
+  
   const EventCard: React.FC<EventCardProps> = ({
     communityName,
     title,
@@ -118,101 +123,114 @@ const Events = () => {
     const handleMouseLeave = () => {
       setMousePosition(null);
     };
-
-    return (
-      <a
-        href={link}
-        target='_blank'
-        rel='noopener noreferrer'
-        className='group relative block cursor-pointer rounded-lg p-[2px] transition-all duration-300'
-        onMouseMove={handleMouseMove}
-        onMouseLeave={handleMouseLeave}
-      >
+  return (
+    <a
+      href={link}
+      target='_blank'
+      rel='noopener noreferrer'
+      className='group relative block cursor-pointer rounded-lg p-[2px] transition-all duration-300'
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+    >
+      <div
+        className='absolute inset-0 rounded-lg opacity-0 transition-opacity duration-300 group-hover:opacity-100'
+        style={{
+          background: mousePosition
+            ? `radial-gradient(150px circle at ${mousePosition.x}px ${mousePosition.y}px, rgb(74, 222, 128), transparent 70%)`
+            : 'none',
+          maskImage: 'linear-gradient(#000 0 0)',
+          maskComposite: 'exclude',
+          WebkitMaskComposite: 'xor'
+        }}
+      /> 
+      <div className='relative h-full rounded-lg border-2 border-[rgb(229,231,235)] bg-white hover:border-[rgb(255,255,255,0.5)] p-4 shadow-sm transition-shadow hover:shadow-md'>
         <div
-          className='absolute inset-0 rounded-lg opacity-0 transition-opacity duration-300 group-hover:opacity-100'
+          className='pointer-events-none absolute -inset-px opacity-0 transition-opacity duration-300 group-hover:opacity-50'
           style={{
             background: mousePosition
-              ? `radial-gradient(150px circle at ${mousePosition.x}px ${mousePosition.y}px, rgb(74, 222, 128), transparent 70%)`
-              : 'none',
-            maskImage: 'linear-gradient(#000 0 0)',
-            maskComposite: 'exclude',
-            WebkitMaskComposite: 'xor'
+              ? `radial-gradient(300px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(74, 222, 128, 0.2), transparent 40%)`
+              : 'none'
           }}
-        /> 
-        <div className='relative h-full rounded-lg border-2 border-[rgb(229,231,235)] bg-white hover:border-[rgb(255,255,255,0.5)] p-4 shadow-sm transition-shadow hover:shadow-md'>
-          <div
-            className='pointer-events-none absolute -inset-px opacity-0 transition-opacity duration-300 group-hover:opacity-50'
-            style={{
-              background: mousePosition
-                ? `radial-gradient(300px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(74, 222, 128, 0.2), transparent 40%)`
-                : 'none'
-            }}
-          />
-          <div className='relative flex items-center justify-between gap-2'>
-            {isOverflowing ? (
-              <Tooltip content={communityName}>
-                <div className='rounded-md border-2 border-black bg-white px-2 py-1 text-xs text-black'>
-                  <span ref={communityNameRef} className='block max-w-[200px] truncate'>
-                    {communityName}
-                  </span>
-                </div>
-              </Tooltip>
-            ) : (
+        />
+        <div className='relative flex items-center justify-between gap-2'>
+          {isOverflowing ? (
+            <Tooltip content={communityName}>
               <div className='rounded-md border-2 border-black bg-white px-2 py-1 text-xs text-black'>
                 <span ref={communityNameRef} className='block max-w-[200px] truncate'>
                   {communityName}
                 </span>
               </div>
-            )}
-            {logo && (
-              <Image
-                src={logo}
-                alt={`${title} logo`}
-                width={24}
-                height={24}
-                className='rounded-sm object-cover grayscale filter transition-all duration-300 hover:filter-none'
-              />
-            )}
+            </Tooltip>
+          ) : (
+            <div className='rounded-md border-2 border-black bg-white px-2 py-1 text-xs text-black'>
+              <span ref={communityNameRef} className='block max-w-[200px] truncate'>
+                {communityName}
+              </span>
+            </div>
+          )}
+          {logo && (
+            <Image
+              src={logo}
+              alt={`${title} logo`}
+              width={24}
+              height={24}
+              className='rounded-sm object-cover grayscale filter transition-all duration-300 hover:filter-none'
+            />
+          )}
+        </div>
+
+        <h3
+          className={`mb-2 mt-3 text-xl font-medium text-black transition-all duration-300`}
+          style={{
+            height: `${isMonthly ? monthlyCardHeight : upcomingCardHeight}px`,
+            overflow: 'hidden'
+          }}
+          title={title}
+        >
+          {title}
+        </h3>
+
+        <div className='flex-row items-center text-sm text-gray-600'>
+          <div className='flex items-center space-x-2'>
+            <span className={`rounded bg-green-100 text-green-800 px-2 py-0.5 text-xs`}>
+              {location}
+            </span>
+            <span className={`rounded bg-blue-100 text-blue-800 px-2 py-0.5 text-xs `}>{date}</span>
+            <AddToCalendar
+              eventTitle={title}
+              eventVenue={venue}
+              eventDate={date}
+              eventLink={link}
+            />
           </div>
-
-          <h3
-            className={`mb-2 mt-3 text-xl font-medium text-black transition-all duration-300`}
-            style={{
-              height: `${isMonthly ? monthlyCardHeight : upcomingCardHeight}px`,
-              overflow: 'hidden'
-            }}
-            title={title}
-          >
-            {title}
-          </h3>
-
-          <div className='flex-row items-center text-sm text-gray-600'>
-            <div className='flex items-center space-x-2'>
-              <span className={`rounded bg-green-100 text-green-800 px-2 py-0.5 text-xs`}>
-                {location}
-              </span>
-              <span className={`rounded bg-blue-100 text-blue-800 px-2 py-0.5 text-xs `}>{date}</span>
-              <AddToCalendar
-                eventTitle={title}
-                eventVenue={venue}
-                eventDate={date}
-                eventLink={link}
-              />
-            </div>
-            <div className='mt-auto flex flex-grow flex-col justify-end'>
-              <span className='mt-4 flex items-start gap-1 text-xs'>
-                <MapPin size={16} className='mt-0.5 min-w-[16px]' />{' '}
-                <span className='break-words'>{validateAndFormatVenue(venue)}</span>{' '}
-              </span>
-            </div>
+          <div className='mt-auto flex flex-grow flex-col justify-end'>
+            <span className='mt-4 flex items-start gap-1 text-xs'>
+              <MapPin size={16} className='mt-0.5 min-w-[16px]' />{' '}
+              <span className='break-words'>{validateAndFormatVenue(venue)}</span>{' '}
+            </span>
           </div>
         </div>
-      </a>
-    );
-  };
-
+      </div>
+    </a>
+  );
+};
   return (
     <main className='mx-4 rounded-xl bg-white p-4 md:mx-8 lg:mx-16'>
+      <div className='mb-4 flex flex-col md:flex-row gap-4'>
+        <input
+          type='text'
+          placeholder='Search by location'
+          value={searchLocation}
+          onChange={(e) => setSearchLocation(e.target.value)}
+          className='p-2 border rounded-md w-full md:w-1/2'
+        />
+        <input
+          type='date'
+          value={searchDate}
+          onChange={(e) => setSearchDate(e.target.value)}
+          className='p-2 border rounded-md w-full md:w-1/2'
+        />
+      </div>
       <section>
         <h2 className='mb-3 text-lg font-normal'>
           <span className='text-[30px] font-semibold text-black'>this month</span>
@@ -237,7 +255,6 @@ const Events = () => {
           )}
         </div>
       </section>
-
       <section className='mt-12'>
         <h2 className='mb-3 text-lg font-normal'>
           <span className='text-[30px] font-semibold text-black'>upcoming</span>
@@ -267,7 +284,6 @@ const Events = () => {
 };
 
 export default Events;
-
 interface TooltipProps {
   content: string;
   children: React.ReactNode;

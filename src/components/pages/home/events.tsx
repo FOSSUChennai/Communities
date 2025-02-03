@@ -170,7 +170,7 @@ const Events = () => {
                 alt={`${title} logo`}
                 width={24}
                 height={24}
-                className='rounded-sm object-cover grayscale filter transition-all duration-300 hover:filter-none'
+                className='rounded-sm object-cover filter transition-all duration-300 hover:filter-none'
               />
             )}
           </div>
@@ -215,7 +215,7 @@ const Events = () => {
     <main className='mx-4 rounded-xl bg-white p-4 md:mx-8 lg:mx-16'>
       <section>
         <h2 className='mb-3 text-lg font-normal'>
-          <span className='text-[30px] font-semibold text-black'>this month</span>
+          <span className='text-[30px] font-semibold text-black'>This Month</span>
         </h2>
         <div className='grid grid-cols-1 gap-6 md:grid-cols-3'>
           {monthlyEvents.length > 0 ? (
@@ -240,7 +240,7 @@ const Events = () => {
 
       <section className='mt-12'>
         <h2 className='mb-3 text-lg font-normal'>
-          <span className='text-[30px] font-semibold text-black'>upcoming</span>
+          <span className='text-[30px] font-semibold text-black'>Upcoming</span>
         </h2>
         <div className='grid grid-cols-1 gap-6 md:grid-cols-3'>
           {upcomingEvents.length > 0 ? (

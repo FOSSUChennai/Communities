@@ -34,6 +34,10 @@ const config: NextConfig = {
       {
         protocol: 'https',
         hostname: 'avatars.githubusercontent.com'
+      },
+      {
+        protoco: 'https',
+        hostname: 'raw.githubusercontent.com'
       }
     ]
   }

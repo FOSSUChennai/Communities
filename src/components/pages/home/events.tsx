@@ -173,7 +173,7 @@ const Events = () => {
                 alt={`${title} logo`}
                 width={24}
                 height={24}
-                className='rounded-sm object-cover grayscale filter transition-all duration-300 hover:filter-none'
+                className='rounded-sm object-cover filter transition-all duration-300 hover:filter-none'
               />
             )}
           </div>

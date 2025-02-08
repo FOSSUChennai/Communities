@@ -53,5 +53,60 @@
     "location": "Pondicherry",
     "communityName": "FOSS United Pondicherry",
     "communityLogo": "https://i.ibb.co/vm4vm6g/fosspondy.jpg"
+  },
+  {
+    "eventName": "Hackers Thiruvizha",
+    "eventDescription": "The ultimate offline hackathon where creativity meets technology! Get ready for an electrifying day filled with brainstorming, building, and bonding with like-minded tech enthusiasts.  ",
+    "eventDate": "2025-02-08",
+    "eventTime": "09:00",
+    "eventVenue": "St Joseph's College Of Engineering, Chennai",
+    "eventLink": "https://event.tixon.app/HackersThiruvizha",
+    "location": "Chennai",
+    "communityName": "Code on JVM",
+    "communityLogo": "https://i.ibb.co/j9GsWdGk/codeonjvm.jpg"
+  },
+  {
+    "eventName": "Chennai React Anniversary Mega Meetup",
+    "eventDescription": "Chennai React is Turning 1 and we are celebrating our 1-year anniversary with a mega meetup",
+    "eventDate": "2025-03-01",
+    "eventTime": "10:00",
+    "eventVenue": "Comcast, Chennai One SEZ, 5th Floor, North Block in Phase II, Thoraipakkam, Chennai",
+    "eventLink": "https://lu.ma/nn29gvkj",
+    "location": "Chennai",
+    "communityName": "Chennai React",
+    "communityLogo": "https://avatars.githubusercontent.com/u/175532518"
+  },
+  {
+    "eventName": "FOSS Hack SSN",
+    "eventDescription": "FOSS Hack local host at SSN College of Engineering.",
+    "eventDate": "2025-02-22",
+    "eventTime": "08:00",
+    "eventVenue": "SSN College of Engineering, SH 49A, Kalavakkam, Tamil Nadu 603110",
+    "eventLink": "https://fossunited.org/hack/fosshack25/host/chennai-ssn",
+    "location": "Chennai",
+    "communityName": "FOSS United",
+    "communityLogo": "https://i.ibb.co/23TrwMyH/1738389876909.jpg"
+  },
+   {
+    "eventName": "The AI Connect (TAI) hosted by TSI Technologies",
+    "eventDescription": "​This full-day event is designed to immerse you in the latest AI trends, hands-on workshops, and insightful tech sessions led by industry experts. With interactive discussions, real-world applications, and networking opportunities, this is your chance to learn, connect, and innovate with fellow AI enthusiasts.",
+    "eventDate": "2025-02-22",
+    "eventTime": "10:00",
+    "eventVenue": "TSI Technologies Private Limited 4th Floor, Prestige Cosmopolitan 38, Sardar Patel Rd, Little Mount, Guindy, Chennai, Tamil Nadu 600034, India",
+    "eventLink": "https://lu.ma/v9ehcxv6",
+    "location": "Guindy, Chennai",
+    "communityName": "The AI Connect (TAI)",
+    "communityLogo": "https://tai-events.s3.eu-central-1.amazonaws.com/01_Tai+4+(2).svg"
+  },
+  {
+    "eventName": "KCD Chennai Konnekt",
+    "eventDescription": "We're kicking off the excitement for KCD Chennai with Konnekt #1, an exclusive in-person session designed to bring the Kubernetes & cloud-native community together!",
+    "eventDate": "2025-02-08",
+    "eventTime": "09:30",
+    "eventVenue": "Excelencia, Ascendas International Tech Park 5th Floor, Pinnacle Building, Chennai, Tamil Nadu 600113",
+    "eventLink": "https://docs.google.com/forms/d/e/1FAIpQLSdj9-R-45x1YGQ8OhUyJ35vovWF25lg8BkjqRVQPcADbi5ZSA/viewform",
+    "location": "Chennai",
+    "communityName": "KCD Chennai",
+    "communityLogo": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,w_500,h_500,g_center/c_fill,dpr_2.0,f_auto,g_center,q_auto:good/v1/gcs/platform-data-cncf/events/Logo_White_Background_eSFH3vi.png"
   }
 ]

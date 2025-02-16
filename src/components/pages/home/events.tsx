@@ -5,6 +5,7 @@ import { MapPin } from 'phosphor-react';
 import EmptyEventCard from '../../no-events-card';
 import Image from 'next/image';
 import AddToCalendar from '@/components/AddToCalendar';
+import { useTheme } from 'next-themes';
 
 type Event = {
   communityName: string;
@@ -28,9 +29,10 @@ type EventCardProps = {
 };
 
 const Events = () => {
+  const [mounted, setMounted] = useState(false);
   const [monthlyCardHeight, setMonthlyCardHeight] = useState<number>(0);
   const [upcomingCardHeight, setUpcomingCardHeight] = useState<number>(0);
-   // Create a date object for start of today
+  // Create a date object for start of today
   const today = new Date();
   today.setHours(0, 0, 0, 0);
 
@@ -74,7 +76,12 @@ const Events = () => {
   useEffect(() => {
     setMonthlyCardHeight(calculateMaxHeight(monthlyEvents));
     setUpcomingCardHeight(calculateMaxHeight(upcomingEvents));
+    setMounted(true);
   }, [monthlyEvents, upcomingEvents]);
+
+  if (!mounted) {
+    return null; // Avoid SSR mismatches
+  }
 
   const EventCard: React.FC<EventCardProps> = ({
     communityName,
@@ -86,6 +93,8 @@ const Events = () => {
     logo,
     isMonthly
   }) => {
+    const { theme } = useTheme();
+    const [mounted, setMounted] = useState(false);
     const [mousePosition, setMousePosition] = React.useState<{
       x: number;
       y: number;
@@ -101,7 +110,7 @@ const Events = () => {
           );
         }
       };
-
+      setMounted(true);
       checkOverflow();
       window.addEventListener('resize', checkOverflow);
       return () => window.removeEventListener('resize', checkOverflow);
@@ -114,6 +123,10 @@ const Events = () => {
         y: e.clientY - rect.top
       });
     };
+
+    if (!mounted) {
+      return null; // Avoid SSR mismatches
+    }
 
     const validateAndFormatVenue = (venue: string): string => {
       // Trim extra spaces and convert to Proper Case
@@ -148,7 +161,9 @@ const Events = () => {
             WebkitMaskComposite: 'xor'
           }}
         />
-        <div className='relative h-full rounded-lg border-2 border-[rgb(229,231,235)] bg-white p-4 shadow-sm transition-shadow hover:border-[rgb(255,255,255,0.5)] hover:shadow-md'>
+        <div
+          className={`relative h-full rounded-lg border-2 border-[rgb(229,231,235)] ${theme === 'dark' ? 'bg-black text-white' : 'bg-[#fafafa] text-black'} p-4 shadow-sm transition-shadow hover:border-[rgb(255,255,255,0.5)] hover:shadow-md`}
+        >
           <div
             className='pointer-events-none absolute -inset-px opacity-0 transition-opacity duration-300 group-hover:opacity-50'
             style={{
@@ -160,14 +175,18 @@ const Events = () => {
           <div className='relative flex flex-wrap items-center justify-between gap-2'>
             {isOverflowing ? (
               <Tooltip content={communityName}>
-                <div className='rounded-md border-2 border-black bg-white px-2 py-1 text-xs text-black'>
+                <div
+                  className={`rounded-md border-2 border-black px-2 py-1 text-xs ${theme === 'dark' ? 'bg-transparent text-white' : 'bg-[#fafafa] text-black'}`}
+                >
                   <span ref={communityNameRef} className='block max-w-[200px] truncate'>
                     {communityName}
                   </span>
                 </div>
               </Tooltip>
             ) : (
-              <div className='rounded-md border-2 border-black bg-white px-2 py-1 text-xs text-black'>
+              <div
+                className={`rounded-md border-2 px-2 py-1 text-xs ${theme === 'dark' ? 'border-white bg-transparent text-white' : 'border-black bg-[#fafafa] text-black'}`}
+              >
                 <span ref={communityNameRef} className='block max-w-[200px] truncate'>
                   {communityName}
                 </span>
@@ -185,7 +204,7 @@ const Events = () => {
           </div>
 
           <h3
-            className={`mb-2 mt-3 text-xl font-medium text-black transition-all duration-300`}
+            className={`mb-2 mt-3 text-xl font-medium transition-all duration-300 ${theme === 'dark' ? 'bg-transparent text-white' : 'bg-[#fafafa] text-black'}`}
             style={{
               height: `${isMonthly ? monthlyCardHeight : upcomingCardHeight}px`,
               overflow: 'hidden'
@@ -223,10 +242,12 @@ const Events = () => {
   };
 
   return (
-    <main className='mx-4 rounded-xl bg-white p-6 md:mx-8 lg:mx-16'>
+    <main
+      className={'${theme===dark?bg-transparent:bg-[#fafafa]} mx-4 rounded-xl p-6 md:mx-8 lg:mx-16'}
+    >
       <section>
         <h2 className='mb-3 text-lg font-normal'>
-          <span className='text-[30px] font-semibold text-black'>this month</span>
+          <span className='text-[30px] font-semibold'>This month</span>
         </h2>
         <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3'>
           {monthlyEvents.length > 0 ? (
@@ -251,7 +272,7 @@ const Events = () => {
 
       <section className='mt-12'>
         <h2 className='mb-3 text-lg font-normal'>
-          <span className='text-[30px] font-semibold text-black'>upcoming</span>
+          <span className='text-[30px] font-semibold'>upcoming</span>
         </h2>
         <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3'>
           {upcomingEvents.length > 0 ? (

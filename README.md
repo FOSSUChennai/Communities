@@ -85,6 +85,12 @@ Pointers to keep in mind is:
   <img src="https://contrib.rocks/image?repo=FOSSUChennai/Communities" />
 </a>
 
+## ⭐ Star History
+
+Go put a star 😤
+
+[![Star History Chart](https://api.star-history.com/svg?repos=FOSSUChennai/Communities&type=Date)](https://star-history.com/#FOSSUChennai/Communities&Date)
+
 ## 📝 License
 
 This project is licensed under the terms of the GPL 3.0 license.

@@ -32,7 +32,8 @@ const Events = () => {
   const [monthlyCardHeight, setMonthlyCardHeight] = useState<number>(0);
   const [upcomingCardHeight, setUpcomingCardHeight] = useState<number>(0);
   const [filter, setFilter] = useState<boolean>(false);
-  const [date, setDate] = useState<string>(new Date().toISOString().split('T')[0]);
+  const [thisdate, setThisdate] = useState<string>(new Date().toISOString().split('T')[0]);
+  const [update, setupdate] = useState<string>(new Date().toISOString().split('T')[0]);
   // Create a date object for start of today
   const today = new Date();
   today.setHours(0, 0, 0, 0);
@@ -46,12 +47,17 @@ const Events = () => {
     (a, b) => new Date(a.eventDate).getTime() - new Date(b.eventDate).getTime()
   );
 
-  const filteredEvents = sortedEvents.filter((event) => {
+  const thisfilteredEvents = sortedEvents.filter((event) => {
     const eventDate = new Date(event.eventDate);
-    return date ? eventDate.toISOString().split('T')[0] === date : true;
+    return thisdate ? eventDate.toISOString().split('T')[0] === thisdate : true;
   });
 
-  const monthlyEvents = filteredEvents.filter((event) => {
+  const upfilteredEvents = sortedEvents.filter((event) => {
+    const eventDate = new Date(event.eventDate);
+    return update ? eventDate.toISOString().split('T')[0] === update : true;
+  });
+
+  const monthlyEvents = thisfilteredEvents.filter((event) => {
     const eventDate = new Date(event.eventDate);
     return (
       eventDate.getMonth() === today.getMonth() &&
@@ -60,7 +66,7 @@ const Events = () => {
     );
   });
 
-  const upcomingEvents = filteredEvents.filter((event) => {
+  const upcomingEvents = upfilteredEvents.filter((event) => {
     const eventDate = new Date(event.eventDate);
     return (
       eventDate > endOfToday && // Compare with end of today
@@ -250,11 +256,21 @@ const Events = () => {
             <div className='mb-4 flex justify-between'>
               <DateFilter
                 events={events.map((event) => ({ date: event.eventDate }))}
-                DateChange={setDate}
-                date={date}
+                DateChange={setThisdate}
+                date={thisdate}
               />
+              <button
+                onClick={() => {
+                  setThisdate(new Date().toISOString().split('T')[0]);
+                  setFilter(false);
+                }}
+                className='ml-4 text-sm font-medium text-red-600 hover:text-red-800'
+              >
+                Remove Filter
+              </button>
             </div>
           )}
+
           <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3'>
             {monthlyEvents.length > 0 ? (
               monthlyEvents.map((event, index) => (
@@ -293,9 +309,18 @@ const Events = () => {
             <div className='mb-4 flex justify-between'>
               <DateFilter
                 events={events.map((event) => ({ date: event.eventDate }))}
-                DateChange={setDate}
-                date={date}
+                DateChange={setupdate}
+                date={update}
               />
+              <button
+                onClick={() => {
+                  setupdate(new Date().toISOString().split('T')[0]);
+                  setFilter(false);
+                }}
+                className='ml-4 text-sm font-medium text-red-600 hover:text-red-800'
+              >
+                Remove Filter
+              </button>
             </div>
           )}
         </section>

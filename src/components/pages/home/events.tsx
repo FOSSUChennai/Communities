@@ -5,6 +5,7 @@ import { MapPin } from 'phosphor-react';
 import EmptyEventCard from '../../no-events-card';
 import Image from 'next/image';
 import AddToCalendar from '@/components/AddToCalendar';
+import DateFilter from '@/components/DateFilter';
 
 type Event = {
   communityName: string;
@@ -30,7 +31,9 @@ type EventCardProps = {
 const Events = () => {
   const [monthlyCardHeight, setMonthlyCardHeight] = useState<number>(0);
   const [upcomingCardHeight, setUpcomingCardHeight] = useState<number>(0);
-   // Create a date object for start of today
+  const [filter, setFilter] = useState<boolean>(false);
+  const [date, setDate] = useState<string>(new Date().toISOString().split('T')[0]);
+  // Create a date object for start of today
   const today = new Date();
   today.setHours(0, 0, 0, 0);
 
@@ -43,7 +46,12 @@ const Events = () => {
     (a, b) => new Date(a.eventDate).getTime() - new Date(b.eventDate).getTime()
   );
 
-  const monthlyEvents = sortedEvents.filter((event) => {
+  const filteredEvents = sortedEvents.filter((event) => {
+    const eventDate = new Date(event.eventDate);
+    return date ? eventDate.toISOString().split('T')[0] === date : true;
+  });
+
+  const monthlyEvents = filteredEvents.filter((event) => {
     const eventDate = new Date(event.eventDate);
     return (
       eventDate.getMonth() === today.getMonth() &&
@@ -52,7 +60,7 @@ const Events = () => {
     );
   });
 
-  const upcomingEvents = sortedEvents.filter((event) => {
+  const upcomingEvents = filteredEvents.filter((event) => {
     const eventDate = new Date(event.eventDate);
     return (
       eventDate > endOfToday && // Compare with end of today
@@ -223,57 +231,97 @@ const Events = () => {
   };
 
   return (
-    <main className='mx-4 rounded-xl bg-white p-6 md:mx-8 lg:mx-16'>
-      <section>
-        <h2 className='mb-3 text-lg font-normal'>
-          <span className='text-[30px] font-semibold text-black'>this month</span>
-        </h2>
-        <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3'>
-          {monthlyEvents.length > 0 ? (
-            monthlyEvents.map((event, index) => (
-              <EventCard
-                key={index}
-                communityName={event.communityName}
-                location={event.location}
-                title={event.eventName}
-                date={event.eventDate}
-                venue={event.eventVenue}
-                link={event.eventLink}
-                logo={event.communityLogo}
-                isMonthly={true}
-              />
-            ))
-          ) : (
-            <EmptyEventCard message='No events scheduled for this month' />
-          )}
-        </div>
-      </section>
+    <>
+      <main className='mx-4 rounded-xl bg-white p-6 md:mx-8 lg:mx-16'>
+        <section className='mt-12'>
+          <div className='mb-4 flex items-center justify-between'>
+            <h2 className='text-lg font-normal'>
+              <span className='text-[30px] font-semibold text-black'>this month</span>
+            </h2>
+            <button
+              onClick={() => setFilter(!filter)}
+              className='text-sm font-medium text-blue-600 hover:text-blue-800'
+            >
+              {filter ? 'Hide Filter' : 'Show Filter'}
+            </button>
+          </div>
 
-      <section className='mt-12'>
-        <h2 className='mb-3 text-lg font-normal'>
-          <span className='text-[30px] font-semibold text-black'>upcoming</span>
-        </h2>
-        <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3'>
-          {upcomingEvents.length > 0 ? (
-            upcomingEvents.map((event, index) => (
-              <EventCard
-                key={index}
-                communityName={event.communityName}
-                title={event.eventName}
-                location={event.location}
-                date={event.eventDate}
-                venue={event.eventVenue}
-                link={event.eventLink}
-                logo={event.communityLogo}
-                isMonthly={false}
+          {filter && (
+            <div className='mb-4 flex justify-between'>
+              <DateFilter
+                events={events.map((event) => ({ date: event.eventDate }))}
+                DateChange={setDate}
+                date={date}
               />
-            ))
-          ) : (
-            <EmptyEventCard message='No upcoming events scheduled' />
+            </div>
           )}
-        </div>
-      </section>
-    </main>
+          <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3'>
+            {monthlyEvents.length > 0 ? (
+              monthlyEvents.map((event, index) => (
+                <EventCard
+                  key={index}
+                  communityName={event.communityName}
+                  location={event.location}
+                  title={event.eventName}
+                  date={event.eventDate}
+                  venue={event.eventVenue}
+                  link={event.eventLink}
+                  logo={event.communityLogo}
+                  isMonthly={true}
+                />
+              ))
+            ) : (
+              <EmptyEventCard message='No events scheduled for this month' />
+            )}
+          </div>
+        </section>
+
+        <section className='mt-12'>
+          <div className='mb-4 flex items-center justify-between'>
+            <h2 className='text-lg font-normal'>
+              <span className='text-[30px] font-semibold text-black'>upcoming</span>
+            </h2>
+            <button
+              onClick={() => setFilter(!filter)}
+              className='text-sm font-medium text-blue-600 hover:text-blue-800'
+            >
+              {filter ? 'Hide Filter' : 'Show Filter'}
+            </button>
+          </div>
+
+          {filter && (
+            <div className='mb-4 flex justify-between'>
+              <DateFilter
+                events={events.map((event) => ({ date: event.eventDate }))}
+                DateChange={setDate}
+                date={date}
+              />
+            </div>
+          )}
+        </section>
+        <section>
+          <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3'>
+            {upcomingEvents.length > 0 ? (
+              upcomingEvents.map((event, index) => (
+                <EventCard
+                  key={index}
+                  communityName={event.communityName}
+                  title={event.eventName}
+                  location={event.location}
+                  date={event.eventDate}
+                  venue={event.eventVenue}
+                  link={event.eventLink}
+                  logo={event.communityLogo}
+                  isMonthly={false}
+                />
+              ))
+            ) : (
+              <EmptyEventCard message='No upcoming events scheduled' />
+            )}
+          </div>
+        </section>
+      </main>
+    </>
   );
 };
 

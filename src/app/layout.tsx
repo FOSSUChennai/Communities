@@ -5,7 +5,10 @@ import { IS_PROD, SITE_URL } from '../lib/constants';
 import UmamiProvider from 'next-umami';
 import Header from '../components/shared/header';
 import Footer from '../components/shared/footer';
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
 
+config.autoAddCss = false
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin']

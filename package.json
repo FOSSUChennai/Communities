@@ -14,6 +14,9 @@
     "lint": "next lint && eslint . --max-warnings 0"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-brands-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "latest",
     "next": "15.1.4",
     "next-umami": "^1.0.0",
     "phosphor-react": "^1.4.1",

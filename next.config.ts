@@ -34,6 +34,10 @@ const config: NextConfig = {
       {
         protocol: 'https',
         hostname: 'avatars.githubusercontent.com'
+      },
+      {
+        protocol: 'https',
+        hostname: 'secure.meetupstatic.com'
       }
     ]
   }

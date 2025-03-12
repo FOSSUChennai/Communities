@@ -107,7 +107,7 @@ const Events = () => {
       return () => window.removeEventListener('resize', checkOverflow);
     }, [communityName]);
 
-    const handleMouseMove = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
       const rect = e.currentTarget.getBoundingClientRect();
       setMousePosition({
         x: e.clientX - rect.left,
@@ -129,10 +129,7 @@ const Events = () => {
     };
 
     return (
-      <a
-        href={link}
-        target='_blank'
-        rel='noopener noreferrer'
+      <div
         className='group relative block cursor-pointer rounded-lg p-[2px] transition-all duration-300'
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
@@ -184,41 +181,43 @@ const Events = () => {
             )}
           </div>
 
-          <h3
-            className={`mb-2 mt-3 text-xl font-medium text-black transition-all duration-300`}
-            style={{
-              height: `${isMonthly ? monthlyCardHeight : upcomingCardHeight}px`,
-              overflow: 'hidden'
-            }}
-            title={title}
-          >
-            {title}
-          </h3>
+          <a href={link} target='_blank' rel='noopener noreferrer' className='block'>
+            <h3
+              className={`mb-2 mt-3 text-xl font-medium text-black transition-all duration-300`}
+              style={{
+                height: `${isMonthly ? monthlyCardHeight : upcomingCardHeight}px`,
+                overflow: 'hidden'
+              }}
+              title={title}
+            >
+              {title}
+            </h3>
 
-          <div className='flex-row items-center text-sm text-gray-600'>
-            <div className='flex items-center space-x-2'>
-              <span className={`rounded bg-green-100 px-2 py-0.5 text-xs text-green-800`}>
-                {location}
-              </span>
-              <span className={`rounded bg-blue-100 px-2 py-0.5 text-xs text-blue-800`}>
-                {date}
-              </span>
-              <AddToCalendar
-                eventTitle={title}
-                eventVenue={venue}
-                eventDate={date}
-                eventLink={link}
-              />
+            <div className='flex-row items-center text-sm text-gray-600'>
+              <div className='flex items-center space-x-2'>
+                <span className={`rounded bg-green-100 px-2 py-0.5 text-xs text-green-800`}>
+                  {location}
+                </span>
+                <span className={`rounded bg-blue-100 px-2 py-0.5 text-xs text-blue-800`}>
+                  {date}
+                </span>
+                <AddToCalendar
+                  eventTitle={title}
+                  eventVenue={venue}
+                  eventDate={date}
+                  eventLink={link}
+                />
+              </div>
+              <div className='mt-auto flex flex-grow flex-col justify-end'>
+                <span className='mt-4 flex items-start gap-1 text-xs'>
+                  <MapPin size={16} className='mt-0.5 min-w-[16px]' />{' '}
+                  <span className='break-words'>{validateAndFormatVenue(venue)}</span>{' '}
+                </span>
+              </div>
             </div>
-            <div className='mt-auto flex flex-grow flex-col justify-end'>
-              <span className='mt-4 flex items-start gap-1 text-xs'>
-                <MapPin size={16} className='mt-0.5 min-w-[16px]' />{' '}
-                <span className='break-words'>{validateAndFormatVenue(venue)}</span>{' '}
-              </span>
-            </div>
-          </div>
+          </a>
         </div>
-      </a>
+      </div>
     );
   };
 

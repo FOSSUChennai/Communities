@@ -20,7 +20,9 @@
     "next-umami": "^1.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "rss": "^1.2.2"
+
+    "react-select": "^5.10.0"
+
   },
   "devDependencies": {
     "@commitlint/cli": "^19.6.1",

@@ -14,10 +14,10 @@
     "lint": "next lint && eslint . --max-warnings 0"
   },
   "dependencies": {
+    "@phosphor-icons/react": "^2.1.7",
     "framer-motion": "^12.4.10",
     "next": "15.1.4",
     "next-umami": "^1.0.0",
-    "phosphor-react": "^1.4.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
 

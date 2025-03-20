@@ -1,4 +1,4 @@
-import { CalendarX } from 'phosphor-react';
+import { CalendarX } from '@phosphor-icons/react';
 
 export default function EmptyEventCard({
   message = 'No events scheduled for this period'

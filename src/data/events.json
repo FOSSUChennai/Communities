@@ -39,7 +39,7 @@
     "eventTime": "14:00",
     "eventVenue": "Tiger Analytics, RMZ Millenia Business Park 2",
     "eventLink": "https://fossunited.org/c/chennai/2025/march",
-    "location": "Chenai",
+    "location": "Chennai",
     "communityName": "FOSS United Chennai",
     "communityLogo": "https://i.ibb.co/F45XJbvR/FOSS-United-Chennai.png"
   },
@@ -53,5 +53,16 @@
     "location": "Chennai",
     "communityName": "build2learn",
     "communityLogo": "https://i.ibb.co/CBsgh43/bxOxo5O.png"
+  },
+  {
+    "eventName": "FFDG Chennai March Meetup",
+    "eventDescription": "​Vanakkam Makkalae! We are back with a Banger! ​FFDG Chennai is hereto help you build cool apps. Tbh, you don't need to know anything. Just your good vibes to turn ideas into reality. ​See you there, makkale! 💜",
+    "eventDate": "2025-03-22",
+    "eventTime": "09:00",
+    "eventVenue": "St. Joseph's Institute of Technology, Hope room, Ground Floor, Admin block",
+    "eventLink": "https://lu.ma/f3ycdsrr",
+    "location": "Chennai",
+    "communityName": "FlutterFlow Developers Group Chennai",
+    "communityLogo": "https://i.ibb.co/1YjTGTdr/FFDG-Chennai-Logo.png"
   }
 ]

@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useState, useEffect } from "react";
@@ -7,6 +8,7 @@ import { MapPin } from "phosphor-react";
 import EmptyEventCard from "../../no-events-card";
 import Image from "next/image";
 import AddToCalendar from "@/components/AddToCalendar";
+
 
 type Event = {
   communityName: string;
@@ -95,6 +97,7 @@ const Events: React.FC = () => {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
+
     setIsClient(true);
   }, []);
 
@@ -150,9 +153,11 @@ const Events: React.FC = () => {
     }),
   };
 
+
   if (!isClient) {
     return <p className="text-center text-gray-500">Loading...</p>;
   }
+
 
   return (
     <main className="mx-4 rounded-xl bg-white p-4 md:mx-8 lg:mx-16">
@@ -177,6 +182,7 @@ const Events: React.FC = () => {
             isClearable
           />
         </div>
+
 
         {/* Sort by Date */}
         <div className="md:w-1/3 w-full">

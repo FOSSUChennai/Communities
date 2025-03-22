@@ -5,6 +5,7 @@ import { IS_PROD, SITE_URL } from '../lib/constants';
 import UmamiProvider from 'next-umami';
 import Header from '../components/shared/header';
 import Footer from '../components/shared/footer';
+import { ThemeProvider } from '../components/themeContext';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -60,19 +61,21 @@ export default function RootLayout({
 }>) {
   const webId = process.env.UMAMI_ANALYTICS_ID;
   return (
-    <html lang='en'>
+    <html lang='en' suppressHydrationWarning>
       <head>
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} mx-auto max-w-[1120px] bg-[#fafafa] antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} mx-auto max-w-[1120px] bg-[#fafafa] antialiased transition-colors duration-300 dark:bg-gray-900`}
       >
-        <Header />
-        {children}
-        <Footer />
+        <ThemeProvider>
+          <Header />
+          {children}
+          <Footer />
+        </ThemeProvider>
+        {IS_PROD && <UmamiProvider websiteId={webId} />}
       </body>
-      {IS_PROD && <UmamiProvider websiteId={webId} />}
     </html>
   );
 }

@@ -5,7 +5,7 @@ import Events from '../components/pages/home/events';
 export default function Home() {
   return (
     <>
-      <div>
+      <div className='transition-colors duration-300'>
         <div className='mx-auto max-w-[1120px] font-inter'>
           <Hero />
           <Events />

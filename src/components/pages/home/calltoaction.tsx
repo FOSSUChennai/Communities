@@ -4,7 +4,7 @@ import React from 'react';
 const CallToAction = () => {
   return (
     <div className='p-4 md:p-8 lg:p-16'>
-      <div className='relative rounded-xl bg-[#4CAF50]'>
+      <div className='relative rounded-xl bg-[#4CAF50] transition-colors duration-300 dark:bg-[#1b5e20]'>
         <div className='flex items-center justify-between p-8'>
           <div className='max-w-2xl'>
             <h3 className='mb-6 text-center text-2xl font-normal text-white md:text-left md:text-3xl'>
@@ -13,7 +13,7 @@ const CallToAction = () => {
             </h3>
             <div className='flex flex-wrap justify-center gap-4 md:justify-start'>
               <button
-                className='rounded-md bg-black px-6 py-2 text-white transition-colors hover:bg-gray-800'
+                className='rounded-md bg-black px-6 py-2 text-white transition-colors hover:bg-gray-800 dark:bg-gray-900 dark:hover:bg-gray-700'
                 onClick={() =>
                   window.open(
                     'https://github.com/FOSSUChennai/Communities/blob/main/CONTRIBUTING.md'

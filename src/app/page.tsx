@@ -1,4 +1,4 @@
-import CallToAction from '../components/pages/home/calltoaction';
+import CallToAction from '../components/pages/home/cta';
 import Hero from '../components/pages/home/hero';
 import Events from '../components/pages/home/events';
 

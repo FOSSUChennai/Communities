@@ -1,7 +1,7 @@
 'use client';
 import React, { useEffect, useRef, useState } from 'react';
 import events from '../../../data/events.json';
-import { MapPin } from '@phosphor-icons/react';
+import { MapPin } from 'phosphor-react';
 import EmptyEventCard from '../../no-events-card';
 import Image from 'next/image';
 import AddToCalendar from '@/components/AddToCalendar';
@@ -11,6 +11,8 @@ type Event = {
   communityLogo: string;
   eventName: string;
   eventDate: string;
+  eventStartTime: string;
+  eventEndTime: string;
   eventVenue: string;
   eventLink: string;
   location: string;
@@ -20,6 +22,8 @@ type EventCardProps = {
   communityName: string;
   title: string;
   date: string;
+  startTime: string;
+  endTime: string;
   location: string;
   venue: string;
   link: string;
@@ -27,18 +31,38 @@ type EventCardProps = {
   isMonthly: boolean;
 };
 
+const formatTime = (time: string) => {
+  const [hours, minutes] = time.split(':').map(Number);
+  const date = new Date();
+  date.setUTCHours(hours, minutes, 0, 0); // Convert to GMT
+  
+  const formattedHours = date.getUTCHours() % 12 || 12;
+  const ampm = date.getUTCHours() >= 12 ? 'PM' : 'AM';
+  
+  return `${formattedHours}:${minutes.toString().padStart(2, '0')} ${ampm} `;
+};
+
+const EventCard: React.FC<EventCardProps> = ({ communityName, title, date, startTime, endTime, location, venue, link, logo }) => {
+  return (
+    <div className='rounded-lg border p-4 shadow-md'>
+      {logo && <Image src={logo} alt={communityName} width={50} height={50} className='mb-2' />}
+      <h3 className='text-lg font-semibold'>{title}</h3>
+      <p className='text-sm text-gray-600'>{communityName}</p>
+      <p className='text-sm text-gray-600'>{date} from {formatTime(startTime)} to {formatTime(endTime)}</p>
+      <p className='text-sm text-gray-600'>{venue}</p>
+      <p className='text-sm text-gray-600 flex items-center'><MapPin className='mr-1' />{location}</p>
+      <a href={link} className='mt-2 text-blue-500 hover:underline'>View Event</a>
+    </div>
+  );
+};
+
 const Events = () => {
-  const [monthlyCardHeight, setMonthlyCardHeight] = useState<number>(0);
-  const [upcomingCardHeight, setUpcomingCardHeight] = useState<number>(0);
-   // Create a date object for start of today
   const today = new Date();
   today.setHours(0, 0, 0, 0);
 
-  // Create a date object for end of today
   const endOfToday = new Date();
   endOfToday.setHours(23, 59, 59, 999);
 
-  // sorts all events first rather than grouping into two types and then sorting
   const sortedEvents = events.sort(
     (a, b) => new Date(a.eventDate).getTime() - new Date(b.eventDate).getTime()
   );
@@ -55,177 +79,16 @@ const Events = () => {
   const upcomingEvents = sortedEvents.filter((event) => {
     const eventDate = new Date(event.eventDate);
     return (
-      eventDate > endOfToday && // Compare with end of today
+      eventDate > endOfToday &&
       (eventDate.getMonth() !== today.getMonth() || eventDate.getFullYear() !== today.getFullYear())
     );
   });
-
-  const calculateMaxHeight = (events: Event[]) => {
-    if (events.length === 0) return 100;
-    const longestTitle = events.reduce((max, event) => {
-      return event.eventName.length > max.length ? event.eventName : max;
-    }, '');
-    const baseHeight = 24;
-    const charsPerLine = 35;
-    const lines = Math.ceil(longestTitle.length / charsPerLine);
-    return Math.max(100, lines * baseHeight);
-  };
-
-  useEffect(() => {
-    setMonthlyCardHeight(calculateMaxHeight(monthlyEvents));
-    setUpcomingCardHeight(calculateMaxHeight(upcomingEvents));
-  }, [monthlyEvents, upcomingEvents]);
-
-  const EventCard: React.FC<EventCardProps> = ({
-    communityName,
-    title,
-    date,
-    location,
-    venue,
-    link,
-    logo,
-    isMonthly
-  }) => {
-    const [mousePosition, setMousePosition] = React.useState<{
-      x: number;
-      y: number;
-    } | null>(null);
-    const [isOverflowing, setIsOverflowing] = useState(false);
-    const communityNameRef = useRef<HTMLSpanElement>(null);
-
-    useEffect(() => {
-      const checkOverflow = () => {
-        if (communityNameRef.current) {
-          setIsOverflowing(
-            communityNameRef.current.scrollWidth > communityNameRef.current.clientWidth
-          );
-        }
-      };
-
-      checkOverflow();
-      window.addEventListener('resize', checkOverflow);
-      return () => window.removeEventListener('resize', checkOverflow);
-    }, [communityName]);
-
-    const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-      const rect = e.currentTarget.getBoundingClientRect();
-      setMousePosition({
-        x: e.clientX - rect.left,
-        y: e.clientY - rect.top
-      });
-    };
-
-    const validateAndFormatVenue = (venue: string): string => {
-      // Trim extra spaces and convert to Proper Case
-      return venue
-        .trim()
-        .split(' ')
-        .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
-        .join(' ');
-    };
-
-    const handleMouseLeave = () => {
-      setMousePosition(null);
-    };
-
-    return (
-      <div
-        className='group relative block cursor-pointer rounded-lg p-[2px] transition-all duration-300'
-        onMouseMove={handleMouseMove}
-        onMouseLeave={handleMouseLeave}
-      >
-        <div
-          className='absolute inset-0 rounded-lg opacity-0 transition-opacity duration-300 group-hover:opacity-100'
-          style={{
-            background: mousePosition
-              ? `radial-gradient(150px circle at ${mousePosition.x}px ${mousePosition.y}px, rgb(74, 222, 128), transparent 70%)`
-              : 'none',
-            maskImage: 'linear-gradient(#000 0 0)',
-            maskComposite: 'exclude',
-            WebkitMaskComposite: 'xor'
-          }}
-        />
-        <div className='relative h-full rounded-lg border-2 border-[rgb(229,231,235)] bg-white p-4 shadow-sm transition-shadow hover:border-[rgb(255,255,255,0.5)] hover:shadow-md'>
-          <div
-            className='pointer-events-none absolute -inset-px opacity-0 transition-opacity duration-300 group-hover:opacity-50'
-            style={{
-              background: mousePosition
-                ? `radial-gradient(300px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(74, 222, 128, 0.2), transparent 40%)`
-                : 'none'
-            }}
-          />
-          <div className='relative flex flex-wrap items-center justify-between gap-2'>
-            {isOverflowing ? (
-              <Tooltip content={communityName}>
-                <div className='rounded-md border-2 border-black bg-white px-2 py-1 text-xs text-black'>
-                  <span ref={communityNameRef} className='block max-w-[200px] truncate'>
-                    {communityName}
-                  </span>
-                </div>
-              </Tooltip>
-            ) : (
-              <div className='rounded-md border-2 border-black bg-white px-2 py-1 text-xs text-black'>
-                <span ref={communityNameRef} className='block max-w-[200px] truncate'>
-                  {communityName}
-                </span>
-              </div>
-            )}
-            {logo && (
-              <Image
-                src={logo}
-                alt={`${title} logo`}
-                width={24}
-                height={24}
-                className='rounded-sm object-cover filter transition-all duration-300 hover:filter-none'
-              />
-            )}
-          </div>
-
-          <a href={link} target='_blank' rel='noopener noreferrer' className='block'>
-            <h3
-              className={`mb-2 mt-3 text-xl font-medium text-black transition-all duration-300`}
-              style={{
-                height: `${isMonthly ? monthlyCardHeight : upcomingCardHeight}px`,
-                overflow: 'hidden'
-              }}
-              title={title}
-            >
-              {title}
-            </h3>
-
-            <div className='flex-row items-center text-sm text-gray-600'>
-              <div className='flex items-center space-x-2'>
-                <span className={`rounded bg-green-100 px-2 py-0.5 text-xs text-green-800`}>
-                  {location}
-                </span>
-                <span className={`rounded bg-blue-100 px-2 py-0.5 text-xs text-blue-800`}>
-                  {date}
-                </span>
-                <AddToCalendar
-                  eventTitle={title}
-                  eventVenue={venue}
-                  eventDate={date}
-                  eventLink={link}
-                />
-              </div>
-              <div className='mt-auto flex flex-grow flex-col justify-end'>
-                <span className='mt-4 flex items-start gap-1 text-xs'>
-                  <MapPin size={16} className='mt-0.5 min-w-[16px]' />{' '}
-                  <span className='break-words'>{validateAndFormatVenue(venue)}</span>{' '}
-                </span>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-    );
-  };
 
   return (
     <main className='mx-4 rounded-xl bg-white p-6 md:mx-8 lg:mx-16'>
       <section>
         <h2 className='mb-3 text-lg font-normal'>
-          <span className='text-[30px] font-semibold text-black'>this month</span>
+          <span className='text-[30px] font-semibold text-black'>This Month</span>
         </h2>
         <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3'>
           {monthlyEvents.length > 0 ? (
@@ -236,6 +99,8 @@ const Events = () => {
                 location={event.location}
                 title={event.eventName}
                 date={event.eventDate}
+                startTime={event.eventStartTime}
+                endTime={event.eventEndTime}
                 venue={event.eventVenue}
                 link={event.eventLink}
                 logo={event.communityLogo}
@@ -250,7 +115,7 @@ const Events = () => {
 
       <section className='mt-12'>
         <h2 className='mb-3 text-lg font-normal'>
-          <span className='text-[30px] font-semibold text-black'>upcoming</span>
+          <span className='text-[30px] font-semibold text-black'>Upcoming</span>
         </h2>
         <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3'>
           {upcomingEvents.length > 0 ? (
@@ -261,6 +126,8 @@ const Events = () => {
                 title={event.eventName}
                 location={event.location}
                 date={event.eventDate}
+                startTime={event.eventStartTime}
+                endTime={event.eventEndTime}
                 venue={event.eventVenue}
                 link={event.eventLink}
                 logo={event.communityLogo}
@@ -277,26 +144,3 @@ const Events = () => {
 };
 
 export default Events;
-
-interface TooltipProps {
-  content: string;
-  children: React.ReactNode;
-}
-
-function Tooltip({ content, children }: TooltipProps) {
-  const [showTooltip, setShowTooltip] = useState(false);
-
-  return (
-    <div className='relative inline-block'>
-      <div onMouseEnter={() => setShowTooltip(true)} onMouseLeave={() => setShowTooltip(false)}>
-        {children}
-      </div>
-      {showTooltip && (
-        <div className='absolute -top-12 left-1/2 z-50 -translate-x-1/2 transform whitespace-nowrap rounded-md border-2 border-gray-800 bg-gray-100 px-2 py-1 text-xs text-gray-800 shadow-lg'>
-          {content}
-          <div className='absolute -bottom-1 left-1/2 h-2 w-2 -translate-x-1/2 rotate-45 transform bg-gray-100' />
-        </div>
-      )}
-    </div>
-  );
-}

@@ -1,9 +1,11 @@
 'use client';
 
+import { useState } from 'react';
 import events from '../../../data/events.json';
 import { MapPin } from 'phosphor-react';
 import EmptyEventCard from '../../no-events-card';
 import Image from 'next/image';
+import AddToCalendar from '@/components/AddToCalendar';
 
 type EventCardProps = {
   communityName: string;
@@ -15,22 +17,16 @@ type EventCardProps = {
   venue: string;
   link: string;
   logo?: string;
-  isMonthly: boolean;
 };
 
-// Function to format time to IST (GMT+5:30)
 const formatTime = (time: string) => {
   const [hours, minutes] = time.split(':').map(Number);
   const date = new Date();
-  date.setUTCHours(hours, minutes, 0, 0); // Convert to GMT
-
-  // Convert to IST (GMT+5:30)
+  date.setUTCHours(hours, minutes, 0, 0);
   date.setMinutes(date.getMinutes() + 330);
-
   const formattedHours = date.getHours() % 12 || 12;
   const ampm = date.getHours() >= 12 ? 'PM' : 'AM';
-
-  return `${formattedHours}:${minutes.toString().padStart(2, '0')} ${ampm} IST`;
+  return `${formattedHours}:${minutes.toString().padStart(2, '0')} ${ampm}`;
 };
 
 const EventCard: React.FC<EventCardProps> = ({
@@ -44,35 +40,75 @@ const EventCard: React.FC<EventCardProps> = ({
   link,
   logo
 }) => {
+  // Mouse tracking state for hover effect
+  const [boxMousePosition, setBoxMousePosition] = useState<{ x: number; y: number } | null>(null);
+
+  const handleBoxMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    setBoxMousePosition({
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top
+    });
+  };
+
+  const handleBoxMouseLeave = () => {
+    setBoxMousePosition(null);
+  };
+
   return (
-    <div className='rounded-lg border bg-gray-100 p-4 shadow-md transition-all duration-300 hover:shadow-lg'>
-      <div className='mb-2 flex items-center'>
-        {logo && (
-          <Image src={logo} alt={communityName} width={40} height={40} className='rounded-full' />
-        )}
-        <div className='ml-3'>
-          <h3 className='text-lg font-semibold'>{title}</h3>
-          <p className='text-sm text-gray-600'>{communityName}</p>
+    <a href={link} target='_blank' rel='noopener noreferrer' className='block'>
+      <div className='relative cursor-pointer overflow-hidden rounded-xl border-4 bg-white p-4 shadow-md transition-all duration-300 hover:shadow-lg'>
+        <div className='rounded-lg p-3 transition-colors duration-300 hover:bg-[#DFFFD8]'>
+          {/* Community Name + Logo with Hover Effect */}
+          <div className='mb-3 flex items-center justify-between'>
+            <div
+              className='relative overflow-hidden rounded-md border-2 border-black bg-white px-2 py-1 text-xs text-black transition-all duration-300'
+              onMouseMove={handleBoxMouseMove}
+              onMouseLeave={handleBoxMouseLeave}
+              style={{
+                background: boxMousePosition
+                  ? `radial-gradient(100px circle at ${boxMousePosition.x}px ${boxMousePosition.y}px, rgba(74, 222, 128, 0.3), transparent 60%)`
+                  : 'white'
+              }}
+            >
+              <span className='block max-w-[200px] truncate'>{communityName}</span>
+            </div>
+            {logo && (
+              <Image src={logo} alt={communityName} width={30} height={30} className='rounded' />
+            )}
+          </div>
+
+          {/* Event Title */}
+          <h3 className='mb-2 text-xl font-bold'>{title}</h3>
+
+          {/* Time Slot */}
+          <div className='mt-2 flex items-center gap-2'>
+            <span className='rounded-md bg-yellow-100 px-3 py-1 text-xs font-semibold text-yellow-700'>
+              {formatTime(startTime)} - {formatTime(endTime)} IST
+            </span>
+          </div>
+
+          {/* Location + Date + Calendar Icon */}
+          <div className='mt-2 flex items-center gap-2'>
+            <span className='rounded bg-green-100 px-2 py-0.5 text-xs text-green-800'>
+              {location}
+            </span>
+            <span className='rounded bg-blue-100 px-2 py-0.5 text-xs text-blue-800'>{date}</span>
+            <AddToCalendar
+              eventTitle={title}
+              eventVenue={venue}
+              eventDate={date}
+              eventLink={link}
+            />
+          </div>
+
+          {/* Venue */}
+          <p className='mt-2 flex items-center text-xs text-gray-600'>
+            <MapPin size={14} className='mr-1 text-gray-500' /> {venue}
+          </p>
         </div>
       </div>
-      <p className='ml-1 ml-2 text-sm text-gray-600 ml-2'>{date}</p>
-
-      {/* Timings UI (Only this is changed) */}
-      <div className='mt-2 flex items-center gap-2'>
-        <div className='rounded-full border border-green-600 bg-white px-3 py-1 text-xs font-semibold text-green-600'>
-          {formatTime(startTime)} - {formatTime(endTime)}
-        </div>
-      </div>
-
-      <p className='text-sm text-gray-600'>{venue}</p>
-      <p className='flex items-center text-sm text-gray-600'>
-        <MapPin className='mr-1' /> {location}
-      </p>
-
-      <a href={link} className='mt-3 inline-block text-blue-500 hover:underline'>
-        View Event
-      </a>
-    </div>
+    </a>
   );
 };
 
@@ -110,7 +146,7 @@ const Events = () => {
         <h2 className='mb-3 text-lg font-normal'>
           <span className='text-[30px] font-semibold text-black'>This Month</span>
         </h2>
-        <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3'>
+        <div className='grid grid-cols-1 gap-4 sm:grid-cols-2'>
           {monthlyEvents.length > 0 ? (
             monthlyEvents.map((event, index) => (
               <EventCard
@@ -124,7 +160,6 @@ const Events = () => {
                 venue={event.eventVenue}
                 link={event.eventLink}
                 logo={event.communityLogo}
-                isMonthly={true}
               />
             ))
           ) : (
@@ -137,7 +172,7 @@ const Events = () => {
         <h2 className='mb-3 text-lg font-normal'>
           <span className='text-[30px] font-semibold text-black'>Upcoming</span>
         </h2>
-        <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3'>
+        <div className='grid grid-cols-1 gap-4 sm:grid-cols-2'>
           {upcomingEvents.length > 0 ? (
             upcomingEvents.map((event, index) => (
               <EventCard
@@ -151,7 +186,6 @@ const Events = () => {
                 venue={event.eventVenue}
                 link={event.eventLink}
                 logo={event.communityLogo}
-                isMonthly={false}
               />
             ))
           ) : (

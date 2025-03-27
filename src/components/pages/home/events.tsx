@@ -55,7 +55,7 @@ const EventCard: React.FC<EventCardProps> = ({
           <p className='text-sm text-gray-600'>{communityName}</p>
         </div>
       </div>
-      <p className='ml-1 ml-2 text-sm text-gray-600'>{date}</p>
+      <p className='ml-1 ml-2 text-sm text-gray-600 ml-2'>{date}</p>
 
       {/* Timings UI (Only this is changed) */}
       <div className='mt-2 flex items-center gap-2'>

@@ -5,8 +5,8 @@
     "eventDate": "2025-04-26",
     "eventStartTime": "08:30",
     "eventEndTime": "17:00",
-    "eventVenue": "Sathyabama University",
-    "eventLink": "https://community.cncf.io/kcd-chennai/",
+    "eventVenue": "IITM Research Park Auditorium, Kanagam, Tharamani, Chennai, 600113",
+    "eventLink": "https://community.cncf.io/events/details/cncf-kcd-chennai-presents-kcd-chennai-2025/",
     "location": "Chennai",
     "communityName": "KCD Chennai",
     "communityLogo": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,w_500,h_500,g_center/c_fill,dpr_2.0,f_auto,g_center,q_auto:good/v1/gcs/platform-data-cncf/events/Logo_White_Background_eSFH3vi.png"
@@ -97,7 +97,7 @@
   },
   {
     "eventName": "MongoDB User Group Chennai: April Meetup - The AI Awakens",
-    "eventDescription": "Join us for an exciting in-person meetup where we explore the power of AI and MongoDB!",
+    "eventDescription": "Join us for an exciting in-person meetup where we explore the power of AI and MongoDB! Whether you're a developer, data enthusiast, or just curious about the intersection of AI and databases, this is the perfect place to learn, network, and grow.",
     "eventDate": "2025-04-19",
     "eventStartTime": "09:30",
     "eventEndTime": "13:00",

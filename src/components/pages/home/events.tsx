@@ -1,22 +1,9 @@
 'use client';
-import React, { useEffect, useRef, useState } from 'react';
+
 import events from '../../../data/events.json';
 import { MapPin } from 'phosphor-react';
 import EmptyEventCard from '../../no-events-card';
 import Image from 'next/image';
-import AddToCalendar from '@/components/AddToCalendar';
-
-type Event = {
-  communityName: string;
-  communityLogo: string;
-  eventName: string;
-  eventDate: string;
-  eventStartTime: string;
-  eventEndTime: string;
-  eventVenue: string;
-  eventLink: string;
-  location: string;
-};
 
 type EventCardProps = {
   communityName: string;
@@ -31,27 +18,60 @@ type EventCardProps = {
   isMonthly: boolean;
 };
 
+// Function to format time to IST (GMT+5:30)
 const formatTime = (time: string) => {
   const [hours, minutes] = time.split(':').map(Number);
   const date = new Date();
   date.setUTCHours(hours, minutes, 0, 0); // Convert to GMT
-  
-  const formattedHours = date.getUTCHours() % 12 || 12;
-  const ampm = date.getUTCHours() >= 12 ? 'PM' : 'AM';
-  
-  return `${formattedHours}:${minutes.toString().padStart(2, '0')} ${ampm} `;
+
+  // Convert to IST (GMT+5:30)
+  date.setMinutes(date.getMinutes() + 330);
+
+  const formattedHours = date.getHours() % 12 || 12;
+  const ampm = date.getHours() >= 12 ? 'PM' : 'AM';
+
+  return `${formattedHours}:${minutes.toString().padStart(2, '0')} ${ampm} IST`;
 };
 
-const EventCard: React.FC<EventCardProps> = ({ communityName, title, date, startTime, endTime, location, venue, link, logo }) => {
+const EventCard: React.FC<EventCardProps> = ({
+  communityName,
+  title,
+  date,
+  startTime,
+  endTime,
+  location,
+  venue,
+  link,
+  logo
+}) => {
   return (
-    <div className='rounded-lg border p-4 shadow-md'>
-      {logo && <Image src={logo} alt={communityName} width={50} height={50} className='mb-2' />}
-      <h3 className='text-lg font-semibold'>{title}</h3>
-      <p className='text-sm text-gray-600'>{communityName}</p>
-      <p className='text-sm text-gray-600'>{date} from {formatTime(startTime)} to {formatTime(endTime)}</p>
+    <div className='rounded-lg border bg-gray-100 p-4 shadow-md transition-all duration-300 hover:shadow-lg'>
+      <div className='mb-2 flex items-center'>
+        {logo && (
+          <Image src={logo} alt={communityName} width={40} height={40} className='rounded-full' />
+        )}
+        <div className='ml-3'>
+          <h3 className='text-lg font-semibold'>{title}</h3>
+          <p className='text-sm text-gray-600'>{communityName}</p>
+        </div>
+      </div>
+      <p className='ml-1 text-sm text-gray-600'>{date}</p>
+
+      {/* Timings UI (Only this is changed) */}
+      <div className='mt-2 flex items-center gap-2'>
+        <div className='rounded-full border border-green-600 bg-white px-3 py-1 text-xs font-semibold text-green-600'>
+          {formatTime(startTime)} - {formatTime(endTime)}
+        </div>
+      </div>
+
       <p className='text-sm text-gray-600'>{venue}</p>
-      <p className='text-sm text-gray-600 flex items-center'><MapPin className='mr-1' />{location}</p>
-      <a href={link} className='mt-2 text-blue-500 hover:underline'>View Event</a>
+      <p className='flex items-center text-sm text-gray-600'>
+        <MapPin className='mr-1' /> {location}
+      </p>
+
+      <a href={link} className='mt-3 inline-block text-blue-500 hover:underline'>
+        View Event
+      </a>
     </div>
   );
 };

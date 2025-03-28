@@ -15,12 +15,14 @@
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.7",
+    "@radix-ui/react-tooltip": "^1.1.8",
     "framer-motion": "^12.4.10",
     "next": "15.1.4",
     "next-umami": "^1.0.0",
     "phosphor-react": "^1.4.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-icons": "^5.5.0",
     "rss": "^1.2.2"
   },
   "devDependencies": {

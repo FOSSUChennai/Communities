@@ -32,6 +32,7 @@ type CommunityCardProps = {
   location?: string;
   youtube?: string;
   github?: string;
+  className?: string;
 };
 
 const CommunityCard = ({
@@ -48,7 +49,8 @@ const CommunityCard = ({
   mastodon,
   telegram,
   youtube,
-  github
+  github,
+  className
 }: CommunityCardProps) => {
   const [mousePosition, setMousePosition] = React.useState<{ x: number; y: number } | null>(null);
 
@@ -78,7 +80,7 @@ const CommunityCard = ({
 
   return (
     <div
-      className='group relative block cursor-pointer rounded-lg p-[2px] transition-all duration-300 hover:scale-[1]'
+      className={`${className} group relative block cursor-pointer rounded-lg p-[2px] transition-all duration-300 hover:scale-[1]`}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
@@ -135,7 +137,18 @@ const CommunityCard = ({
 
           <p className='line-clamp-5 text-justify text-gray-600'>{description}</p>
 
-          <div className='mt-4 flex gap-3 border-t border-gray-100 pt-4 opacity-100 transition-opacity'>
+          {/* This creates a line only if social links exist*/}
+          {(twitter ||
+            linkedin ||
+            github ||
+            discord ||
+            instagram ||
+            bluesky ||
+            mastodon ||
+            telegram ||
+            youtube) && <div className='mt-4 border-t border-gray-100' />}
+
+          <div className='mt-4 flex gap-3 opacity-100 transition-opacity'>
             {Object.entries(socialLinks).map(([key, { Icon, color, title, link }]) =>
               eval(key) ? (
                 <HoverIcon
@@ -164,7 +177,7 @@ const Community = () => {
   );
 
   return (
-    <main className='mx-4 mt-8 rounded-xl bg-white p-6 md:mx-8 lg:mx-16'>
+    <main className='mx-[2%] my-16 flex items-center rounded-xl bg-white p-3 shadow-2xl shadow-black/25 sm:mx-[10%] sm:p-6'>
       <section className='relative flex flex-col py-2'>
         <div className='mb-8'>
           <h2 className='mb-4 text-3xl font-bold text-gray-900'>Tech Communities in Tamil Nadu</h2>
@@ -184,23 +197,8 @@ const Community = () => {
           {filteredCommunities
             .sort((a, b) => a.name.localeCompare(b.name))
             .map((community, index) => (
-              <div key={index} className='group relative'>
-                <CommunityCard
-                  name={community.name}
-                  description={community.description}
-                  logo={community.logo}
-                  twitter={community.twitter}
-                  linkedin={community.linkedin}
-                  discord={community.discord}
-                  website={community.website}
-                  location={community.location}
-                  bluesky={community.bluesky}
-                  instagram={community.instagram}
-                  mastodon={community.mastodon}
-                  telegram={community.telegram}
-                  github={community.github}
-                  youtube={community.youtube}
-                />
+              <div key={index} className='group relative h-full'>
+                <CommunityCard className='h-full' {...community} />
               </div>
             ))}
         </div>

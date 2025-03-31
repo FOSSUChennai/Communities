@@ -53,15 +53,25 @@ Ensure:
 
 ### Step 4: Submit Your Changes
 
-1. Commit your changes:
+1. Commit your changes using [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/):
+   
    ```bash
    git add src/data/events.json
-   git commit -m "Add: [Your Event Name] on [Date]"
+   git commit -m "feat: add [Your Event Name] on [Date]"
    git push origin feature/your-feature-name
    ```
+
+   **Commit Message Guidelines:**
+   - **feat:** A new feature (e.g., `feat: add new event on June 1st`)
+   - **fix:** A bug fix (e.g., `fix: correct date format in events.json`)
+   - **docs:** Documentation changes (e.g., `docs: update contributing guidelines`)
+   - **refactor:** Code restructuring without functionality changes
+   - **test:** Adding or modifying tests
+   - **chore:** Routine tasks (e.g., `chore: update dependencies`)
+
 2. Create a Pull Request with:
-   - Title: "Add: [Your Event Name]"
-   - Description: Brief details about the event
+   - **Title:** Follow the conventional commit format (e.g., `feat: add [Your Event Name]`)
+   - **Description:** Brief details about the event and why it was added
 
 ## 🐛 Reporting Bugs
 

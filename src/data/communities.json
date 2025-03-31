@@ -1,0 +1,42 @@
+[
+  {
+    "name": "FOSS United Chennai",
+    "logo": "https://i.ibb.co/F45XJbvR/FOSS-United-Chennai.png",
+    "description": "FOSS United Chennai is a vibrant community dedicated to promoting Free and Open Source Software (FOSS) in the Chennai region. We organize regular meetups, workshops, and hackathons to bring together FOSS enthusiasts, developers, and advocates.",
+    "location": "Chennai",
+    "twitter": "https://twitter.com/fosschennai",
+    "website": "https://fossunited.org/c/chennai",
+    "instagram": "https://www.instagram.com/fossunitedchennai/",
+    "linkedin": "https://www.linkedin.com/company/foss-united-chennai/",
+    "mastodon":"https://twitter.com/fosschennai",
+    "telegram":"https://t.me/fossunitedchennai",
+    "youtube":"https://www.youtube.com/@fossunitedchennai",
+    "github":"https://github.com/FOSSUChennai"
+  },
+  {
+    "name": "Chennai React",
+    "logo": "https://avatars.githubusercontent.com/u/175532518",
+    "description": "Chennai React is a vibrant community of developers passionate about React.js, React Native, Next.js, and modern web and mobile development. We bring developers, industry experts, and tech enthusiasts together to learn, share, and network.",
+    "location": "Chennai",
+    "twitter": "https://twitter.com/chennaiReact",
+    "discord": "https://discord.gg/JbDNt2gQ",
+    "website": "https://chennaireact.in",
+    "instagram": "https://instagram.com/chennaireact",
+    "linkedin": "https://www.linkedin.com/company/chennaireact/",
+    "bluesky": "https://bsky.app/profile/chennaireact.bsky.social",
+    "youtube":"https://www.youtube.com/@ChennaiReactJS",
+    "github":"https://github.com/chennaireact"
+  },
+  {
+    "name": "FOSS United Pondicherry",
+    "logo": "https://i.ibb.co/vm4vm6g/fosspondy.jpg",
+    "description": "FOSS United Pondicherry is a vibrant community dedicated to promoting Free and Open Source Software (FOSS) in the Chennai region. We organize regular meetups, workshops, and hackathons to bring together FOSS enthusiasts, developers, and advocates.",
+    "location": "Pondicherry"
+  },
+  {
+    "name": "JS Lovers Chennai",
+    "logo": "https://i.ibb.co/89fw9p0/1718639979394.jpg",
+    "description": "We are a passionate community of JavaScript enthusiasts who come together to share knowledge, explore the latest trends, and collaborate on exciting projects.Our meetups cover a wide range of topics, from JavaScript fundamentals to advanced frameworks, front-end and back-end development, and everything in between. ",
+    "location": "Chennai"
+  }
+]

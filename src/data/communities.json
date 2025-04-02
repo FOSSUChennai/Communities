@@ -1,0 +1,102 @@
+[
+  {
+    "name": "FOSS United Chennai",
+    "logo": "https://i.ibb.co/F45XJbvR/FOSS-United-Chennai.png",
+    "description": "FOSS United Chennai is a vibrant community dedicated to promoting Free and Open Source Software (FOSS) in the Chennai region. We organize regular meetups, workshops, and hackathons to bring together FOSS enthusiasts, developers, and advocates.",
+    "location": "Chennai",
+    "twitter": "https://twitter.com/fosschennai",
+    "website": "https://fossunited.org/c/chennai",
+    "instagram": "https://www.instagram.com/fossunitedchennai/",
+    "linkedin": "https://www.linkedin.com/company/foss-united-chennai/",
+    "mastodon": "https://twitter.com/fosschennai",
+    "telegram": "https://t.me/fossunitedchennai",
+    "youtube": "https://www.youtube.com/@fossunitedchennai",
+    "github": "https://github.com/FOSSUChennai"
+  },
+  {
+    "name": "Chennai React",
+    "logo": "https://avatars.githubusercontent.com/u/175532518",
+    "description": "Chennai React is a vibrant community of developers passionate about React.js, React Native, Next.js, and modern web and mobile development. We bring developers, industry experts, and tech enthusiasts together to learn, share, and network.",
+    "location": "Chennai",
+    "twitter": "https://twitter.com/chennaiReact",
+    "discord": "https://discord.gg/JbDNt2gQ",
+    "website": "https://chennaireact.in",
+    "instagram": "https://instagram.com/chennaireact",
+    "linkedin": "https://www.linkedin.com/company/chennaireact/",
+    "bluesky": "https://bsky.app/profile/chennaireact.bsky.social",
+    "youtube": "https://www.youtube.com/@ChennaiReactJS",
+    "github": "https://github.com/chennaireact"
+  },
+  {
+    "name": "FOSS United Pondicherry",
+    "logo": "https://i.ibb.co/vm4vm6g/fosspondy.jpg",
+    "description": "FOSS United Pondicherry is a vibrant community dedicated to promoting Free and Open Source Software (FOSS) in the Chennai region. We organize regular meetups, workshops, and hackathons to bring together FOSS enthusiasts, developers, and advocates.",
+    "location": "Pondicherry"
+  },
+  {
+    "name": "JS Lovers Chennai",
+    "logo": "https://i.ibb.co/89fw9p0/1718639979394.jpg",
+    "description": "We are a passionate community of JavaScript enthusiasts who come together to share knowledge, explore the latest trends, and collaborate on exciting projects.Our meetups cover a wide range of topics, from JavaScript fundamentals to advanced frameworks, front-end and back-end development, and everything in between. ",
+    "location": "Chennai"
+  },
+  {
+    "name": "Namma Flutter",
+    "logo": "https://avatars.githubusercontent.com/u/176333249",
+    "description": "Namma Flutter is a community of Flutter enthusiasts dedicated to learning, sharing, and growing together. We host meetups, workshops, and events to explore the latest in Flutter development, exchange ideas, and foster innovation.",
+    "location": "Chennai",
+    "github": "https://github.com/Namma-Flutter",
+    "linkedin": "https://www.linkedin.com/company/nammaflutter/",
+    "instagram": "https://www.instagram.com/nammaflutter",
+    "twitter": "https://x.com/nammaflutter",
+    "telegram": "https://t.me/nammaflutter",
+    "youtube": "https://www.youtube.com/@nammaflutter"
+  },
+  {
+    "name": "Chennaipy",
+    "logo": "https://res.cloudinary.com/dwir71gi2/image/upload/v1737382622/chennaipy_ovbthm.png",
+    "description": "Chennaipy is a Python user-group, where Pythonistas in and around Chennai come together to share their knowledge and to contribute to the promotion of Python.",
+    "location": "Chennai",
+    "website": "https://chennaipy.org",
+    "github": "https://github.com/chennaipy/",
+    "linkedin": "https://www.linkedin.com/company/chennaipy/",
+    "twitter": "https://x.com/chennaipy"
+  },
+  {
+    "name": "GDG Chennai",
+    "logo": "https://avatars.githubusercontent.com/u/5188301?s=200&v=4",
+    "description": "Google Developers Group Chennai is an initiative to concentrate the efforts of many developers in and around Chennai to learn, share and get productive using the various Google products & Open source technologies.",
+    "location": "Chennai",
+    "website": "https://gdg.community.dev/gdg-chennai/",
+    "github": "https://github.com/gdgchennai",
+    "linkedin": "https://www.linkedin.com/company/gdgchennai/",
+    "instagram": "https://www.instagram.com/gdgchennai/",
+    "twitter": "https://x.com/GDGChennai",
+    "discord": "https://katb.in/gdgchennai-discord",
+    "youtube": "https://www.youtube.com/@GDGCHENNAICOMMUNITY"
+  },
+  {
+    "name": "WTM Chennai",
+    "logo": "https://res.cloudinary.com/dwir71gi2/image/upload/v1725966926/wtmchennai_d4tym8.webp",
+    "description": "Women Techmakers program provides visibility, community, and resources for women in technology. We are building a world where all women can thrive in tech.",
+    "location": "Chennai",
+    "website": "https://gdg.community.dev/gdg-chennai/",
+    "github": "https://github.com/gdgchennai",
+    "linkedin": "https://www.linkedin.com/company/wtm-chennai/",
+    "instagram": "https://www.instagram.com/wtm_chennai",
+    "twitter": "https://x.com/wtmchennai",
+    "discord": "https://katb.in/gdgchennai-discord",
+    "youtube": "https://www.youtube.com/@GDGCHENNAICOMMUNITY"
+  },
+  {
+    "name": "KUG Chennai",
+    "logo": "https://avatars.githubusercontent.com/u/171473236?s=200&v=4",
+    "description": "Kotlin User Group Chennai is a community for Kotlin enthusiasts, developers, and learners passionate about building with Kotlin across Android, Backend, and Multiplatform. We host meetups, workshops, and hackathons to explore the latest in Kotlin development, share insights, and grow together as a community. Whether you're a beginner or an experienced developer, join us to connect, learn, and collaborate on exciting Kotlin projects!",
+    "location": "Chennai",
+    "website": "https://linktr.ee/kugchennai",
+    "github": "https://github.com/kugchennai",
+    "linkedin": "https://www.linkedin.com/groups/14464683/",
+    "instagram": "https://www.instagram.com/kugchennai/",
+    "twitter": "https://x.com/kugchennai",
+    "discord": "https://discord.com/invite/u2GTjKsU9z"
+  }
+]

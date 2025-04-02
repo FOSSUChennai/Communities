@@ -4,11 +4,22 @@
     "eventDescription": "Kubernetes Community Days Chennai 2025 is a community-organized conference supported by the Cloud Native Computing Foundation (CNCF) to help grow and sustain the Kubernetes and cloud-native community in Chennai. It gathers adopters and technologists from open source and cloud-native communities for education, collaboration, and networking.",
     "eventDate": "2025-04-26",
     "eventTime": "08:30",
-    "eventVenue": "Sathyabama University",
-    "eventLink": "https://community.cncf.io/kcd-chennai/",
+    "eventVenue": "IITM Research Park Auditorium, Kanagam, Tharamani, Chennai, 600113",
+    "eventLink": "https://community.cncf.io/events/details/cncf-kcd-chennai-presents-kcd-chennai-2025/",
     "location": "Chennai",
     "communityName": "KCD Chennai",
     "communityLogo": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,w_500,h_500,g_center/c_fill,dpr_2.0,f_auto,g_center,q_auto:good/v1/gcs/platform-data-cncf/events/Logo_White_Background_eSFH3vi.png"
+  },
+  {
+    "eventName": "Chennai React meetup #10",
+    "eventDescription": "Chennai React Offline Meet-up",
+    "eventDate": "2025-04-06",
+    "eventTime": "10:00",
+    "eventVenue": "St.Joseph's College Of Engineering",
+    "eventLink": "https://lu.ma/51q5v9dk",
+    "location": "Chennai",
+    "communityName": "Chennai React",
+    "communityLogo": "https://i.ibb.co/fdHFbNwV/KGIIG0u-F-400x400.jpg"
   },
   {
     "eventName": "10 Years of JSLovers",
@@ -75,5 +86,27 @@
     "location": "Chennai",
     "communityName": "Women Tech Makers (WTM) Chennai",
     "communityLogo": "https://i.ibb.co/ymLgFRk3/images.png"
+  },
+  {
+    "eventName": "MongoDB User Group Chennai: April Meetup - The AI Awakens",
+    "eventDescription": "Join us for an exciting in-person meetup where we explore the power of AI and MongoDB! Whether you're a developer, data enthusiast, or just curious about the intersection of AI and databases, this is the perfect place to learn, network, and grow.",
+    "eventDate": "2025-04-19",
+    "eventTime": "09:30",
+    "eventVenue": "IBM, 5th Floor, Unit 3, Pinnacle Building, Ascendas IT Park, CSIR Road, Tharamani, Chennai - 600113",
+    "eventLink": "https://www.mongodb.com/community/forums/t/mongodb-user-group-chennai-april-meetup-the-ai-awakens/316466",
+    "location": "Chennai",
+    "communityName": "MongoDB User Group Chennai",
+    "communityLogo": "https://i.ibb.co/MkmpSxgY/MugChn.png"
+  },
+  {
+    "eventName": "AI and Data Science collective By FireDucks x DevRelSquad",
+    "eventDescription": "Join us for an exclusive AI & Data Science Collective, where developers, researchers, and AI enthusiasts unite to explore groundbreaking innovations in Artificial Intelligence and Data Science! This in-person gathering is designed to foster learning, collaboration, and networking among the brightest minds in AI. Whether you're a developer, data scientist, startup founder, or AI enthusiast, this event is your gateway to discovering the latest trends, tools, and breakthroughs in the field.",
+    "eventDate": "2025-04-26",
+    "eventTime": "09:30",
+    "eventVenue": "11th Floor , A, GLOBAL INFOCITY PARK, Kodandarama Nagar, Perungudi, Chennai, Tamil Nadu 600096",
+    "eventLink": "https://devrelsquad.live/FireDucksMeetupChennai",
+    "location": "Chennai",
+    "communityName": "DevRelSquad Chennai Chapter",
+    "communityLogo": "https://i.ibb.co/9Hvz0tSx/image.png"
   }
 ]

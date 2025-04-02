@@ -32,7 +32,8 @@ const DarkModeToggle = () => {
       onClick={toggleDarkMode}
       className='bg-white-200 rounded-md p-2 text-black shadow dark:bg-gray-800 dark:text-white'
     >
-      {darkMode ? '☀️ Light Mode' : '🌙 Dark Mode'}
+      <span className='block sm:hidden'>{darkMode ? '☀️' : '🌙'}</span>
+      <span className='hidden sm:inline'>{darkMode ? '☀️ Light Mode' : '🌙 Dark Mode'}</span>
     </button>
   );
 };

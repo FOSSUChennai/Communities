@@ -38,7 +38,12 @@ const AddToCalendar: React.FC<AddToCalendarProps> = ({
 
   return (
     <button onClick={handleRedirect}>
-      <Image src={Add2Calendar} alt='CalendarIcon' style={{ width: '20px', height: '20px' }} />
+      <Image
+        src={Add2Calendar}
+        className='dark:border-white dark:invert'
+        alt='CalendarIcon'
+        style={{ width: '20px', height: '20px' }}
+      />
     </button>
   );
 };

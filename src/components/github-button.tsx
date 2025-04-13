@@ -29,9 +29,13 @@ const GitHubButton = () => {
       href={repoUrl}
       target='_blank'
       rel='noopener noreferrer'
-      className='inline-flex items-center rounded-lg px-4 py-2 text-black shadow transition duration-200'
+      className='inline-flex items-center rounded-lg bg-white px-4 py-2 text-black shadow dark:bg-gray-800 dark:text-white'
     >
-      <Image src={githubIcon} alt='Github star icon' className='mr-2 h-5 w-5' />
+      <Image
+        src={githubIcon}
+        alt='Github star icon'
+        className='mr-2 h-5 w-5 rounded-full border border-black dark:border-white dark:invert'
+      />
       <span className='hidden text-sm font-medium sm:inline'>
         {stars !== null ? `Contribute ${stars} ⭐` : 'Loading...'}
       </span>

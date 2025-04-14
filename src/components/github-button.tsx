@@ -1,7 +1,6 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import Image from 'next/image';
-import githubIcon from '../../public/githubIcon.svg';
+import { FaGithub } from 'react-icons/fa';
 
 const GitHubButton = () => {
   const [stars, setStarCount] = useState<number | null>(null);
@@ -29,9 +28,9 @@ const GitHubButton = () => {
       href={repoUrl}
       target='_blank'
       rel='noopener noreferrer'
-      className='inline-flex items-center rounded-lg px-4 py-2 text-black shadow transition duration-200'
+      className='inline-flex items-center rounded-lg px-4 py-2 shadow transition duration-200'
     >
-      <Image src={githubIcon} alt='Github star icon' className='mr-2 h-5 w-5' />
+      <FaGithub className='mr-2 h-5 w-5' />
       <span className='hidden text-sm font-medium sm:inline'>
         {stars !== null ? `Contribute ${stars} ⭐` : 'Loading...'}
       </span>

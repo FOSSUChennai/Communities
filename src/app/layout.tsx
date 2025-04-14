@@ -5,6 +5,8 @@ import { IS_PROD, SITE_URL } from '../lib/constants';
 import UmamiProvider from 'next-umami';
 import Header from '../components/shared/header';
 import Footer from '../components/shared/footer';
+import ThemeContextProvider from '@/context/theme-context';
+import ThemeSwitch from '@/components/ui/theme-switch';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -66,11 +68,14 @@ export default function RootLayout({
         <link rel='icon' href='/favicon.ico' />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} mx-auto max-w-[1120px] bg-[#fafafa] antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} relative mx-auto max-w-[1120px] bg-gray-50 text-gray-950 antialiased dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
       >
-        <Header />
-        {children}
-        <Footer />
+        <ThemeContextProvider>
+          <Header />
+          {children}
+          <Footer />
+          <ThemeSwitch />
+        </ThemeContextProvider>
       </body>
       {IS_PROD && <UmamiProvider websiteId={webId} />}
     </html>

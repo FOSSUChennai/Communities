@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.7",
-    "framer-motion": "^12.4.10",
+    "framer-motion": "^12.6.5",
     "next": "15.1.4",
     "next-umami": "^1.0.0",
     "react": "^19.0.0",

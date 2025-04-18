@@ -30,7 +30,7 @@ type EventCardProps = {
 const Events = () => {
   const [monthlyCardHeight, setMonthlyCardHeight] = useState<number>(0);
   const [upcomingCardHeight, setUpcomingCardHeight] = useState<number>(0);
-   // Create a date object for start of today
+  // Create a date object for start of today
   const today = new Date();
   today.setHours(0, 0, 0, 0);
 
@@ -130,7 +130,7 @@ const Events = () => {
 
     return (
       <div
-        className='group relative block cursor-pointer rounded-lg p-[2px] transition-all duration-300'
+        className='group relative block cursor-pointer rounded-lg bg-gray-50 p-[2px] text-gray-950 transition-all duration-300 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90'
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
       >
@@ -145,7 +145,7 @@ const Events = () => {
             WebkitMaskComposite: 'xor'
           }}
         />
-        <div className='relative h-full rounded-lg border-2 border-[rgb(229,231,235)] bg-white p-4 shadow-sm transition-shadow hover:border-[rgb(255,255,255,0.5)] hover:shadow-md'>
+        <div className='relative h-full rounded-lg border-2 border-[rgb(229,231,235)] bg-white p-4 shadow-sm transition-shadow hover:border-[rgb(255,255,255,0.5)] hover:shadow-md dark:border-gray-700 dark:bg-gray-900 dark:hover:border-[rgb(255,255,255,0.5)] dark:hover:shadow-md'>
           <div
             className='pointer-events-none absolute -inset-px opacity-0 transition-opacity duration-300 group-hover:opacity-50'
             style={{
@@ -157,14 +157,14 @@ const Events = () => {
           <div className='relative flex flex-wrap items-center justify-between gap-2'>
             {isOverflowing ? (
               <Tooltip content={communityName}>
-                <div className='rounded-md border-2 border-black bg-white px-2 py-1 text-xs text-black'>
+                <div className='rounded-md border-2 border-black px-2 py-1 text-xs dark:border-gray-300'>
                   <span ref={communityNameRef} className='block max-w-[200px] truncate'>
                     {communityName}
                   </span>
                 </div>
               </Tooltip>
             ) : (
-              <div className='rounded-md border-2 border-black bg-white px-2 py-1 text-xs text-black'>
+              <div className='rounded-md border-2 border-black px-2 py-1 text-xs dark:border-gray-300'>
                 <span ref={communityNameRef} className='block max-w-[200px] truncate'>
                   {communityName}
                 </span>
@@ -176,14 +176,14 @@ const Events = () => {
                 alt={`${title} logo`}
                 width={24}
                 height={24}
-                className='rounded-sm object-cover filter transition-all duration-300 hover:filter-none'
+                className='rounded-sm object-cover filter transition-all duration-300 hover:filter-none dark:bg-slate-200'
               />
             )}
           </div>
 
           <a href={link} target='_blank' rel='noopener noreferrer' className='block'>
             <h3
-              className={`mb-2 mt-3 text-xl font-medium text-black transition-all duration-300`}
+              className={`mb-2 mt-3 text-xl font-medium transition-all duration-300`}
               style={{
                 height: `${isMonthly ? monthlyCardHeight : upcomingCardHeight}px`,
                 overflow: 'hidden'
@@ -193,7 +193,7 @@ const Events = () => {
               {title}
             </h3>
 
-            <div className='flex-row items-center text-sm text-gray-600'>
+            <div className='flex-row items-center text-sm text-gray-600 dark:text-gray-400'>
               <div className='flex items-center space-x-2'>
                 <span className={`rounded bg-green-100 px-2 py-0.5 text-xs text-green-800`}>
                   {location}
@@ -222,10 +222,10 @@ const Events = () => {
   };
 
   return (
-    <main className='mx-4 rounded-xl bg-white p-6 md:mx-8 lg:mx-16'>
+    <main className='mx-4 rounded-xl p-6 md:mx-8 lg:mx-16'>
       <section>
         <h2 className='mb-3 text-lg font-normal'>
-          <span className='text-[30px] font-semibold text-black'>this month</span>
+          <span className='text-[30px] font-semibold'>this month</span>
         </h2>
         <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3'>
           {monthlyEvents.length > 0 ? (
@@ -250,7 +250,7 @@ const Events = () => {
 
       <section className='mt-12'>
         <h2 className='mb-3 text-lg font-normal'>
-          <span className='text-[30px] font-semibold text-black'>upcoming</span>
+          <span className='text-[30px] font-semibold'>upcoming</span>
         </h2>
         <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3'>
           {upcomingEvents.length > 0 ? (
@@ -292,9 +292,9 @@ function Tooltip({ content, children }: TooltipProps) {
         {children}
       </div>
       {showTooltip && (
-        <div className='absolute -top-12 left-1/2 z-50 -translate-x-1/2 transform whitespace-nowrap rounded-md border-2 border-gray-800 bg-gray-100 px-2 py-1 text-xs text-gray-800 shadow-lg'>
+        <div className='absolute -top-12 left-1/2 z-50 -translate-x-1/2 transform whitespace-nowrap rounded-md border-2 border-gray-800 px-2 py-1 text-xs text-gray-800 shadow-lg dark:border-gray-300 dark:text-gray-400'>
           {content}
-          <div className='absolute -bottom-1 left-1/2 h-2 w-2 -translate-x-1/2 rotate-45 transform bg-gray-100' />
+          <div className='absolute -bottom-1 left-1/2 h-2 w-2 -translate-x-1/2 rotate-45 transform' />
         </div>
       )}
     </div>

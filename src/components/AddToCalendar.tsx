@@ -1,5 +1,4 @@
-import Image from 'next/image';
-import Add2Calendar from '../../public/add2Calendar.webp';
+import { BiCalendar } from 'react-icons/bi';
 
 interface AddToCalendarProps {
   eventTitle: string;
@@ -38,7 +37,7 @@ const AddToCalendar: React.FC<AddToCalendarProps> = ({
 
   return (
     <button onClick={handleRedirect}>
-      <Image src={Add2Calendar} alt='CalendarIcon' style={{ width: '20px', height: '20px' }} />
+      <BiCalendar size={17} />
     </button>
   );
 };

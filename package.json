@@ -20,7 +20,7 @@
     "next": "15.1.4",
     "next-umami": "^1.0.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "react-dom": "^19.1.0",
     "rss": "^1.2.2"
   },
   "devDependencies": {

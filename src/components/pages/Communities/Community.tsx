@@ -178,7 +178,7 @@ const Community = () => {
 
   return (
     <main className='mx-[2%] my-16 flex items-center rounded-xl bg-white p-3 shadow-2xl shadow-black/25 sm:mx-[10%] sm:p-6'>
-      <section className='relative flex flex-col py-2'>
+      <section className='relative flex w-full flex-col py-2'>
         <div className='mb-8'>
           <h2 className='mb-4 text-3xl font-bold text-gray-900'>Tech Communities in Tamil Nadu</h2>
           <div className='relative'>

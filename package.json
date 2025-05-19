@@ -43,7 +43,7 @@
     "prettier-plugin-tailwindcss": "^0.6.9",
     "tailwindcss": "^3.4.1",
     "typescript": "^5",
-    "typescript-eslint": "^8.19.0"
+    "typescript-eslint": "^8.32.1"
   },
   "lint-staged": {
     "*.{cjs,mjs,js,jsx,cts,mts,ts,tsx,json}": "eslint --fix",

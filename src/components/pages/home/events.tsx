@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useRef, useState } from 'react';
-// import events from '../../../data/events.json';
+import eventsJson from '../../../data/events.json';
 import { MapPin } from '@phosphor-icons/react';
 import EmptyEventCard from '../../no-events-card';
 import Image from 'next/image';
@@ -46,7 +46,12 @@ const Events = () => {
     fetch(
       'https://raw.githubusercontent.com/FOSSUChennai/Communities/refs/heads/main/src/data/events.json'
     )
-      .then((resp) => resp.json())
+      .then((response) => {
+        if (!response.ok) {
+          setEvents(eventsJson);
+        }
+        return response.json();
+      })
       .then((json) => setEvents(json));
   }, []);
 

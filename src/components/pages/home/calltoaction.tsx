@@ -22,8 +22,8 @@ const CallToAction = () => {
         <div className='relative z-10 flex flex-col text-left'>
           <div className='max-w-2xl'>
             <h3 className='text-3xl font-semibold text-white md:text-4xl'>
-              Know a tech event? <br className='hidden md:block' /> Share it to help others find and
-              join!
+              Know a tech event? <br className='block' />{' '}
+              <span className='text-black'> Share it to help others find and join!</span>
             </h3>
             <p className='mt-3 text-lg font-medium text-white/80 drop-shadow-md'>
               Add your event to our list and be a part of the growing tech community.

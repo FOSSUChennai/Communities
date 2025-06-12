@@ -1,0 +1,314 @@
+name: Validate JSON Fields
+
+on:
+  pull_request:
+    paths:
+      - 'src/data/events.json'
+      - 'src/data/communities.json'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  validate-json-fields:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        run: |
+          npm install -g jsonlint
+
+      - name: Lint events.json
+        id: lint-events
+        run: |
+          jsonlint -q src/data/events.json > events_lint_output.txt 2>&1
+          if [ $? -ne 0 ]; then
+            echo "events_lint_failed=true" >> $GITHUB_OUTPUT
+            cat events_lint_output.txt >> $GITHUB_STEP_SUMMARY
+          else
+            echo "events_lint_failed=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Lint communities.json
+        id: lint-communities
+        run: |
+          jsonlint -q src/data/communities.json > communities_lint_output.txt 2>&1
+          if [ $? -ne 0 ]; then
+            echo "communities_lint_failed=true" >> $GITHUB_OUTPUT
+            cat communities_lint_output.txt >> $GITHUB_STEP_SUMMARY
+          else
+            echo "communities_lint_failed=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Comment on PR for Events Linting Failure
+        if: github.event_name == 'pull_request' && steps.lint-events.outputs.events_lint_failed == 'true'
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const fs = require('fs');
+            const lintOutput = fs.readFileSync('events_lint_output.txt', 'utf8');
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '❌ **Events JSON Linting Failed**\n\n```\n' + lintOutput + '\n```\n\nPlease fix the JSON syntax in `src/data/events.json`.'
+            });
+
+      - name: Comment on PR for Events Linting Success
+        if: github.event_name == 'pull_request' && steps.lint-events.outputs.events_lint_failed == 'false'
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '✅ **Events JSON Linting Passed**\n\nThe JSON syntax in `src/data/events.json` is valid.'
+            });
+
+      - name: Comment on PR for Communities Linting Failure
+        if: github.event_name == 'pull_request' && steps.lint-communities.outputs.communities_lint_failed == 'true'
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const fs = require('fs');
+            const lintOutput = fs.readFileSync('communities_lint_output.txt', 'utf8');
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '❌ **Communities JSON Linting Failed**\n\n```\n' + lintOutput + '\n```\n\nPlease fix the JSON syntax in `src/data/communities.json`.'
+            });
+
+      - name: Comment on PR for Communities Linting Success
+        if: github.event_name == 'pull_request' && steps.lint-communities.outputs.communities_lint_failed == 'false'
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '✅ **Communities JSON Linting Passed**\n\nThe JSON syntax in `src/data/communities.json` is valid.'
+            });
+
+      - name: Overall PR Summary and Approval
+        id: approve-pr
+        if: github.event_name == 'pull_request' && steps.lint-events.outputs.events_lint_failed == 'false' && steps.lint-communities.outputs.communities_lint_failed == 'false'
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '🎉 **All JSON Checks Passed**\n\n' +
+                    '- ✅ Events JSON Linting: Passed\n' +
+                    '- ✅ Communities JSON Linting: Passed\n\n' +
+                    'Your changes are ready to be merged!'
+            });
+
+            await github.rest.pulls.createReview({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number,
+              event: 'APPROVE',
+              body: 'Automatically approved because all JSON validation and linting checks passed.'
+            });
+
+            core.setOutput('approved', 'true');
+
+      - name: Check if PR only changes JSON data files
+        id: check-pr-files
+        if: steps.approve-pr.outputs.approved == 'true'
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            // Get PR files
+            const { data: files } = await github.rest.pulls.listFiles({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number
+            });
+
+            // Check if only JSON files in src/data are modified
+            const jsonOnly = files.every(file => 
+              (file.filename === 'src/data/events.json' || 
+               file.filename === 'src/data/communities.json')
+            );
+
+            console.log(`PR #${context.issue.number} contains only JSON data files: ${jsonOnly}`);
+            core.setOutput('json_only', jsonOnly.toString());
+
+      - name: Auto Merge PR
+        if: steps.check-pr-files.outputs.json_only == 'true'
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            console.log(`Attempting to merge PR #${context.issue.number}`);
+
+            let branchName;
+
+            try {
+              // First, get the PR information to retrieve the branch name and details
+              const { data: prData } = await github.rest.pulls.get({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: context.issue.number
+              });
+              
+              // Save the branch name for later deletion
+              branchName = prData.head.ref;
+              console.log(`PR branch name: ${branchName}`);
+              
+              // Get PR files to identify which JSON files were modified
+              const { data: files } = await github.rest.pulls.listFiles({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: context.issue.number
+              });
+              
+              const fs = require('fs');
+              
+              // Check which JSON files were modified
+              const eventsModified = files.some(file => file.filename === 'src/data/events.json');
+              const communitiesModified = files.some(file => file.filename === 'src/data/communities.json');
+              
+              // Initialize variables for commit info
+              let commitTitle = '';
+              let commitMessage = 'This automated squash merge includes validated changes to JSON data files:\n\n';
+              
+              // Get specific details from the modified files
+              if (eventsModified) {
+                try {
+                  // Read and parse the events.json file
+                  const eventsData = JSON.parse(fs.readFileSync('src/data/events.json', 'utf8'));
+                  
+                  // Get changes from the PR
+                  const { data: eventDiff } = await github.rest.pulls.getFiles({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    pull_number: context.issue.number,
+                    path: 'src/data/events.json'
+                  });
+                  
+                  // Extract event information for commit message
+                  const eventTitles = eventsData
+                    .filter(event => new Date(event.startDate) >= new Date()) // Future events
+                    .slice(0, 3) // Limit to 3 events to keep message reasonable
+                    .map(event => `"${event.title}"`);
+                  
+                  // Add event-specific information to commit message
+                  if (eventTitles.length > 0) {
+                    commitMessage += `• Updated events including ${eventTitles.join(', ')}\n`;
+                    if (eventTitles.length === 1) {
+                      commitTitle = `Add ${eventTitles[0]} event in PR #${context.issue.number}`;
+                    } else {
+                      commitTitle = `Add ${eventTitles.length} events in PR #${context.issue.number}`;
+                    }
+                  } else {
+                    commitMessage += `• Updated events.json with event information\n`;
+                    commitTitle = `Update events data in PR #${context.issue.number}`;
+                  }
+                } catch (error) {
+                  console.log(`Error parsing events.json: ${error.message}`);
+                  commitMessage += `• Updated events.json with new community event information\n`;
+                  if (!commitTitle) {
+                    commitTitle = `Update events data in PR #${context.issue.number}`;
+                  }
+                }
+              }
+              
+              if (communitiesModified) {
+                try {
+                  // Read and parse the communities.json file
+                  const communitiesData = JSON.parse(fs.readFileSync('src/data/communities.json', 'utf8'));
+                  
+                  // Extract community names for commit message
+                  const communityNames = communitiesData
+                    .slice(0, 3) // Limit to 3 communities to keep message reasonable
+                    .map(community => `"${community.name}"`);
+                  
+                  // Add community-specific information to commit message
+                  if (communityNames.length > 0) {
+                    commitMessage += `• Updated communities including ${communityNames.join(', ')}\n`;
+                    if (!eventsModified) {
+                      if (communityNames.length === 1) {
+                        commitTitle = `Add ${communityNames[0]} community in PR #${context.issue.number}`;
+                      } else {
+                        commitTitle = `Update ${communityNames.length} communities in PR #${context.issue.number}`;
+                      }
+                    }
+                  } else {
+                    commitMessage += `• Updated communities.json with community information\n`;
+                    if (!commitTitle) {
+                      commitTitle = `Update communities data in PR #${context.issue.number}`;
+                    }
+                  }
+                } catch (error) {
+                  console.log(`Error parsing communities.json: ${error.message}`);
+                  commitMessage += `• Updated communities.json with new community information\n`;
+                  if (!commitTitle) {
+                    commitTitle = `Update communities data in PR #${context.issue.number}`;
+                  }
+                }
+              }
+              
+              // Default title if needed
+              if (!commitTitle) {
+                if (eventsModified && communitiesModified) {
+                  commitTitle = `Update events and communities data in PR #${context.issue.number}`;
+                } else {
+                  commitTitle = `Update JSON data files in PR #${context.issue.number}`;
+                }
+              }
+              
+              // Add validation information
+              commitMessage += '\nAll JSON validation and linting checks have passed successfully.';
+              
+              // Add PR title and description for additional context
+              if (prData.title) {
+                commitMessage += `\n\nOriginal PR: "${prData.title}"`;
+              }
+              
+              // Merge the PR using squash method with enhanced commit info
+              await github.rest.pulls.merge({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: context.issue.number,
+                merge_method: 'squash',
+                commit_title: commitTitle,
+                commit_message: commitMessage
+              });
+              console.log(`Successfully merged PR #${context.issue.number}`);
+              
+              // Delete the branch after successful merge
+              await github.rest.git.deleteRef({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                ref: `heads/${branchName}`
+              });
+              console.log(`Successfully deleted branch: ${branchName}`);
+              
+            } catch (error) {
+              console.log(`Failed to process PR #${context.issue.number}`);
+              console.log(error);
+              core.setFailed(`Failed to process PR: ${error.message}`);
+            }
+
+      - name: Fail workflow if validation failed
+        if: steps.lint-events.outputs.events_lint_failed == 'true' || steps.lint-communities.outputs.communities_lint_failed == 'true'
+        run: exit 1

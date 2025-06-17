@@ -406,5 +406,16 @@
     "location": "Chennai",
     "communityName": "Build2Learn",
     "communityLogo": "https://i.ibb.co/CBsgh43/bxOxo5O.png"
+  },
+  {
+    "eventName": "A Coffee Talk At The HUB",
+    "eventDescription": "🚨 Calling all Java heads, code junkies & caffeine lovers! 🚨 It’s time to brew brilliance and stir up some tech magic!",
+    "eventDate": "2025-06-28",
+    "eventTime": "9:00",
+    "eventVenue": "Contentstack India Pvt. Ltd., 5th Floor, WorkEZ, Helix.21, Guru Nanak College Rd, above West side, Indira Gandhi Nagar, Velachery, Chennai, Tamil Nadu 600042",
+    "eventLink": "https://lu.ma/eapgdfxn?utm_source=tamilnadutech",
+    "location": "Chennai",
+    "communityName": "Code On JVM Chennai",
+    "communityLogo": "https://i.ibb.co/5xSndqPW/Code-On-Chennai-JVM.png"
   }
 ]

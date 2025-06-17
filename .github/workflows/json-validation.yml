@@ -165,6 +165,7 @@ jobs:
             console.log(`Attempting to merge PR #${context.issue.number}`);
 
             let branchName;
+            let isFork = false;
 
             try {
               // First, get the PR information to retrieve the branch name and details
@@ -177,6 +178,10 @@ jobs:
               // Save the branch name for later deletion
               branchName = prData.head.ref;
               console.log(`PR branch name: ${branchName}`);
+              
+              // Check if the PR is from a fork
+              isFork = prData.head.repo.fork || (prData.head.repo.full_name !== prData.base.repo.full_name);
+              console.log(`PR is from a fork: ${isFork}`);
               
               // Get PR files to identify which JSON files were modified
               const { data: files } = await github.rest.pulls.listFiles({
@@ -299,13 +304,18 @@ jobs:
               });
               console.log(`Successfully merged PR #${context.issue.number}`);
               
-              // Delete the branch after successful merge
-              await github.rest.git.deleteRef({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                ref: `heads/${branchName}`
-              });
-              console.log(`Successfully deleted branch: ${branchName}`);
+              // Only delete the branch if it's not from a fork
+              if (!isFork) {
+                console.log(`Attempting to delete branch ${branchName} (not a fork)`);
+                await github.rest.git.deleteRef({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  ref: `heads/${branchName}`
+                });
+                console.log(`Successfully deleted branch: ${branchName}`);
+              } else {
+                console.log(`Skipping branch deletion for ${branchName} because it's from a fork`);
+              }
               
             } catch (error) {
               console.log(`Failed to process PR #${context.issue.number}`);

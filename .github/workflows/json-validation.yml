@@ -52,8 +52,29 @@ jobs:
             echo "communities_lint_failed=false" >> $GITHUB_OUTPUT
           fi
 
+      - name: Check Modified Files
+        id: check-modified-files
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const { data: files } = await github.rest.pulls.listFiles({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number
+            });
+
+            const eventsModified = files.some(file => file.filename === 'src/data/events.json');
+            const communitiesModified = files.some(file => file.filename === 'src/data/communities.json');
+
+            console.log(`Events modified: ${eventsModified}`);
+            console.log(`Communities modified: ${communitiesModified}`);
+
+            core.setOutput('events_modified', eventsModified.toString());
+            core.setOutput('communities_modified', communitiesModified.toString());
+
       - name: Comment on PR for Events Linting Failure
-        if: steps.lint-events.outputs.events_lint_failed == 'true'
+        if: steps.lint-events.outputs.events_lint_failed == 'true' && steps.check-modified-files.outputs.events_modified == 'true'
         uses: actions/github-script@v6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -68,7 +89,7 @@ jobs:
             });
 
       - name: Comment on PR for Events Linting Success
-        if: steps.lint-events.outputs.events_lint_failed == 'false'
+        if: steps.lint-events.outputs.events_lint_failed == 'false' && steps.check-modified-files.outputs.events_modified == 'true'
         uses: actions/github-script@v6
         with:
           script: |
@@ -80,7 +101,7 @@ jobs:
             });
 
       - name: Comment on PR for Communities Linting Failure
-        if: steps.lint-communities.outputs.communities_lint_failed == 'true'
+        if: steps.lint-communities.outputs.communities_lint_failed == 'true' && steps.check-modified-files.outputs.communities_modified == 'true'
         uses: actions/github-script@v6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -95,7 +116,7 @@ jobs:
             });
 
       - name: Comment on PR for Communities Linting Success
-        if: steps.lint-communities.outputs.communities_lint_failed == 'false'
+        if: steps.lint-communities.outputs.communities_lint_failed == 'false' && steps.check-modified-files.outputs.communities_modified == 'true'
         uses: actions/github-script@v6
         with:
           script: |
@@ -113,14 +134,23 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
+            let summaryMessage = '🎉 **JSON Checks Passed**\n\n';
+
+            if (steps.check-modified-files.outputs.events_modified == 'true') {
+              summaryMessage += '- ✅ Events JSON Linting: Passed\n';
+            }
+
+            if (steps.check-modified-files.outputs.communities_modified == 'true') {
+              summaryMessage += '- ✅ Communities JSON Linting: Passed\n';
+            }
+
+            summaryMessage += '\nYour changes are ready to be merged!';
+
             github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: '🎉 **All JSON Checks Passed**\n\n' +
-                    '- ✅ Events JSON Linting: Passed\n' +
-                    '- ✅ Communities JSON Linting: Passed\n\n' +
-                    'Your changes are ready to be merged!'
+              body: summaryMessage
             });
 
             await github.rest.pulls.createReview({

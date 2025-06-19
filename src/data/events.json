@@ -92,10 +92,21 @@
     "eventDescription": "🚨 Calling all Java heads, code junkies & caffeine lovers! 🚨 It’s time to brew brilliance and stir up some tech magic!",
     "eventDate": "2025-06-28",
     "eventTime": "9:00",
-    "eventVenue": "Contentstack India Pvt. Ltd., 5th Floor, WorkEZ, Helix.21, Guru Nanak College Rd, above West side, Indira Gandhi Nagar, Velachery, Chennai, Tamil Nadu 600042",
+    "eventVenue": "Contentstack India Pvt. Ltd., 5th Floor, WorkEZ, Helix.21, Guru Nanak College Rd, above West side, Indira Gandhi Nagar, Velachery, Chennai, Tamil Nadu 600042",
     "eventLink": "https://lu.ma/eapgdfxn?utm_source=tamilnadutech",
     "location": "Chennai",
     "communityName": "Code On JVM Chennai",
     "communityLogo": "https://i.ibb.co/5xSndqPW/Code-On-Chennai-JVM.png"
+  },
+  {
+    "eventName": "The Future is Now: SRE Powered by AI & Hyper-Automated Healing",
+    "eventDescription": "Discovering how AI is no longer just a concept but the new standard, and how Hyper Automation is making fully self-healing, zero-touch systems an achievable goal today.",
+    "eventDate": "2025-07-05",
+    "eventTime": "10:30",
+    "eventVenue": "New cafe , 3rd floor ,Audi – 2,HCL Technologies, Gate 1, Elcot SEZ, Shollinganallur, Chennai 600119",
+    "eventLink": "https://www.meetup.com/chennai-site-reliability-engineering-meetup-group/events/308535503/?eventOrigin=group_upcoming_events",
+    "location": "Chennai",
+    "communityName": "Chennai Site Reliability Engineering",
+    "communityLogo": "https://i.ibb.co/xt5zTSMG/SRElogo.jpg"
   }
 ]

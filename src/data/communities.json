@@ -175,5 +175,16 @@
     "linkedin": "https://www.linkedin.com/company/codeonjvmchennai/",
     "telegram": "https://t.me/codeonjvmchennai",
     "youtube": "https://www.youtube.com/channel/UCxQft97E-LVwIHcZd38JghA"
+  },
+  {
+    "name": "Chennai SRE",
+    "logo": "https://i.ibb.co/xt5zTSMG/SRElogo.jpg",
+    "description": "Discovering how AI is no longer just a concept but the new standard, and how Hyper Automation is making fully self-healing, zero-touch systems an achievable goal today.",
+    "location": "Chennai",
+    "twitter": "https://x.com/chennaisre",
+    "instagram": "https://www.instagram.com/chennai_sre/",
+    "linkedin": "https://www.linkedin.com/groups/14496299/",
+    "youtube": "https://www.youtube.com/@ChennaiSRE"
   }
+
 ]

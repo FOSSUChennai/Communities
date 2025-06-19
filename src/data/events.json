@@ -10,6 +10,17 @@
     "communityName": "FOSS United Chennai",
     "communityLogo": "https://i.ibb.co/F45XJbvR/FOSS-United-Chennai.png"
   },
+   {
+    "eventName": "FOSS Meetup Coimbatore",
+    "eventDescription": "Monthly FOSS Meetup from FOSS United Coimbatore",
+    "eventDate": "2025-07-12",
+    "eventTime": "14:00",
+    "eventVenue": "Coimbatore Institute of Technology",
+    "eventLink": "https://fossunited.org/c/coimbatore/2025/july",
+    "location": "Coimbatore",
+    "communityName": "FOSS United Coimbatore",
+    "communityLogo": "https://i.ibb.co/F45XJbvR/FOSS-United-Chennai.png"
+  },
   {
     "eventName": "NammaFlutter June Meetup",
     "eventDescription": "NammaFlutter is a community of Flutter developers in Chennai. We are celebrating our 1st year anniversary with a meetup. Join us for a day of fun, learning, and networking with fellow Flutter enthusiasts.",

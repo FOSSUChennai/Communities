@@ -53,5 +53,16 @@
     "location": "Chennai",
     "communityName": "Chennai Site Reliability Engineering",
     "communityLogo": "https://i.ibb.co/xt5zTSMG/SRElogo.jpg"
+  },
+  {
+    "eventName": "FOSS Meetup Coimbatore",
+    "eventDescription": "Join us for our FOSS United Coimbatore Chapter meetup! In Collaboration with FOSS-CIT",
+    "eventDate": "2025-07-12",
+    "eventTime": "14:00",
+    "eventVenue": "Coimbatore Institute of Technology, Avinashi Rd, Civil Aerodrome Post, Coimbatore, Tamil Nadu 641014",
+    "eventLink": "https://fossunited.org/c/coimbatore/2025/july",
+    "location": "Coimbatore",
+    "communityName": "FOSS United Coimbatore and FOSS-CIT",
+    "communityLogo": "https://i.ibb.co/m5900Dn2/Logo-FOSS-United-CBE.jpg"
   }
 ]

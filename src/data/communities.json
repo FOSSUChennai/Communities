@@ -185,5 +185,16 @@
     "linkedin": "https://www.linkedin.com/company/codeonjvmchennai/",
     "telegram": "https://t.me/codeonjvmchennai",
     "youtube": "https://www.youtube.com/channel/UCxQft97E-LVwIHcZd38JghA"
+  },
+  {
+    "name": "GDG Cloud Chennai",
+    "logo": "https://i.ibb.co/XZRVypNb/gdg-cloud-chennai-logo.jpg",
+    "description": "GDG Cloud Chennai is the official and independent Google Developers Group (#GDG) for Google Cloud (#GCP) in Chennai location, supported by Google Developers. We have passionate individuals (from Developers to CTOs, System Admins to Data Scientists) who focus on Google Cloud, open-source technologies, and related topics.",
+    "location": "Chennai",
+    "website": "http://www.gdgcloudchennai.com/",
+    "linkedin": "https://www.linkedin.com/showcase/gdg-cloud-chennai",
+    "github": "https://github.com/GdgCloudChennai",
+    "instagram": "https://www.instagram.com/GdgCloudChennai/",
+    "twitter": "https://x.com/GdgCloudChennai"
   }
 ]

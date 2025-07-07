@@ -31,5 +31,16 @@
     "location": "Chennai",
     "communityName": "GDG Cloud Chennai",
     "communityLogo": "https://i.ibb.co/XZRVypNb/gdg-cloud-chennai-logo.jpg"
+  },
+  {
+    "eventName": "June Ponal, July Kaatre!",
+    "eventDescription": "Full-throttle JVM meetup for devs & Java geeks!Code, chill & connect as we dive into Java, JVM, and more. Expect lightning talks, live demos & community fun. Filter kaapi meets functional programming. Don't miss it!",
+    "eventDate": "2025-07-12",
+    "eventTime": "09:00",
+    "eventVenue": "YUNIQ, 4th Floor, TICEL BIOPARK, 5, CSIR Rd, Phase II, Tharamani, Chennai, Tamil Nadu 600113, India",
+    "eventLink": "https://lu.ma/qp3mbc8k",
+    "location": "Chennai",
+    "communityName": "Code on JVM",
+    "communityLogo": "https://i.ibb.co/sprfRsVT/codeonjvmchennai-logo.jpg"
   }
 ]

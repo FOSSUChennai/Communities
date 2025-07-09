@@ -18,5 +18,11 @@
 		<changefreq>daily</changefreq>
 		<priority>0.8</priority>
 	</url>
+	<url>
+		<loc>https://tamilnadu.tech/archive</loc>
+		<lastmod>2025-05-06</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>0.8</priority>
+	</url>
 	<!-- Add more URLs as site grows -->
 </urlset> 

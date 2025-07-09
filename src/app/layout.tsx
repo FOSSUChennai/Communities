@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
-import { IS_PROD, SITE_URL } from '../lib/constants';
+import { IS_PROD } from '../lib/constants';
 import UmamiProvider from 'next-umami';
 import Header from '../components/shared/header';
 import Footer from '../components/shared/footer';
+import { generateMetadata, Page } from '@/components/shared/utils/metadata';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -16,42 +17,7 @@ const geistMono = Geist_Mono({
   subsets: ['latin']
 });
 
-export const metadata: Metadata = {
-  title: 'TamilNadu Tech Community',
-  description:
-    'Never miss an event from your favourite Tech Commnuity in Tamil Nadu. Discover upcoming developer conferences, tech meetups, and community events across Tamil Nadu. Stay updated with the latest technology events, workshops, and hackathons in Chennai, Coimbatore, Madurai and more.',
-  keywords:
-    'tamil nadu tech events, developer conferences tamil nadu, tech meetups chennai, developer events chennai, tamil nadu developer community, tech conferences india, technology events chennai, developer workshops tamil nadu, tech community events, coding meetups chennai',
-  openGraph: {
-    title: 'Tamil Nadu Tech Events & Developer Conferences | TN Tech Community',
-    description:
-      'Discover upcoming developer conferences, tech meetups, and community events across Tamil Nadu. Stay updated with the latest technology events, workshops, and hackathons.',
-    type: 'website',
-    locale: 'en_US',
-    siteName: 'Tamil Nadu Tech Events'
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Tamil Nadu Tech Events & Developer Conferences',
-    description:
-      'Discover upcoming developer conferences, tech meetups, and community events across Tamil Nadu.'
-  },
-  alternates: {
-    canonical: SITE_URL
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1
-    }
-  },
-  metadataBase: new URL(SITE_URL)
-};
+export const metadata: Metadata = generateMetadata(Page.HOME);
 
 export default function RootLayout({
   children
@@ -59,11 +25,33 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const webId = process.env.UMAMI_ANALYTICS_ID;
+
+  const jsonLD = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'TamilNadu Tech',
+    url: 'https://tamilnadu.tech/',
+    logo: 'https://tamilnadu.tech/favicon.ico',
+    sameAs: ['https://github.com/fossuchennai/communities'],
+    description:
+      'Discover upcoming developer conferences, tech meetups, and community events across Tamil Nadu. We host regular meetups, workshops, and code sprints to unite Java, Kotlin, Python, React, Flutter and other tech communities.',
+    foundingDate: '2025-01-01',
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': 'https://tamilnadu.tech/'
+    }
+  };
+
   return (
     <html lang='en'>
       <head>
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
+        <meta name='theme-color' content='#fafafa' />
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLD) }}
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} mx-auto max-w-[1120px] bg-[#fafafa] antialiased`}

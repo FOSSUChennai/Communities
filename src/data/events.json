@@ -1,5 +1,15 @@
 [
   {
+    "eventName": "TypedCoders",
+    "eventDescription": "TypedCoders is a niche tech community dedicated exclusively to mastering and exploring everything around TypeScript.",
+    "eventDate": "2025-07-19",
+    "eventTime": "14:00",
+    "eventVenue": "Talentship , Chennai, Tamil Nadu 600119 ",
+    "eventLink": "https://lu.ma/x4jmpo9x",
+    "location": "Chennai",
+    "communityName": "TypedCoders",
+    "communityLogo": "https://i.ibb.co/G3nxBFbm/1750660828268.jpg"
+  },{
     "eventName": "TossConf'25",
     "eventDescription": "TOSSConf25 (Tamil Open Source Software Conference 2025) is a community-driven event celebrating open-source software and Tamil computing. Scheduled for July 18–19, 2025, at St. Joseph’s Institute of Technology in Semmancheri, Chennai, the conference aims to bring together developers, contributors, and enthusiasts to promote open source initiatives in Tamil Nadu.",
     "eventDate": "2025-07-18",
@@ -30,7 +40,7 @@
     "eventLink": "https://gdg.community.dev/events/details/google-gdg-cloud-chennai-presents-cloud-community-days-2025-chennai/",
     "location": "Chennai",
     "communityName": "GDG Cloud Chennai",
-    "communityLogo": "https://i.ibb.co/XZRVypNb/gdg-cloud-chennai-logo.jpg"
+    "communityLogo": "https://ibb.co/h1L7hCt0"
   },
   {
     "eventName": "June Ponal, July Kaatre!",

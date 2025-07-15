@@ -47,7 +47,6 @@ export function ResizableNavbar() {
             </NavbarButton>
           </div>
         </NavBody>
-
         {/* Mobile Navigation */}
         <MobileNav>
           <MobileNavHeader>

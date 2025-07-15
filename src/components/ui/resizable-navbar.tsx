@@ -1,9 +1,8 @@
 'use client';
 import { cn } from '@/lib/utils';
-import { IconMenu2, IconX } from '@tabler/icons-react';
 import Link from 'next/link';
-import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'motion/react';
-
+import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'framer-motion';
+import { List, X } from '@phosphor-icons/react';
 import React, { useRef, useState } from 'react';
 
 interface NavbarProps {
@@ -207,9 +206,9 @@ export const MobileNavMenu = ({ children, className, isOpen, onClose }: MobileNa
 
 export const MobileNavToggle = ({ isOpen, onClick }: { isOpen: boolean; onClick: () => void }) => {
   return isOpen ? (
-    <IconX className='text-black' onClick={onClick} />
+    <X size={20} className='text-black' onClick={onClick} />
   ) : (
-    <IconMenu2 className='text-black' onClick={onClick} />
+    <List size={20} className='text-black' onClick={onClick} />
   );
 };
 

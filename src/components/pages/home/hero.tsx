@@ -7,7 +7,7 @@ import RocketUpdated from '../../../../public/RocketUpdated.webp';
 
 const Hero = () => {
   return (
-    <div className='relative z-10 my-16 mb-48 flex items-start bg-[#fafafa] px-4 md:px-8 lg:px-16'>
+    <div className='relative z-10 my-16 mb-48 flex items-start bg-[#fafafa] px-4 pt-8 md:px-8 lg:px-16'>
       <div className='container relative mx-auto flex flex-col items-center justify-between px-4 text-center md:flex-row md:text-left'>
         <motion.div
           className='z-10 max-w-2xl'

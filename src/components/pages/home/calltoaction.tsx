@@ -1,10 +1,9 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 const CallToAction = () => {
-  const router = useRouter();
   return (
     <div className='m-[12px] px-6 py-12 md:px-16'>
       <div className='relative rounded-lg bg-[#4CAF50] p-10 shadow-lg'>
@@ -31,20 +30,19 @@ const CallToAction = () => {
           </div>
 
           <div className='mt-6 flex flex-wrap gap-4'>
-            <button
+            <a
+              href='https://github.com/fossuchennai/communities/blob/main/CONTRIBUTING.md'
+              target='_blank'
               className='rounded-lg bg-black px-6 py-3 text-base font-medium text-white transition-all duration-300 hover:scale-105 hover:bg-gray-900 focus:ring focus:ring-gray-400/40 active:scale-95'
-              onClick={() =>
-                window.open('https://github.com/fossuchennai/communities/blob/main/CONTRIBUTING.md')
-              }
             >
               Contribute
-            </button>
-            <button
+            </a>
+            <Link
+              href='/Communities'
               className='rounded-lg border border-white/50 bg-transparent px-6 py-3 text-base font-medium text-white transition-all duration-300 hover:scale-105 hover:bg-white/20 focus:ring focus:ring-white/30 active:scale-95'
-              onClick={() => router.push('/Communities')}
             >
               Communities
-            </button>
+            </Link>
           </div>
         </div>
       </div>

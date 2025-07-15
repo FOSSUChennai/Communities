@@ -63,5 +63,16 @@
     "location": "Chennai",
     "communityName": "D3 Community",
     "communityLogo": "https://i.ibb.co/BKQb8hLG/D3-Community-Official-logo.png"
+  },
+  {
+    "eventName": "Chennaipy July Meetup",
+    "eventDescription": "This is a group for anyone who loves Python. Meet and discuss with other Pythonistas in Chennai. Contribute to promoting Python in and around Chennai.",
+    "eventDate": "2025-07-26",
+    "eventTime": "15:00",
+    "eventVenue": "TBD",
+    "eventLink": "TBD",
+    "location": "Chennai",
+    "communityName": "Chennaipy",
+    "communityLogo": "https://res.cloudinary.com/dwir71gi2/image/upload/v1737382622/chennaipy_ovbthm.png"
   }
 ]

@@ -21,39 +21,6 @@
     "communityLogo": "https://i.ibb.co/fWZCQww/hero-bg1.png"
   },
   {
-    "eventName": "FOSS Meetup Coimbatore",
-    "eventDescription": "Join us for our FOSS United Coimbatore Chapter meetup! In Collaboration with FOSS-CIT",
-    "eventDate": "2025-07-12",
-    "eventTime": "14:00",
-    "eventVenue": "Coimbatore Institute of Technology, Avinashi Rd, Civil Aerodrome Post, Coimbatore, Tamil Nadu 641014",
-    "eventLink": "https://fossunited.org/c/coimbatore/2025/july",
-    "location": "Coimbatore",
-    "communityName": "FOSS United Coimbatore and FOSS-CIT",
-    "communityLogo": "https://i.ibb.co/m5900Dn2/Logo-FOSS-United-CBE.jpg"
-  },
-  {
-    "eventName": "Cloud Community Days 2025 Chennai",
-    "eventDescription": "Flagship full-day event for developers, IT pros & cloud enthusiasts! Dive into Google Cloud & general cloud tech. Expect expert keynotes, technical sessions & hands-on workshops covering AI, ML, & Cloud Infra. Grow, learn & connect. Don't miss it!",
-    "eventDate": "2025-07-12",
-    "eventTime": "09:00",
-    "eventVenue": "Ford Global Technology & Business Center, W67C+98H, Elcot Sez, Sholinganallur, Tamil Nadu, Chennai, 600119",
-    "eventLink": "https://gdg.community.dev/events/details/google-gdg-cloud-chennai-presents-cloud-community-days-2025-chennai/",
-    "location": "Chennai",
-    "communityName": "GDG Cloud Chennai",
-    "communityLogo": "https://ibb.co/h1L7hCt0"
-  },
-  {
-    "eventName": "June Ponal, July Kaatre!",
-    "eventDescription": "Full-throttle JVM meetup for devs & Java geeks!Code, chill & connect as we dive into Java, JVM, and more. Expect lightning talks, live demos & community fun. Filter kaapi meets functional programming. Don't miss it!",
-    "eventDate": "2025-07-12",
-    "eventTime": "09:00",
-    "eventVenue": "YUNIQ, 4th Floor, TICEL BIOPARK, 5, CSIR Rd, Phase II, Tharamani, Chennai, Tamil Nadu 600113, India",
-    "eventLink": "https://lu.ma/qp3mbc8k",
-    "location": "Chennai",
-    "communityName": "Code on JVM",
-    "communityLogo": "https://i.ibb.co/sprfRsVT/codeonjvmchennai-logo.jpg"
-  },
-  {
     "eventName": "D3 Community Meetup #3",
     "eventDescription": "D3 Community Meetup #03: Join a vibrant in-person community for Software Engineers focused on Full Stack, DevOps, Cloud & AI. Learn, network, and grow!",
     "eventDate": "2025-07-26",

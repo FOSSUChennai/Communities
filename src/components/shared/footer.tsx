@@ -12,6 +12,15 @@ export default function Footer() {
         <a href='/archive' className='mt-4 text-[#042613] underline'>
           Events Archive
         </a>
+        {/* ✅ New Wiki Link */}
+        <a
+          href='https://wiki.tamilnadu.tech'
+          target='_blank'
+          rel='noopener noreferrer'
+          className='mt-2 block text-[#042613] underline'
+        >
+          Wiki
+        </a>
       </div>
     </footer>
   );

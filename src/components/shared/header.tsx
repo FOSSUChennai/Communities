@@ -11,6 +11,15 @@ export default function Header() {
       </Link>
       <div className='flex h-full items-center space-x-4'>
         <GitHubButton />
+         {/* ✅ New Wiki Link */}
+        <a
+          href='https://wiki.tamilnadu.tech'
+          target='_blank'
+          rel='noopener noreferrer'
+          className='inline-flex items-center rounded-lg px-4 py-2 text-sm text-black shadow transition duration-200 hover:text-gray-700'
+        >
+          Wiki
+        </a>
         <Link
           href='/rss'
           className='inline-flex items-center rounded-lg px-4 py-2 text-sm text-black shadow transition duration-200 hover:text-gray-700'

@@ -105,7 +105,7 @@ const CommunityCard = ({
           }}
         />
 
-        <div className='flex h-full flex-col'>
+        <div className='flex h-full min-h-[340px] flex-col justify-between'>//consistent card height
           <a
             href={website}
             target='_blank'
@@ -148,7 +148,7 @@ const CommunityCard = ({
             telegram ||
             youtube) && <div className='mt-4 border-t border-gray-100' />}
 
-          <div className='mt-4 flex gap-3 opacity-100 transition-opacity'>
+<div className='mt-auto pt-4 flex gap-3 opacity-100 transition-opacity'>//pushes the icon container to bottom 
             {Object.entries(socialLinks).map(([key, { Icon, color, title, link }]) =>
               eval(key) ? (
                 <HoverIcon

@@ -11,6 +11,17 @@
     "communityLogo": "https://ibb.co/JjzQYTZx"
   },
   {
+    "eventName": "Build2Learn",
+    "eventDescription": "Welcome to build2learn - Where Innovation Meets Community! Imagine a hackathon, but with a twist!🤔 It's not just about building incredible micro products; it's about forging lifelong connections with like-minded individuals who share your passion for innovation! 🤝💡At build2learn, we believe that magic happens when engineers come together to do what they love - BUILD!, Are you someone with a side project that you've been dreaming of bringing to life? build2learn is your chance to turn that dream into reality! ⏰🌟 Are you a student eager to create something extraordinary but in need of mentors to guide you? build2learn is the launchpad you've been waiting for! 🎓🚀 Or maybe you're someone who thrives on helping others unleash their full potential? build2learn is the perfect platform to make a lasting impact! 🤗 Join us at build2learn and embark on a journey of creation, collaboration, and camaraderie! 🌟 See you there!🌆 ",
+    "eventDate": "2025-07-26",
+    "eventTime": "09:30",
+    "eventVenue": "Freshworks, Chennai",
+    "eventLink": "https://lu.ma/7tnq58qg?utm_source=tamilnadutech",
+    "location": "Chennai",
+    "communityName": "Build2Learn",
+    "communityLogo": "https://build2learn.in/images/build2learn-logo.svg"
+  },
+  {
     "eventName": "TypedCoders",
     "eventDescription": "TypedCoders is a niche tech community dedicated exclusively to mastering and exploring everything around TypeScript.",
     "eventDate": "2025-07-19",
@@ -20,7 +31,8 @@
     "location": "Chennai",
     "communityName": "TypedCoders",
     "communityLogo": "https://i.ibb.co/G3nxBFbm/1750660828268.jpg"
-  },{
+  },
+  {
     "eventName": "TossConf'25",
     "eventDescription": "TOSSConf25 (Tamil Open Source Software Conference 2025) is a community-driven event celebrating open-source software and Tamil computing. Scheduled for July 18–19, 2025, at St. Joseph’s Institute of Technology in Semmancheri, Chennai, the conference aims to bring together developers, contributors, and enthusiasts to promote open source initiatives in Tamil Nadu.",
     "eventDate": "2025-07-18",

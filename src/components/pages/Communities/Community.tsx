@@ -74,7 +74,7 @@ const CommunityCard = ({
     github: { Icon: GithubLogo, color: 'text-black', title: 'GitHub', link: github },
     discord: { Icon: DiscordLogo, color: 'text-indigo-500', title: 'Discord', link: discord },
     twitter: { Icon: XLogo, color: 'text-black', title: 'Twitter', link: twitter },
-    instagram: { Icon: InstagramLogo, color: 'text-pink-600', title: 'Instagram', link: instagram },
+    instagram: { Icon: InstagramLogo, color: 'text-pink-500', title: 'Instagram', link: instagram },
     bluesky: { Icon: Butterfly, color: 'text-blue-400', title: 'Bluesky', link: bluesky },
     mastodon: { Icon: MastodonLogo, color: 'text-purple-600', title: 'Mastodon', link: mastodon },
     telegram: { Icon: TelegramLogo, color: 'text-blue-400', title: 'Telegram', link: telegram },

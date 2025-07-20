@@ -215,14 +215,6 @@
     "linkedin": "https://www.linkedin.com/groups/14722178/"
   },
   {
-    "name": "TOSSConf",
-    "logo": "https://i.ibb.co/VcDpKF1h/hero-bg1.png",
-    "description": "விடுதலை - இதை விரும்பாதோர் யார்? விடுதலை விதையைக் கணினிக்குள் விதைக்கும் ஓர் ஒப்பற்ற திருவிழாவே இம்மாநாடு! \"எது செய்க நாட்டுக்கே எனத் துடித்த சிங்கமே! இன்றே, இன்னே புது நாளை உண்டாக்கித் தமிழ் காப்பாய் புத்துணர்வைக் கொணர்வாய் இங்கே!\" என்னும் பாவேந்தரின் வைர வரிகளை வாழ்வாக்கும் ஒரு நல் தொடக்கம்! கட்டற்ற கணித்தமிழை விரும்பும் அத்துணை நல்லுள்ளங்களும் இதில் அடக்கம்! வாருங்கள்! நிகழ்வைப் பாருங்கள்! பங்கு பெறுங்கள்! சங்கம் வளர்த்த தமிழைக் கணினியிலும் வளர்த்தெடுப்போம்!",
-    "location": "Chennai",
-    "website": "https://tossconf25.kaniyam.com/",
-    "github": "https://github.com/tossconf2025/tossconf2025.github.io"
-  },
-  {
     "name": "GeekCoders",
     "logo": "https://i.ibb.co/5xvnYwy1/geek-coders.png",
     "description": "GeekCoders is a thriving community focused on skill development and growth in the tech industry. Our mission is to empower passionate individuals by fostering a culture of collaboration, continuous learning, and networking. Whether you're a beginner or an experienced professional, GeekCoders provides a platform where members can enhance their technical skills, exchange innovative ideas, and connect with like-minded peers. Together, we aim to shape the future of technology by creating opportunities for hands-on learning, mentorship, and real-world problem-solving. Join us and become part of a dynamic, inclusive community committed to driving change in the tech world.",
@@ -433,5 +425,20 @@
     "twitter": "https://x.com/owasp_chennai",
     "instagram": "https://www.instagram.com/owasp_chennai/",
     "discord": "https://discord.com/invite/7PdfJz5"
+  },
+  {
+    "name": "KanchiLUG",
+    "logo": "https://i.ibb.co/4ZB0SpRC/kanchi-lug.jpg",
+    "description": "We are the Linux Users from Kanchipuram, Tamil Nadu. We share all out thoughts, doubts, CDs, knlowedge about Linux nd other open source Software.",
+    "location": "Kanchipuram",
+    "website": "https://kanchilug.wordpress.com/",
+    "telegram": "https://t.me/tamillinux",
+    "youtube": "https://www.youtube.com/channel/UCumTlpC2nok42RJ3yRsbLRA"
+  },
+  {
+    "name": "ILUGC",
+    "description": "ILUGC was started on 1997 and it is an one of the oldest Linux Users Group in India. We are a heterogeneous group of computer users from the South Indian city of Chennai (a.k.a Madras), united in our use of Free/Libre/Open Source Software and support of Software Freedom in general and GNU/Linux in particular",
+    "location": "Chennai",
+    "website": "https://ilugc.in/"
   }
 ]

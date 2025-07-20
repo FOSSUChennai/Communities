@@ -13,7 +13,8 @@ import {
   XLogo,
   YoutubeLogo,
   Butterfly,
-  XSquare
+  XSquare,
+  RedditLogo
 } from '@phosphor-icons/react';
 import HoverIcon from './HoverIcon';
 
@@ -32,6 +33,7 @@ type CommunityCardProps = {
   location?: string;
   youtube?: string;
   github?: string;
+  reddit?: string;
   className?: string;
 };
 
@@ -50,6 +52,7 @@ const CommunityCard = ({
   telegram,
   youtube,
   github,
+  reddit,
   className
 }: CommunityCardProps) => {
   const [mousePosition, setMousePosition] = React.useState<{ x: number; y: number } | null>(null);
@@ -75,7 +78,8 @@ const CommunityCard = ({
     bluesky: { Icon: Butterfly, color: 'text-blue-400', title: 'Bluesky', link: bluesky },
     mastodon: { Icon: MastodonLogo, color: 'text-purple-600', title: 'Mastodon', link: mastodon },
     telegram: { Icon: TelegramLogo, color: 'text-blue-400', title: 'Telegram', link: telegram },
-    youtube: { Icon: YoutubeLogo, color: 'text-red-600', title: 'Youtube', link: youtube }
+    youtube: { Icon: YoutubeLogo, color: 'text-red-600', title: 'Youtube', link: youtube },
+    reddit: { Icon: RedditLogo, color: 'text-red-600', title: 'Reddit', link: reddit }
   };
 
   return (

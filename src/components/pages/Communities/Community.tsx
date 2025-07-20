@@ -114,7 +114,7 @@ const CommunityCard = ({
             href={website}
             target='_blank'
             rel='noopener noreferrer'
-            className='mb-4 flex items-center gap-4'
+            className='mb-4 flex flex-shrink-0 items-center gap-4'
           >
             {logo && (
               <Image
@@ -139,7 +139,7 @@ const CommunityCard = ({
             </div>
           </a>
 
-          <p className='line-clamp-5 text-justify text-gray-600'>{description}</p>
+          <p className='line-clamp-5 flex-1 text-justify text-gray-600'>{description}</p>
 
           {/* This creates a line only if social links exist*/}
           {(twitter ||
@@ -150,9 +150,9 @@ const CommunityCard = ({
             bluesky ||
             mastodon ||
             telegram ||
-            youtube) && <div className='mt-4 border-t border-gray-100' />}
+            youtube) && <div className='mt-4 flex-shrink-0 border-t border-gray-100' />}
 
-          <div className='mt-4 flex gap-3 opacity-100 transition-opacity'>
+          <div className='mt-4 flex flex-shrink-0 gap-3 opacity-100 transition-opacity'>
             {Object.entries(socialLinks).map(([key, { Icon, color, title, link }]) =>
               eval(key) ? (
                 <HoverIcon

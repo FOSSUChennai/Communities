@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Geist, Geist_Mono, Inter } from 'next/font/google';
 import './globals.css';
 import { IS_PROD, SITE_URL } from '../lib/constants';
 import UmamiProvider from 'next-umami';
@@ -16,7 +16,18 @@ const geistMono = Geist_Mono({
   subsets: ['latin']
 });
 
+// Inter was imported from the globals.css file, but we can also import it here so the the render block won't happen.
+const inter = Inter({
+  variable: '--font-inter',
+  subsets: ['latin']
+});
+
 export const metadata: Metadata = {
+  //adding the head props from below to here ( the next will take care from here )
+  viewport: 'width=device-width, initial-scale=1',
+  icons: {
+    icon: '/favicon.ico'
+  },
   title: 'TamilNadu Tech Community',
   description:
     'Never miss an event from your favourite Tech Commnuity in Tamil Nadu. Discover upcoming developer conferences, tech meetups, and community events across Tamil Nadu. Stay updated with the latest technology events, workshops, and hackathons in Chennai, Coimbatore, Madurai and more.',
@@ -61,12 +72,10 @@ export default function RootLayout({
   const webId = process.env.UMAMI_ANALYTICS_ID;
   return (
     <html lang='en'>
-      <head>
-        <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <link rel='icon' href='/favicon.ico' />
-      </head>
+      {/* removed the head tag, next will add it automatically ( LCP from above 2.5 to below 2.5  ) - adding head manually will be like overriding or bypassing the optimized head from next */}
+
       <body
-        className={`${geistSans.variable} ${geistMono.variable} mx-auto max-w-[1120px] bg-[#fafafa] antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} mx-auto max-w-[1120px] bg-[#fafafa] antialiased`}
       >
         <Header />
         {children}

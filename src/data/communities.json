@@ -1,6 +1,5 @@
 [
   {
-    "id": "foss-united-chennai",
     "name": "FOSS United Chennai",
     "logo": "https://i.ibb.co/F45XJbvR/FOSS-United-Chennai.png",
     "description": "FOSS United Chennai is a vibrant community dedicated to promoting Free and Open Source Software (FOSS) in the Chennai region. We organize regular meetups, workshops, and hackathons to bring together FOSS enthusiasts, developers, and advocates.",
@@ -15,7 +14,6 @@
     "github": "https://github.com/FOSSUChennai"
   },
   {
-    "id": "foss-united-coimbatore",
     "name": "FOSS United Coimbatore",
     "logo": "https://i.ibb.co/m5900Dn2/Logo-FOSS-United-CBE.jpg",
     "description": "FOSS United Coimbatore is a vibrant community dedicated to promoting Free and Open Source Software (FOSS) in the Coimbatore region. Operating under FOSS United",
@@ -26,7 +24,6 @@
     "telegram": "https://t.me/fossunitedcoimbatore"
   },
   {
-    "id": "chennai-react",
     "name": "Chennai React",
     "logo": "https://avatars.githubusercontent.com/u/175532518",
     "description": "Chennai React is a vibrant community of developers passionate about React.js, React Native, Next.js, and modern web and mobile development. We bring developers, industry experts, and tech enthusiasts together to learn, share, and network.",
@@ -41,7 +38,6 @@
     "github": "https://github.com/chennaireact"
   },
   {
-    "id": "foss-united-pondicherry",
     "name": "FOSS United Pondicherry",
     "logo": "https://i.ibb.co/vm4vm6g/fosspondy.jpg",
     "description": "FOSS United Pondicherry is a vibrant community dedicated to promoting Free and Open Source Software (FOSS) in the Chennai region. We organize regular meetups, workshops, and hackathons to bring together FOSS enthusiasts, developers, and advocates.",
@@ -49,7 +45,6 @@
     "website": "https://fossunited.org/c/pondicherry"
   },
   {
-    "id": "js-lovers-chennai",
     "name": "JS Lovers Chennai",
     "logo": "https://i.ibb.co/89fw9p0/1718639979394.jpg",
     "description": "We are a passionate community of JavaScript enthusiasts who come together to share knowledge, explore the latest trends, and collaborate on exciting projects.Our meetups cover a wide range of topics, from JavaScript fundamentals to advanced frameworks, front-end and back-end development, and everything in between. ",
@@ -62,7 +57,6 @@
     "github": "https://github.com/JSLOVERS"
   },
   {
-    "id": "namma-flutter",
     "name": "Namma Flutter",
     "logo": "https://avatars.githubusercontent.com/u/176333249",
     "description": "Namma Flutter is a community of Flutter enthusiasts dedicated to learning, sharing, and growing together. We host meetups, workshops, and events to explore the latest in Flutter development, exchange ideas, and foster innovation.",
@@ -75,7 +69,6 @@
     "youtube": "https://www.youtube.com/@nammaflutter"
   },
   {
-    "id": "chennaipy",
     "name": "Chennaipy",
     "logo": "https://res.cloudinary.com/dwir71gi2/image/upload/v1737382622/chennaipy_ovbthm.png",
     "description": "Chennaipy is a Python user-group, where Pythonistas in and around Chennai come together to share their knowledge and to contribute to the promotion of Python.",
@@ -86,7 +79,6 @@
     "twitter": "https://x.com/chennaipy"
   },
   {
-    "id": "gdg-chennai",
     "name": "GDG Chennai",
     "logo": "https://avatars.githubusercontent.com/u/5188301?s=200&v=4",
     "description": "Google Developers Group Chennai is an initiative to concentrate the efforts of many developers in and around Chennai to learn, share and get productive using the various Google products & Open source technologies.",
@@ -100,7 +92,6 @@
     "youtube": "https://www.youtube.com/@GDGCHENNAICOMMUNITY"
   },
   {
-    "id": "wtm-chennai",
     "name": "WTM Chennai",
     "logo": "https://res.cloudinary.com/dwir71gi2/image/upload/v1725966926/wtmchennai_d4tym8.webp",
     "description": "Women Techmakers program provides visibility, community, and resources for women in technology. We are building a world where all women can thrive in tech.",
@@ -114,7 +105,6 @@
     "youtube": "https://www.youtube.com/@GDGCHENNAICOMMUNITY"
   },
   {
-    "id": "kug-chennai",
     "name": "KUG Chennai",
     "logo": "https://avatars.githubusercontent.com/u/171473236?s=200&v=4",
     "description": "Kotlin User Group Chennai is a community for Kotlin enthusiasts, developers, and learners passionate about building with Kotlin across Android, Backend, and Multiplatform. We host meetups, workshops, and hackathons to explore the latest in Kotlin development, share insights, and grow together as a community. Whether you're a beginner or an experienced developer, join us to connect, learn, and collaborate on exciting Kotlin projects!",
@@ -127,7 +117,6 @@
     "discord": "https://discord.com/invite/u2GTjKsU9z"
   },
   {
-    "id": "ffdg-chennai",
     "name": "FFDG Chennai",
     "logo": "https://i.ibb.co/gLCj8k8R/ffdg-chennai.jpg",
     "description": "FFDG Chennai is a vibrant community of developers, engineers, and innovators who come together to collaborate, experiment, and turn bold ideas into reality. We build cool stuff, share knowledge, and push boundaries while fostering a strong culture of innovation and creating open-source projects.We welcome not only tech enthusiasts but also spreadsheet warriors, no-code ninjas, and anyone who thinks differently. With the FFDG low-code platform, you can build projects on your own with ease and creativity.",
@@ -138,7 +127,6 @@
     "telegram": "https://t.me/FFDGCHENNAI"
   },
   {
-    "id": "ctotalk",
     "name": "CTOtalk",
     "logo": "https://ctotalk.in/hubfs/cto-talk-logo.svg",
     "description": "CTOTalk is India’s first and only platform where we provide a rare deep-learning opportunity for aspiring tech leaders and have CTOs from well-known brands come in as Guest Speakers. CTOs deep dive into how they built scalability into their businesses.",
@@ -149,7 +137,6 @@
     "youtube": "https://www.youtube.com/channel/UC1vs3OTn1DrKX7mCYXrahxw"
   },
   {
-    "id": "build2learn",
     "name": "Build2Learn",
     "logo": "https://avatars.githubusercontent.com/u/200388134",
     "description": "Build2Learn, Unlike other tech communities we are a community of people who learn technology by building microproducts",
@@ -160,7 +147,6 @@
     "github": "https://github.com/build2learn-in/"
   },
   {
-    "id": "chennai-web-engineering",
     "name": "Chennai Web Engineering",
     "logo": "https://i.ibb.co/21x51045/cwe-transparent.png",
     "description": "Chennai Web Engineering, Community exclusively to learn, share and network for Web engineering professionals across Chennai",
@@ -171,7 +157,6 @@
     "github": "https://github.com/topics/chennaiwebengineering"
   },
   {
-    "id": "d3-community",
     "name": "D3 Community",
     "logo": "https://i.ibb.co/BKQb8hLG/D3-Community-Official-logo.png",
     "description": "D3 is more than just a tech community; it's a vibrant ecosystem where digital dreamers connect, collaborate, and cultivate their skills. We're a technology-agnostic space, welcoming enthusiasts from all corners of the tech world.",
@@ -183,7 +168,6 @@
     "youtube": "https://www.youtube.com/@d3CommunityOfficial"
   },
   {
-    "id": "mongodb-user-group-chennai",
     "name": "MongoDB User Group Chennai",
     "logo": "https://i.ibb.co/MkmpSxgY/MugChn.png",
     "description": "MUG Chennai is a MongoDB User Group, where MongoDB Enthusiasts in and around Chennai come together to share their knowledge and to contribute to the promotion of MongoDB.",
@@ -192,7 +176,6 @@
     "linkedin": "https://www.linkedin.com/company/mugchennai"
   },
   {
-    "id": "code-on-jvm-chennai",
     "name": "Code On JVM Chennai",
     "logo": "https://i.ibb.co/5xSndqPW/Code-On-Chennai-JVM.png",
     "description": "Code On JVM Chennai is a passionate community focused on advancing Java and JVM-based technologies in the Chennai region. We host regular meetups, workshops, and code sprints to unite Java developers, Kotlin enthusiasts and other JVM language. Our mission is to foster learning, collaboration, and innovation around everything that runs on the Java Virtual Machine.",
@@ -204,7 +187,6 @@
     "youtube": "https://www.youtube.com/channel/UCxQft97E-LVwIHcZd38JghA"
   },
   {
-    "id": "gdg-cloud-chennai",
     "name": "GDG Cloud Chennai",
     "logo": "https://i.ibb.co/XZRVypNb/gdg-cloud-chennai-logo.jpg",
     "description": "GDG Cloud Chennai is the official and independent Google Developers Group (#GDG) for Google Cloud (#GCP) in Chennai location, supported by Google Developers. We have passionate individuals (from Developers to CTOs, System Admins to Data Scientists) who focus on Google Cloud, open-source technologies, and related topics.",
@@ -216,7 +198,6 @@
     "twitter": "https://x.com/GdgCloudChennai"
   },
   {
-    "id": "azure-developer-community-tamilnadu",
     "name": "Azure Developer Community Tamilnadu",
     "logo": "https://i.ibb.co/dsG9GBkJ/azure-developer-community.jpg",
     "description": "Azure Developer Community aims to empower individuals who are enthusiastic about embracing new technologies and advancing their skills by actively engaging in our community's learning, networking, and growth opportunities.",
@@ -226,7 +207,6 @@
     "twitter": "https://x.com/AzDevTamilnadu"
   },
   {
-    "id": "typedcoders",
     "name": "TypedCoders",
     "logo": "https://i.ibb.co/cKS0Kt6C/typed-coders-community.jpg",
     "description": "TypedCoders, a brand-new meetup group dedicated to fostering a vibrant community around TypeScript. Whether you're actively building robust applications with TypeScript, exploring the power of typed JavaScript libraries, or eager to dive into typed backend/front-end frameworks, this is the perfect space for you.",
@@ -235,7 +215,6 @@
     "linkedin": "https://www.linkedin.com/groups/14722178/"
   },
   {
-    "id": "geekcoders",
     "name": "GeekCoders",
     "logo": "https://i.ibb.co/5xvnYwy1/geek-coders.png",
     "description": "GeekCoders is a thriving community focused on skill development and growth in the tech industry. Our mission is to empower passionate individuals by fostering a culture of collaboration, continuous learning, and networking. Whether you're a beginner or an experienced professional, GeekCoders provides a platform where members can enhance their technical skills, exchange innovative ideas, and connect with like-minded peers. Together, we aim to shape the future of technology by creating opportunities for hands-on learning, mentorship, and real-world problem-solving. Join us and become part of a dynamic, inclusive community committed to driving change in the tech world.",
@@ -246,7 +225,6 @@
     "discord": "https://discord.com/invite/GnjmFTWhTT"
   },
   {
-    "id": "grafana-and-friends-chennai",
     "name": "Grafana and Friends Chennai",
     "logo": "https://i.ibb.co/NgJ3pRQj/grafana-friends-chennai-meetup.jpg",
     "description": "Grafana & Friends meetup group hosts events centered on open source monitoring and observability with Grafana and complementary technologies. Some events feature presentations, while some are more laid back and meant to foster group discussion. Either way, there will be snacks and stickers!",
@@ -255,7 +233,6 @@
     "github": "https://github.com/grafana/grafana/blob/HEAD/CONTRIBUTING.md/?src=meetup&camp=community-cross-platform-engagement"
   },
   {
-    "id": "cloud-native-chennai",
     "name": "Cloud Native Chennai",
     "logo": "https://i.ibb.co/gMcMK6j0/cncf-chennai.webp",
     "description": "Cloud Native Chennai is the official Cloud Native Community Group in Chennai location supported by CNCF. Cloud Native Technologies empower organizations to build and run scalable applications in modern, dynamic environments such as public, private, and hybrid clouds. Containers, service meshes, microservices, immutable infrastructure, and declarative APIs exemplify this approach. These techniques enable loosely coupled systems that are resilient, manageable, and observable. Combined with robust automation, they allow engineers to make high-impact changes frequently and predictably with minimal toil. The Cloud Native Computing Foundation (CNCF) seeks to drive adoption of this paradigm by fostering and sustaining an ecosystem of open source, vendor-neutral projects. We democratize state-of-the-art patterns to make these innovations accessible for everyone.",
@@ -268,7 +245,6 @@
     "youtube": "https://www.youtube.com/c/cloudnativefdn"
   },
   {
-    "id": "elastic-chennai-user-group",
     "name": "Elastic Chennai User Group",
     "logo": "https://i.ibb.co/sJbZLsV5/elastic-chennai.jpg",
     "description": "This group is for anyone interested in open source search, logging, analytics & data visualization. We primarily focus on these open source projects — Elasticsearch, Kibana, Logstash, and Beats — but we welcome talks on any aspect of data exploration.",
@@ -280,7 +256,6 @@
     "youtube": "https://www.youtube.com/@officialelasticcommunity"
   },
   {
-    "id": "django-india",
     "name": "Django India",
     "logo": "https://i.ibb.co/QFnW9mqX/django-india.jpg",
     "description": "A vibrant community of Django developers, primarily from India. It unites passionate individuals who are eager to learn, share knowledge, and collaborate on innovative projects. Through our meetups, workshops, and online events, members actively contribute to the growth of the Django ecosystem in India.",
@@ -294,7 +269,6 @@
     "reddit": "https://www.reddit.com/r/djangoindia/"
   },
   {
-    "id": "devrelsquad-chennai-chapter",
     "name": "DevRelSquad Chennai Chapter",
     "logo": "https://i.ibb.co/27qK7xd8/dev-rel-squad.jpg",
     "description": "Developers rarely engage with ads, making them ineffective. Instead, hosting and participating in blogs, meetups, and leveraging social media are more impactful. Unlike traditional advertising, consistent community engagement helps connect developers with products organically.",
@@ -307,7 +281,6 @@
     "youtube": "https://www.youtube.com/@devrelsquad"
   },
   {
-    "id": "friends-of-figma-chennai",
     "name": "Friends of Figma Chennai",
     "logo": "https://i.ibb.co/0VBN7wyb/fof-chennai.jpg",
     "description": "Friends of Figma is a community for designers, developers, and creative professionals who use Figma for design and collaboration.",
@@ -318,7 +291,6 @@
     "instagram": "https://www.instagram.com/fof_chennai/"
   },
   {
-    "id": "friends-of-figma-coimbatore",
     "name": "Friends of Figma Coimbatore",
     "logo": "https://i.ibb.co/VcRqDXk4/fof-coimbatore.jpg",
     "description": "Friends of Figma is a community for designers, developers, and creative professionals who use Figma for design and collaboration.",
@@ -328,7 +300,6 @@
     "instagram": "https://www.instagram.com/fof_coimbatore/"
   },
   {
-    "id": "digital-ocean-community",
     "name": "Digital Ocean Community",
     "logo": "https://i.ibb.co/wZKZQGX6/digital-ocean-community.png",
     "description": "DigitalOcean's community offers thousands of tutorials, videos, and answers to questions on a wide range of topics.",
@@ -342,7 +313,6 @@
     "youtube": "https://www.youtube.com/DigitalOcean"
   },
   {
-    "id": "confluent",
     "name": "Confluent",
     "logo": "https://i.ibb.co/4B1cpLL/confluent-community.jpg",
     "description": "Confluent proudly supports the community around the world that focuses on streaming platforms, real-time data streams, Apache Kafka®️, Apache Flink®️, and its ecosystems.",
@@ -354,7 +324,6 @@
     "youtube": "https://www.youtube.com/confluent"
   },
   {
-    "id": "global-ai-coimbatore",
     "name": "Global AI Coimbatore",
     "logo": "https://i.ibb.co/0jnXHV0X/global-ai-community.jpg",
     "description": "This group is dedicated to exploring the latest trends and applications of Artificial Intelligence, including AI and Society, Artificial General Intelligence, Azure SQL Database, recommender systems, and Federated discovery of big data. Whether you're a beginner or an expert, join us to learn about Creating simple Windows Azure applications, Data Management Platforms, and Artificial Intelligence: A Modern Approach. Let's come together to discuss and collaborate on all things related to AI in Tamilnadu.",
@@ -366,7 +335,6 @@
     "instagram": "https://www.instagram.com/globalaicommunity/"
   },
   {
-    "id": "platform-engineering-coimbatore",
     "name": "Platform Engineering Coimbatore",
     "description": "This group is dedicated to deep-dive discussions and knowledge-sharing on topics like Platform Engineering, DevOps, Artificial Intelligence, Software Development, and Data Engineering. Whether you're building internal developer platforms, optimizing CI/CD pipelines, managing infrastructure as code, leveraging AI in production, or designing scalable systems",
     "location": "Coimbatore",
@@ -374,7 +342,6 @@
   },
 
   {
-    "id": "js-mavens",
     "name": "JS Mavens",
     "logo": "https://i.ibb.co/W40Zh5w7/js-mavens.jpg",
     "description": "This is a community of like-minded developers and enthusiasts who are passionate about JavaScript, ReactJS, NodeJS, and web development in general. Our group is based in Nagercoil, Kanyakumari and we welcome anyone who is interested in learning, sharing knowledge and networking with other tech enthusiasts in the region.",
@@ -386,7 +353,6 @@
     "instagram": "https://www.instagram.com/js.mavens/"
   },
   {
-    "id": "kcd-chennai",
     "name": "KCD Chennai",
     "logo": "https://i.ibb.co/d0pns3JZ/kcd-chennai.webp",
     "description": "Kubernetes Community Days Chennai  is a community-organized conference supported by the Cloud Native Computing Foundation (CNCF) to help grow and sustain the Kubernetes and cloud-native community. It gathers adopters and technologists from open source and cloud-native communities for education, collaboration and networking.",
@@ -396,7 +362,6 @@
     "twitter": "https://x.com/kcdchennai"
   },
   {
-    "id": "the-startup-club",
     "name": "The Startup Club",
     "logo": "https://i.ibb.co/Fk6Sbv4p/startup-club.png",
     "description": "Startup Club is a community of individuals involved in the startup scene in India. Whether you're simply an aspiring entrepreneur or a veteran in the startup industry, we wish to include you in our effort to bring us all together to enable a constructive and collaborative startup ecosystem.",
@@ -407,7 +372,6 @@
     "youtube": "https://www.youtube.com/@startupclublive"
   },
   {
-    "id": "startup-atti",
     "name": "Startup Atti",
     "logo": "https://i.ibb.co/pv37Lb2Y/startup-atti.webp",
     "description": "Startup Atti is an initiative Department of Economic and Entrepreneurship Development by Unity of Youth",
@@ -418,7 +382,6 @@
     "youtube": "https://www.youtube.com/@startupatti"
   },
   {
-    "id": "swift-chennai",
     "name": "Swift Chennai",
     "logo": "https://i.ibb.co/XxZsKjVf/swift-chennai.jpg",
     "description": "Swift Chennai is a vibrant meetup series for Swift devs, iOS enthusiasts, and curious creators. Come for the code, stay for the kaapi, and leave with solid connections.",
@@ -428,7 +391,6 @@
     "twitter": "https://x.com/swiftchennai"
   },
   {
-    "id": "technexus-community",
     "name": "TechNexus Community",
     "logo": "https://i.ibb.co/7J4Py2PW/technexus.png",
     "description": "TechNexus Community is a Meetup group for tech enthusiasts looking to connect, network, and collaborate with like-minded individuals. Whether you're a developer, engineer, AI enthusiast, or entrepreneur, this group is for anyone who is passionate about technology and interested in sharing ideas, learning new skills, and staying up to date on the latest industry trends. Join us for In-person/virtual meetups, workshops, and events focused on various tech interests such as AI, Data, IoT, and more. Let's foster a vibrant community where innovation thrives, and connections are made.",
@@ -437,7 +399,6 @@
     "linkedin": "https://www.linkedin.com/company/technexuscommunity/"
   },
   {
-    "id": "gdg-cloud-madurai",
     "name": "GDG Cloud Madurai",
     "logo": "https://i.ibb.co/TM7MsTcR/gdg-madurai.webp",
     "description": "GDG Cloud Madurai is the official Google Developers Group for Google Cloud technologies in the Madurai region.",
@@ -447,7 +408,6 @@
     "twitter": "https://x.com/gdgcloudmadurai"
   },
   {
-    "id": "microsoft-azure-user-group-chennai",
     "name": "Microsoft Azure User Group-Chennai",
     "logo": "https://i.ibb.co/nqgZbyKN/msft-azure-user-group-chennai.png",
     "description": "We are a user group run by the community with the aim of learning and sharing our knowledge on cloud computing using the Microsoft Azure cloud platform.",
@@ -455,7 +415,6 @@
     "website": "https://www.meetup.com/chennai-microsoft-azure-user-group/"
   },
   {
-    "id": "owasp-chennai-chapter",
     "name": "OWASP Chennai Chapter",
     "logo": "https://i.ibb.co/Xk6G3hh0/owasp-chennai.png",
     "description": "The Open Web Application Security Project (OWASP) is a nonprofit foundation that works to improve the security of software. OWASP Chennai was founded in Jan, 2009. For the past 11 years, the Chennai Chapter has conducted numerous Meetups, Webinars and Conferences. All these conferences are open meets where everyone can join and share their knowledge in Application Security. The chapter presents opportunities to the software community in contributing to secure application development.",
@@ -468,7 +427,6 @@
     "discord": "https://discord.com/invite/7PdfJz5"
   },
   {
-    "id": "kanchilug",
     "name": "KanchiLUG",
     "logo": "https://i.ibb.co/4ZB0SpRC/kanchi-lug.jpg",
     "description": "We are the Linux Users from Kanchipuram, Tamil Nadu. We share all out thoughts, doubts, CDs, knlowedge about Linux nd other open source Software.",
@@ -478,7 +436,6 @@
     "youtube": "https://www.youtube.com/channel/UCumTlpC2nok42RJ3yRsbLRA"
   },
   {
-    "id": "ilugc",
     "name": "ILUGC",
     "description": "ILUGC was started on 1997 and it is an one of the oldest Linux Users Group in India. We are a heterogeneous group of computer users from the South Indian city of Chennai (a.k.a Madras), united in our use of Free/Libre/Open Source Software and support of Software Freedom in general and GNU/Linux in particular",
     "location": "Chennai",

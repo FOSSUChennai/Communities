@@ -25,12 +25,15 @@
     "eventName": "TossConf'25",
     "eventDescription": "TOSSConf25 (Tamil Open Source Software Conference 2025) is a community-driven event celebrating open-source software and Tamil computing. Scheduled for July 18–19, 2025, at St. Joseph’s Institute of Technology in Semmancheri, Chennai, the conference aims to bring together developers, contributors, and enthusiasts to promote open source initiatives in Tamil Nadu.",
     "eventDate": "2025-07-18",
-    "eventTime": "09:30",
-    "eventVenue": "St. Joseph's Institute of Technology, Old Mahabalipuram Road, Kamaraj Nagar, Semmancheri, Chennai, Tamil Nadu 600119 ",
-    "eventLink": "https://tossconf25.kaniyam.com/",
-    "location": "Chennai",
-    "communityName": "TossConf25",
-    "communityLogo": "https://i.ibb.co/fWZCQww/hero-bg1.png"
+    "eventName": "N8N & AI Automation: Real Systems for Professionals - Azure AI Platform",
+    "eventDescription": "Join N8N Automation in Action, a hands-on workshop by Global AI Coimbatore to learn real-world automation using n8n and AI. Build smart workflows like a resume sorter and explore tools, frameworks, and ideas to save time and scale faster.",
+    "eventDate": "2025-07-26",
+    "eventTime": "9:00",
+    "eventVenue": "Thoughtworks Technologies (India) Pvt Ltd, KCT Tech Park, 1st Floor, Thudiyalur Rd, Saravanampatti · Coimbatore",
+    "eventLink": "https://www.meetup.com/global-ai-tamilnadu/events/308775156/?utm_medium=referral&utm_campaign=share-btn_savedevents_share_modal&utm_source=link&utm_version=v2",
+    "location": "Coimbatore",
+    "communityName": "Global AI Coimbatore",
+    "communityLogo": "https://i.ibb.co/k2h1LTZ3/Global-AI-Coimbatore-Logo.jpg"
   },
   {
     "eventName": "D3 Community Meetup #3",
@@ -48,10 +51,43 @@
     "eventDescription": "This is a group for anyone who loves Python. Meet and discuss with other Pythonistas in Chennai. Contribute to promoting Python in and around Chennai.",
     "eventDate": "2025-07-26",
     "eventTime": "15:00",
-    "eventVenue": "TBD",
+    "eventVenue": "E C G Sudarshan Hall,IMSc, X6VW+FP7, 4th Cross St, CIT Campus, Tharamani, Chennai, Tamil Nadu 600113",
     "eventLink": "https://www.meetup.com/chennaipy/events/309690796/?eventOrigin=group_upcoming_events",
     "location": "Chennai",
     "communityName": "Chennaipy",
     "communityLogo": "https://res.cloudinary.com/dwir71gi2/image/upload/v1737382622/chennaipy_ovbthm.png"
+  },
+  {
+    "eventName": "InnovateX August Edition",
+    "eventDescription": "Our community brings together founders, developers, and tech enthusiasts who are passionate about innovation, collaboration, and building the future together",
+    "eventDate": "2025-08-09",
+    "eventTime": "09:00",
+    "eventVenue": "Sciflare Technologies, Karapakkam, Chennai",
+    "eventLink": "https://linktr.ee/innovatexsciflare",
+    "location": "Chennai",
+    "communityName": "InnovateX by Sciflare",
+    "communityLogo": "https://i.ibb.co/r2cpfJLq/1749464830460.jpg"
+  },
+  {
+    "eventName": "Chennai React August Meetup",
+    "eventDescription": "Chennai React is a community of React developers in Chennai. We meet every month to discuss the latest in React, share knowledge, and build connections.",
+    "eventDate": "2025-08-09",
+    "eventTime": "14:00",
+    "eventVenue": "Multi Purpose Hall in the basement of CapitaLand(Ascendas) Phase 2 ",
+    "eventLink": "https://lu.ma/srifcjng",
+    "location": "Chennai",
+    "communityName": "Chennai React",
+    "communityLogo": "https://avatars.githubusercontent.com/u/175532518"
+  },
+  {
+    "eventName": "Namma Flutter Singapengal",
+    "eventDescription": "Namma Singapengal event ku vara maateengala ?",
+    "eventDate": "2025-07-26",
+    "eventTime": "09:00",
+    "eventVenue": "Mako IT Lab 8th Floor, TICEL BIOPARK, TICEL Biopark Rd, Phase II, Tharamani, Chennai, Tamil Nadu 600113",
+    "eventLink": "https://lu.ma/pe978u26",
+    "location": "Chennai",
+    "communityName": "Namma Flutter",
+    "communityLogo": "https://avatars.githubusercontent.com/u/176333249"
   }
 ]

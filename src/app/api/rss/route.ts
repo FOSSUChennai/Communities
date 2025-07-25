@@ -1,7 +1,7 @@
 import RSS from 'rss';
 import { NextResponse } from 'next/server';
 
-import Events from '@/data/events.json';
+import localEvents from '@/data/events.json';
 import { SITE_URL } from '@/lib/constants';
 import { convertToIST } from '@/lib/common';
 import { Event } from '@/types/event';
@@ -14,7 +14,9 @@ export async function GET() {
   const currentYear = new Date().getFullYear();
   const feed = createRSSFeed(currentYear);
 
-  const sortedEvents = getSortedEvents();
+  // Fetch events from GitHub or fall back to local events
+  const events = await fetchEvents();
+  const sortedEvents = getSortedEvents(events);
 
   if (sortedEvents.length) {
     sortedEvents.forEach((event) => addEventToFeed(feed, event));
@@ -44,11 +46,40 @@ const createRSSFeed = (year: number): RSS => {
 };
 
 /**
- * Sorts events in descending order based on the event date.
- * @returns {Events[]} - Sorted array of events.
+ * Fetches events from GitHub or falls back to local events.
+ * @returns {Promise<Event[]>} - Promise that resolves to events array.
  */
-const getSortedEvents = (): Event[] =>
-  Events.sort((a, b) => convertToIST(b.eventDate).getTime() - convertToIST(a.eventDate).getTime());
+const fetchEvents = async (): Promise<Event[]> => {
+  try {
+    const response = await fetch(
+      'https://raw.githubusercontent.com/FOSSUChennai/Communities/refs/heads/main/src/data/events.json',
+      { next: { revalidate: 300 } } // Cache for 5 minutes
+    );
+
+    if (!response.ok) {
+      console.warn('Failed to fetch events from GitHub, using local events');
+      return localEvents;
+    }
+
+    const events = await response.json();
+    if (!isValidEventArray(events)) {
+      console.warn('Fetched events data is malformed, using local events');
+      return localEvents;
+    }
+    return events;
+  } catch (error) {
+    console.error('Error fetching events from GitHub:', error);
+    return localEvents;
+  }
+};
+
+/**
+ * Sorts events in descending order based on the event date.
+ * @param {Event[]} events - The events array to sort.
+ * @returns {Event[]} - Sorted array of events.
+ */
+const getSortedEvents = (events: Event[]): Event[] =>
+  events.sort((a, b) => convertToIST(b.eventDate).getTime() - convertToIST(a.eventDate).getTime());
 
 /**
  * Adds a single event to the RSS feed.

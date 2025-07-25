@@ -33,6 +33,9 @@ const Archive = () => {
   const [monthlyCardHeight, setMonthlyCardHeight] = useState<number>(0);
   const [upcomingCardHeight, setUpcomingCardHeight] = useState<number>(0);
   const [events, setEvents] = useState<Event[]>([]);
+  const [selectedCommunity, setSelectedCommunity] = useState<string>('all');
+  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
+
   // Create a date object for start of today
   const today = new Date();
   today.setHours(0, 0, 0, 0);
@@ -63,9 +66,19 @@ const Archive = () => {
   }, []);
 
   // sorts all events first rather than grouping into two types and then sorting
-  const sortedEvents = events.sort(
-    (a, b) => new Date(a.eventDate).getTime() - new Date(b.eventDate).getTime()
-  );
+  const sortedEvents = events
+    .filter((event) => {
+      if (selectedCommunity === 'all') return true;
+      return event.communityName === selectedCommunity;
+    })
+    .sort((a, b) => {
+      const dateA = new Date(a.eventDate).getTime();
+      const dateB = new Date(b.eventDate).getTime();
+      return sortOrder === 'asc' ? dateA - dateB : dateB - dateA;
+    });
+
+  // Get unique community names for the dropdown
+  const uniqueCommunities = Array.from(new Set(events.map((event) => event.communityName))).sort();
 
   const monthlyEvents = sortedEvents.filter((event) => {
     const eventDate = new Date(event.eventDate);
@@ -235,7 +248,7 @@ const Archive = () => {
               </div>
               <div className='mt-auto flex flex-grow flex-col justify-end'>
                 <span className='mt-4 flex items-start gap-1 text-xs'>
-                  <MapPin size={16} className='mt-0.5 min-w-[16px]' />{' '}
+                  <MapPin size={16} className='min-w-[16px]' />{' '}
                   <span className='break-words'>{validateAndFormatVenue(venue)}</span>{' '}
                 </span>
               </div>
@@ -252,6 +265,64 @@ const Archive = () => {
         <h2 className='mb-3 text-lg font-normal'>
           <span className='text-[30px] font-semibold text-black'>archive</span>
         </h2>
+
+        {/* Filter and Sort Controls */}
+        <div className='mb-6 flex flex-wrap items-center justify-between gap-4'>
+          <div className='flex flex-wrap items-center gap-4'>
+            {/* Community Filter Dropdown */}
+            <div className='flex items-center gap-2'>
+              <label htmlFor='communityFilter' className='text-sm font-medium text-gray-700'>
+                Filter by Community:
+              </label>
+              <select
+                id='communityFilter'
+                value={selectedCommunity}
+                onChange={(e) => setSelectedCommunity(e.target.value)}
+                className='rounded-md border border-gray-300 bg-white px-3 py-2 text-sm focus:border-green-500 focus:outline-none focus:ring-1 focus:ring-green-500'
+              >
+                <option value='all'>All Communities</option>
+                {uniqueCommunities.map((community) => (
+                  <option key={community} value={community}>
+                    {community}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            {/* Sort Order Controls */}
+            <div className='flex items-center gap-2'>
+              <span className='text-sm font-medium text-gray-700'>Sort by Date:</span>
+              <div className='flex overflow-hidden rounded-md border border-gray-300'>
+                <button
+                  onClick={() => setSortOrder('asc')}
+                  className={`px-3 py-2 text-sm font-medium transition-colors ${
+                    sortOrder === 'asc'
+                      ? 'bg-green-500 text-white'
+                      : 'bg-white text-gray-700 hover:bg-gray-50'
+                  }`}
+                >
+                  Ascending
+                </button>
+                <button
+                  onClick={() => setSortOrder('desc')}
+                  className={`border-l border-gray-300 px-3 py-2 text-sm font-medium transition-colors ${
+                    sortOrder === 'desc'
+                      ? 'bg-green-500 text-white'
+                      : 'bg-white text-gray-700 hover:bg-gray-50'
+                  }`}
+                >
+                  Descending
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Results count */}
+          <div className='text-sm text-gray-600'>
+            {monthlyEvents.length} event{monthlyEvents.length !== 1 ? 's' : ''} found
+          </div>
+        </div>
+
         <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3'>
           {monthlyEvents.length > 0 ? (
             monthlyEvents.map((event, index) => (

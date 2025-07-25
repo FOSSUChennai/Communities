@@ -239,7 +239,7 @@ const Events = () => {
               </div>
               <div className='mt-auto flex flex-grow flex-col justify-end'>
                 <span className='mt-4 flex items-start gap-1 text-xs'>
-                  <MapPin size={16} className='mt-0.5 min-w-[16px]' />{' '}
+                  <MapPin size={16} className='min-w-[16px]' />{' '}
                   <span className='break-words'>{validateAndFormatVenue(venue)}</span>{' '}
                 </span>
               </div>

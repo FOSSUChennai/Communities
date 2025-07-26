@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import communities from '../../../data/communities.json';
+import communities from '../';
 
 interface Community {
   name: string;

@@ -1,49 +1,5 @@
 [
   {
-    "eventName": "N8N & AI Automation: Real Systems for Professionals - Azure AI Platform",
-    "eventDescription": "Join N8N Automation in Action, a hands-on workshop by Global AI Coimbatore to learn real-world automation using n8n and AI. Build smart workflows like a resume sorter and explore tools, frameworks, and ideas to save time and scale faster.",
-    "eventDate": "2025-07-26",
-    "eventTime": "9:00",
-    "eventVenue": "Thoughtworks Technologies (India) Pvt Ltd, KCT Tech Park, 1st Floor, Thudiyalur Rd, Saravanampatti · Coimbatore",
-    "eventLink": "https://www.meetup.com/global-ai-tamilnadu/events/308775156/?utm_medium=referral&utm_campaign=share-btn_savedevents_share_modal&utm_source=link&utm_version=v2",
-    "location": "Coimbatore",
-    "communityName": "Global AI Coimbatore",
-    "communityLogo": "https://i.ibb.co/k2h1LTZ3/Global-AI-Coimbatore-Logo.jpg"
-  },
-  {
-    "eventName": "Build2Learn",
-    "eventDescription": "Welcome to build2learn - Where Innovation Meets Community! Imagine a hackathon, but with a twist!🤔 It's not just about building incredible micro products; it's about forging lifelong connections with like-minded individuals who share your passion for innovation! 🤝💡At build2learn, we believe that magic happens when engineers come together to do what they love - BUILD!, Are you someone with a side project that you've been dreaming of bringing to life? build2learn is your chance to turn that dream into reality! ⏰🌟 Are you a student eager to create something extraordinary but in need of mentors to guide you? build2learn is the launchpad you've been waiting for! 🎓🚀 Or maybe you're someone who thrives on helping others unleash their full potential? build2learn is the perfect platform to make a lasting impact! 🤗 Join us at build2learn and embark on a journey of creation, collaboration, and camaraderie! 🌟 See you there!🌆 ",
-    "eventDate": "2025-07-26",
-    "eventTime": "09:30",
-    "eventVenue": "Freshworks, Chennai",
-    "eventLink": "https://lu.ma/7tnq58qg?utm_source=tamilnadutech",
-    "location": "Chennai",
-    "communityName": "Build2Learn",
-    "communityLogo": "https://build2learn.in/images/build2learn-logo.svg"
-  },
-  {
-    "eventName": "D3 Community Meetup #3",
-    "eventDescription": "D3 Community Meetup #03: Join a vibrant in-person community for Software Engineers focused on Full Stack, DevOps, Cloud & AI. Learn, network, and grow!",
-    "eventDate": "2025-07-26",
-    "eventTime": "14:00",
-    "eventVenue": "Kissflow (OrangeScape Technologies), No:5, Tower-B, 10th Floor, World Trade Center, 142, Rajiv Gandhi Salai, Tirumalai Nagar, Perungudi, Chennai, Tamil Nadu 600096, India",
-    "eventLink": "https://lu.ma/zmtjxd8s",
-    "location": "Chennai",
-    "communityName": "D3 Community",
-    "communityLogo": "https://i.ibb.co/BKQb8hLG/D3-Community-Official-logo.png"
-  },
-  {
-    "eventName": "Chennaipy July Meetup",
-    "eventDescription": "This is a group for anyone who loves Python. Meet and discuss with other Pythonistas in Chennai. Contribute to promoting Python in and around Chennai.",
-    "eventDate": "2025-07-26",
-    "eventTime": "15:00",
-    "eventVenue": "E C G Sudarshan Hall,IMSc, X6VW+FP7, 4th Cross St, CIT Campus, Tharamani, Chennai, Tamil Nadu 600113",
-    "eventLink": "https://www.meetup.com/chennaipy/events/309690796/?eventOrigin=group_upcoming_events",
-    "location": "Chennai",
-    "communityName": "Chennaipy",
-    "communityLogo": "https://res.cloudinary.com/dwir71gi2/image/upload/v1737382622/chennaipy_ovbthm.png"
-  },
-  {
     "eventName": "InnovateX August Edition",
     "eventDescription": "Our community brings together founders, developers, and tech enthusiasts who are passionate about innovation, collaboration, and building the future together",
     "eventDate": "2025-08-09",
@@ -64,16 +20,5 @@
     "location": "Chennai",
     "communityName": "Chennai React",
     "communityLogo": "https://avatars.githubusercontent.com/u/175532518"
-  },
-  {
-    "eventName": "Namma Flutter Singapengal",
-    "eventDescription": "Namma Singapengal event ku vara maateengala ?",
-    "eventDate": "2025-07-26",
-    "eventTime": "09:00",
-    "eventVenue": "Mako IT Lab 8th Floor, TICEL BIOPARK, TICEL Biopark Rd, Phase II, Tharamani, Chennai, Tamil Nadu 600113",
-    "eventLink": "https://lu.ma/pe978u26",
-    "location": "Chennai",
-    "communityName": "Namma Flutter",
-    "communityLogo": "https://avatars.githubusercontent.com/u/176333249"
   }
 ]

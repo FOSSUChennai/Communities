@@ -1,17 +1,16 @@
 import type { Config } from 'tailwindcss';
 
-export default {
-  content: ['./src/**/*.{js,ts,jsx,tsx,md,mdx}'],
+const config: Config = {
+  darkMode: 'class',
+  content: ['./src/app/**/*.{js,ts,jsx,tsx}', './src/components/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       fontFamily: {
         inter: ['var(--font-inter)']
-      },
-      colors: {
-        background: 'var(--background)',
-        foreground: 'var(--foreground)'
       }
     }
   },
   plugins: []
-} satisfies Config;
+};
+
+export default config;

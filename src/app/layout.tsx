@@ -5,6 +5,7 @@ import { IS_PROD, SITE_URL } from '../lib/constants';
 import UmamiProvider from 'next-umami';
 import Header from '../components/shared/header';
 import Footer from '../components/shared/footer';
+import { ThemeProvider } from '../context/ThemeContext';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -16,14 +17,12 @@ const geistMono = Geist_Mono({
   subsets: ['latin']
 });
 
-// Inter was imported from the globals.css file, but we can also import it here so the the render block won't happen.
 const inter = Inter({
   variable: '--font-inter',
   subsets: ['latin']
 });
 
 export const metadata: Metadata = {
-  //adding the head props from below to here ( the next will take care from here )
   viewport: 'width=device-width, initial-scale=1',
   icons: {
     icon: '/favicon.ico'
@@ -70,18 +69,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const webId = process.env.UMAMI_ANALYTICS_ID;
-  return (
-    <html lang='en'>
-      {/* removed the head tag, next will add it automatically ( LCP from above 2.5 to below 2.5  ) - adding head manually will be like overriding or bypassing the optimized head from next */}
 
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} mx-auto max-w-[1120px] bg-[#fafafa] antialiased`}
-      >
-        <Header />
-        {children}
-        <Footer />
-      </body>
-      {IS_PROD && <UmamiProvider websiteId={webId} />}
+  return (
+    <html lang='en' suppressHydrationWarning>
+      <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} mx-auto max-w-[1120px] bg-white text-black antialiased transition-colors duration-300 dark:bg-black dark:text-white`}
+        >
+          <Header />
+          {children}
+          <Footer />
+          {IS_PROD && <UmamiProvider websiteId={webId} />}
+        </body>
+      </ThemeProvider>
     </html>
   );
 }

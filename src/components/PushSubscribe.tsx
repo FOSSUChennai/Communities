@@ -13,9 +13,8 @@ const PushSubscribe: React.FC<PushSubscribeProps> = ({ className = '' }) => {
   const [showPrompt, setShowPrompt] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  // VAPID public key - you'll need to generate this
   if (!process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY) {
-    throw new Error("Environment variable NEXT_PUBLIC_VAPID_PUBLIC_KEY is required but not set. Please set it to a valid VAPID public key.");
+    throw new Error('NEXT_PUBLIC_VAPID_PUBLIC_KEY not set.');
   }
   const VAPID_PUBLIC_KEY = process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY;
 
@@ -38,7 +37,6 @@ const PushSubscribe: React.FC<PushSubscribeProps> = ({ className = '' }) => {
       setIsSupported('serviceWorker' in navigator && 'PushManager' in window);
       checkSubscriptionStatus();
 
-      // Show prompt after a delay if not subscribed
       const timer = setTimeout(() => {
         if (!isSubscribed && isSupported) {
           setShowPrompt(true);
@@ -61,7 +59,7 @@ const PushSubscribe: React.FC<PushSubscribeProps> = ({ className = '' }) => {
 
   const urlBase64ToUint8Array = (base64String: string) => {
     const padding = '='.repeat((4 - (base64String.length % 4)) % 4);
-    const base64 = (base64String + padding).replace(/\-/g, '+').replace(/_/g, '/');
+    const base64 = (base64String + padding).replace(/-/g, '+').replace(/_/g, '/');
 
     const rawData = window.atob(base64);
     const outputArray = new Uint8Array(rawData.length);
@@ -77,27 +75,19 @@ const PushSubscribe: React.FC<PushSubscribeProps> = ({ className = '' }) => {
     setError(null);
 
     try {
-      // Request permission
       const permission = await Notification.requestPermission();
-      if (permission !== 'granted') {
-        throw new Error('Notification permission denied');
-      }
+      if (permission !== 'granted') throw new Error('Notification permission denied');
 
-      // Register service worker
       const registration = await registerServiceWorker();
 
-      // Subscribe to push notifications
       const subscription = await registration.pushManager.subscribe({
         userVisibleOnly: true,
         applicationServerKey: urlBase64ToUint8Array(VAPID_PUBLIC_KEY)
       });
 
-      // Save subscription to server
       const response = await fetch('/api/save-subscription', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           subscription,
           userAgent: navigator.userAgent,
@@ -105,18 +95,14 @@ const PushSubscribe: React.FC<PushSubscribeProps> = ({ className = '' }) => {
         })
       });
 
-      if (!response.ok) {
-        throw new Error('Failed to save subscription');
-      }
-      // save the response.subscriptionId to storage
+      if (!response.ok) throw new Error('Failed to save subscription');
       const data = await response.json();
       localStorage.setItem('pushSubscriptionId', data.subscriptionId);
 
       setIsSubscribed(true);
       setShowPrompt(false);
-      console.log('Successfully subscribed to notifications');
     } catch (error) {
-      console.error('Error subscribing to notifications:', error);
+      console.error('Subscription error:', error);
       setError(error instanceof Error ? error.message : 'Failed to subscribe');
     } finally {
       setIsLoading(false);
@@ -134,51 +120,42 @@ const PushSubscribe: React.FC<PushSubscribeProps> = ({ className = '' }) => {
         if (subscription) {
           await subscription.unsubscribe();
 
-          // Optionally, remove from server
           await fetch('/api/remove-subscription', {
             method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-              endpoint: subscription.endpoint
-            })
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ endpoint: subscription.endpoint })
           });
         }
       }
-
       setIsSubscribed(false);
-      console.log('Successfully unsubscribed from notifications');
     } catch (error) {
-      console.error('Error unsubscribing from notifications:', error);
+      console.error('Unsubscribe error:', error);
       setError(error instanceof Error ? error.message : 'Failed to unsubscribe');
     } finally {
       setIsLoading(false);
     }
   };
 
-  if (!isSupported) {
-    return null;
-  }
+  if (!isSupported) return null;
 
   return (
     <>
-      {/* Notification Prompt */}
+      {/* Prompt Box */}
       {showPrompt && !isSubscribed && (
-        <div className='fixed bottom-4 right-4 z-50 max-w-sm rounded-lg border border-gray-200 bg-white p-4 shadow-lg'>
+        <div className='fixed bottom-4 right-4 z-50 max-w-sm rounded-lg border border-gray-200 bg-white p-4 shadow-lg dark:border-gray-600 dark:bg-gray-900'>
           <div className='flex items-start justify-between'>
-            <div className='flex items-start space-x-3'>
+            <div className='flex space-x-3'>
               <BellIcon className='mt-0.5 h-6 w-6 text-green-500' />
               <div>
-                <h4 className='font-medium text-gray-900'>Stay Updated!</h4>
-                <p className='mt-1 text-sm text-gray-600'>
+                <h4 className='font-medium text-gray-900 dark:text-white'>Stay Updated!</h4>
+                <p className='mt-1 text-sm text-gray-600 dark:text-gray-300'>
                   Get notified about new tech events in Tamil Nadu
                 </p>
               </div>
             </div>
             <button
               onClick={() => setShowPrompt(false)}
-              className='text-gray-400 hover:text-gray-600'
+              className='text-gray-400 hover:text-gray-600 dark:hover:text-gray-300'
             >
               <XIcon className='h-5 w-5' />
             </button>
@@ -193,7 +170,7 @@ const PushSubscribe: React.FC<PushSubscribeProps> = ({ className = '' }) => {
             </button>
             <button
               onClick={() => setShowPrompt(false)}
-              className='flex-1 rounded bg-gray-100 px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-200'
+              className='flex-1 rounded bg-gray-100 px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-200 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600'
             >
               Later
             </button>
@@ -201,36 +178,36 @@ const PushSubscribe: React.FC<PushSubscribeProps> = ({ className = '' }) => {
         </div>
       )}
 
-      {/* Notification Button */}
+      {/* Main Toggle Button */}
       <button
         onClick={isSubscribed ? unsubscribeFromNotifications : subscribeToNotifications}
         disabled={isLoading}
-        className={`flex items-center space-x-2 rounded-lg px-4 py-2 font-medium transition-colors ${
+        className={`flex items-center space-x-2 rounded-lg px-4 py-2 text-sm font-medium transition-colors duration-300 ${
           isSubscribed
-            ? 'bg-green-100 text-green-700 hover:bg-green-200'
-            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+            ? 'bg-green-100 text-green-700 hover:bg-green-200 dark:bg-green-800 dark:text-green-200 dark:hover:bg-green-700'
+            : 'bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700'
         } disabled:opacity-50 ${className}`}
         title={isSubscribed ? 'Unsubscribe from notifications' : 'Subscribe to notifications'}
       >
         {isSubscribed ? <BellRingingIcon className='h-5 w-5' /> : <BellIcon className='h-5 w-5' />}
-        <span className='hidden text-sm sm:inline'>
+        <span className='hidden sm:inline'>
           {isLoading ? 'Loading...' : isSubscribed ? 'Notifications On' : 'Get Notifications'}
         </span>
       </button>
 
-      {/* Error Message */}
+      {/* Error Toast */}
       {error && (
-        <div className='fixed bottom-4 right-4 z-50 max-w-sm rounded-lg border border-red-200 bg-red-50 p-4'>
+        <div className='fixed bottom-4 right-4 z-50 max-w-sm rounded-lg border border-red-200 bg-red-50 p-4 dark:border-red-600 dark:bg-red-900'>
           <div className='flex items-start space-x-2'>
-            <div className='mt-0.5 h-5 w-5 text-red-400'>⚠️</div>
+            <div className='mt-0.5 h-5 w-5 text-red-400 dark:text-red-300'>⚠️</div>
             <div>
-              <h4 className='font-medium text-red-800'>Error</h4>
-              <p className='mt-1 text-sm text-red-600'>{error}</p>
+              <h4 className='font-medium text-red-800 dark:text-red-100'>Error</h4>
+              <p className='mt-1 text-sm text-red-600 dark:text-red-300'>{error}</p>
             </div>
           </div>
           <button
             onClick={() => setError(null)}
-            className='mt-2 text-sm text-red-600 hover:text-red-800'
+            className='mt-2 text-sm text-red-600 hover:text-red-800 dark:text-red-300 dark:hover:text-red-200'
           >
             Dismiss
           </button>

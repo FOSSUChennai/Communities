@@ -5,7 +5,7 @@ import githubIcon from '../../public/githubIcon.svg';
 
 const GitHubButton = () => {
   const [stars, setStarCount] = useState<number | null>(null);
-  const repoUrl = `https://github.com/fossuchennai/communities`;
+  const repoUrl = 'https://github.com/fossuchennai/communities';
 
   useEffect(() => {
     fetchStars();
@@ -13,7 +13,7 @@ const GitHubButton = () => {
 
   const fetchStars = async () => {
     try {
-      const response = await fetch(`https://api.github.com/repos/fossuchennai/communities`);
+      const response = await fetch('https://api.github.com/repos/fossuchennai/communities');
       if (!response.ok) {
         throw new Error('Failed to fetch repository data');
       }
@@ -29,15 +29,17 @@ const GitHubButton = () => {
       href={repoUrl}
       target='_blank'
       rel='noopener noreferrer'
-      className='inline-flex items-center rounded-lg px-4 py-2 text-black shadow transition duration-200'
+      className='text-black-800 dark:text-white-300 inline-flex items-center rounded-md bg-white px-3 py-1.5 text-sm font-medium transition hover:text-green-600 dark:bg-gray-800 dark:hover:text-green-400'
     >
-      <Image src={githubIcon} alt='Github star icon' className='mr-2 h-5 w-5' />
-      <span className='hidden text-sm font-medium sm:inline'>
+      <Image src={githubIcon} alt='GitHub star icon' className='mr-2 h-5 w-5' />
+
+      {/* Large screens: show full label */}
+      <span className='hidden sm:inline'>
         {stars !== null ? `Contribute ${stars} ⭐` : 'Loading...'}
       </span>
-      <span className='text-sm font-medium sm:hidden'>
-        {stars !== null ? `${stars} ⭐` : 'Loading...'}
-      </span>
+
+      {/* Small screens: just stars */}
+      <span className='sm:hidden'>{stars !== null ? `${stars} ⭐` : '...'}</span>
     </a>
   );
 };

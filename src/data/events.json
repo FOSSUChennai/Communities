@@ -75,5 +75,16 @@
     "location": "Chennai",
     "communityName": "Namma Flutter",
     "communityLogo": "https://avatars.githubusercontent.com/u/176333249"
-  }
+  },
+  {
+  "eventName": "CodeSapiens - August Meetup",
+  "eventDescription": "​Namma first offline meetup of the year is here! A space where students, devs, and tech-curious minds come together to learn, share, and vibe over tech.",
+  "eventDate": "2025-08-09", // Format: YYYY-MM-DD
+  "eventTime": "09:00", // 24-hour format: HH:MM
+  "eventVenue": "Mako IT Lab 8th Floor, TICEL BIOPARK, TICEL Biopark Rd, Phase II, Tharamani, Chennai, Tamil Nadu 600113, India",
+  "eventLink": "https://lu.ma/1fsxy7o9",
+  "location": "Chennai",
+  "communityName": "CodeSapiens",
+  "communityLogo": "https://ibb.co/qY3W8tcT" // use imgbb to host the images or change next.config file
+}
 ]

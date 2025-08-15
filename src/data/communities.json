@@ -440,5 +440,17 @@
     "description": "ILUGC was started on 1997 and it is an one of the oldest Linux Users Group in India. We are a heterogeneous group of computer users from the South Indian city of Chennai (a.k.a Madras), united in our use of Free/Libre/Open Source Software and support of Software Freedom in general and GNU/Linux in particular",
     "location": "Chennai",
     "website": "https://ilugc.in/"
+  },
+  {
+    "name": "CodeSapiens",
+    "logo": "https://i.ibb.co/LdXJyLcV/codesapiens-community-logo.jpg",
+    "description": "A hub for students to network, engage in tech discussions, develop products, and envision the future. A self-driven community dedicated to engineering and growth.",
+    "location": "Chennai",
+    "website": "https://codesapiens.in/",
+    "instagram": "https://www.instagram.com/codesapiens.in/",
+    "linkedin": "https://www.linkedin.com/company/codesapiens-community/",
+    "youtube": "https://www.youtube.com/@CodeSapiens-in",
+    "github": "https://github.com/CodeSapiens-in"
+    
   }
 ]

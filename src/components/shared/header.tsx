@@ -1,11 +1,12 @@
 'use client';
 import Link from 'next/link';
 import Image from 'next/image';
-import GitHubButton from '../github-button';
 import PushSubscribe from '../PushSubscribe';
 import Logo from '../../../public/logo.webp';
 import Icon from '../../app/favicon.ico';
-import { RssSimple } from '@phosphor-icons/react';
+import { RssSimpleIcon } from '@phosphor-icons/react';
+import githubIcon from '../../../public/githubIcon.svg';
+import React from 'react';
 
 export default function Header() {
   return (
@@ -33,13 +34,21 @@ export default function Header() {
         <span className='hidden sm:flex'>
           <PushSubscribe />
         </span>
-        <GitHubButton />
+        <a
+          href='https://github.com/fossuchennai/communities'
+          target='_blank'
+          rel='noopener noreferrer'
+          className='inline-flex items-center rounded-lg px-4 py-2 text-black shadow transition duration-200'
+        >
+          <Image src={githubIcon} alt='Github star icon' className='mr-2 h-5 w-5' />
+          <span className='hidden text-sm font-medium sm:inline'>Contribute</span>
+        </a>
         <Link
           href='/rss'
           className='inline-flex items-center rounded-lg px-4 py-2 text-sm text-black shadow transition duration-200 hover:text-gray-700'
           target='_blank'
         >
-          <RssSimple size={20} />
+          <RssSimpleIcon size={20} />
         </Link>
       </div>
     </nav>

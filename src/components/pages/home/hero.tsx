@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import React from 'react';
-import RocketUpdated from '../../../../public/rocket.webp';
+import RocketUpdated from '../../../../public/TN.png';
 
 const Hero = () => {
   return (
@@ -57,7 +57,7 @@ const Hero = () => {
             width={600}
             height={760}
             sizes='(max-width: 768px) calc(100vw - 2rem), 50vw'
-            className='h-[365px] w-auto'
+            className='mt-10 h-auto w-[465px] flex-shrink-0 md:ml-10'
             priority
           />
         </motion.div>

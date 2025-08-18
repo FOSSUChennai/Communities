@@ -14,7 +14,8 @@
     "lint": "next lint && eslint . --max-warnings 0"
   },
   "dependencies": {
-    "@phosphor-icons/react": "^2.1.7",
+    "@phosphor-icons/react": "^2.1.10",
+    "express": "^5.1.0",
     "framer-motion": "^12.4.10",
     "jsonfeed-to-rss": "^3.0.8",
     "next": "15.1.4",

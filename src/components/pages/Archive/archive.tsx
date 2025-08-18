@@ -263,7 +263,7 @@ const Archive = () => {
     <main className='mx-4 rounded-xl bg-white p-6 md:mx-8 lg:mx-16'>
       <section>
         <h2 className='mb-3 text-lg font-normal'>
-          <span className='text-[30px] font-semibold text-black'>archive</span>
+          <span className='text-[30px] font-semibold text-black dark:text-white'>archive</span>
         </h2>
 
         {/* Filter and Sort Controls */}

@@ -7,7 +7,7 @@ import RocketUpdated from '../../../../public/rocket.webp';
 
 const Hero = () => {
   return (
-    <div className='relative z-10 my-16 mb-48 flex items-start bg-[#fafafa] px-4 md:px-8 lg:px-16'>
+    <div className='relative z-10 my-16 mb-48 flex items-start bg-none px-4 md:px-8 lg:px-16'>
       <div className='container relative mx-auto flex flex-col items-center justify-between px-4 text-center md:flex-row md:text-left'>
         <motion.div
           className='z-10 max-w-2xl'
@@ -15,7 +15,7 @@ const Hero = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: 'easeOut' }}
         >
-          <h1 className='relative text-4xl font-semibold leading-tight text-black md:text-[68px] lg:text-[74px]'>
+          <h1 className='relative text-4xl font-semibold leading-tight text-black dark:text-white md:text-[68px] lg:text-[74px]'>
             {`Don't `}
             <motion.span
               className='relative z-20'
@@ -37,7 +37,7 @@ const Hero = () => {
             </motion.span>
           </h1>
           <motion.p
-            className='mt-4 text-[20px] text-gray-600'
+            className='mt-4 text-[20px] text-gray-600 dark:text-gray-300'
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: 'easeOut', delay: 0.7 }}

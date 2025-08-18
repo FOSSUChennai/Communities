@@ -14,10 +14,8 @@ const PushSubscribe: React.FC<PushSubscribeProps> = ({ className = '' }) => {
   const [error, setError] = useState<string | null>(null);
 
   // VAPID public key - you'll need to generate this
-  if (!process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY) {
-    throw new Error("Environment variable NEXT_PUBLIC_VAPID_PUBLIC_KEY is required but not set. Please set it to a valid VAPID public key.");
-  }
-  const VAPID_PUBLIC_KEY = process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY;
+  const VAPID_PUBLIC_KEY = process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY ?? '';
+  const hasVapidKey = Boolean(VAPID_PUBLIC_KEY);
 
   useEffect(() => {
     const checkSubscriptionStatus = async () => {
@@ -35,12 +33,16 @@ const PushSubscribe: React.FC<PushSubscribeProps> = ({ className = '' }) => {
     };
 
     if (typeof window !== 'undefined') {
-      setIsSupported('serviceWorker' in navigator && 'PushManager' in window);
+      const supported = 'serviceWorker' in navigator && 'PushManager' in window && hasVapidKey;
+      setIsSupported(supported);
+      if (!hasVapidKey) {
+        console.warn('Missing NEXT_PUBLIC_VAPID_PUBLIC_KEY. Push notifications will not work.');
+      }
       checkSubscriptionStatus();
 
       // Show prompt after a delay if not subscribed
       const timer = setTimeout(() => {
-        if (!isSubscribed && isSupported) {
+        if (!isSubscribed && supported) {
           setShowPrompt(true);
         }
       }, 3000);
@@ -77,6 +79,9 @@ const PushSubscribe: React.FC<PushSubscribeProps> = ({ className = '' }) => {
     setError(null);
 
     try {
+      if (!hasVapidKey) {
+        throw new Error('Missing VAPID key');
+      }
       // Request permission
       const permission = await Notification.requestPermission();
       if (permission !== 'granted') {
@@ -157,14 +162,12 @@ const PushSubscribe: React.FC<PushSubscribeProps> = ({ className = '' }) => {
     }
   };
 
-  if (!isSupported) {
-    return null;
-  }
+  // Always render the button; disable and adjust label when unsupported
 
   return (
     <>
       {/* Notification Prompt */}
-      {showPrompt && !isSubscribed && (
+      {isSupported && showPrompt && !isSubscribed && (
         <div className='fixed bottom-4 right-4 z-50 max-w-sm rounded-lg border border-gray-200 bg-white p-4 shadow-lg'>
           <div className='flex items-start justify-between'>
             <div className='flex items-start space-x-3'>
@@ -204,17 +207,29 @@ const PushSubscribe: React.FC<PushSubscribeProps> = ({ className = '' }) => {
       {/* Notification Button */}
       <button
         onClick={isSubscribed ? unsubscribeFromNotifications : subscribeToNotifications}
-        disabled={isLoading}
+        disabled={isLoading || !isSupported}
         className={`flex items-center space-x-2 rounded-lg px-4 py-2 font-medium transition-colors ${
           isSubscribed
             ? 'bg-green-100 text-green-700 hover:bg-green-200'
             : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
         } disabled:opacity-50 ${className}`}
-        title={isSubscribed ? 'Unsubscribe from notifications' : 'Subscribe to notifications'}
+        title={
+          !isSupported
+            ? 'Push not supported on this browser'
+            : isSubscribed
+              ? 'Unsubscribe from notifications'
+              : 'Subscribe to notifications'
+        }
       >
         {isSubscribed ? <BellRingingIcon className='h-5 w-5' /> : <BellIcon className='h-5 w-5' />}
         <span className='hidden text-sm sm:inline'>
-          {isLoading ? 'Loading...' : isSubscribed ? 'Notifications On' : 'Get Notifications'}
+          {isLoading
+            ? 'Loading...'
+            : !isSupported
+              ? 'Not supported'
+              : isSubscribed
+                ? 'Notifications On'
+                : 'Get Notifications'}
         </span>
       </button>
 

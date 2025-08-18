@@ -5,6 +5,8 @@ import { IS_PROD, SITE_URL } from '../lib/constants';
 import UmamiProvider from 'next-umami';
 import Header from '../components/shared/header';
 import Footer from '../components/shared/footer';
+import Script from 'next/script';
+// import GreenCursor from '../components/shared/GreenCursor';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -71,15 +73,19 @@ export default function RootLayout({
 }>) {
   const webId = process.env.UMAMI_ANALYTICS_ID;
   return (
-    <html lang='en'>
+    <html lang='en' suppressHydrationWarning>
       {/* removed the head tag, next will add it automatically ( LCP from above 2.5 to below 2.5  ) - adding head manually will be like overriding or bypassing the optimized head from next */}
 
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} mx-auto max-w-[1120px] bg-[#fafafa] antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} mx-auto max-w-[1120px] bg-[#fafafa] text-black antialiased transition-colors dark:bg-zinc-950 dark:text-white`}
       >
+        <Script id='theme-init' strategy='beforeInteractive'>
+          {`try {var t=localStorage.getItem('theme');var m=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;var v=t|| (m?'dark':'light');var r=document.documentElement;if(v==='dark'){r.classList.add('dark')}else{r.classList.remove('dark')}} catch(e){}`}
+        </Script>
         <Header />
         {children}
         <Footer />
+        {/** GreenCursor removed to fix build: component file no longer exists */}
       </body>
       {IS_PROD && <UmamiProvider websiteId={webId} />}
     </html>

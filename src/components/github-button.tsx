@@ -1,7 +1,6 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import Image from 'next/image';
-import githubIcon from '../../public/githubIcon.svg';
+import { GithubLogo } from '@phosphor-icons/react';
 
 const GitHubButton = () => {
   const [stars, setStarCount] = useState<number | null>(null);
@@ -29,9 +28,9 @@ const GitHubButton = () => {
       href={repoUrl}
       target='_blank'
       rel='noopener noreferrer'
-      className='inline-flex items-center rounded-lg px-4 py-2 text-black shadow transition duration-200'
+      className='inline-flex items-center rounded-lg px-4 py-2 text-black transition-colors duration-200 hover:bg-black/5 dark:text-white dark:hover:bg-white/10'
     >
-      <Image src={githubIcon} alt='Github star icon' className='mr-2 h-5 w-5' />
+      <GithubLogo size={20} weight='fill' className='mr-2' />
       <span className='hidden text-sm font-medium sm:inline'>
         {stars !== null ? `Contribute ${stars} ⭐` : 'Loading...'}
       </span>

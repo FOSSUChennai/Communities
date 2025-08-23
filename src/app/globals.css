@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Optional: keep green selection/caret? Remove to revert to defaults. */
+
+/* Moving green glow keyframes for navbar/footer */
+@keyframes glow-sweep {
+  0% {
+    transform: translateX(-40%);
+  }
+  100% {
+    transform: translateX(40%);
+  }
+}

@@ -31,7 +31,8 @@
     "name": "FOSS United Pondicherry",
     "logo": "https://i.ibb.co/vm4vm6g/fosspondy.jpg",
     "description": "FOSS United Pondicherry is a vibrant community dedicated to promoting Free and Open Source Software (FOSS) in the Chennai region. We organize regular meetups, workshops, and hackathons to bring together FOSS enthusiasts, developers, and advocates.",
-    "location": "Pondicherry"
+    "location": "Pondicherry",
+    "website": "https://fossunited.org/c/pondicherry"
   },
   {
     "name": "JS Lovers Chennai",
@@ -134,5 +135,45 @@
     "instagram": "https://www.instagram.com/build2learn_c",
     "linkedin": "https://www.linkedin.com/company/build2learn/",
     "github": "https://github.com/build2learn-in/"
+  },
+  {
+    "name": "Chennai Web Engineering",
+    "logo": "https://i.ibb.co/21x51045/cwe-transparent.png",
+    "description": "Chennai Web Engineering, Community exclusively to learn, share and network for Web engineering professionals across Chennai",
+    "location": "Chennai",
+    "website": "https://www.linkedin.com/company/chennai-web-engineering",
+    "instagram": "https://www.linkedin.com/company/chennai-web-engineering",
+    "linkedin": "https://www.linkedin.com/company/chennai-web-engineering",
+    "github": "https://github.com/topics/chennaiwebengineering"
+  },
+  {
+    "name": "D3 Community",
+    "logo": "https://i.ibb.co/BKQb8hLG/D3-Community-Official-logo.png",
+    "description": "D3 is more than just a tech community; it's a vibrant ecosystem where digital dreamers connect, collaborate, and cultivate their skills. We're a technology-agnostic space, welcoming enthusiasts from all corners of the tech world.",
+    "location": "Chennai",
+    "twitter": "https://x.com/NammaD3Official",
+    "website": "https://bento.me/d3community",
+    "instagram": "https://www.instagram.com/d3communityofficial/",
+    "linkedin": "https://www.linkedin.com/company/d3-community",
+    "youtube": "https://www.youtube.com/@d3CommunityOfficial"
+  },
+  {
+    "name": "MongoDB User Group Chennai",
+    "logo": "https://i.ibb.co/MkmpSxgY/MugChn.png",
+    "description": "MUG Chennai is a MongoDB User Group, where MongoDB Enthusiasts in and around Chennai come together to share their knowledge and to contribute to the promotion of MongoDB.",
+    "location": "Chennai",
+    "website": "https://www.mongodb.com/community/user-groups/chennai/",
+    "linkedin": "https://www.linkedin.com/company/mugchennai"
+  },
+  {
+    "name": "Code On JVM Chennai",
+    "logo": "https://i.ibb.co/5xSndqPW/Code-On-Chennai-JVM.png",
+    "description": "Code On JVM Chennai is a passionate community focused on advancing Java and JVM-based technologies in the Chennai region. We host regular meetups, workshops, and code sprints to unite Java developers, Kotlin enthusiasts and other JVM language. Our mission is to foster learning, collaboration, and innovation around everything that runs on the Java Virtual Machine.",
+    "location": "Chennai",
+    "twitter": "https://x.com/CodeOnJVM",
+    "instagram": "https://www.instagram.com/codeonjvmchennai/",
+    "linkedin": "https://www.linkedin.com/company/codeonjvmchennai/",
+    "telegram": "https://t.me/codeonjvmchennai",
+    "youtube": "https://www.youtube.com/channel/UCxQft97E-LVwIHcZd38JghA"
   }
 ]

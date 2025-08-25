@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useRef, useState } from 'react';
-import eventsJson from '../../../data/events.json';
+import pastEvents from '../../../data/pastevents.json';
 import { MapPin } from '@phosphor-icons/react';
 import EmptyEventCard from '../../no-events-card';
 import Image from 'next/image';
@@ -29,7 +29,7 @@ type EventCardProps = {
   isMonthly: boolean;
 };
 
-const Events = () => {
+const Archive = () => {
   const [monthlyCardHeight, setMonthlyCardHeight] = useState<number>(0);
   const [upcomingCardHeight, setUpcomingCardHeight] = useState<number>(0);
   const [events, setEvents] = useState<Event[]>([]);
@@ -45,12 +45,12 @@ const Events = () => {
   useEffect(() => {
     if (process.env.NODE_ENV !== 'development') {
       fetch(
-        'https://raw.githubusercontent.com/FOSSUChennai/Communities/refs/heads/main/src/data/events.json'
+        'https://raw.githubusercontent.com/FOSSUChennai/Communities/refs/heads/main/src/data/pastevents.json'
       )
         .then((response) => {
           if (!response.ok) {
             // If the fetch fails or in development mode, use the local eventsJson
-            setEvents(eventsJson);
+            setEvents(pastEvents);
             return null;
           }
           return response.json();
@@ -58,7 +58,7 @@ const Events = () => {
         .then((json) => setEvents(json));
     } else {
       // In development, use the local eventsJson directly
-      setEvents(eventsJson);
+      setEvents(pastEvents);
     }
   }, []);
 
@@ -70,11 +70,7 @@ const Events = () => {
   const monthlyEvents = sortedEvents.filter((event) => {
     const eventDate = new Date(event.eventDate);
 
-    return (
-      eventDate.getMonth() === today.getMonth() &&
-      eventDate.getFullYear() === today.getFullYear() &&
-      eventDate >= today
-    );
+    return eventDate <= today;
   });
 
   const upcomingEvents = sortedEvents.filter((event) => {
@@ -198,7 +194,7 @@ const Events = () => {
             )}
             {logo && (
               <Image
-                src={logo}
+                src={logo || ''}
                 alt={`${title} logo`}
                 width={24}
                 height={24}
@@ -254,7 +250,7 @@ const Events = () => {
     <main className='mx-4 rounded-xl bg-white p-6 md:mx-8 lg:mx-16'>
       <section>
         <h2 className='mb-3 text-lg font-normal'>
-          <span className='text-[30px] font-semibold text-black'>this month</span>
+          <span className='text-[30px] font-semibold text-black'>archive</span>
         </h2>
         <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3'>
           {monthlyEvents.length > 0 ? (
@@ -277,37 +273,11 @@ const Events = () => {
           )}
         </div>
       </section>
-
-      <section className='mt-12'>
-        <h2 className='mb-3 text-lg font-normal'>
-          <span className='text-[30px] font-semibold text-black'>upcoming</span>
-        </h2>
-        <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3'>
-          {upcomingEvents.length > 0 ? (
-            upcomingEvents.map((event, index) => (
-              <EventCard
-                key={index}
-                communityName={event.communityName}
-                title={event.eventName}
-                location={event.location}
-                date={event.eventDate}
-                venue={event.eventVenue}
-                link={event.eventLink}
-                time={event.eventTime}
-                logo={event.communityLogo}
-                isMonthly={false}
-              />
-            ))
-          ) : (
-            <EmptyEventCard message='No upcoming events scheduled' />
-          )}
-        </div>
-      </section>
     </main>
   );
 };
 
-export default Events;
+export default Archive;
 
 interface TooltipProps {
   content: string;

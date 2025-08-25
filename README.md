@@ -28,7 +28,7 @@ Have an upcoming tech event in Tamil Nadu? Adding it is simple! Check out our [e
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/FOSSUChennai/Communities.git
+   git clone https://github.com/fossuchennai/communities
    cd Communities
    ```
 
@@ -81,15 +81,15 @@ Pointers to keep in mind is:
 
 ## 🥰 Contributors
 
-<a href="https://github.com/FOSSUChennai/Communities/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=FOSSUChennai/Communities" />
+<a href="https://github.com/fossuchennai/communities/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=fossuchennai/communities" />
 </a>
 
 ## ⭐ Star History
 
 Go put a star 😤
 
-[![Star History Chart](https://api.star-history.com/svg?repos=FOSSUChennai/Communities&type=Date)](https://star-history.com/#FOSSUChennai/Communities&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=FOSSUChennai/Communities&type=Date)](https://www.star-history.com/#FOSSUChennai/Communities&Date)
 
 ## 📝 License
 

@@ -34,6 +34,15 @@ export default function Header() {
           <PushSubscribe />
         </span>
         <GitHubButton />
+         {/* ✅ New Wiki Link */}
+        <a
+          href='https://wiki.tamilnadu.tech'
+          target='_blank'
+          rel='noopener noreferrer'
+          className='inline-flex items-center rounded-lg px-4 py-2 text-sm text-black shadow transition duration-200 hover:text-gray-700'
+        >
+          Wiki
+        </a>
         <Link
           href='/rss'
           className='inline-flex items-center rounded-lg px-4 py-2 text-sm text-black shadow transition duration-200 hover:text-gray-700'

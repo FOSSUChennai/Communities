@@ -74,6 +74,24 @@ const fetchEvents = async (): Promise<Event[]> => {
 };
 
 /**
+ * Checks if the provided data is a valid array of Event objects.
+ * @param {any} data - The data to validate.
+ * @returns {boolean} - True if valid, false otherwise.
+ */
+function isValidEventArray(data: unknown): data is Event[] {
+  return (
+    Array.isArray(data) &&
+    data.every(
+      (event) =>
+        typeof event.eventName === 'string' &&
+        typeof event.eventDescription === 'string' &&
+        typeof event.eventDate === 'string' &&
+        typeof event.eventLink === 'string'
+    )
+  );
+}
+
+/**
  * Sorts events in descending order based on the event date.
  * @param {Event[]} events - The events array to sort.
  * @returns {Event[]} - Sorted array of events.

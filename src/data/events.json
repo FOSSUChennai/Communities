@@ -54,5 +54,16 @@
     "communityName": "TechXConf",
     "communityLogo": "https://i.ibb.co/FkPD9QdN/techconf-logo.png",
     "paid": true
+  },
+  {
+    "eventName": "JSLovers Chennai 1st Anniversary Meetup",
+    "eventDescription": "JSLovers Chennai is celebrating its first anniversary meetup event to celebrate JavaScript, tech and communities",
+    "eventDate": "2025-09-13",
+    "eventTime": "14:00",
+    "eventVenue": "Freshworks, Vijay Shanthi Block-B, GLOBAL INFOCITY PARK, Perungudi, Chennai - 600096",
+    "eventLink": "https://lu.ma/b2wrnk0t",
+    "location": "Chennai",
+    "communityName": "JSLovers Chennai",
+    "communityLogo": "https://i.ibb.co/89fw9p0/1718639979394.jpg"
   }
 ]

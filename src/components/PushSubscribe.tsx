@@ -40,14 +40,24 @@ const PushSubscribe: React.FC<PushSubscribeProps> = ({ className = '' }) => {
       setIsSupported('serviceWorker' in navigator && 'PushManager' in window);
       checkSubscriptionStatus();
 
-      // Show prompt after a delay if not subscribed
-      const timer = setTimeout(() => {
+      // Show prompt after 5 seconds delay if not subscribed
+      const showTimer = setTimeout(() => {
         if (!isSubscribed && isSupported) {
           setShowPrompt(true);
         }
-      }, 3000);
+      }, 5000);
 
-      return () => clearTimeout(timer);
+      // Hide prompt after 15 seconds (5 seconds delay + 10 seconds visible)
+      const hideTimer = setTimeout(() => {
+        if (!isSubscribed && isSupported) {
+          setShowPrompt(false);
+        }
+      }, 15000);
+
+      return () => {
+        clearTimeout(showTimer);
+        clearTimeout(hideTimer);
+      };
     }
   }, [isSubscribed, isSupported]);
 

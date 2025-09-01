@@ -167,20 +167,20 @@ const PushSubscribe: React.FC<PushSubscribeProps> = ({ className = '' }) => {
     <>
       {/* Notification Prompt */}
       {showPrompt && !isSubscribed && (
-        <div className='fixed bottom-4 right-4 z-50 max-w-sm rounded-lg border border-gray-200 bg-white p-4 shadow-lg'>
+        <div className='fixed bottom-4 right-4 z-50 max-w-sm rounded-lg border border-[var(--border)] bg-[var(--card-background)] p-4 shadow-lg'>
           <div className='flex items-start justify-between'>
             <div className='flex items-start space-x-3'>
               <BellIcon className='mt-0.5 h-6 w-6 text-green-500' />
               <div>
-                <h4 className='font-medium text-gray-900'>Stay Updated!</h4>
-                <p className='mt-1 text-sm text-gray-600'>
+                <h4 className='font-medium text-[var(--foreground)]'>Stay Updated!</h4>
+                <p className='mt-1 text-sm text-[var(--muted-foreground)]'>
                   Get notified about new tech events in Tamil Nadu
                 </p>
               </div>
             </div>
             <button
               onClick={() => setShowPrompt(false)}
-              className='text-gray-400 hover:text-gray-600'
+              className='text-[var(--muted-foreground)] hover:text-[var(--foreground)]'
             >
               <XIcon className='h-5 w-5' />
             </button>
@@ -195,7 +195,7 @@ const PushSubscribe: React.FC<PushSubscribeProps> = ({ className = '' }) => {
             </button>
             <button
               onClick={() => setShowPrompt(false)}
-              className='flex-1 rounded bg-gray-100 px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-200'
+              className='flex-1 rounded bg-[var(--muted)] px-3 py-2 text-sm font-medium text-[var(--foreground)] hover:bg-[var(--accent)]'
             >
               Later
             </button>
@@ -207,10 +207,10 @@ const PushSubscribe: React.FC<PushSubscribeProps> = ({ className = '' }) => {
       <button
         onClick={isSubscribed ? unsubscribeFromNotifications : subscribeToNotifications}
         disabled={isLoading}
-        className={`flex items-center space-x-2 rounded-lg px-4 py-2 font-medium transition-colors ${
+        className={`flex items-center space-x-2 rounded-lg border border-[var(--border)] px-4 py-2 font-medium transition-colors ${
           isSubscribed
-            ? 'bg-green-100 text-green-700 hover:bg-green-200'
-            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+            ? 'bg-green-100 text-green-700 hover:bg-green-200 dark:bg-green-900/20 dark:text-green-400 dark:hover:bg-green-900/30'
+            : 'bg-[var(--card-background)] text-[var(--foreground)] hover:bg-[var(--accent)]'
         } disabled:opacity-50 ${className}`}
         title={isSubscribed ? 'Unsubscribe from notifications' : 'Subscribe to notifications'}
       >
@@ -222,7 +222,7 @@ const PushSubscribe: React.FC<PushSubscribeProps> = ({ className = '' }) => {
 
       {/* Error Message */}
       {error && (
-        <div className='fixed bottom-4 right-4 z-50 max-w-sm rounded-lg border border-red-200 bg-red-50 p-4'>
+        <div className='fixed bottom-4 right-4 z-50 max-w-sm rounded-lg border border-red-200 bg-red-50 p-4 dark:border-red-800 dark:bg-red-950/20'>
           <div className='flex items-start space-x-2'>
             <div className='mt-0.5 h-5 w-5 text-red-400'>⚠️</div>
             <div>

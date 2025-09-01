@@ -1,5 +1,9 @@
+'use client';
 import Image from 'next/image';
-import Add2Calendar from '../../public/add2Calendar.webp';
+import { useEffect, useState } from 'react';
+import Add2Calendar from '../../public/add2Calendar.svg';
+import Add2CalendarDark from '../../public/add2Calendar-dark.svg';
+import { useTheme } from '../contexts/ThemeContext';
 
 interface AddToCalendarProps {
   eventTitle: string;
@@ -14,6 +18,12 @@ const AddToCalendar: React.FC<AddToCalendarProps> = ({
   eventDate,
   eventLink
 }) => {
+  const [mounted, setMounted] = useState(false);
+  const { theme } = useTheme();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
   const dateFormatter = (formatDate: string): string => {
     const date = new Date(formatDate);
     const year = date.getFullYear().toString();
@@ -38,7 +48,11 @@ const AddToCalendar: React.FC<AddToCalendarProps> = ({
 
   return (
     <button onClick={handleRedirect}>
-      <Image src={Add2Calendar} alt='CalendarIcon' style={{ width: '20px', height: '20px' }} />
+      <Image
+        src={mounted && theme === 'dark' ? Add2CalendarDark : Add2Calendar}
+        alt='CalendarIcon'
+        className='h-5 w-5'
+      />
     </button>
   );
 };

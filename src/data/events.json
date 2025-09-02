@@ -9,5 +9,61 @@
     "location": "Chennai",
     "communityName": "CTOtalk",
     "communityLogo": "https://ctotalk.in/hubfs/cto-talk-logo.svg"
+  },
+  {
+    "eventName": "Digital Dreamers Den (D3) Meetup #4",
+    "eventDescription": "Digital Dreamers Den (D3) is a vibrant tech community that brings together AI Full-Stack Developers to build the future. We host events, workshops, and networking opportunities that connect talented engineers with cutting-edge technology and industry leaders.",
+    "eventDate": "2025-09-20",
+    "eventTime": "09:30",
+    "eventVenue": "YuniQ, 4th Floor, TICEL BIOPARK, 5, CSIR Rd, Phase II, Tharamani, Chennai, Tamil Nadu 600113",
+    "eventLink": "https://lu.ma/1m0tz3b8",
+    "location": "Chennai",
+    "communityName": "Digital Dreamers Den (D3)",
+    "communityLogo": "https://i.ibb.co/BKQb8hLG/D3-Community-Official-logo.png"
+  },
+  {
+    "eventName": "Chennai DevOps Meetup",
+    "eventDescription": "Chennai DevOps Meetup is back again with the next meet up !!! . This is a free meet up for all the DevOps enthusiasts out there. We will be having some amazing speakers from the industry who will be sharing their knowledge and experience with us. Don't miss this opportunity to learn and network with like-minded individuals.",
+    "eventDate": "2025-09-06",
+    "eventTime": "10.30",
+    "eventVenue": "IBM India Private Limited, 5th Floor,Unit 3,Pinnacle Building, Ascendas IT Park, CSIR Road, Taramani, Chennai- 600113",
+    "eventLink": "https://www.meetup.com/chennaidevops/events/310557996/",
+    "location": "Chennai",
+    "communityName": "Chennai DevOps for Continuous Delivery and Beyond",
+    "communityLogo": "https://i.ibb.co/Y4wkwRW9/Devops.jpg"
+  },
+  {
+    "eventName": "From Dev to Ops - Devops Community Sep 25 Meetup",
+    "eventDescription": "From Dev to Ops is a community of devops practitioners who share raw, behind-the-scenes war room experiences — the outages, the quick fixes, the lessons learned, and the systems that broke in a fun, honest, and simple way.",
+    "eventDate": "2025-09-13",
+    "eventTime": "09:00",
+    "eventVenue": "Go Perfecter AI Private Limited, Temple Steps, 6th Floor B Block, 181-187 Anna Salai, Little Mount, Saidapet, Chennai - 600015 ",
+    "eventLink": "https://lu.ma/7ecrqx68",
+    "location": "Chennai",
+    "communityName": "From Dev to Ops",
+    "communityLogo": "https://i.ibb.co/KZTKzgt/from-dev-to-ops-logo-900-x-900-px.png"
+  },
+  {
+    "eventName": "TechXConf 2025 — AI & Cloud Conference",
+    "eventDescription": "TechXConf is a global phenomenon that unites visionary speakers, pioneering technologies, and a vibrant community of tech enthusiasts. Our mission is to explore, educate, and envision the future of technology through two dynamic domains:Generative AI and Cloud Computing.",
+    "eventDate": "2025-11-01",
+    "eventTime": "09:00",
+    "eventVenue": "Chennai Trade Centre New Building, 3, Karumariamman Koil St, Ganapathi Colony, Wood Creek County,Tulasingapuram, Nandambakkam, Chennai, Tamil Nadu – 600 089.",
+    "eventLink": "https://techxconf.com/",
+    "location": "Chennai",
+    "communityName": "TechXConf",
+    "communityLogo": "https://i.ibb.co/FkPD9QdN/techconf-logo.png",
+    "paid": true
+  },
+  {
+    "eventName": "JSLovers Chennai 1st Anniversary Meetup",
+    "eventDescription": "JSLovers Chennai is celebrating its first anniversary meetup event to celebrate JavaScript, tech and communities",
+    "eventDate": "2025-09-13",
+    "eventTime": "14:00",
+    "eventVenue": "Freshworks, Vijay Shanthi Block-B, GLOBAL INFOCITY PARK, Perungudi, Chennai - 600096",
+    "eventLink": "https://lu.ma/b2wrnk0t",
+    "location": "Chennai",
+    "communityName": "JSLovers Chennai",
+    "communityLogo": "https://i.ibb.co/89fw9p0/1718639979394.jpg"
   }
 ]

@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #fafafa;
+    --foreground: #000000;
+    --card-background: #ffffff;
+    --border: #e5e5e5;
+    --muted: #f5f5f5;
+    --muted-foreground: #6b7280;
+    --accent: #f3f4f6;
+    --accent-foreground: #111827;
+  }
+
+  .dark {
+    --background: #111111;
+    --foreground: #ffffff;
+    --card-background: #1f1f1f;
+    --border: #333333;
+    --muted: #1a1a1a;
+    --muted-foreground: #a3a3a3;
+    --accent: #2a2a2a;
+    --accent-foreground: #ffffff;
+  }
+
+  html {
+    @apply bg-[var(--background)] text-[var(--foreground)];
+  }
+
+  body {
+    @apply bg-[var(--background)] text-[var(--foreground)] transition-colors duration-300;
+  }
+}

@@ -13,7 +13,8 @@ import {
   XLogo,
   YoutubeLogo,
   Butterfly,
-  XSquare
+  XSquare,
+  RedditLogo
 } from '@phosphor-icons/react';
 import HoverIcon from './HoverIcon';
 
@@ -32,6 +33,7 @@ type CommunityCardProps = {
   location?: string;
   youtube?: string;
   github?: string;
+  reddit?: string;
   className?: string;
 };
 
@@ -50,6 +52,7 @@ const CommunityCard = ({
   telegram,
   youtube,
   github,
+  reddit,
   className
 }: CommunityCardProps) => {
   const [mousePosition, setMousePosition] = React.useState<{ x: number; y: number } | null>(null);
@@ -71,11 +74,12 @@ const CommunityCard = ({
     github: { Icon: GithubLogo, color: 'text-black', title: 'GitHub', link: github },
     discord: { Icon: DiscordLogo, color: 'text-indigo-500', title: 'Discord', link: discord },
     twitter: { Icon: XLogo, color: 'text-black', title: 'Twitter', link: twitter },
-    instagram: { Icon: InstagramLogo, color: 'text-pink-600', title: 'Instagram', link: instagram },
+    instagram: { Icon: InstagramLogo, color: 'text-pink-500', title: 'Instagram', link: instagram },
     bluesky: { Icon: Butterfly, color: 'text-blue-400', title: 'Bluesky', link: bluesky },
     mastodon: { Icon: MastodonLogo, color: 'text-purple-600', title: 'Mastodon', link: mastodon },
     telegram: { Icon: TelegramLogo, color: 'text-blue-400', title: 'Telegram', link: telegram },
-    youtube: { Icon: YoutubeLogo, color: 'text-red-600', title: 'Youtube', link: youtube }
+    youtube: { Icon: YoutubeLogo, color: 'text-red-600', title: 'Youtube', link: youtube },
+    reddit: { Icon: RedditLogo, color: 'text-red-600', title: 'Reddit', link: reddit }
   };
 
   return (
@@ -110,7 +114,7 @@ const CommunityCard = ({
             href={website}
             target='_blank'
             rel='noopener noreferrer'
-            className='mb-4 flex items-center gap-4'
+            className='mb-4 flex flex-shrink-0 items-center gap-4'
           >
             {logo && (
               <Image
@@ -135,7 +139,7 @@ const CommunityCard = ({
             </div>
           </a>
 
-          <p className='line-clamp-5 text-justify text-gray-600'>{description}</p>
+          <p className='line-clamp-5 flex-1 text-justify text-gray-600'>{description}</p>
 
           {/* This creates a line only if social links exist*/}
           {(twitter ||
@@ -146,9 +150,9 @@ const CommunityCard = ({
             bluesky ||
             mastodon ||
             telegram ||
-            youtube) && <div className='mt-4 border-t border-gray-100' />}
+            youtube) && <div className='mt-4 flex-shrink-0 border-t border-gray-100' />}
 
-          <div className='mt-4 flex gap-3 opacity-100 transition-opacity'>
+          <div className='mt-4 flex flex-shrink-0 gap-3 opacity-100 transition-opacity'>
             {Object.entries(socialLinks).map(([key, { Icon, color, title, link }]) =>
               eval(key) ? (
                 <HoverIcon

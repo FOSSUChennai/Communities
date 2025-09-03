@@ -21,7 +21,8 @@
     "next-umami": "^1.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "rss": "^1.2.2"
+    "rss": "^1.2.2",
+    "web-push": "^3.6.7"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.6.1",
@@ -32,6 +33,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@types/rss": "^0.0.32",
+    "@types/web-push": "^3.6.4",
     "eslint": "^9.18.0",
     "eslint-config-next": "^15.1.3",
     "eslint-plugin-react": "^7.37.3",

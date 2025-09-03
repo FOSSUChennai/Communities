@@ -1,0 +1,216 @@
+name: Send Push Notifications
+
+on:
+  workflow_dispatch:
+    inputs:
+      title:
+        description: 'Notification Title'
+        required: true
+        default: 'Tamil Nadu Tech Update'
+      body:
+        description: 'Notification Body'
+        required: true
+        default: 'New tech event available!'
+      url:
+        description: 'Notification URL (optional)'
+        required: false
+        default: '/'
+      test_mode:
+        description: 'Test mode (sends to limited recipients)'
+        type: boolean
+        required: false
+        default: true
+
+  push:
+    paths:
+      - 'src/data/events.json'
+
+jobs:
+  send-notifications:
+    runs-on: ubuntu-latest
+    name: Send Push Notifications
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Ensure full git history
+        run: |
+          echo "Fetching full git history..."
+          git fetch --unshallow || true
+          echo "Git history fetched."
+
+      - name: Setup Node.js & tools
+        run: |
+          echo "Updating apt-get..."
+          sudo apt-get update
+          echo "Installing jq and curl..."
+          sudo apt-get install -y jq curl
+          echo "Installing web-push npm package..."
+          npm install -g web-push
+          echo "Setup complete."
+
+      - name: Detect new events (on push)
+        id: detect-changes
+        if: github.event_name == 'push'
+        run: |
+          echo "::notice ::Checking if events.json changed..."
+          git diff --name-only HEAD~1 HEAD | grep -q "src/data/events.json" || { echo "No changes in events.json. Exiting."; exit 0; }
+
+          echo "Extracting new and old events.json..."
+          git show HEAD:src/data/events.json > new.json
+          git show HEAD~1:src/data/events.json > old.json
+
+          echo "Calculating new events..."
+          NEW_EVENTS=$(jq -s '.[1] - .[0]' old.json new.json)
+          echo "$NEW_EVENTS" > diff.json
+          COUNT=$(jq 'length' diff.json)
+          echo "New events count: $COUNT"
+
+          if [ "$COUNT" -gt 0 ]; then
+              echo "::notice ::Found $COUNT new event(s)."
+              FIRST_EVENT=$(jq '.[0]' diff.json)
+              echo "$FIRST_EVENT" > detected_event.json
+              echo "First new event: $FIRST_EVENT"
+              jq -r '. as $e | to_entries[] | "\(.key)=\($e[.key])"' <<< "$FIRST_EVENT" >> $GITHUB_OUTPUT
+              echo "new_event_found=true" >> $GITHUB_OUTPUT
+          else
+              echo "::notice ::No new events found."
+              echo "new_event_found=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Clone subscriptions repo
+        env:
+          GH_DB_PAT: ${{ secrets.GH_DB_PAT }}
+        run: |
+          echo "Cloning subscriptions repo..."
+          git clone https://x-access-token:${GH_DB_PAT}@github.com/${{ secrets.SUBSCRIPTION_REPO }}.git subs_repo
+          echo "Repo cloned. Listing files:"
+          ls subs_repo
+
+      - name: List subscription files
+        id: list-files
+        run: |
+          echo "Listing subscription files in subs_repo..."
+          cd subs_repo
+          ls *.json > ../subs.txt || echo "" > ../subs.txt
+          echo "Subscription files:"
+          cat ../subs.txt
+          echo "file_count=$(wc -l < ../subs.txt)" >> $GITHUB_OUTPUT
+
+      - name: Prepare notification content
+        id: prepare
+        run: |
+          echo "Preparing notification content..."
+          if [ "${{ github.event_name }}" = "push" ] && [ "${{ steps.detect-changes.outputs.new_event_found }}" = "true" ]; then
+              echo "Push event detected with new event."
+              TITLE="🎉 New Tech Event: ${{ steps.detect-changes.outputs.eventName }}"
+              BODY="📅 ${{ steps.detect-changes.outputs.eventDate }} at ${{ steps.detect-changes.outputs.eventTime }} in ${{ steps.detect-changes.outputs.location }}"
+              URL="${{ steps.detect-changes.outputs.eventLink }}"
+              TEST_MODE=false
+          else
+              echo "Using workflow_dispatch inputs."
+              TITLE="${{ inputs.title }}"
+              BODY="${{ inputs.body }}"
+              URL="${{ inputs.url }}"
+              TEST_MODE=true
+          fi
+
+          echo "Raw TITLE: $TITLE"
+          echo "Raw BODY: $BODY"
+          echo "Raw URL: $URL"
+          echo "Test mode: $TEST_MODE"
+
+          TITLE=$(echo "$TITLE" | cut -c1-100)
+          BODY=$(echo "$BODY" | cut -c1-150)
+
+          echo "Trimmed TITLE: $TITLE"
+          echo "Trimmed BODY: $BODY"
+
+          jq -n --arg title "$TITLE" \
+                      --arg body "$BODY" \
+                      --arg url "$URL" \
+                      --argjson test "$TEST_MODE" \
+                      --arg timestamp "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
+                      '{title: $title, body: $body, url: $url, test: $test, timestamp: $timestamp}' > notification.json
+
+          echo "Notification JSON:"
+          cat notification.json
+
+      - name: Send Notifications
+        id: send
+        env:
+          VAPID_PUBLIC_KEY: ${{ secrets.VAPID_PUBLIC_KEY }}
+          VAPID_PRIVATE_KEY: ${{ secrets.VAPID_PRIVATE_KEY }}
+        run: |
+          echo "Starting notification sending process..."
+          TOTAL=$(wc -l < subs.txt)
+          SENT=0
+          FAIL=0
+          echo "Total subscriptions to process: $TOTAL"
+
+          # Handle test mode
+          if jq -e '.test' notification.json | grep -q true; then
+              echo "Test mode enabled. Limiting recipients to first 3."
+              head -3 subs.txt > subs_tmp.txt && mv subs_tmp.txt subs.txt
+              TOTAL=$(wc -l < subs.txt)
+              echo "Test mode total: $TOTAL"
+          fi
+
+          # Check if there are any subscriptions to process
+          if [ "$TOTAL" -eq 0 ]; then
+              echo "::warning ::No subscriptions found to send notifications."
+          else
+              while IFS= read -r FILE || [ -n "$FILE" ]; do
+                  [ -z "$FILE" ] && continue
+                  echo "Processing subscription file: $FILE"
+                  SUB=$(cat subs_repo/"$FILE")
+                  ENDPOINT=$(echo "$SUB" | jq -r '.endpoint')
+                  P256DH=$(echo "$SUB" | jq -r '.keys.p256dh')
+                  AUTH=$(echo "$SUB" | jq -r '.keys.auth')
+
+                  if [ -z "$ENDPOINT" ] || [ -z "$P256DH" ] || [ -z "$AUTH" ]; then
+                      echo "::warning ::Invalid subscription in $FILE"
+                      FAIL=$((FAIL+1))
+                      continue
+                  fi
+
+                  if web-push send-notification \
+                          --endpoint="$ENDPOINT" \
+                          --key="$P256DH" \
+                          --auth="$AUTH" \
+                          --vapid-subject="https://tamilnadu.tech/" \
+                          --vapid-pubkey="$VAPID_PUBLIC_KEY" \
+                          --vapid-pvtkey="$VAPID_PRIVATE_KEY" \
+                          --payload="$(jq -c . < notification.json)" \
+                          --ttl=3600 2>/dev/null; then
+                      SENT=$((SENT+1))
+                  else
+                      echo "::error ::Failed to send notification to $ENDPOINT"
+                      FAIL=$((FAIL+1))
+                  fi
+                  sleep 0.2
+              done < subs.txt
+          fi
+
+          echo "Notifications sent: $SENT"
+          echo "Notifications failed: $FAIL"
+          echo "Total processed: $TOTAL"
+
+          echo "sent_count=$SENT" >> $GITHUB_OUTPUT
+          echo "failed_count=$FAIL" >> $GITHUB_OUTPUT
+          echo "total=$TOTAL" >> $GITHUB_OUTPUT
+
+      - name: Summary
+        run: |
+          echo "## Push Summary" >> $GITHUB_STEP_SUMMARY
+          echo "- Total Subscriptions: ${{ steps.list-files.outputs.file_count }}" >> $GITHUB_STEP_SUMMARY
+          echo "- Sent: ${{ steps.send.outputs.sent_count }}" >> $GITHUB_STEP_SUMMARY
+          echo "- Failed: ${{ steps.send.outputs.failed_count }}" >> $GITHUB_STEP_SUMMARY
+          echo "Summary written to $GITHUB_STEP_SUMMARY"
+
+      - name: Cleanup
+        run: |
+          echo "Cleaning up temporary files..."
+          rm -rf subs_repo *.json subs.txt
+          echo "Cleanup complete."

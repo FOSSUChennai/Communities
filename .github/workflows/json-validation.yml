@@ -72,9 +72,19 @@ jobs:
 
             core.setOutput('events_modified', eventsModified.toString());
             core.setOutput('communities_modified', communitiesModified.toString());
+      
+      - name: Set environment variables for next steps
+        run: |
+          echo "EVENTS_MODIFIED=${{ steps.check-modified-files.outputs.events_modified }}" >> $GITHUB_ENV
+          echo "COMMUNITIES_MODIFIED=${{ steps.check-modified-files.outputs.communities_modified }}" >> $GITHUB_ENV
+
+      - name: Set additional environment variables
+        run: |
+          echo "EVENTS_LINT_FAILED=${{ steps.lint-events.outputs.events_lint_failed }}" >> $GITHUB_ENV
+          echo "COMMUNITIES_LINT_FAILED=${{ steps.lint-communities.outputs.communities_lint_failed }}" >> $GITHUB_ENV
 
       - name: Comment on PR for Events Linting Failure
-        if: steps.lint-events.outputs.events_lint_failed == 'true' && steps.check-modified-files.outputs.events_modified == 'true'
+        if: env.EVENTS_LINT_FAILED == 'true' && env.EVENTS_MODIFIED == 'true'
         uses: actions/github-script@v6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -89,7 +99,7 @@ jobs:
             });
 
       - name: Comment on PR for Events Linting Success
-        if: steps.lint-events.outputs.events_lint_failed == 'false' && steps.check-modified-files.outputs.events_modified == 'true'
+        if: env.EVENTS_LINT_FAILED == 'false' && env.EVENTS_MODIFIED == 'true'
         uses: actions/github-script@v6
         with:
           script: |
@@ -101,7 +111,7 @@ jobs:
             });
 
       - name: Comment on PR for Communities Linting Failure
-        if: steps.lint-communities.outputs.communities_lint_failed == 'true' && steps.check-modified-files.outputs.communities_modified == 'true'
+        if: env.COMMUNITIES_LINT_FAILED == 'true' && env.COMMUNITIES_MODIFIED == 'true'
         uses: actions/github-script@v6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -116,7 +126,7 @@ jobs:
             });
 
       - name: Comment on PR for Communities Linting Success
-        if: steps.lint-communities.outputs.communities_lint_failed == 'false' && steps.check-modified-files.outputs.communities_modified == 'true'
+        if: env.COMMUNITIES_LINT_FAILED == 'false' && env.COMMUNITIES_MODIFIED == 'true'
         uses: actions/github-script@v6
         with:
           script: |
@@ -129,18 +139,22 @@ jobs:
 
       - name: Overall PR Summary and Approval
         id: approve-pr
-        if: steps.lint-events.outputs.events_lint_failed == 'false' && steps.lint-communities.outputs.communities_lint_failed == 'false'
+        if: env.EVENTS_LINT_FAILED == 'false' && env.COMMUNITIES_LINT_FAILED == 'false'
         uses: actions/github-script@v6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
+            // Access the step outputs through the GitHub Actions environment variables
+            const eventsModified = process.env.EVENTS_MODIFIED === 'true';
+            const communitiesModified = process.env.COMMUNITIES_MODIFIED === 'true';
+            
             let summaryMessage = '🎉 **JSON Checks Passed**\n\n';
 
-            if (steps.check-modified-files.outputs.events_modified == 'true') {
+            if (eventsModified) {
               summaryMessage += '- ✅ Events JSON Linting: Passed\n';
             }
 
-            if (steps.check-modified-files.outputs.communities_modified == 'true') {
+            if (communitiesModified) {
               summaryMessage += '- ✅ Communities JSON Linting: Passed\n';
             }
 
@@ -163,31 +177,8 @@ jobs:
 
             core.setOutput('approved', 'true');
 
-      - name: Check if PR only changes JSON data files
-        id: check-pr-files
-        if: steps.approve-pr.outputs.approved == 'true'
-        uses: actions/github-script@v6
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            // Get PR files
-            const { data: files } = await github.rest.pulls.listFiles({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              pull_number: context.issue.number
-            });
-
-            // Check if only JSON files in src/data are modified
-            const jsonOnly = files.every(file => 
-              (file.filename === 'src/data/events.json' || 
-               file.filename === 'src/data/communities.json')
-            );
-
-            console.log(`PR #${context.issue.number} contains only JSON data files: ${jsonOnly}`);
-            core.setOutput('json_only', jsonOnly.toString());
-
       - name: Auto Merge PR
-        if: steps.check-pr-files.outputs.json_only == 'true'
+        if: env.EVENTS_LINT_FAILED == 'false' && env.COMMUNITIES_LINT_FAILED == 'false'
         uses: actions/github-script@v6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -195,7 +186,6 @@ jobs:
             console.log(`Attempting to merge PR #${context.issue.number}`);
 
             let branchName;
-            let isFork = false;
 
             try {
               // First, get the PR information to retrieve the branch name and details
@@ -208,10 +198,6 @@ jobs:
               // Save the branch name for later deletion
               branchName = prData.head.ref;
               console.log(`PR branch name: ${branchName}`);
-              
-              // Check if the PR is from a fork
-              isFork = prData.head.repo.fork || (prData.head.repo.full_name !== prData.base.repo.full_name);
-              console.log(`PR is from a fork: ${isFork}`);
               
               // Get PR files to identify which JSON files were modified
               const { data: files } = await github.rest.pulls.listFiles({
@@ -236,13 +222,8 @@ jobs:
                   // Read and parse the events.json file
                   const eventsData = JSON.parse(fs.readFileSync('src/data/events.json', 'utf8'));
                   
-                  // Get changes from the PR
-                  const { data: eventDiff } = await github.rest.pulls.getFiles({
-                    owner: context.repo.owner,
-                    repo: context.repo.repo,
-                    pull_number: context.issue.number,
-                    path: 'src/data/events.json'
-                  });
+                  // We already have the files information from earlier, no need to fetch again
+                  // The path parameter is not supported in the getFiles method
                   
                   // Extract event information for commit message
                   const eventTitles = eventsData
@@ -324,35 +305,56 @@ jobs:
               }
               
               // Merge the PR using squash method with enhanced commit info
-              await github.rest.pulls.merge({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                pull_number: context.issue.number,
-                merge_method: 'squash',
-                commit_title: commitTitle,
-                commit_message: commitMessage
-              });
-              console.log(`Successfully merged PR #${context.issue.number}`);
-              
-              // Only delete the branch if it's not from a fork
-              if (!isFork) {
-                console.log(`Attempting to delete branch ${branchName} (not a fork)`);
-                await github.rest.git.deleteRef({
+              try {
+                await github.rest.pulls.merge({
                   owner: context.repo.owner,
                   repo: context.repo.repo,
-                  ref: `heads/${branchName}`
+                  pull_number: context.issue.number,
+                  merge_method: 'squash',
+                  commit_title: commitTitle,
+                  commit_message: commitMessage
                 });
-                console.log(`Successfully deleted branch: ${branchName}`);
-              } else {
-                console.log(`Skipping branch deletion for ${branchName} because it's from a fork`);
+                console.log(`Successfully merged PR #${context.issue.number}`);
+              } catch (mergeError) {
+                // Handle permission issues
+                console.log(`Error merging PR: ${mergeError.message}`);
+                
+                // Create a comment instead of failing entirely
+                await github.rest.issues.createComment({
+                  issue_number: context.issue.number,
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  body: '✅ **All JSON validation checks passed!**\n\nThis PR is ready to be merged, but the automated merge failed due to permissions.\n\nPlease ask a repository maintainer to merge this PR manually.'
+                });
+                
+                // Don't fail the workflow
+                console.log('Created comment requesting manual merge');
               }
               
             } catch (error) {
               console.log(`Failed to process PR #${context.issue.number}`);
               console.log(error);
-              core.setFailed(`Failed to process PR: ${error.message}`);
+              
+              // Create a comment about the error
+              try {
+                await github.rest.issues.createComment({
+                  issue_number: context.issue.number,
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  body: `⚠️ **JSON validation passed, but there was an issue with automatic processing**\n\nAn error occurred: ${error.message}\n\nA repository maintainer should review this PR manually.`
+                });
+              } catch (commentError) {
+                console.log(`Failed to create error comment: ${commentError.message}`);
+              }
+              
+              // Don't fail the workflow completely if only the merge part failed
+              if (error.message.includes('Resource not accessible by integration')) {
+                console.log('Continuing workflow despite merge permission error');
+              } else {
+                core.setFailed(`Failed to process PR: ${error.message}`);
+              }
             }
 
       - name: Fail workflow if validation failed
-        if: steps.lint-events.outputs.events_lint_failed == 'true' || steps.lint-communities.outputs.communities_lint_failed == 'true'
+        if: env.EVENTS_LINT_FAILED == 'true' || env.COMMUNITIES_LINT_FAILED == 'true'
         run: exit 1

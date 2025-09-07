@@ -1,5 +1,5 @@
 [
-    {
+  {
     "eventName": "FOSS Meetup | September 2025",
     "eventDescription": "FOSS Meetup - September 2025.",
     "eventDate": "2025-09-27",
@@ -98,5 +98,16 @@
     "location": "Chennai",
     "communityName": "Chennai React",
     "communityLogo": "https://avatars.githubusercontent.com/u/175532518"
+  },
+  {
+    "eventName": "JAVACRAFT: Coding Possibilities",
+    "eventDescription": "JavaCraft: Coding Possibilities – a power-packed workshop where code meets creativity!",
+    "eventDate": "2025-09-20",
+    "eventTime": "9:00",
+    "eventVenue": "Entrans Technologies Pvt Ltd, Chennai.",
+    "eventLink": "https://luma.com/h3vol08t",
+    "location": "Chennai",
+    "communityName": "CodeonJVM",
+    "communityLogo": "https://shorturl.at/Lk5UD"
   }
 ]

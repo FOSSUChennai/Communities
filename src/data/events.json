@@ -22,17 +22,6 @@
     "communityLogo": "https://i.ibb.co/BKQb8hLG/D3-Community-Official-logo.png"
   },
   {
-    "eventName": "From Dev to Ops - Devops Community Sep 25 Meetup",
-    "eventDescription": "From Dev to Ops is a community of devops practitioners who share raw, behind-the-scenes war room experiences — the outages, the quick fixes, the lessons learned, and the systems that broke in a fun, honest, and simple way.",
-    "eventDate": "2025-09-13",
-    "eventTime": "09:00",
-    "eventVenue": "Go Perfecter AI Private Limited, Temple Steps, 6th Floor B Block, 181-187 Anna Salai, Little Mount, Saidapet, Chennai - 600015 ",
-    "eventLink": "https://lu.ma/7ecrqx68",
-    "location": "Chennai",
-    "communityName": "From Dev to Ops",
-    "communityLogo": "https://i.ibb.co/KZTKzgt/from-dev-to-ops-logo-900-x-900-px.png"
-  },
-  {
     "eventName": "TechXConf 2025 — AI & Cloud Conference",
     "eventDescription": "TechXConf is a global phenomenon that unites visionary speakers, pioneering technologies, and a vibrant community of tech enthusiasts. Our mission is to explore, educate, and envision the future of technology through two dynamic domains:Generative AI and Cloud Computing.",
     "eventDate": "2025-11-01",
@@ -43,16 +32,5 @@
     "communityName": "TechXConf",
     "communityLogo": "https://i.ibb.co/FkPD9QdN/techconf-logo.png",
     "paid": true
-  },
-  {
-    "eventName": "JSLovers Chennai 1st Anniversary Meetup",
-    "eventDescription": "JSLovers Chennai is celebrating its first anniversary meetup event to celebrate JavaScript, tech and communities",
-    "eventDate": "2025-09-13",
-    "eventTime": "14:00",
-    "eventVenue": "Freshworks, Vijay Shanthi Block-B, GLOBAL INFOCITY PARK, Perungudi, Chennai - 600096",
-    "eventLink": "https://lu.ma/b2wrnk0t",
-    "location": "Chennai",
-    "communityName": "JSLovers Chennai",
-    "communityLogo": "https://i.ibb.co/89fw9p0/1718639979394.jpg"
   }
 ]

@@ -2,9 +2,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import events from '../../../data/events.json';
 import { MapPin } from '@phosphor-icons/react';
-import EmptyEventCard from '../../no-events-card';
+import NoEventsCard from '../../no-events-card';
 import Image from 'next/image';
 import AddToCalendar from '@/components/AddToCalendar';
+import Tooltip from '@/components/Tooltip';
 
 type Event = {
   communityName: string;
@@ -247,7 +248,7 @@ const Events = () => {
               />
             ))
           ) : (
-            <EmptyEventCard message='No events scheduled for this month' />
+            <NoEventsCard message='No events scheduled for this month' />
           )}
         </div>
       </section>
@@ -272,7 +273,7 @@ const Events = () => {
               />
             ))
           ) : (
-            <EmptyEventCard message='No upcoming events scheduled' />
+            <NoEventsCard message='No upcoming events scheduled' />
           )}
         </div>
       </section>
@@ -281,26 +282,3 @@ const Events = () => {
 };
 
 export default Events;
-
-interface TooltipProps {
-  content: string;
-  children: React.ReactNode;
-}
-
-function Tooltip({ content, children }: TooltipProps) {
-  const [showTooltip, setShowTooltip] = useState(false);
-
-  return (
-    <div className='relative inline-block'>
-      <div onMouseEnter={() => setShowTooltip(true)} onMouseLeave={() => setShowTooltip(false)}>
-        {children}
-      </div>
-      {showTooltip && (
-        <div className='absolute -top-12 left-1/2 z-50 -translate-x-1/2 transform whitespace-nowrap rounded-md border-2 border-gray-800 bg-gray-100 px-2 py-1 text-xs text-gray-800 shadow-lg'>
-          {content}
-          <div className='absolute -bottom-1 left-1/2 h-2 w-2 -translate-x-1/2 rotate-45 transform bg-gray-100' />
-        </div>
-      )}
-    </div>
-  );
-}

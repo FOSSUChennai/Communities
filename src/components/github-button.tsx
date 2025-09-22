@@ -2,12 +2,17 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import githubIcon from '../../public/githubIcon.svg';
+import githubIconDark from '../../public/githubIcon-dark.svg';
+import { useTheme } from '../contexts/ThemeContext';
 
 const GitHubButton = () => {
   const [stars, setStarCount] = useState<number | null>(null);
+  const [mounted, setMounted] = useState(false);
+  const { theme } = useTheme();
   const repoUrl = `https://github.com/fossuchennai/communities`;
 
   useEffect(() => {
+    setMounted(true);
     fetchStars();
   }, []);
 
@@ -29,9 +34,13 @@ const GitHubButton = () => {
       href={repoUrl}
       target='_blank'
       rel='noopener noreferrer'
-      className='inline-flex items-center rounded-lg px-4 py-2 text-black shadow transition duration-200'
+      className='inline-flex items-center rounded-lg border border-[var(--border)] bg-[var(--card-background)] px-4 py-2 text-[var(--foreground)] shadow transition duration-200 hover:bg-[var(--accent)]'
     >
-      <Image src={githubIcon} alt='Github star icon' className='mr-2 h-5 w-5' />
+      <Image
+        src={mounted && theme === 'dark' ? githubIconDark : githubIcon}
+        alt='Github star icon'
+        className='mr-2 h-5 w-5'
+      />
       <span className='hidden text-sm font-medium sm:inline'>
         {stars !== null ? `Contribute ${stars} ⭐` : 'Loading...'}
       </span>

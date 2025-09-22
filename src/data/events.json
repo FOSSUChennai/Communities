@@ -98,5 +98,16 @@
     "location": "Chennai",
     "communityName": "Chennai React",
     "communityLogo": "https://avatars.githubusercontent.com/u/175532518"
+  },
+  {
+    "eventName": "FOSS United Chennai x Namma Flutter Meetup",
+    "eventDescription": "FOSS United Chennai X Namma Flutter Workshop - Septmeber 2025.",
+    "eventDate": "2025-09-27",
+    "eventTime": "9:30",
+    "eventVenue": "YuniQ,Tharamani, Chennai, Tamil Nadu 600113 ",
+    "eventLink": "https://fossunited.org/c/chennai/2025/september",
+    "location": "Chennai",
+    "communityName": "FOSS United Chennai",
+    "communityLogo": "https://fossunited.org/files/Foss%20United%20Logo%20Black.svg"
   }
 ]

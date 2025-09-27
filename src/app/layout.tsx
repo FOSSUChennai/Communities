@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Geist, Geist_Mono, Inter } from 'next/font/google';
 import './globals.css';
 import { IS_PROD, SITE_URL } from '../lib/constants';
@@ -24,7 +24,6 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   //adding the head props from below to here ( the next will take care from here )
-  viewport: 'width=device-width, initial-scale=1',
   icons: {
     icon: '/favicon.ico'
   },
@@ -62,6 +61,11 @@ export const metadata: Metadata = {
     }
   },
   metadataBase: new URL(SITE_URL)
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1
 };
 
 export default function RootLayout({

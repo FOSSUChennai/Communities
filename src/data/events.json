@@ -1,5 +1,16 @@
 [
   {
+    "eventName": "DevFest 2025 Chennai",
+    "eventDescription": "DevFest is one of the largest and most inclusive community-led technology conferences worldwide! Every year, Google Developer Groups host DevFests, where attendees explore developer tools, learn from Google Developer Experts, and connect with other tech enthusiasts from their local community.",
+    "eventDate": "2025-11-08",
+    "eventTime": "09:00",
+    "eventVenue": "IIT Madras Research Park, MGR Film City Road, Chennai, 600113",
+    "eventLink": "https://gdg.community.dev/events/details/google-gdg-chennai-presents-devfest-2025-chennai",
+    "location": "Chennai",
+    "communityName": "Google Developer Group Chennai",
+    "communityLogo": "https://i.ibb.co/ynkrJnD4/gdglogo-0229df09.png"
+  },
+  {
     "eventName": "FOSS Meetup | September 2025",
     "eventDescription": "FOSS Meetup - September 2025.",
     "eventDate": "2025-09-27",

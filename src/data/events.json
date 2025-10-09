@@ -99,5 +99,16 @@
     "location": "Chennai",
     "communityName": "Codesapiens",
     "communityLogo": "https://i.ibb.co/bgwW96Mh/logo.png"
+  },
+  {
+    "eventName": "Global Startup Summit-2025",
+    "eventDescription": "Tamil Nadu Global Startup Summit 2025—the premier global stage where startups, investors, and industry leaders connect, collaborate, and drive innovation.",
+    "eventDate": "2025-10-09",
+    "eventTime": "09:00",
+    "eventVenue": "Codissia Trade Fair Complex, Coimbatore",
+    "eventLink": "https://event.startuptn.in/",
+    "location": "Coimbatore",
+    "communityName": "Startup TN",
+    "communityLogo": "https://startuptn.in/images/blue%20horizontal.png"
   }
 ]

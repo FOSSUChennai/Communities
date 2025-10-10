@@ -1,5 +1,16 @@
 [
   {
+  "eventName": "தமிழ் மென்பொருள் சுதந்திர தினம் (Software Freedom Day) - 2025",
+  "eventDescription": "தமிழில் திறந்த மூல மென்பொருளின் விழிப்புணர்வைக் கொண்டாடுதல் மற்றும் பரப்புதல்.",
+  "eventDate": "2025-11-08, 2025-11-09",
+  "eventTime": "09:00",
+  "eventVenue": "Virtual (Online)",
+  "eventLink": "https://tamilsfd25.kaniyam.com",
+  "location": "Virtual (Online)",
+  "communityName": "Kaniyam",
+  "communityLogo": "https://i.ibb.co/Fbd1bckP/kaniyam.webp"
+  },
+  {
     "eventName": "DevFest 2025 Chennai",
     "eventDescription": "DevFest is one of the largest and most inclusive community-led technology conferences worldwide! Every year, Google Developer Groups host DevFests, where attendees explore developer tools, learn from Google Developer Experts, and connect with other tech enthusiasts from their local community.",
     "eventDate": "2025-11-08",

@@ -6,8 +6,8 @@ import { useRouter } from 'next/navigation';
 const CallToAction = () => {
   const router = useRouter();
   return (
-    <div className='m-[12px] px-6 py-12 md:px-16'>
-      <div className='relative rounded-lg bg-[#4CAF50] p-10 shadow-lg'>
+    <div className='mx-4 py-12 md:mx-8 lg:mx-16'>
+      <div className='relative rounded-lg bg-[#4CAF50] p-10 shadow-lg md:w-[93%] lg:w-full'>
         <div className='absolute bottom-0 right-0 hidden translate-x-[72px] md:block'>
           <Image
             src='/rockethalf.png'
@@ -19,7 +19,7 @@ const CallToAction = () => {
           />
         </div>
 
-        <div className='relative z-10 flex flex-col text-left'>
+        <div className='relative z-10 flex flex-col text-left md:pr-[70px]'>
           <div className='max-w-2xl'>
             <h3 className='text-3xl font-semibold text-white md:text-4xl'>
               Know a tech event? <br className='block' />{' '}

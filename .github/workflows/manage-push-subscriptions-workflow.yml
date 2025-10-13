@@ -1,0 +1,72 @@
+name: Manage Push Subscriptions
+
+on:
+  repository_dispatch:
+    types: [save_push_subscription, remove_push_subscription]
+
+jobs:
+  manage-subscription:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout target repository
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ secrets.SUBSCRIPTION_REPO }}
+          token: ${{ secrets.GH_DB_PAT }}
+          path: subs-repo
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Process subscription data
+        id: process
+        run: |
+          SUBSCRIPTION_ID="${{ github.event.client_payload.subscription.subscriptionId }}"
+          ACTION="${{ github.event.client_payload.action }}"
+          TIMESTAMP="${{ github.event.client_payload.subscription.timestamp }}"
+
+          echo "subscription_id=${SUBSCRIPTION_ID}" >> $GITHUB_OUTPUT
+          echo "action=${ACTION}" >> $GITHUB_OUTPUT
+          echo "timestamp=${TIMESTAMP}" >> $GITHUB_OUTPUT
+
+      - name: Save subscription as JSON file
+        if: steps.process.outputs.action == 'save'
+        run: |
+          SUBSCRIPTION_ID="${{ steps.process.outputs.subscription_id }}"
+          SUBS_FILE="subs-repo/${SUBSCRIPTION_ID}.json"
+
+          echo "Saving subscription data for ID: $SUBSCRIPTION_ID"
+          echo '${{ toJSON(github.event.client_payload.subscription) }}' > "$SUBS_FILE"
+
+      - name: Remove subscription JSON file
+        if: steps.process.outputs.action == 'remove'
+        run: |
+          SUBSCRIPTION_ID="${{ steps.process.outputs.subscription_id }}"
+          SUBS_FILE="subs-repo/${SUBSCRIPTION_ID}.json"
+
+          echo "Removing subscription data for ID: $SUBSCRIPTION_ID"
+          if [ -f "$SUBS_FILE" ]; then
+            rm "$SUBS_FILE"
+          else
+            echo "File $SUBS_FILE does not exist."
+          fi
+
+      - name: Commit and push changes
+        run: |
+          cd subs-repo
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git diff --cached --quiet || git commit -m "Manage subscription: ${{ steps.process.outputs.action }} ${{ steps.process.outputs.subscription_id }}"
+          git push
+
+      - name: Log operation
+        run: |
+          echo "📝 Push subscription operation completed:"
+          echo "   Action: ${{ steps.process.outputs.action }}"
+          echo "   Subscription ID: ${{ steps.process.outputs.subscription_id }}"
+          echo "   Timestamp: ${{ steps.process.outputs.timestamp }}"
+          echo "   Repository: ${{ secrets.SUBSCRIPTION_REPO }}"

@@ -207,7 +207,13 @@ const Events = () => {
             )}
           </div>
 
-          <a href={link} target='_blank' rel='noopener noreferrer' className='block'>
+          <a
+            href={link}
+            target='_blank'
+            rel='noopener noreferrer'
+            className='block'
+            aria-label={`View details for ${title} event`}
+          >
             <h3
               className={`mb-2 mt-3 text-xl font-medium text-black transition-all duration-300`}
               style={{
@@ -239,7 +245,7 @@ const Events = () => {
               </div>
               <div className='mt-auto flex flex-grow flex-col justify-end'>
                 <span className='mt-4 flex items-start gap-1 text-xs'>
-                  <MapPin size={16} className='mt-0.5 min-w-[16px]' />{' '}
+                  <MapPin size={16} className='min-w-[16px]' />{' '}
                   <span className='break-words'>{validateAndFormatVenue(venue)}</span>{' '}
                 </span>
               </div>

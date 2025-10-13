@@ -9,7 +9,8 @@
     "location": "Chennai",
     "communityName": "TypedCoders",
     "communityLogo": "https://i.ibb.co/G3nxBFbm/1750660828268.jpg"
-  },{
+  },
+  {
     "eventName": "TossConf'25",
     "eventDescription": "TOSSConf25 (Tamil Open Source Software Conference 2025) is a community-driven event celebrating open-source software and Tamil computing. Scheduled for July 18–19, 2025, at St. Joseph’s Institute of Technology in Semmancheri, Chennai, the conference aims to bring together developers, contributors, and enthusiasts to promote open source initiatives in Tamil Nadu.",
     "eventDate": "2025-07-18",
@@ -41,5 +42,16 @@
     "location": "Chennai",
     "communityName": "Chennaipy",
     "communityLogo": "https://res.cloudinary.com/dwir71gi2/image/upload/v1737382622/chennaipy_ovbthm.png"
+  },
+  {
+    "eventName": "Java Birthday Bash!",
+    "eventDescription": "Bring your energy, your ideas, and your best coding jokes — because this ain’t just an event, it’s a JVM party!",
+    "eventDate": "2025-10-25",
+    "eventTime": "09:00",
+    "eventVenue": "Entrans Technologies Private Limited",
+    "eventLink": "https://luma.com/2yx4uevo",
+    "location": "Chennai",
+    "communityName": "Code On JVM",
+    "communityLogo": "https://i.ibb.co/5xSndqPW/Code-On-Chennai-JVM.png"
   }
 ]

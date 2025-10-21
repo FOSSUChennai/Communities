@@ -134,5 +134,16 @@
     "location": "Chennai",
     "communityName": "Codesapiens",
     "communityLogo": "https://i.ibb.co/bgwW96Mh/logo.png"
+  },
+  {
+    "eventName": "FOSS Meetup | October 2025",
+    "eventDescription": "Join us for insightful talks, hands-on sessions, and networking opportunities that foster community growth and innovation. Whether you're a seasoned contributor or new to FOSS, this meetup is the perfect platform to connect and contribute to open-source.",
+    "eventDate": "2025-10-25",
+    "eventTime": "15:00",
+    "eventVenue": "Thoughtworks Technologies",
+    "eventLink": "https://fossunited.org/c/coimbatore/oct-2025/rsvp",
+    "location": "Coimbatore",
+    "communityName": "FOSS United Coimbatore",
+    "communityLogo": "https://ibb.co/qFW4JPF0"
   }
 ]

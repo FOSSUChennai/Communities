@@ -1,16 +1,5 @@
 [
   {
-    "eventName": "CTOtalk Annual Summit 2025",
-    "eventDescription": "CTOtalk Annual Summit 2025 is happening on October 25 at ITC Grand Chola, Chennai. Join 1000+ CTOs, CDOs, VPs, and engineering leaders from India's top tech companies as they share real-world AI strategies, challenges, and innovations. Expect deep-dive tech sessions, unfiltered peer insights, and a gathering of leaders building the future. Early bird registration closing soon!",
-    "eventDate": "2025-10-25",
-    "eventTime": "09:30",
-    "eventVenue": "ITC Grand Chola, Chennai",
-    "eventLink": "https://shorturl.at/HlbNo",
-    "location": "Chennai",
-    "communityName": "CTOtalk",
-    "communityLogo": "https://ctotalk.in/hubfs/cto-talk-logo.svg"
-  },
-  {
     "eventName": "TechXConf 2025 — AI & Cloud Conference",
     "eventDescription": "TechXConf is a global phenomenon that unites visionary speakers, pioneering technologies, and a vibrant community of tech enthusiasts. Our mission is to explore, educate, and envision the future of technology through two dynamic domains:Generative AI and Cloud Computing.",
     "eventDate": "2025-11-01",

@@ -87,5 +87,16 @@
     "location": "Chennai",
     "communityName": "Elastic Chennai User Group",
     "communityLogo": "https://secure.meetupstatic.com/photos/event/3/3/5/7/clean_524773143.webp"
+  },
+  {
+    "eventName": "JSLovers Chennai Meetup #8",
+    "eventDescription": "JSLovers Chennai Meetup #8 is back! Expect JS talks, learning, networking, and great community vibes. Don’t miss it on Dec 6!",
+    "eventDate": "2025-12-06",
+    "eventTime": "14:00",
+    "eventVenue": "YuniQ, 4th Floor, TICEL BIOPARK, 5, CSIR Rd, Phase II, Tharamani, Chennai, Tamil Nadu 600113",
+    "eventLink": "https://luma.com/1l2wraih",
+    "location": "Chennai",
+    "communityName": "JSLovers Chennai",
+    "communityLogo": "https://ibb.co/bjJGdCdM"
   }
 ]

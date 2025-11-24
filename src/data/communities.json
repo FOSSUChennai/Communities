@@ -452,5 +452,18 @@
     "twitter:": "https://x.com/OpenSearchProj",
     "slack": "https://opensearch.org/slack/",
     "youtube": "https://www.youtube.com/@OpenSearchProject"
+  },
+  {
+    "name": "Codesapiens",
+    "logo": "https://i.ibb.co/bgwW96Mh/logo.png",
+    "description": "Our vision is to bring our students to collaborate, share, grow and in the process have lots of fun together. We envision a platform managed and grown by students themselves, where they can build their career based on their interests and skills. We strive to Help, Empower, and ensure everything is Fun.",
+    "location": "Chennai",
+    "website": "https://codesapiens.in/",
+    "github": "https://github.com/Codesapiens-in",
+    "linkedin": "https://www.linkedin.com/company/codesapiens-community",
+    "twitter:": "https://x.com/codesapiens_in",
+    "discord": "https://discord.gg/pzqEPvzn",
+    "youtube": "https://www.youtube.com/@codesapiens-in",
+    "instagram": "https://www.instagram.com/codesapiens.in/"
   }
 ]

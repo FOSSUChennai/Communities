@@ -131,5 +131,16 @@
     "location": "Chennai",
     "communityName": "FOSS United Chennai",
     "communityLogo": "https://fossunited.org/files/Foss%20United%20Logo%20Black.svg"
+  },
+  {
+    "eventName": "Codesapiens November Meetup - Tech Winter Warm-Up!",
+    "eventDescription": "A cool November meetup to reboot your mind, refuel your tech energy, and level up before the semester boss fight begins!",
+    "eventDate": "2025-11-29",
+    "eventTime": "09:00",
+    "eventVenue": "YuniQ, 4th Floor, TICEL BIOPARK, 5, CSIR Rd, Phase II, Tharamani, Chennai, Tamil Nadu 600113",
+    "eventLink": "https://luma.com/y79y0p5x",
+    "location": "Chennai",
+    "communityName": "Codesapiens",
+    "communityLogo": "https://i.ibb.co/bgwW96Mh/logo.png"
   }
 ]

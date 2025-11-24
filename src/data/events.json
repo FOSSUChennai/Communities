@@ -111,6 +111,28 @@
     "communityLogo": "https://i.ibb.co/My6JNtNx/jslovers-Logo.png"
   },
   {
+    "eventName": "December FOSS Meetup",
+    "eventDescription": "FOSS United Chennai Monthly Meetup - December 2025",
+    "eventDate": "2025-12-20",
+    "eventTime": "09:00",
+    "eventVenue": "Poshmark Pvt.Ltd., 3rd floor South Wing, KRM Plaza, Harrington Road, Chetpet, Chennai, Tamil Nadu 600031",
+    "eventLink": "https://fossunited.org/c/chennai/dec-25",
+    "location": "Chennai",
+    "communityName": "FOSS United Chennai",
+    "communityLogo": "https://fossunited.org/files/Foss%20United%20Logo%20Black.svg"
+  },
+  {
+    "eventName": "January FOSS Meetup",
+    "eventDescription": "FOSS United Chennai Monthly Meetup - January 2026",
+    "eventDate": "2026-01-10",
+    "eventTime": "09:00",
+    "eventVenue": "YuniQ, 4th Floor, TICEL BIOPARK, 5, CSIR Rd, Phase II, Tharamani, Chennai, Tamil Nadu 600113",
+    "eventLink": "https://fossunited.org/c/chennai/jan-26",
+    "location": "Chennai",
+    "communityName": "FOSS United Chennai",
+    "communityLogo": "https://fossunited.org/files/Foss%20United%20Logo%20Black.svg"
+  },
+  {
     "eventName": "Codesapiens November Meetup - Tech Winter Warm-Up!",
     "eventDescription": "A cool November meetup to reboot your mind, refuel your tech energy, and level up before the semester boss fight begins!",
     "eventDate": "2025-11-29",

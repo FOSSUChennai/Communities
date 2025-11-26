@@ -72,7 +72,7 @@ jobs:
 
             core.setOutput('events_modified', eventsModified.toString());
             core.setOutput('communities_modified', communitiesModified.toString());
-      
+
       - name: Set environment variables for next steps
         run: |
           echo "EVENTS_MODIFIED=${{ steps.check-modified-files.outputs.events_modified }}" >> $GITHUB_ENV
@@ -147,7 +147,7 @@ jobs:
             // Access the step outputs through the GitHub Actions environment variables
             const eventsModified = process.env.EVENTS_MODIFIED === 'true';
             const communitiesModified = process.env.COMMUNITIES_MODIFIED === 'true';
-            
+
             let summaryMessage = '🎉 **JSON Checks Passed**\n\n';
 
             if (eventsModified) {

@@ -142,5 +142,16 @@
     "location": "Chennai",
     "communityName": "Codesapiens",
     "communityLogo": "https://i.ibb.co/bgwW96Mh/logo.png"
+  },
+  {
+  "eventName": "Java Jingle-A End-of-year code meetup",
+  "eventDescription": "A End of year code meetup,We're thrilled to announce that this Showdown event is in collaboration with Google for Developers! We are bringing the best of the Java community together for technical deep dives, some friendly competition, and pure fun in collaboration with Google for Developers. ",
+  "eventDate": "2025-12-13", 
+  "eventTime": "09:00",
+  "eventVenue": "Kissflow WTC,Chennai",
+  "eventLink": "https://luma.com/9nu25h4b",
+  "location": "Chennai",
+  "communityName": "CodeonJVM Chennai",
+  "communityLogo": "https://i.postimg.cc/Y0SpZ2f1/Logo-Black.jpg"
   }
 ]

@@ -37,9 +37,70 @@ Add your event to the JSON array using this template:
   "eventLink": "https://registration-link.com",
   "location": "City Name",
   "communityName": "Your Community Name",
-  "communityLogo": "https://url-to-your-logo.svg" // use imgbb to host the images or change next.config file
+  "communityLogo": "https://url-to-your-logo.svg", // use imgbb to host the images or change next.config file
+  "alert": {
+    // Optional: Add alerts for important updates
+    "message": "Important notice about the event",
+    "type": "postponed" // Optional: "postponed", "venue-change", "cancelled", or "general"
+  }
 }
 ```
+
+#### Adding Event Alerts (Optional)
+
+If your event has been postponed, cancelled, or has important updates (venue changes, time changes, etc.), you can add an `alert` field to notify attendees directly on the event card:
+
+**Alert Types:**
+
+- `"postponed"` - Event has been rescheduled to a different date
+- `"venue-change"` - Event venue has changed
+- `"cancelled"` - Event has been cancelled
+- `"general"` - General important notice (or omit type for default)
+
+**Example - Postponed Event:**
+
+```json
+{
+  "eventName": "Community Meetup",
+  "eventDate": "2025-12-06",
+  "eventTime": "09:30",
+  ...
+  "alert": {
+    "message": "Due to cyclone alert, event postponed from Nov 29 to Dec 6. Same venue. We apologise for any inconveniences.",
+    "type": "postponed"
+  }
+}
+```
+
+**Example - Venue Change:**
+
+```json
+{
+  "eventName": "Tech Workshop",
+  "eventDate": "2025-12-15",
+  "eventVenue": "New Venue Address",
+  ...
+  "alert": {
+    "message": "Please note: The event venue has been changed. New location: New Venue Address",
+    "type": "venue-change"
+  }
+}
+```
+
+**Example - General Notice:**
+
+```json
+{
+  "eventName": "Hackathon",
+  ...
+  "alert": {
+    "message": "Registration closes 2 days before the event. Limited seats available!",
+    "type": "general"
+  }
+}
+```
+
+> **Note:** The `alert` field is completely optional. Events without alerts will display normally.
 
 ### Step 3: Validate Your Event Entry
 
@@ -50,11 +111,12 @@ Ensure:
 - The event is taking place in Tamil Nadu
 - URLs are valid and accessible
 - Your community logo is a high-quality image (preferably SVG)
+- If using `alert`, the `message` field is provided and clearly communicates the update
 
 ### Step 4: Submit Your Changes
 
 1. Commit your changes using [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/):
-   
+
    ```bash
    git add src/data/events.json
    git commit -m "feat: add [Your Event Name] on [Date]"
@@ -62,6 +124,7 @@ Ensure:
    ```
 
    **Commit Message Guidelines:**
+
    - **feat:** A new feature (e.g., `feat: add new event on June 1st`)
    - **fix:** A bug fix (e.g., `fix: correct date format in events.json`)
    - **docs:** Documentation changes (e.g., `docs: update contributing guidelines`)

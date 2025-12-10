@@ -8,4 +8,8 @@ export interface Event {
   location: string;
   communityName: string;
   communityLogo: string;
+  alert?: {
+    message: string;
+    type?: 'postponed' | 'venue-change' | 'cancelled' | 'general';
+  };
 }

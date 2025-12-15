@@ -7,15 +7,16 @@ import RocketUpdated from '../../../../public/rocket.webp';
 
 const Hero = () => {
   return (
-    <div className='relative z-10 my-16 mb-48 flex items-start bg-[#fafafa] px-4 md:px-8 lg:px-16'>
-      <div className='container relative mx-auto flex flex-col items-center justify-between px-4 text-center md:flex-row md:text-left'>
+    <section className='relative z-10 py-14 sm:py-16'>
+      <div className='relative flex flex-col items-center justify-between gap-10 text-center md:flex-row md:text-left'>
         <motion.div
           className='z-10 max-w-2xl'
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: 'easeOut' }}
         >
-          <h1 className='relative text-4xl font-semibold leading-tight text-black md:text-[68px] lg:text-[74px]'>
+          <p className='section-kicker'>Discover meetups, workshops, and conferences.</p>
+          <h1 className='relative mt-3 text-4xl font-semibold leading-tight tracking-tight text-gray-950 md:text-[64px] lg:text-[72px]'>
             {`Don't `}
             <motion.span
               className='relative z-20'
@@ -28,7 +29,7 @@ const Hero = () => {
             next community
             <br />
             <motion.span
-              className='italic text-[#03b051]'
+              className='italic text-green-600'
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, ease: 'easeOut', delay: 0.5 }}
@@ -37,7 +38,7 @@ const Hero = () => {
             </motion.span>
           </h1>
           <motion.p
-            className='mt-4 text-[20px] text-gray-600'
+            className='mt-4 text-lg font-medium text-gray-600 sm:text-xl'
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: 'easeOut', delay: 0.7 }}
@@ -57,18 +58,18 @@ const Hero = () => {
             width={600}
             height={760}
             sizes='(max-width: 768px) calc(100vw - 2rem), 50vw'
-            className='h-[365px] w-auto'
+            className='h-[320px] w-auto sm:h-[365px]'
             priority
           />
         </motion.div>
       </div>
       <motion.div
-        className='absolute left-[15%] top-[10%] z-0 h-[350px] w-[350px] rounded-full bg-[#7eff5f]/75 blur-[140px] md:left-[18%] md:top-[7%] md:h-[406px] md:w-[406px] md:blur-[200px]'
+        className='absolute left-[10%] top-[6%] z-0 h-[340px] w-[340px] rounded-full bg-green-300/60 blur-[140px] md:left-[14%] md:top-[5%] md:h-[406px] md:w-[406px] md:blur-[200px]'
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1, ease: 'easeOut' }}
       />
-    </div>
+    </section>
   );
 };
 

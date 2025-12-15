@@ -166,15 +166,15 @@
     "communityLogo": "https://i.ibb.co/bgwW96Mh/logo.png"
   },
   {
-  "eventName": "Java Jingle-A End-of-year code meetup",
-  "eventDescription": "A End of year code meetup,We're thrilled to announce that this Showdown event is in collaboration with Google for Developers! We are bringing the best of the Java community together for technical deep dives, some friendly competition, and pure fun in collaboration with Google for Developers. ",
-  "eventDate": "2025-12-13", 
-  "eventTime": "09:00",
-  "eventVenue": "Kissflow WTC,Chennai",
-  "eventLink": "https://luma.com/9nu25h4b",
-  "location": "Chennai",
-  "communityName": "CodeonJVM Chennai",
-  "communityLogo": "https://i.ibb.co/84B2cpZy/Logo-Black.jpg"
+    "eventName": "Java Jingle-A End-of-year code meetup",
+    "eventDescription": "A End of year code meetup,We're thrilled to announce that this Showdown event is in collaboration with Google for Developers! We are bringing the best of the Java community together for technical deep dives, some friendly competition, and pure fun in collaboration with Google for Developers. ",
+    "eventDate": "2025-12-13",
+    "eventTime": "09:00",
+    "eventVenue": "Kissflow WTC,Chennai",
+    "eventLink": "https://luma.com/9nu25h4b",
+    "location": "Chennai",
+    "communityName": "CodeonJVM Chennai",
+    "communityLogo": "https://i.ibb.co/84B2cpZy/Logo-Black.jpg"
   },
   {
     "eventName": "Madurai FOSS Meetup – December",
@@ -197,5 +197,16 @@
     "location": "Chennai",
     "communityName": "Kotlin User Group Chennai",
     "communityLogo": "https://i.ibb.co/N6q8WqzK/KUG-Board-Logo-1.png"
+  },
+  {
+    "eventName": "Code the Future: JS Edition - A Global Tech Event",
+    "eventDescription": "A global JavaScript event exploring modern tools, real-world skills and what’s next in web development.",
+    "eventDate": "2025-12-23",
+    "eventTime": "19:00",
+    "eventVenue": "Online Event",
+    "eventLink": "https://forms.gle/Zpxew9pM8VvGfmgJ9",
+    "location": "Online Event",
+    "communityName": "Happiest Community",
+    "communityLogo": "https://i.ibb.co/Nd3hF3Fc/People-Group-Logo.png"
   }
 ]

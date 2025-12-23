@@ -166,15 +166,15 @@
     "communityLogo": "https://i.ibb.co/bgwW96Mh/logo.png"
   },
   {
-  "eventName": "Java Jingle-A End-of-year code meetup",
-  "eventDescription": "A End of year code meetup,We're thrilled to announce that this Showdown event is in collaboration with Google for Developers! We are bringing the best of the Java community together for technical deep dives, some friendly competition, and pure fun in collaboration with Google for Developers. ",
-  "eventDate": "2025-12-13", 
-  "eventTime": "09:00",
-  "eventVenue": "Kissflow WTC,Chennai",
-  "eventLink": "https://luma.com/9nu25h4b",
-  "location": "Chennai",
-  "communityName": "CodeonJVM Chennai",
-  "communityLogo": "https://i.ibb.co/84B2cpZy/Logo-Black.jpg"
+    "eventName": "Java Jingle-A End-of-year code meetup",
+    "eventDescription": "A End of year code meetup,We're thrilled to announce that this Showdown event is in collaboration with Google for Developers! We are bringing the best of the Java community together for technical deep dives, some friendly competition, and pure fun in collaboration with Google for Developers. ",
+    "eventDate": "2025-12-13",
+    "eventTime": "09:00",
+    "eventVenue": "Kissflow WTC,Chennai",
+    "eventLink": "https://luma.com/9nu25h4b",
+    "location": "Chennai",
+    "communityName": "CodeonJVM Chennai",
+    "communityLogo": "https://i.ibb.co/84B2cpZy/Logo-Black.jpg"
   },
   {
     "eventName": "Madurai FOSS Meetup – December",
@@ -197,5 +197,16 @@
     "location": "Chennai",
     "communityName": "Kotlin User Group Chennai",
     "communityLogo": "https://i.ibb.co/N6q8WqzK/KUG-Board-Logo-1.png"
+  },
+  {
+    "eventName": "Chennaipy December Meetup",
+    "eventDescription": "It’s the final Python meetup of 2025 — let’s wrap up the year with great talks, good vibes, and awesome people from the Chennai Python community!",
+    "eventDate": "2025-12-27",
+    "eventTime": "15.00",
+    "eventVenue": "IMSc, Alladi Ramakrishnan Hall, IMSc, C.I.T Campus, 4th Cross Street, Tharamani, Chennai · Chennai",
+    "eventLink": "https://www.meetup.com/chennaipy/events/312443435/",
+    "location": "Chennai",
+    "communityName": "Chennaipy",
+    "communityLogo": "https://res.cloudinary.com/dwir71gi2/image/upload/v1737382622/chennaipy_ovbthm.png"
   }
 ]

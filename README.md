@@ -28,42 +28,66 @@ Have an upcoming tech event in Tamil Nadu? Adding it is simple! Check out our [e
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/fossuchennai/communities
+   git clone https://github.com/FOSSUChennai/communities
    cd Communities
    ```
 
 2. Install dependencies:
 
    ```bash
-   npm install
-   # or
-   yarn install
+   pnpm install
    ```
 
-3. Start the development server:
+3. Set up environment variables:
+
    ```bash
-   npm run dev
-   # or
-   yarn dev
+   cp .env.example .env
+   ```
+
+   Generate VAPID keys for push notifications:
+
+   ```bash
+   pnpx web-push generate-vapid-keys
+   ```
+
+   Update `.env` with generated keys and other required values:
+
+   - `NEXT_PUBLIC_VAPID_PUBLIC_KEY` - Public key (used in browser)
+   - `VAPID_PUBLIC_KEY` - Public key (server-side)
+   - `VAPID_PRIVATE_KEY` - Private key (server-side)
+   - `GITHUB_TOKEN` - For push notification subscription management
+   - `UMAMI_ANALYTICS_ID` - (Optional) Analytics tracking
+
+4. Start the development server:
+   ```bash
+   pnpm dev
    ```
 
 Visit `http://localhost:3000` to see the application.
 
 ## 🛠️ Tech Stack
 
-- [Next.js 15](https://nextjs.org/) - React framework for production
-- [React 19](https://reactjs.org/) - JavaScript library for user interfaces
-- [TypeScript](https://www.typescriptlang.org/) - Static type checking
-- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
-- [Phosphor Icons](https://phosphoricons.com/) - Flexible icon family
+- [Next.js 15](https://nextjs.org/) - React framework with App Router
+- [React 19](https://reactjs.org/) - UI library
+- [TypeScript](https://www.typescriptlang.org/) - Type safety
+- [Tailwind CSS](https://tailwindcss.com/) - Styling
+- [Phosphor Icons](https://phosphoricons.com/) - Icons
+- [Web Push](https://github.com/web-push-libs/web-push) - Push notifications
+- [Umami Analytics](https://umami.is/) - Privacy-friendly analytics
 
 ## 📁 Project Structure
 
 ```
 src/
-├── app/          # Next.js app directory
-├── components/   # Reusable React components
-└── data/         # Static data and configurations
+├── app/
+│   ├── Communities/    # Communities page
+│   ├── api/           # API routes (subscriptions)
+│   ├── archive/       # Past events
+│   └── rss/          # RSS feed
+├── components/        # React components
+├── data/             # Events & communities JSON
+├── lib/              # Utilities & web push
+└── types/            # TypeScript types
 ```
 
 ## 🤝 Contributing
@@ -78,6 +102,15 @@ Pointers to keep in mind is:
 - if its a bug fix or a minor code change, please describe what your change does.
 - if its a feature request, please provide a detailed description and if UI feature, please do provide a mockup.
 - if updating events.json, please make sure you add the hostname for the image to next.config.ts file in the root directory.
+
+## 🔔 Push Notifications
+
+This platform supports web push notifications for event updates:
+
+- Users can subscribe to notifications
+- Subscriptions are stored in GitHub Secrets via repository dispatch
+- Requires VAPID keys configuration
+- See [PUSH_NOTIFICATIONS_SETUP.md](PUSH_NOTIFICATIONS_SETUP.md) for detailed setup
 
 ## 🥰 Contributors
 

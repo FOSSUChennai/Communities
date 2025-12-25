@@ -25,40 +25,43 @@ Have an upcoming tech event in Tamil Nadu? Adding it is simple! Check out our [e
 
 ## 🤝 Getting Started
 
-1. Clone the repository:
+1. Fork the repository
+2. Clone the repository:
 
    ```bash
-   git clone https://github.com/FOSSUChennai/communities
+   git clone https://github.com/your-username/communities
    cd Communities
    ```
 
-2. Install dependencies:
+3. Install dependencies:
 
    ```bash
    pnpm install
    ```
 
-3. Set up environment variables:
+4. Set up environment variables:
 
    ```bash
    cp .env.example .env
    ```
 
-   Generate VAPID keys for push notifications:
+   **(Optional)** Generate VAPID keys for push notifications:
+
+   > **Note:** Push notifications are disabled in non-production environments. VAPID keys are only required when `NODE_ENV=production`.
 
    ```bash
    pnpx web-push generate-vapid-keys
    ```
 
-   Update `.env` with generated keys and other required values:
+   Update `.env` with generated keys and other values:
 
-   - `NEXT_PUBLIC_VAPID_PUBLIC_KEY` - Public key (used in browser)
-   - `VAPID_PUBLIC_KEY` - Public key (server-side)
-   - `VAPID_PRIVATE_KEY` - Private key (server-side)
-   - `GITHUB_TOKEN` - For push notification subscription management
+   - `NEXT_PUBLIC_VAPID_PUBLIC_KEY` - (Optional) Public key (used in browser)
+   - `VAPID_PUBLIC_KEY` - (Optional) Public key (server-side)
+   - `VAPID_PRIVATE_KEY` - (Optional) Private key (server-side)
+   - `GITHUB_TOKEN` - (Optional) For push notification subscription management
    - `UMAMI_ANALYTICS_ID` - (Optional) Analytics tracking
 
-4. Start the development server:
+5. Start the development server:
    ```bash
    pnpm dev
    ```

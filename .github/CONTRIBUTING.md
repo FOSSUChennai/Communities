@@ -7,7 +7,7 @@ Thank you for your interest in contributing to TamilNadu.tech Communities! We ai
 1. Fork the repository
 2. Clone your fork:
    ```bash
-   git clone https://github.com/FOSSUChennai/Communities.git
+   git clone https://github.com/your-username/Communities.git
    cd Communities
    ```
 3. Create a new branch:
@@ -108,17 +108,19 @@ Have ideas to make the platform better? Create an issue with:
    cp .env.example .env
    ```
 
-2. Generate VAPID keys:
+2. **(Optional)** Generate VAPID keys for push notifications:
+
+   > **Note:** Push notifications are disabled in non-production environments. VAPID keys are only required when `NODE_ENV=production`.
 
    ```bash
    npx web-push generate-vapid-keys
    ```
 
 3. Update `.env` with:
-   - `NEXT_PUBLIC_VAPID_PUBLIC_KEY` - Public VAPID key
-   - `VAPID_PUBLIC_KEY` - Server-side public key
-   - `VAPID_PRIVATE_KEY` - Server-side private key
-   - `GITHUB_TOKEN` - For subscription management
+   - `NEXT_PUBLIC_VAPID_PUBLIC_KEY` - (Optional) Public VAPID key
+   - `VAPID_PUBLIC_KEY` - (Optional) Server-side public key
+   - `VAPID_PRIVATE_KEY` - (Optional) Server-side private key
+   - `GITHUB_TOKEN` - (Optional) For subscription management
    - `UMAMI_ANALYTICS_ID` - (Optional) Analytics
 
 ### Development Guidelines

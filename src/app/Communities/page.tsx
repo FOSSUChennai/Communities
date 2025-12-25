@@ -1,9 +1,9 @@
-import Community from "@/components/pages/Communities/Community";
+import Community from '@/components/pages/communities/Community';
 
-export default function Communities (){
-    return(
-        <>
-        <Community/>
-        </>
-    )
+export default function Communities() {
+  return (
+    <>
+      <Community />
+    </>
+  );
 }

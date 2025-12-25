@@ -1,4 +1,4 @@
-import Archive from '@/components/pages/Archive/archive';
+import Archive from '@/components/pages/archive/archive';
 
 export default function Communities() {
   return (

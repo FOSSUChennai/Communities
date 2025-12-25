@@ -13,13 +13,9 @@ const PushSubscribe: React.FC<PushSubscribeProps> = ({ className = '' }) => {
   const [showPrompt, setShowPrompt] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  // VAPID public key - you'll need to generate this
-  if (!process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY) {
-    throw new Error(
-      'Environment variable NEXT_PUBLIC_VAPID_PUBLIC_KEY is required but not set. Please set it to a valid VAPID public key.'
-    );
-  }
-  const VAPID_PUBLIC_KEY = process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY;
+  // VAPID public key - only required in production
+  const VAPID_PUBLIC_KEY = process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY || '';
+  const isProduction = process.env.NODE_ENV === 'production';
 
   useEffect(() => {
     const checkSubscriptionStatus = async () => {
@@ -118,7 +114,14 @@ const PushSubscribe: React.FC<PushSubscribeProps> = ({ className = '' }) => {
       });
 
       if (!response.ok) {
-        throw new Error('Failed to save subscription');
+        const errorData = await response.json();
+        // Handle non-production environment gracefully
+        if (response.status === 403 && !isProduction) {
+          console.warn('[DEV] Push notifications disabled in non-production environment');
+          setError('Push notifications are only available in production');
+          return;
+        }
+        throw new Error(errorData.error || 'Failed to save subscription');
       }
       // save the response.subscriptionId to storage
       const data = await response.json();
@@ -147,7 +150,7 @@ const PushSubscribe: React.FC<PushSubscribeProps> = ({ className = '' }) => {
           await subscription.unsubscribe();
 
           // Optionally, remove from server
-          await fetch('/api/remove-subscription', {
+          const response = await fetch('/api/remove-subscription', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
@@ -156,6 +159,11 @@ const PushSubscribe: React.FC<PushSubscribeProps> = ({ className = '' }) => {
               endpoint: subscription.endpoint
             })
           });
+
+          // Handle non-production environment gracefully
+          if (!response.ok && response.status === 403 && !isProduction) {
+            console.warn('[DEV] Push notifications disabled in non-production environment');
+          }
         }
       }
 
@@ -189,6 +197,7 @@ const PushSubscribe: React.FC<PushSubscribeProps> = ({ className = '' }) => {
               </div>
             </div>
             <button
+              type='button'
               onClick={() => setShowPrompt(false)}
               className='text-gray-400 hover:text-gray-600'
             >
@@ -197,6 +206,7 @@ const PushSubscribe: React.FC<PushSubscribeProps> = ({ className = '' }) => {
           </div>
           <div className='mt-3 flex space-x-2'>
             <button
+              type='button'
               onClick={subscribeToNotifications}
               disabled={isLoading}
               className='flex-1 rounded bg-green-500 px-3 py-2 text-sm font-medium text-white hover:bg-green-600 disabled:opacity-50'
@@ -204,6 +214,7 @@ const PushSubscribe: React.FC<PushSubscribeProps> = ({ className = '' }) => {
               {isLoading ? 'Enabling...' : 'Enable'}
             </button>
             <button
+              type='button'
               onClick={() => setShowPrompt(false)}
               className='flex-1 rounded bg-gray-100 px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-200'
             >
@@ -215,6 +226,7 @@ const PushSubscribe: React.FC<PushSubscribeProps> = ({ className = '' }) => {
 
       {/* Notification Button */}
       <button
+        type='button'
         onClick={isSubscribed ? unsubscribeFromNotifications : subscribeToNotifications}
         disabled={isLoading}
         className={`flex items-center space-x-2 rounded-lg px-4 py-2 font-medium transition-colors ${
@@ -241,6 +253,7 @@ const PushSubscribe: React.FC<PushSubscribeProps> = ({ className = '' }) => {
             </div>
           </div>
           <button
+            type='button'
             onClick={() => setError(null)}
             className='mt-2 text-sm text-red-600 hover:text-red-800'
           >

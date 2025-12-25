@@ -8,8 +8,8 @@ declare global {
       GITHUB_TOKEN?: string;
       GITHUB_REPOSITORY?: string;
 
-      // Web Push Notifications (VAPID Keys)
-      NEXT_PUBLIC_VAPID_PUBLIC_KEY: string;
+      // Web Push Notifications (VAPID Keys) - Only required in production
+      NEXT_PUBLIC_VAPID_PUBLIC_KEY?: string;
       VAPID_PUBLIC_KEY?: string;
       VAPID_PRIVATE_KEY?: string;
 

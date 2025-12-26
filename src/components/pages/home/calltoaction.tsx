@@ -2,7 +2,6 @@
 import React from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import Link from 'next/link';
 
 const CallToAction = () => {
   const router = useRouter();
@@ -40,12 +39,6 @@ const CallToAction = () => {
             >
               Contribute
             </button>
-            <Link
-              href='/add-event'
-              className='btn bg-white/15 px-6 py-3 text-base text-white hover:bg-white/20 focus-visible:ring-white/30'
-            >
-              Add Event
-            </Link>
             <button
               className='btn bg-white/15 px-6 py-3 text-base text-white hover:bg-white/20 focus-visible:ring-white/30'
               onClick={() => router.push('/Communities')}

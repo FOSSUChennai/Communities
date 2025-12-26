@@ -7,14 +7,14 @@ const CallToAction = () => {
   const router = useRouter();
   return (
     <section className='py-12'>
-      <div className='relative overflow-visible rounded-2xl bg-gradient-to-br from-green-600 to-green-500 p-8 shadow-sm sm:p-10'>
-        <div className='absolute bottom-0 right-0 hidden translate-x-[72px] md:block'>
+      <div className='relative overflow-hidden rounded-2xl bg-gradient-to-br from-green-600 to-green-500 p-6 shadow-sm sm:p-8 md:overflow-visible md:p-10'>
+        <div className='absolute bottom-0 right-0 hidden md:block md:translate-x-4 lg:translate-x-[72px]'>
           <Image
             src='/rockethalf.png'
             alt='Rocket'
             width={300}
             height={300}
-            className='scale-125 drop-shadow-md'
+            className='drop-shadow-md md:scale-100 lg:scale-125'
             style={{ transformOrigin: 'bottom right' }}
           />
         </div>

@@ -40,7 +40,7 @@ const CallToAction = () => {
               Contribute
             </button>
             <button
-              className='btn bg-white/15 px-6 py-3 text-base text-white hover:bg-white/20 focus-visible:ring-white/30'
+              className='btn btn-glass px-6 py-3 text-base'
               onClick={() => router.push('/Communities')}
             >
               Communities

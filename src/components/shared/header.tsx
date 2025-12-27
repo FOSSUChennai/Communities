@@ -30,7 +30,6 @@ export default function Header() {
               width={32}
               height={32}
               className='h-8 w-8'
-              priority
             />
           </span>
         </Link>

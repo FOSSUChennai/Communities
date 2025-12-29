@@ -227,17 +227,14 @@ const Events = () => {
                   {/* Alert Tooltip */}
                   {showAlert && (
                     <div className='absolute left-0 top-8 z-50 w-64 rounded-lg border-2 border-yellow-300 bg-yellow-50 p-3 shadow-lg'>
-                      <div className='flex items-start gap-2'>
-                        <Warning size={20} className='mt-0.5 flex-shrink-0 text-yellow-600' />
-                        <div>
-                          <p className='text-sm font-semibold text-yellow-900'>
-                            {alert.type === 'postponed' && '⚠️ Event Postponed'}
-                            {alert.type === 'venue-change' && '📍 Venue Changed'}
-                            {alert.type === 'cancelled' && '❌ Event Cancelled'}
-                            {!alert.type && '⚠️ Important Notice'}
-                          </p>
-                          <p className='mt-1 text-xs text-yellow-800'>{alert.message}</p>
-                        </div>
+                      <div>
+                        <p className='text-sm font-semibold text-yellow-900'>
+                          {alert.type === 'postponed' && '⚠️ Event Postponed'}
+                          {alert.type === 'venue-change' && '📍 Venue Changed'}
+                          {alert.type === 'cancelled' && '❌ Event Cancelled'}
+                          {!alert.type && '⚠️ Important Notice'}
+                        </p>
+                        <p className='mt-1 text-xs text-yellow-800'>{alert.message}</p>
                       </div>
                       <div className='absolute -top-2 left-4 h-3 w-3 rotate-45 border-l-2 border-t-2 border-yellow-300 bg-yellow-50' />
                     </div>

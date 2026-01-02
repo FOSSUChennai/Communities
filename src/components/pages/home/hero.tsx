@@ -15,7 +15,6 @@ const Hero = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: 'easeOut' }}
         >
-          <p className='section-kicker'>Discover meetups, workshops, and conferences.</p>
           <h1 className='relative mt-3 text-4xl font-semibold leading-tight tracking-tight text-gray-950 md:text-[64px] lg:text-[72px]'>
             {`Don't `}
             <motion.span

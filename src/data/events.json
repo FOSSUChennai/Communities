@@ -208,5 +208,16 @@
     "location": "Chennai",
     "communityName": "Shebuilds Chennai",
     "communityLogo": "https://i.ibb.co/mCLbZ2Sb/shebuilds-logo.png"
-  }
+  },
+  {
+    "eventName": "The AI Connect (TAI) 3.0",
+    "eventDescription": "​This full-day event is designed to immerse you in the latest AI trends, hands-on workshops, and insightful tech sessions led by industry experts. With interactive discussions, real-world applications, and networking opportunities, this is your chance to learn, connect, and innovate with fellow AI enthusiasts.",
+    "eventDate": "2026-01-31",
+    "eventTime": "10:00",
+    "eventVenue": "TSI Technologies Private Limited 4th Floor, Prestige Cosmopolitan 38, Sardar Patel Rd, Little Mount, Guindy, Chennai, Tamil Nadu 600034, India",
+    "eventLink": "https://luma.com/in2w4pv8",
+    "location": "Guindy, Chennai",
+    "communityName": "The AI Connect (TAI) 3.0",
+    "communityLogo": "https://tai-events.s3.eu-central-1.amazonaws.com/01_Tai+4+(2).svg"
+}
 ]

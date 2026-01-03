@@ -25,19 +25,21 @@ const Hero = () => {
               miss
             </motion.span>
             {` your`} <br />
-            next community
-            <br />
-            <motion.span
-              className='italic text-[#03b051]'
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1, ease: 'easeOut', delay: 0.5 }}
-            >
-              meetup
-            </motion.span>
+            <span className='inline-block'>
+              next community
+              <br />
+              <motion.span
+                className='block text-left italic text-[#03b051]'
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+              >
+                meetup
+              </motion.span>
+            </span>
           </h1>
           <motion.p
-            className='mt-4 text-[20px] text-gray-600'
+            className='mt-4 block text-left text-[20px] text-gray-600'
+            // className='mt-4 text-[20px] text-gray-600 sm:ml-[20px]'
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: 'easeOut', delay: 0.7 }}

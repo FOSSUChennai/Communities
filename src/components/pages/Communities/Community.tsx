@@ -83,8 +83,8 @@ const CommunityCard = ({
   };
 
   return (
-    <div
-      className={`${className} group relative block cursor-pointer rounded-lg p-[2px] transition-all duration-300 hover:scale-[1]`}
+    <article
+      className={`${className} group relative block rounded-lg p-[2px] transition-all duration-300 hover:scale-[1]`}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
@@ -153,21 +153,33 @@ const CommunityCard = ({
             youtube) && <div className='mt-4 flex-shrink-0 border-t border-gray-100' />}
 
           <div className='mt-4 flex flex-shrink-0 gap-3 opacity-100 transition-opacity'>
-            {Object.entries(socialLinks).map(([key, { Icon, color, title, link }]) =>
-              eval(key) ? (
+            {Object.entries(socialLinks).map(([key, { Icon, color, title, link }]) => {
+              const socialProps = {
+                linkedin,
+                github,
+                discord,
+                twitter,
+                instagram,
+                bluesky,
+                mastodon,
+                telegram,
+                youtube,
+                reddit
+              } as Record<string, string | undefined>;
+              return socialProps[key] ? (
                 <HoverIcon
                   key={key}
                   Icon={Icon}
-                  link={link ?? ''} // Provide a default value for link
+                  link={link ?? ''}
                   title={title}
                   hoverColor={color}
                 />
-              ) : null
-            )}
+              ) : null;
+            })}
           </div>
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 

@@ -219,5 +219,16 @@
     "location": "Guindy, Chennai",
     "communityName": "The AI Connect (TAI) 3.0",
     "communityLogo": "https://i.ibb.co/pry2pPVc/TAI-LOGO.png"
-  }
+  },
+     {
+    "eventName": "Kotlin & AI - Nexus",
+    "eventDescription": "Join us on 24 Jan for a hands-on KUG Chennai meetup exploring the intersection of Kotlin and AI.",
+    "eventDate": "2026-01-24",
+    "eventTime": "09:00",
+    "eventVenue": "TBD",
+    "eventLink": "https://luma.com/x2eg95bn",
+    "location": "Chennai",
+    "communityName": "Kotlin User Group Chennai",
+    "communityLogo": "https://i.ibb.co/N6q8WqzK/KUG-Board-Logo-1.png"
+  },
 ]

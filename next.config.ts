@@ -5,6 +5,10 @@ const config: NextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
+        hostname: 'techkoodaram.in'
+      },
+      {
+        protocol: 'https',
         hostname: 'makerstribe.in'
       },
       {

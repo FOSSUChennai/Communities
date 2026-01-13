@@ -68,6 +68,9 @@ Add this token to your environment variables as `GITHUB_TOKEN`.
 Install the required web-push dependency:
 
 ```bash
+pnpm add web-push
+pnpm add -D @types/web-push
+# or
 npm install web-push
 npm install --save-dev @types/web-push
 ```

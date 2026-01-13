@@ -1,8 +1,11 @@
 // Utility functions for web push notifications
 import webpush from 'web-push';
 
+// Only configure web-push in production environment
+const isProduction = process.env.NODE_ENV === 'production';
+
 // Configure web-push with VAPID keys
-if (process.env.VAPID_PUBLIC_KEY && process.env.VAPID_PRIVATE_KEY) {
+if (isProduction && process.env.VAPID_PUBLIC_KEY && process.env.VAPID_PRIVATE_KEY) {
   webpush.setVapidDetails(
     process.env.WEB_PUSH_CONTACT || 'https://tamilnadu.tech/',
     process.env.VAPID_PUBLIC_KEY,
@@ -39,6 +42,12 @@ export async function sendNotification(
   subscription: PushSubscription,
   payload: NotificationPayload
 ): Promise<boolean> {
+  // Disable notifications in non-production environments
+  if (!isProduction) {
+    console.log('[DEV] Notification disabled in non-production environment:', payload);
+    return false;
+  }
+
   try {
     const notificationPayload = JSON.stringify({
       title: payload.title,
@@ -72,6 +81,12 @@ export async function sendBulkNotifications(
   subscriptions: PushSubscription[],
   payload: NotificationPayload
 ): Promise<{ success: number; failed: number }> {
+  // Disable notifications in non-production environments
+  if (!isProduction) {
+    console.log('[DEV] Bulk notifications disabled in non-production environment:', payload);
+    return { success: 0, failed: 0 };
+  }
+
   const promises = subscriptions.map((subscription) => sendNotification(subscription, payload));
 
   const results = await Promise.allSettled(promises);

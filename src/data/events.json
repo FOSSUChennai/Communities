@@ -233,7 +233,7 @@
   },
   {
     "eventName": "[Workshop] Beyond ELK: Elastic Stack in Practice",
-    "eventDescription": "Explore how Generative AI transforms data, APIs, and search with Elastic. Live demos, real-world use cases, and AI-powered experiences.",
+    "eventDescription": "This session explores real-world Elastic Stack usage, from core ELK fundamentals to production-ready architectures, covering scaling strategies, performance tuning, and best practices for teams running Elastic at scale.",
     "eventDate": "2026-02-07",
     "eventTime": "10:00",
     "eventVenue": "SQ1 Security Technology Private Limited: 2nd Floor Block B, International Tech Park, Futura Tech Park, Rajiv Gandhi Salai, OMR, Sholinganallur, Chennai, Tamil Nadu 600119",

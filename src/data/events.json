@@ -145,7 +145,7 @@
   },
   {
     "eventName": "KoHacks #2",
-    "eventDescription": "​Ko-Hacks is a hackathon event exclusively focused on Kotlin application development.",
+    "eventDescription": "Ko-Hacks is a hackathon event exclusively focused on Kotlin application development.",
     "eventDate": "2025-11-01",
     "eventTime": "9:00",
     "eventVenue": "Mako IT Lab - Indian Delivery Center",
@@ -211,7 +211,7 @@
   },
   {
     "eventName": "The AI Connect (TAI) 3.0",
-    "eventDescription": "​This full-day event is designed to immerse you in the latest AI trends, hands-on workshops, and insightful tech sessions led by industry experts. With interactive discussions, real-world applications, and networking opportunities, this is your chance to learn, connect, and innovate with fellow AI enthusiasts.",
+    "eventDescription": "This full-day event is designed to immerse you in the latest AI trends, hands-on workshops, and insightful tech sessions led by industry experts. With interactive discussions, real-world applications, and networking opportunities, this is your chance to learn, connect, and innovate with fellow AI enthusiasts.",
     "eventDate": "2026-01-31",
     "eventTime": "10:00",
     "eventVenue": "TSI Technologies Private Limited 4th Floor, Prestige Cosmopolitan 38, Sardar Patel Rd, Little Mount, Guindy, Chennai, Tamil Nadu 600034, India",
@@ -241,5 +241,16 @@
     "location": "Chennai",
     "communityName": "Elastic Chennai User Group",
     "communityLogo": "https://i.ibb.co/XkLjmzG5/Chennai-Badge-Template.png"
+  },
+  {
+    "eventName": "CodeSapiens January 2026 Meetup — Kickstarting the Year with Code & Community",
+    "eventDescription": "The CodeSapiens January 2026 Meetup brings students, developers, and tech enthusiasts together for a half-day of tech discussions, networking, and learning. Kickstart 2026 by connecting, sharing ideas, and growing with the CodeSapiens community.",
+    "eventDate": "2026-01-24",
+    "eventTime": "09:30",
+    "eventVenue": "Mako IT Lab, 8th Floor, TICEL BIOPARK, TICEL Biopark Rd, Phase II, Tharamani, Chennai, Tamil Nadu 600113",
+    "eventLink": "https://codesapiens.in/meetups",
+    "location": "Chennai",
+    "communityName": "CodeSapiens",
+    "communityLogo": "https://i.ibb.co/bgwW96Mh/logo.png"
   }
 ]

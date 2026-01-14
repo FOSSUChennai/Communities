@@ -220,7 +220,7 @@
     "communityName": "The AI Connect (TAI) 3.0",
     "communityLogo": "https://i.ibb.co/pry2pPVc/TAI-LOGO.png"
   },
-     {
+  {
     "eventName": "Kotlin & AI - Nexus",
     "eventDescription": "Join us on 24 Jan for a hands-on KUG Chennai meetup exploring the intersection of Kotlin and AI.",
     "eventDate": "2026-01-24",
@@ -230,5 +230,16 @@
     "location": "Chennai",
     "communityName": "Kotlin User Group Chennai",
     "communityLogo": "https://i.ibb.co/N6q8WqzK/KUG-Board-Logo-1.png"
+  },
+  {
+    "eventName": "CodeSapiens January 2026 Meetup — Kickstarting the Year with Code & Community",
+    "eventDescription": "The CodeSapiens January 2026 Meetup brings students, developers, and tech enthusiasts together for a half-day of tech discussions, networking, and learning. Kickstart 2026 by connecting, sharing ideas, and growing with the CodeSapiens community.",
+    "eventDate": "2026-01-24",
+    "eventTime": "09:30",
+    "eventVenue": "Mako IT Lab, 8th Floor, TICEL BIOPARK, TICEL Biopark Rd, Phase II, Tharamani, Chennai, Tamil Nadu 600113",
+    "eventLink": "https://codesapiens.in/meetups",
+    "location": "Chennai",
+    "communityName": "CodeSapiens",
+    "communityLogo": "https://i.ibb.co/bgwW96Mh/logo.png"
   }
 ]

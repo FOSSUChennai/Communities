@@ -252,5 +252,16 @@
     "location": "Chennai",
     "communityName": "CodeSapiens",
     "communityLogo": "https://i.ibb.co/bgwW96Mh/logo.png"
+  },
+  {
+    "eventName": "From-Dev-to-Ops | Devops Community Meetup Jan 31",
+    "eventDescription": "From-Dev-to-Ops is a community of devops, SRE and Platform Engineers who share raw, behind-the-scenes war room experiences — the outages, the quick fixes, the lessons learned, and the systems that broke in a fun, honest, and simple way.",
+    "eventDate": "2026-01-31",
+    "eventTime": "09:30",
+    "eventVenue": "Hexaware Technilogies, H-5, Sipcot It Park, Post, Navalur, Siruseri, Tamil Nadu 603103",
+    "eventLink": "https://luma.com/0m3vl3d2",
+    "location": "Chennai",
+    "communityName": "From-Dev-to-Ops",
+    "communityLogo": "https://i.ibb.co/KZTKzgt/from-dev-to-ops-logo-900-x-900-px.png"
   }
 ]

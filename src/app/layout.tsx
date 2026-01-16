@@ -79,7 +79,7 @@ export default function RootLayout({
       {/* removed the head tag, next will add it automatically ( LCP from above 2.5 to below 2.5  ) - adding head manually will be like overriding or bypassing the optimized head from next */}
 
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} mx-auto max-w-[1120px] bg-[#fafafa] antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} min-h-screen antialiased`}
       >
         <Header />
         {children}

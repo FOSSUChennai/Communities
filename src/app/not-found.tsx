@@ -11,7 +11,7 @@ export default function NotFoundPage() {
   return (
     <div className='mb-30 mt-4 flex flex-col items-center justify-center gap-10'>
       <Image src={PageNotFoundImg} alt='' className='size-[20rem]' />
-      <h1 className='bg-gradient-to-tr from-[#03B051] to-green-400 bg-clip-text text-center text-5xl font-bold text-transparent'>
+      <h1 className='bg-gradient-to-tr from-green-600 to-green-400 bg-clip-text text-center text-5xl font-bold text-transparent'>
         404 Not Found
       </h1>
       <Link

@@ -99,7 +99,7 @@ const CommunityCard = ({
           WebkitMaskComposite: 'xor'
         }}
       />
-      <div className='relative h-full rounded-lg border-2 border-[rgb(229,231,235)] bg-white p-4 shadow-sm transition-shadow hover:border-[rgb(255,255,255,0.5)] hover:shadow-md'>
+      <div className='relative h-full rounded-lg border border-gray-200 bg-white p-4 shadow-sm transition-shadow hover:shadow-md'>
         <div
           className='pointer-events-none absolute -inset-px opacity-0 transition-opacity duration-300 group-hover:opacity-50'
           style={{
@@ -181,16 +181,17 @@ const Community = () => {
   );
 
   return (
-    <main className='mx-[2%] my-16 flex items-center rounded-xl bg-white p-3 shadow-2xl shadow-black/25 sm:mx-[10%] sm:p-6'>
-      <section className='relative flex w-full flex-col py-2'>
+    <main className='container-page py-12'>
+      <section className='surface relative w-full p-5 sm:p-8'>
         <div className='mb-8'>
-          <h2 className='mb-4 text-3xl font-bold text-gray-900'>Tech Communities in Tamil Nadu</h2>
+          <h1 className='section-title'>Tech Communities in Tamil Nadu</h1>
+          <p className='mt-2 text-sm text-gray-600'>Find your people. Join, learn, and share.</p>
           <div className='relative'>
             <MagnifyingGlass className='absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400' />
             <input
               type='text'
               placeholder='Search communities by name or location...'
-              className='w-full rounded-lg border border-gray-200 py-2 pl-10 pr-4 focus:border-green-500 focus:outline-none'
+              className='mt-4 w-full rounded-xl border border-gray-200 bg-white py-2.5 pl-10 pr-4 text-sm text-gray-900 shadow-sm outline-none transition focus:border-green-500 focus:ring-4 focus:ring-green-500/10'
               aria-label='Search communities'
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}

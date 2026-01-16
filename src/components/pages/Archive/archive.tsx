@@ -180,7 +180,7 @@ const Archive = () => {
             WebkitMaskComposite: 'xor'
           }}
         />
-        <div className='relative h-full rounded-lg border-2 border-[rgb(229,231,235)] bg-white p-4 shadow-sm transition-shadow hover:border-[rgb(255,255,255,0.5)] hover:shadow-md'>
+        <div className='relative h-full rounded-lg border border-gray-200 bg-white p-4 shadow-sm transition-shadow hover:shadow-md'>
           <div
             className='pointer-events-none absolute -inset-px opacity-0 transition-opacity duration-300 group-hover:opacity-50'
             style={{
@@ -224,7 +224,7 @@ const Archive = () => {
             aria-label={`View details for ${title} event`}
           >
             <h3
-              className={`mb-2 mt-3 text-xl font-medium text-black transition-all duration-300`}
+              className='mb-2 mt-3 text-xl font-semibold tracking-tight text-gray-900'
               style={{
                 height: `${isMonthly ? monthlyCardHeight : upcomingCardHeight}px`,
                 overflow: 'hidden'
@@ -236,15 +236,9 @@ const Archive = () => {
 
             <div className='flex-row items-center text-sm text-gray-600'>
               <div className='flex items-center space-x-2'>
-                <span className={`rounded bg-green-100 px-2 py-0.5 text-xs text-green-800`}>
-                  {location}
-                </span>
-                <span className={`rounded bg-blue-100 px-2 py-0.5 text-xs text-blue-800`}>
-                  {date}
-                </span>
-                <span className={`rounded bg-yellow-100 px-2 py-0.5 text-xs text-yellow-800`}>
-                  {time}
-                </span>
+                <span className='badge badge-green'>{location}</span>
+                <span className='badge'>{date}</span>
+                <span className='badge'>{time}</span>
                 <AddToCalendar
                   eventTitle={title}
                   eventVenue={venue}
@@ -266,88 +260,86 @@ const Archive = () => {
   };
 
   return (
-    <main className='mx-4 rounded-xl bg-white p-6 md:mx-8 lg:mx-16'>
+    <main className='container-page py-12'>
       <section>
-        <h2 className='mb-3 text-lg font-normal'>
-          <span className='text-[30px] font-semibold text-black'>archive</span>
-        </h2>
+        <div className='surface p-6 sm:p-8'>
+          <h1 className='section-title'>Archive</h1>
+          <p className='mt-2 text-sm text-gray-600'>Browse past events by community and date.</p>
 
-        {/* Filter and Sort Controls */}
-        <div className='mb-6 flex flex-wrap items-center justify-between gap-4'>
-          <div className='flex flex-wrap items-center gap-4'>
-            {/* Community Filter Dropdown */}
-            <div className='flex items-center gap-2'>
-              <label htmlFor='communityFilter' className='text-sm font-medium text-gray-700'>
-                Filter by Community:
-              </label>
-              <select
-                id='communityFilter'
-                value={selectedCommunity}
-                onChange={(e) => setSelectedCommunity(e.target.value)}
-                className='rounded-md border border-gray-300 bg-white px-3 py-2 text-sm focus:border-green-500 focus:outline-none focus:ring-1 focus:ring-green-500'
-              >
-                <option value='all'>All Communities</option>
-                {uniqueCommunities.map((community) => (
-                  <option key={community} value={community}>
-                    {community}
-                  </option>
-                ))}
-              </select>
-            </div>
+          {/* Filter and Sort Controls */}
+          <div className='mt-6 flex flex-wrap items-center justify-between gap-4'>
+            <div className='flex flex-wrap items-center gap-4'>
+              <div className='flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-2'>
+                <label htmlFor='communityFilter' className='text-sm font-medium text-gray-700'>
+                  Filter by community
+                </label>
+                <select
+                  id='communityFilter'
+                  value={selectedCommunity}
+                  onChange={(e) => setSelectedCommunity(e.target.value)}
+                  className='rounded-xl border border-gray-200 bg-white px-3 py-2 text-sm text-gray-900 shadow-sm outline-none transition focus:border-green-500 focus:ring-4 focus:ring-green-500/10'
+                >
+                  <option value='all'>All Communities</option>
+                  {uniqueCommunities.map((community) => (
+                    <option key={community} value={community}>
+                      {community}
+                    </option>
+                  ))}
+                </select>
+              </div>
 
-            {/* Sort Order Controls */}
-            <div className='flex items-center gap-2'>
-              <span className='text-sm font-medium text-gray-700'>Sort by Date:</span>
-              <div className='flex overflow-hidden rounded-md border border-gray-300'>
-                <button
-                  onClick={() => setSortOrder('asc')}
-                  className={`px-3 py-2 text-sm font-medium transition-colors ${
-                    sortOrder === 'asc'
-                      ? 'bg-green-500 text-white'
-                      : 'bg-white text-gray-700 hover:bg-gray-50'
-                  }`}
-                >
-                  Ascending
-                </button>
-                <button
-                  onClick={() => setSortOrder('desc')}
-                  className={`border-l border-gray-300 px-3 py-2 text-sm font-medium transition-colors ${
-                    sortOrder === 'desc'
-                      ? 'bg-green-500 text-white'
-                      : 'bg-white text-gray-700 hover:bg-gray-50'
-                  }`}
-                >
-                  Descending
-                </button>
+              <div className='flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-2'>
+                <span className='text-sm font-medium text-gray-700'>Sort by date</span>
+                <div className='inline-flex overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm'>
+                  <button
+                    onClick={() => setSortOrder('asc')}
+                    className={`px-3 py-2 text-sm font-medium transition ${
+                      sortOrder === 'asc'
+                        ? 'bg-gray-900 text-white'
+                        : 'bg-white text-gray-700 hover:bg-gray-50'
+                    }`}
+                  >
+                    Asc
+                  </button>
+                  <button
+                    onClick={() => setSortOrder('desc')}
+                    className={`border-l border-gray-200 px-3 py-2 text-sm font-medium transition ${
+                      sortOrder === 'desc'
+                        ? 'bg-gray-900 text-white'
+                        : 'bg-white text-gray-700 hover:bg-gray-50'
+                    }`}
+                  >
+                    Desc
+                  </button>
+                </div>
               </div>
             </div>
+
+            <div className='text-sm text-gray-600'>
+              {monthlyEvents.length} event{monthlyEvents.length !== 1 ? 's' : ''} found
+            </div>
           </div>
 
-          {/* Results count */}
-          <div className='text-sm text-gray-600'>
-            {monthlyEvents.length} event{monthlyEvents.length !== 1 ? 's' : ''} found
+          <div className='mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3'>
+            {monthlyEvents.length > 0 ? (
+              monthlyEvents.map((event, index) => (
+                <EventCard
+                  key={index}
+                  communityName={event.communityName}
+                  location={event.location}
+                  title={event.eventName}
+                  date={event.eventDate}
+                  venue={event.eventVenue}
+                  link={event.eventLink}
+                  time={event.eventTime}
+                  logo={event.communityLogo}
+                  isMonthly={true}
+                />
+              ))
+            ) : (
+              <EmptyEventCard message='No events scheduled for this month' />
+            )}
           </div>
-        </div>
-
-        <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3'>
-          {monthlyEvents.length > 0 ? (
-            monthlyEvents.map((event, index) => (
-              <EventCard
-                key={index}
-                communityName={event.communityName}
-                location={event.location}
-                title={event.eventName}
-                date={event.eventDate}
-                venue={event.eventVenue}
-                link={event.eventLink}
-                time={event.eventTime}
-                logo={event.communityLogo}
-                isMonthly={true}
-              />
-            ))
-          ) : (
-            <EmptyEventCard message='No events scheduled for this month' />
-          )}
         </div>
       </section>
     </main>

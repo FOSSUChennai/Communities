@@ -263,5 +263,16 @@
     "location": "Chennai",
     "communityName": "From-Dev-to-Ops",
     "communityLogo": "https://i.ibb.co/KZTKzgt/from-dev-to-ops-logo-900-x-900-px.png"
+  },
+  {
+    "eventName": "Build2Learn Meetup #31",
+    "eventDescription": "Begin the year by building what’s been on your mind with curious minds beside you.",
+    "eventDate": "2026-01-31",
+    "eventTime": "09:30",
+    "eventVenue": "Entrans Technologies Private Limited Millenia Business Park, Phase Two, Dr MGR Main Rd, Kandhanchavadi, Perungudi, Chennai, Tamil Nadu 600096",
+    "eventLink": "https://events.build2learn.in/",
+    "location": "Chennai",
+    "communityName": "Build2Learn",
+    "communityLogo": "https://i.ibb.co/CBsgh43/bxOxo5O.png"
   }
 ]

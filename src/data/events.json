@@ -221,15 +221,26 @@
     "communityLogo": "https://i.ibb.co/pry2pPVc/TAI-LOGO.png"
   },
   {
-    "eventName": "Kotlin & AI - Nexus",
-    "eventDescription": "Join us on 24 Jan for a hands-on KUG Chennai meetup exploring the intersection of Kotlin and AI.",
-    "eventDate": "2026-01-24",
-    "eventTime": "09:00",
-    "eventVenue": "TBD",
-    "eventLink": "https://luma.com/x2eg95bn",
-    "location": "Chennai",
-    "communityName": "Kotlin User Group Chennai",
-    "communityLogo": "https://i.ibb.co/N6q8WqzK/KUG-Board-Logo-1.png"
+  "eventName": "AI Memory Matters: Build AI apps with Memori without a million tokens",
+  "eventDescription": "Join DevRelSquad X Memori Labs for an engaging panel discussion in Chennai! Learn how to build AI applications efficiently without extensive token usage, featuring industry experts and Q&A sessions to enhance your development knowledge.",
+  "eventDate": "2026-02-07",
+  "eventTime": "11:00",
+  "eventVenue": "Zoominfo Chennai, 11th Floor, Block A, GLOBAL INFOCITY PARK, Kodandarama Nagar, Perungudi, Chennai, Tamil Nadu 600096, India",
+  "eventLink": "https://www.goavo.ai/events/forms/fillup?id=695b7de744664a59dd37b249",
+  "location": "Perungudi, Chennai",
+  "communityName": "DevRelSquad X Memori Labs",
+  "communityLogo": "https://www.devrelsquad.com/assets/Black_Logo-D3q49o8f.svg"
+  },
+  {
+  "eventName": "Kotlin & AI - Nexus",
+  "eventDescription": "Join us on 24 Jan for a hands-on KUG Chennai meetup exploring the intersection of Kotlin and AI.",
+  "eventDate": "2026-01-24",
+  "eventTime": "09:00",
+  "eventVenue": "TBD",
+  "eventLink": "https://luma.com/x2eg95bn",
+  "location": "Chennai",
+  "communityName": "Kotlin User Group Chennai",
+  "communityLogo": "https://i.ibb.co/N6q8WqzK/KUG-Board-Logo-1.png"
   },
   {
     "eventName": "[Workshop] Beyond ELK: Elastic Stack in Practice",

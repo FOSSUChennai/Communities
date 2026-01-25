@@ -4,18 +4,12 @@ import type { NextRequest } from 'next/server';
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // Handle case-insensitive redirects
-  const redirects: Record<string, string> = {
-    '/Communities': '/communities',
-    '/COMMUNITIES': '/communities',
-    '/Archive': '/archive',
-    '/ARCHIVE': '/archive'
-  };
+  const allowedRoutes = new Set(['/communities', '/archive']);
 
-  // Check if pathname needs redirection
-  if (redirects[pathname]) {
+  const lower = pathname.toLowerCase();
+  if (allowedRoutes.has(lower) && pathname !== lower) {
     const url = request.nextUrl.clone();
-    url.pathname = redirects[pathname];
+    url.pathname = lower;
     return NextResponse.redirect(url, 301);
   }
 

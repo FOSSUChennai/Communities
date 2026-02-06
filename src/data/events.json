@@ -23,15 +23,15 @@
     "paid": true
   },
   {
-    "eventName": "Digital Dreamers Den (D3) Meetup #5",
+    "eventName": "Digital Dreamers Den (D3) Workshop #1",
     "eventDescription": "Digital Dreamers Den (D3) is a vibrant tech community that brings together AI Full-Stack Developers to build the future. We host events, workshops, and networking opportunities that connect talented engineers with cutting-edge technology and industry leaders.",
-    "eventDate": "2025-11-22",
-    "eventTime": "09:30",
+    "eventDate": "2026-01-31",
+    "eventTime": "14:00",
     "eventVenue": "YuniQ, 4th Floor, TICEL BIOPARK, 5, CSIR Rd, Phase II, Tharamani, Chennai, Tamil Nadu 600113",
-    "eventLink": "https://d3community.in/meetup-5",
+    "eventLink": "https://d3community.in/workshop-1",
     "location": "Chennai",
     "communityName": "Digital Dreamers Den (D3)",
-    "communityLogo": "https://i.ibb.co/Cr5BSh2/D3logo.png"
+    "communityLogo": "https://i.ibb.co/Lh1nbgjy/D3-Community-Official-logo.png"
   },
   {
     "eventName": "From Dev to Ops | Devops Community Meetup Nov 15",
@@ -145,7 +145,7 @@
   },
   {
     "eventName": "KoHacks #2",
-    "eventDescription": "​Ko-Hacks is a hackathon event exclusively focused on Kotlin application development.",
+    "eventDescription": "Ko-Hacks is a hackathon event exclusively focused on Kotlin application development.",
     "eventDate": "2025-11-01",
     "eventTime": "9:00",
     "eventVenue": "Mako IT Lab - Indian Delivery Center",
@@ -166,15 +166,15 @@
     "communityLogo": "https://i.ibb.co/bgwW96Mh/logo.png"
   },
   {
-  "eventName": "Java Jingle-A End-of-year code meetup",
-  "eventDescription": "A End of year code meetup,We're thrilled to announce that this Showdown event is in collaboration with Google for Developers! We are bringing the best of the Java community together for technical deep dives, some friendly competition, and pure fun in collaboration with Google for Developers. ",
-  "eventDate": "2025-12-13", 
-  "eventTime": "09:00",
-  "eventVenue": "Kissflow WTC,Chennai",
-  "eventLink": "https://luma.com/9nu25h4b",
-  "location": "Chennai",
-  "communityName": "CodeonJVM Chennai",
-  "communityLogo": "https://i.ibb.co/84B2cpZy/Logo-Black.jpg"
+    "eventName": "Java Jingle-A End-of-year code meetup",
+    "eventDescription": "A End of year code meetup,We're thrilled to announce that this Showdown event is in collaboration with Google for Developers! We are bringing the best of the Java community together for technical deep dives, some friendly competition, and pure fun in collaboration with Google for Developers. ",
+    "eventDate": "2025-12-13",
+    "eventTime": "09:00",
+    "eventVenue": "Kissflow WTC,Chennai",
+    "eventLink": "https://luma.com/9nu25h4b",
+    "location": "Chennai",
+    "communityName": "CodeonJVM Chennai",
+    "communityLogo": "https://i.ibb.co/84B2cpZy/Logo-Black.jpg"
   },
   {
     "eventName": "Madurai FOSS Meetup – December",
@@ -197,5 +197,115 @@
     "location": "Chennai",
     "communityName": "Kotlin User Group Chennai",
     "communityLogo": "https://i.ibb.co/N6q8WqzK/KUG-Board-Logo-1.png"
+  },
+  {
+    "eventName": "Code and Connect 3.0 - SheBuilds Chennai Meetup",
+    "eventDescription": "Join Tamilnadu's largest women-in-tech conference, let's learn, network and grow together!",
+    "eventDate": "2026-01-31",
+    "eventTime": "9:00",
+    "eventVenue": "Rajalakshmi Engineering College",
+    "eventLink": "https://luma.com/vs98di4e",
+    "location": "Chennai",
+    "communityName": "Shebuilds Chennai",
+    "communityLogo": "https://i.ibb.co/mCLbZ2Sb/shebuilds-logo.png"
+  },
+  {
+    "eventName": "The AI Connect (TAI) 3.0",
+    "eventDescription": "This full-day event is designed to immerse you in the latest AI trends, hands-on workshops, and insightful tech sessions led by industry experts. With interactive discussions, real-world applications, and networking opportunities, this is your chance to learn, connect, and innovate with fellow AI enthusiasts.",
+    "eventDate": "2026-01-31",
+    "eventTime": "10:00",
+    "eventVenue": "TSI Technologies Private Limited 4th Floor, Prestige Cosmopolitan 38, Sardar Patel Rd, Little Mount, Guindy, Chennai, Tamil Nadu 600034, India",
+    "eventLink": "https://luma.com/in2w4pv8",
+    "location": "Guindy, Chennai",
+    "communityName": "The AI Connect (TAI) 3.0",
+    "communityLogo": "https://i.ibb.co/pry2pPVc/TAI-LOGO.png"
+  },
+  {
+    "eventName": "AI Memory Matters: Build AI apps with Memori without a million tokens",
+    "eventDescription": "Join DevRelSquad X Memori Labs for an engaging panel discussion in Chennai! Learn how to build AI applications efficiently without extensive token usage, featuring industry experts and Q&A sessions to enhance your development knowledge.",
+    "eventDate": "2026-02-07",
+    "eventTime": "11:00",
+    "eventVenue": "Zoominfo Chennai, 11th Floor, Block A, GLOBAL INFOCITY PARK, Kodandarama Nagar, Perungudi, Chennai, Tamil Nadu 600096, India",
+    "eventLink": "https://www.goavo.ai/events/forms/fillup?id=695b7de744664a59dd37b249",
+    "location": "Perungudi, Chennai",
+    "communityName": "DevRelSquad X Memori Labs",
+    "communityLogo": "https://www.devrelsquad.com/assets/Black_Logo-D3q49o8f.svg"
+  },
+  {
+    "eventName": "Kotlin & AI - Nexus",
+    "eventDescription": "Join us on 24 Jan for a hands-on KUG Chennai meetup exploring the intersection of Kotlin and AI.",
+    "eventDate": "2026-01-24",
+    "eventTime": "09:00",
+    "eventVenue": "TBD",
+    "eventLink": "https://luma.com/x2eg95bn",
+    "location": "Chennai",
+    "communityName": "Kotlin User Group Chennai",
+    "communityLogo": "https://i.ibb.co/N6q8WqzK/KUG-Board-Logo-1.png"
+  },
+  {
+    "eventName": "[Workshop] Beyond ELK: Elastic Stack in Practice",
+    "eventDescription": "This session explores real-world Elastic Stack usage, from core ELK fundamentals to production-ready architectures, covering scaling strategies, performance tuning, and best practices for teams running Elastic at scale.",
+    "eventDate": "2026-02-07",
+    "eventTime": "10:00",
+    "eventVenue": "SQ1 Security Technology Private Limited: 2nd Floor Block B, International Tech Park, Futura Tech Park, Rajiv Gandhi Salai, OMR, Sholinganallur, Chennai, Tamil Nadu 600119",
+    "eventLink": "https://luma.com/ab8xlkcq",
+    "location": "Chennai",
+    "communityName": "Elastic Chennai User Group",
+    "communityLogo": "https://i.ibb.co/XkLjmzG5/Chennai-Badge-Template.png"
+  },
+  {
+    "eventName": "AI in Action: Prompting to Fine Tuning LLMs - A Hands-on Workshop",
+    "eventDescription": "This is a deep technical, hands-on session designed for developers who want to actively build and experiment with AI models during the workshop. Participants will engage in live coding and fine-tuning exercises using open-source LLMs. The session focuses on practical application, from prompt engineering to retrieval augmentation and lightweight fine-tuning.",
+    "eventDate": "2026-02-07",
+    "eventTime": "14:00",
+    "eventVenue": "Kissflow Office, Tower-B, 10th Floor, World Trade Center, 142, Rajiv Gandhi Salai, Perungudi, Chennai, Tamil Nadu 600096",
+    "eventLink": "https://in.explara.com/e/aiworkshop?utm_source=jen&utm_medium=ws&utm_campaign=kf",
+    "location": "Chennai",
+    "communityName": "CTOtalk",
+    "communityLogo": "https://i.ibb.co/k26BSd17/ctotalk-logo.jpg"
+  },
+  {
+    "eventName": "CodeSapiens January 2026 Meetup — Kickstarting the Year with Code & Community",
+    "eventDescription": "The CodeSapiens January 2026 Meetup brings students, developers, and tech enthusiasts together for a half-day of tech discussions, networking, and learning. Kickstart 2026 by connecting, sharing ideas, and growing with the CodeSapiens community.",
+    "eventDate": "2026-01-24",
+    "eventTime": "09:30",
+    "eventVenue": "Mako IT Lab, 8th Floor, TICEL BIOPARK, TICEL Biopark Rd, Phase II, Tharamani, Chennai, Tamil Nadu 600113",
+    "eventLink": "https://codesapiens.in/meetups",
+    "location": "Chennai",
+    "communityName": "CodeSapiens",
+    "communityLogo": "https://i.ibb.co/bgwW96Mh/logo.png"
+  },
+  {
+    "eventName": "From-Dev-to-Ops | Devops Community Meetup Jan 31",
+    "eventDescription": "From-Dev-to-Ops is a community of devops, SRE and Platform Engineers who share raw, behind-the-scenes war room experiences — the outages, the quick fixes, the lessons learned, and the systems that broke in a fun, honest, and simple way.",
+    "eventDate": "2026-01-31",
+    "eventTime": "09:30",
+    "eventVenue": "Hexaware Technilogies, H-5, Sipcot It Park, Post, Navalur, Siruseri, Tamil Nadu 603103",
+    "eventLink": "https://luma.com/0m3vl3d2",
+    "location": "Chennai",
+    "communityName": "From-Dev-to-Ops",
+    "communityLogo": "https://i.ibb.co/KZTKzgt/from-dev-to-ops-logo-900-x-900-px.png"
+  },
+  {
+    "eventName": "Build2Learn Meetup #31",
+    "eventDescription": "Begin the year by building what’s been on your mind with curious minds beside you.",
+    "eventDate": "2026-01-31",
+    "eventTime": "09:30",
+    "eventVenue": "Entrans Technologies Private Limited Millenia Business Park, Phase Two, Dr MGR Main Rd, Kandhanchavadi, Perungudi, Chennai, Tamil Nadu 600096",
+    "eventLink": "https://events.build2learn.in/",
+    "location": "Chennai",
+    "communityName": "Build2Learn",
+    "communityLogo": "https://i.ibb.co/CBsgh43/bxOxo5O.png"
+  },
+  {
+    "eventName": "Chennai React Meetup #16",
+    "eventDescription": "​Happy new year! This is our first meetup of 2026.",
+    "eventDate": "2026-02-21",
+    "eventTime": "1:30",
+    "eventVenue": "Comcast India Engineering Center | LLP, Chennai One SEZ, 5th Floor, North Block in Phase II Module 7& 8, 200 Feet Radial Rd, Pallavaram, Thoraipakkam, Tamil Nadu 600097",
+    "eventLink": "https://luma.com/v864j0r8?tk=YI1RlZ",
+    "location": "Chennai",
+    "communityName": "Chennai React",
+    "communityLogo": "https://avatars.githubusercontent.com/u/175532518"
   }
 ]

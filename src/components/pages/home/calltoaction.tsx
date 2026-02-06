@@ -41,7 +41,7 @@ const CallToAction = () => {
             </button>
             <button
               className='btn btn-glass px-6 py-3 text-base'
-              onClick={() => router.push('/Communities')}
+              onClick={() => router.push('/communities')}
             >
               Communities
             </button>

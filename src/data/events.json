@@ -254,6 +254,17 @@
     "communityLogo": "https://i.ibb.co/XkLjmzG5/Chennai-Badge-Template.png"
   },
   {
+    "eventName": "AI in Action: Prompting to Fine Tuning LLMs - A Hands-on Workshop",
+    "eventDescription": "This is a deep technical, hands-on session designed for developers who want to actively build and experiment with AI models during the workshop. Participants will engage in live coding and fine-tuning exercises using open-source LLMs. The session focuses on practical application, from prompt engineering to retrieval augmentation and lightweight fine-tuning.",
+    "eventDate": "2026-02-07",
+    "eventTime": "14:00",
+    "eventVenue": "Kissflow Office, Tower-B, 10th Floor, World Trade Center, 142, Rajiv Gandhi Salai, Perungudi, Chennai, Tamil Nadu 600096",
+    "eventLink": "https://in.explara.com/e/aiworkshop?utm_source=jen&utm_medium=ws&utm_campaign=kf",
+    "location": "Chennai",
+    "communityName": "CTOtalk",
+    "communityLogo": "https://i.ibb.co/k26BSd17/ctotalk-logo.jpg"
+  },
+  {
     "eventName": "CodeSapiens January 2026 Meetup — Kickstarting the Year with Code & Community",
     "eventDescription": "The CodeSapiens January 2026 Meetup brings students, developers, and tech enthusiasts together for a half-day of tech discussions, networking, and learning. Kickstart 2026 by connecting, sharing ideas, and growing with the CodeSapiens community.",
     "eventDate": "2026-01-24",

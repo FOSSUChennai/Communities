@@ -54,6 +54,10 @@ const config: NextConfig = {
       {
         protocol: 'https',
         hostname: 'www.devrelsquad.com'
+      },
+      {
+        protocol: 'https',
+        hostname: 'podu.pics'
       }
     ]
   }

@@ -6,7 +6,6 @@ import EmptyEventCard from '../../no-events-card';
 import Image from 'next/image';
 import AddToCalendar from '@/components/AddToCalendar';
 import LoadingAnimation from '@/components/LoadingAnimation';
-import { div } from 'framer-motion/client';
 
 type Event = {
   communityName: string;
@@ -28,16 +27,12 @@ type EventCardProps = {
   time: string;
   link: string;
   logo?: string;
-  isMonthly: boolean;
 };
 
 const Archive = () => {
-  const [monthlyCardHeight, setMonthlyCardHeight] = useState<number>(0);
-  const [upcomingCardHeight, setUpcomingCardHeight] = useState<number>(0);
   const [events, setEvents] = useState<Event[]>([]);
   const [selectedCommunity, setSelectedCommunity] = useState<string>('all');
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
-  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   // Create a date object for start of today
   const today = new Date();
@@ -61,7 +56,9 @@ const Archive = () => {
           }
           return response.json();
         })
-        .then((json) => setEvents(json));
+        .then((json) => {
+          if (json) setEvents(json);
+        });
     } else {
       // In development, use the local eventsJson directly
       setEvents(pastEvents);
@@ -89,30 +86,6 @@ const Archive = () => {
     return eventDate <= today;
   });
 
-  const upcomingEvents = sortedEvents.filter((event) => {
-    const eventDate = new Date(event.eventDate);
-    return (
-      eventDate > endOfToday && // Compare with end of today
-      (eventDate.getMonth() !== today.getMonth() || eventDate.getFullYear() !== today.getFullYear())
-    );
-  });
-
-  const calculateMaxHeight = (events: Event[]) => {
-    if (events.length === 0) return 100;
-    const longestTitle = events.reduce((max, event) => {
-      return event.eventName.length > max.length ? event.eventName : max;
-    }, '');
-    const baseHeight = 24;
-    const charsPerLine = 35;
-    const lines = Math.ceil(longestTitle.length / charsPerLine);
-    return Math.max(100, lines * baseHeight);
-  };
-
-  useEffect(() => {
-    setMonthlyCardHeight(calculateMaxHeight(monthlyEvents));
-    setUpcomingCardHeight(calculateMaxHeight(upcomingEvents));
-  }, [monthlyEvents, upcomingEvents]);
-
   const EventCard: React.FC<EventCardProps> = ({
     communityName,
     title,
@@ -121,8 +94,7 @@ const Archive = () => {
     venue,
     time,
     link,
-    logo,
-    isMonthly
+    logo
   }) => {
     const [mousePosition, setMousePosition] = React.useState<{
       x: number;
@@ -228,17 +200,13 @@ const Archive = () => {
           >
             <h3
               className='mb-2 mt-3 text-xl font-semibold tracking-tight text-gray-900'
-              style={{
-                height: `${isMonthly ? monthlyCardHeight : upcomingCardHeight}px`,
-                overflow: 'hidden'
-              }}
               title={title}
             >
               {title}
             </h3>
 
             <div className='flex-row items-center text-sm text-gray-600'>
-              <div className='flex items-center space-x-2'>
+              <div className='flex flex-wrap items-center gap-2'>
                 <span className='badge badge-green'>{location}</span>
                 <span className='badge'>{date}</span>
                 <span className='badge'>{time}</span>
@@ -280,7 +248,7 @@ const Archive = () => {
                   id='communityFilter'
                   value={selectedCommunity}
                   onChange={(e) => setSelectedCommunity(e.target.value)}
-                  className='rounded-xl border border-gray-200 bg-white px-3 py-2 text-sm text-gray-900 shadow-sm outline-none transition focus:border-green-500 focus:ring-4 focus:ring-green-500/10'
+                  className='form-input'
                 >
                   <option value='all'>All Communities</option>
                   {uniqueCommunities.map((community) => (
@@ -293,9 +261,14 @@ const Archive = () => {
 
               <div className='flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-2'>
                 <span className='text-sm font-medium text-gray-700'>Sort by date</span>
-                <div className='inline-flex overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm'>
+                <div
+                  className='inline-flex overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm'
+                  role='group'
+                  aria-label='Sort by date'
+                >
                   <button
                     onClick={() => setSortOrder('asc')}
+                    aria-pressed={sortOrder === 'asc'}
                     className={`px-3 py-2 text-sm font-medium transition ${
                       sortOrder === 'asc'
                         ? 'bg-gray-900 text-white'
@@ -306,6 +279,7 @@ const Archive = () => {
                   </button>
                   <button
                     onClick={() => setSortOrder('desc')}
+                    aria-pressed={sortOrder === 'desc'}
                     className={`border-l border-gray-200 px-3 py-2 text-sm font-medium transition ${
                       sortOrder === 'desc'
                         ? 'bg-gray-900 text-white'
@@ -325,9 +299,9 @@ const Archive = () => {
 
           <div className='mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3'>
             {monthlyEvents.length > 0 ? (
-              monthlyEvents.map((event, index) => (
+              monthlyEvents.map((event) => (
                 <EventCard
-                  key={index}
+                  key={`${event.communityName}-${event.eventName}-${event.eventDate}`}
                   communityName={event.communityName}
                   location={event.location}
                   title={event.eventName}
@@ -336,7 +310,6 @@ const Archive = () => {
                   link={event.eventLink}
                   time={event.eventTime}
                   logo={event.communityLogo}
-                  isMonthly={true}
                 />
               ))
             ) : (

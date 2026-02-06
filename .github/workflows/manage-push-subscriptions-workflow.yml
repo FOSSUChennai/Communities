@@ -10,7 +10,7 @@ jobs:
 
     steps:
       - name: Checkout target repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: ${{ secrets.SUBSCRIPTION_REPO }}
           token: ${{ secrets.GH_DB_PAT }}

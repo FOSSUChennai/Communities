@@ -28,6 +28,14 @@ interface SubscriptionPayload {
  * Saves a push notification subscription by dispatching to GitHub Actions
  */
 export async function POST(request: NextRequest) {
+  // Disable in non-production environments
+  if (process.env.NODE_ENV !== 'production') {
+    return NextResponse.json(
+      { error: 'Push notifications are disabled in non-production environments' },
+      { status: 403 }
+    );
+  }
+
   try {
     const data: SubscriptionData = await request.json();
 

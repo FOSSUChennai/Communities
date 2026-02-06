@@ -1,6 +1,6 @@
 {
   "name": "communities",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "type": "module",
   "description": "A community hub for discovering and engaging with technology conferences, tech meetups and events across Tamil Nadu.",
   "private": true,
@@ -11,16 +11,19 @@
     "prepare": "husky",
     "format:check": "prettier --cache --check --ignore-path .gitignore --ignore-path .prettierignore .",
     "format:write": "prettier --cache --write --list-different --ignore-path .gitignore --ignore-path .prettierignore .",
-    "lint": "next lint && eslint . --max-warnings 0"
+    "lint": "next lint && eslint . --max-warnings 0",
+    "generate:vapid": "npx web-push generate-vapid-keys",
+    "validate:events": "node -e \"const events = require('./src/data/events.json'); console.log('✅ events.json is valid JSON with', events.length, 'events')\"",
+    "validate:communities": "node -e \"const communities = require('./src/data/communities.json'); console.log('✅ communities.json is valid JSON with', communities.length, 'communities')\""
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.7",
     "framer-motion": "^12.4.10",
     "jsonfeed-to-rss": "^3.0.8",
-    "next": "15.1.4",
+    "next": "15.4.10",
     "next-umami": "^1.0.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
     "rss": "^1.2.2",
     "web-push": "^3.6.7"
   },
@@ -50,5 +53,9 @@
   "lint-staged": {
     "*.{cjs,mjs,js,jsx,cts,mts,ts,tsx,json}": "eslint --fix",
     "**/*": "prettier --write --ignore-unknown"
+  },
+  "packageManager": "pnpm@9.0.0",
+  "engines": {
+    "node": ">=22.0.0"
   }
 }

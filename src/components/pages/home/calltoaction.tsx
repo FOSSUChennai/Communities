@@ -41,7 +41,7 @@ const CallToAction = () => {
             </button>
             <button
               className='rounded-lg border border-white/50 bg-transparent px-6 py-3 text-base font-medium text-white transition-all duration-300 hover:scale-105 hover:bg-white/20 focus:ring focus:ring-white/30 active:scale-95'
-              onClick={() => router.push('/Communities')}
+              onClick={() => router.push('/communities')}
             >
               Communities
             </button>

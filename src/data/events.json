@@ -307,5 +307,16 @@
     "location": "Chennai",
     "communityName": "Chennai React",
     "communityLogo": "https://avatars.githubusercontent.com/u/175532518"
+  },
+  {
+    "eventName": "AWS Community Day Chennai 2026",
+    "eventDescription": "AWS Community Day is a comprehensive full-day, community-driven conference supported by AWS, bringing together cloud enthusiasts, professionals, industry leaders, and technology experts for extensive knowledge sharing, networking opportunities, and collaborative learning experiences.",
+    "eventDate": "2026-03-07",
+    "eventTime": "09:30",
+    "eventVenue": "St. Joseph's College of Engineering, OMR, Sholinganallur, Chennai, Tamil Nadu 600119",
+    "eventLink": "https://www.acdchennai.com",
+    "location": "Chennai",
+    "communityName": "AWS User Group Chennai & AWS User Group Women in Tech India - Chennai",
+    "communityLogo": "https://www.acdchennai.com/aws-user-groups-chennai-logo.png"
   }
 ]

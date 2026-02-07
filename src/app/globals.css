@@ -48,11 +48,6 @@
     @apply bg-gray-900 text-white hover:bg-gray-800;
   }
 
-  .form-input {
-    @apply rounded-xl border border-gray-200 bg-white px-3 py-2 text-sm text-gray-900 shadow-sm outline-none transition;
-    @apply focus:border-green-500 focus:ring-4 focus:ring-green-500/10;
-  }
-
   .btn-secondary {
     @apply bg-gray-100 text-gray-900 hover:bg-gray-200;
   }
@@ -65,6 +60,11 @@
     @apply border border-white/30 bg-white/15 text-white shadow-sm backdrop-blur-md;
     @apply hover:border-white/40 hover:bg-white/25 hover:text-white;
     @apply disabled:border-white/20 disabled:bg-white/10 disabled:text-white/70;
+  }
+
+  .form-input {
+    @apply rounded-xl border border-gray-200 bg-white px-3 py-2 text-sm text-gray-900 shadow-sm outline-none transition;
+    @apply focus:border-green-500 focus:ring-4 focus:ring-green-500/10;
   }
 
   .badge {

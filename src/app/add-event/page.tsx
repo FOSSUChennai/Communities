@@ -8,5 +8,4 @@ export const metadata: Metadata = {
 
 export default function AddEventPage() {
   notFound();
-  return null;
 }

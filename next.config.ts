@@ -58,10 +58,6 @@ const config: NextConfig = {
       {
         protocol: 'https',
         hostname: 'podu.pics'
-      },
-      {
-        protocol: 'https',
-        hostname: 'www.acdchennai.com'
       }
     ]
   }

@@ -23,15 +23,15 @@
     "paid": true
   },
   {
-    "eventName": "Digital Dreamers Den (D3) Meetup #5",
+    "eventName": "Digital Dreamers Den (D3) Workshop #1",
     "eventDescription": "Digital Dreamers Den (D3) is a vibrant tech community that brings together AI Full-Stack Developers to build the future. We host events, workshops, and networking opportunities that connect talented engineers with cutting-edge technology and industry leaders.",
-    "eventDate": "2025-11-22",
-    "eventTime": "09:30",
+    "eventDate": "2026-01-31",
+    "eventTime": "14:00",
     "eventVenue": "YuniQ, 4th Floor, TICEL BIOPARK, 5, CSIR Rd, Phase II, Tharamani, Chennai, Tamil Nadu 600113",
-    "eventLink": "https://d3community.in/meetup-5",
+    "eventLink": "https://d3community.in/workshop-1",
     "location": "Chennai",
     "communityName": "Digital Dreamers Den (D3)",
-    "communityLogo": "https://i.ibb.co/Cr5BSh2/D3logo.png"
+    "communityLogo": "https://i.ibb.co/Lh1nbgjy/D3-Community-Official-logo.png"
   },
   {
     "eventName": "From Dev to Ops | Devops Community Meetup Nov 15",
@@ -166,15 +166,15 @@
     "communityLogo": "https://i.ibb.co/bgwW96Mh/logo.png"
   },
   {
-  "eventName": "Java Jingle-A End-of-year code meetup",
-  "eventDescription": "A End of year code meetup,We're thrilled to announce that this Showdown event is in collaboration with Google for Developers! We are bringing the best of the Java community together for technical deep dives, some friendly competition, and pure fun in collaboration with Google for Developers. ",
-  "eventDate": "2025-12-13", 
-  "eventTime": "09:00",
-  "eventVenue": "Kissflow WTC,Chennai",
-  "eventLink": "https://luma.com/9nu25h4b",
-  "location": "Chennai",
-  "communityName": "CodeonJVM Chennai",
-  "communityLogo": "https://i.ibb.co/84B2cpZy/Logo-Black.jpg"
+    "eventName": "Java Jingle-A End-of-year code meetup",
+    "eventDescription": "A End of year code meetup,We're thrilled to announce that this Showdown event is in collaboration with Google for Developers! We are bringing the best of the Java community together for technical deep dives, some friendly competition, and pure fun in collaboration with Google for Developers. ",
+    "eventDate": "2025-12-13",
+    "eventTime": "09:00",
+    "eventVenue": "Kissflow WTC,Chennai",
+    "eventLink": "https://luma.com/9nu25h4b",
+    "location": "Chennai",
+    "communityName": "CodeonJVM Chennai",
+    "communityLogo": "https://i.ibb.co/84B2cpZy/Logo-Black.jpg"
   },
   {
     "eventName": "Madurai FOSS Meetup – December",
@@ -194,6 +194,39 @@
     "eventTime": "9:30",
     "eventVenue": "TBD",
     "eventLink": "https://luma.com/mj0jq8zo",
+    "location": "Chennai",
+    "communityName": "Kotlin User Group Chennai",
+    "communityLogo": "https://i.ibb.co/N6q8WqzK/KUG-Board-Logo-1.png"
+  },
+  {
+    "eventName": "Code and Connect 3.0 - SheBuilds Chennai Meetup",
+    "eventDescription": "Join Tamilnadu's largest women-in-tech conference, let's learn, network and grow together!",
+    "eventDate": "2026-01-31",
+    "eventTime": "9:00",
+    "eventVenue": "Rajalakshmi Engineering College",
+    "eventLink": "https://luma.com/vs98di4e",
+    "location": "Chennai",
+    "communityName": "Shebuilds Chennai",
+    "communityLogo": "https://i.ibb.co/mCLbZ2Sb/shebuilds-logo.png"
+  },
+  {
+    "eventName": "The AI Connect (TAI) 3.0",
+    "eventDescription": "​This full-day event is designed to immerse you in the latest AI trends, hands-on workshops, and insightful tech sessions led by industry experts. With interactive discussions, real-world applications, and networking opportunities, this is your chance to learn, connect, and innovate with fellow AI enthusiasts.",
+    "eventDate": "2026-01-31",
+    "eventTime": "10:00",
+    "eventVenue": "TSI Technologies Private Limited 4th Floor, Prestige Cosmopolitan 38, Sardar Patel Rd, Little Mount, Guindy, Chennai, Tamil Nadu 600034, India",
+    "eventLink": "https://luma.com/in2w4pv8",
+    "location": "Guindy, Chennai",
+    "communityName": "The AI Connect (TAI) 3.0",
+    "communityLogo": "https://i.ibb.co/pry2pPVc/TAI-LOGO.png"
+  },
+  {
+    "eventName": "Kotlin & AI - Nexus",
+    "eventDescription": "Join us on 24 Jan for a hands-on KUG Chennai meetup exploring the intersection of Kotlin and AI.",
+    "eventDate": "2026-01-24",
+    "eventTime": "09:00",
+    "eventVenue": "TBD",
+    "eventLink": "https://luma.com/x2eg95bn",
     "location": "Chennai",
     "communityName": "Kotlin User Group Chennai",
     "communityLogo": "https://i.ibb.co/N6q8WqzK/KUG-Board-Logo-1.png"

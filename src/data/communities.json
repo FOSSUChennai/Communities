@@ -159,7 +159,7 @@
   },
   {
     "name": "Digital Dreamers Den (D3)",
-    "logo": "https://i.ibb.co/Cr5BSh2/D3logo.png",
+    "logo": "https://i.ibb.co/Lh1nbgjy/D3-Community-Official-logo.png",
     "description": "Digital Dreamers Den (D3) is a vibrant tech community that brings together AI Full-Stack Developers to build the future. We host events, workshops, and networking opportunities that connect talented engineers with cutting-edge technology and industry leaders.",
     "location": "Chennai",
     "twitter": "https://d3community.in/x",
@@ -465,5 +465,14 @@
     "discord": "https://discord.gg/pzqEPvzn",
     "youtube": "https://www.youtube.com/@codesapiens-in",
     "instagram": "https://www.instagram.com/codesapiens.in/"
+  },
+  {
+    "name": "Shebuilds Chennai",
+    "logo": "https://i.ibb.co/mCLbZ2Sb/shebuilds-logo.png",
+    "description": "Our vision is to bring women-in-tech together to collaborate, share, grow and in the process empower women in tech to innovate and lead.",
+    "location": "Chennai",
+    "website": "https://shebuilds-chennai.tech/",
+    "linkedin": "https://www.linkedin.com/company/shebuildshack/",
+    "instagram": "https://www.instagram.com/shebuilds_chennai?igsh=MXVndDBsdGwyYjZwNA=="
   }
 ]

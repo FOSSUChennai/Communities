@@ -127,7 +127,23 @@ const Events = () => {
     } | null>(null);
     const [isOverflowing, setIsOverflowing] = useState(false);
     const [showAlert, setShowAlert] = useState(false);
+    const [tooltipPlacement, setTooltipPlacement] = useState<'left' | 'right' | 'center'>('left');
     const communityNameRef = useRef<HTMLSpanElement>(null);
+    const alertContainerRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+      if (showAlert && alertContainerRef.current) {
+        const rect = alertContainerRef.current.getBoundingClientRect();
+        const tooltipWidth = 256;
+        if (rect.left + tooltipWidth > window.innerWidth) {
+          setTooltipPlacement('right');
+        } else if (rect.left < tooltipWidth / 2) {
+          setTooltipPlacement('center');
+        } else {
+          setTooltipPlacement('left');
+        }
+      }
+    }, [showAlert]);
 
     useEffect(() => {
       const checkOverflow = () => {
@@ -209,7 +225,7 @@ const Events = () => {
               )}
               {/* Alert Icon - positioned right next to community name badge */}
               {alert && (
-                <div className='relative'>
+                <div ref={alertContainerRef} className='relative'>
                   <button
                     onClick={(e) => {
                       e.preventDefault();
@@ -226,13 +242,24 @@ const Events = () => {
 
                   {/* Alert Tooltip */}
                   {showAlert && (
-                    <div className='absolute left-0 top-8 z-50 w-64 rounded-lg border-2 border-yellow-300 bg-yellow-50 p-3 shadow-lg'>
+                    <div
+                      className={`absolute top-8 z-50 w-64 rounded-lg border-2 border-yellow-300 bg-yellow-50 p-3 shadow-lg ${
+                        tooltipPlacement === 'right'
+                          ? 'left-auto right-0'
+                          : tooltipPlacement === 'center'
+                            ? 'left-1/2 -translate-x-1/2'
+                            : 'left-0'
+                      }`}
+                    >
                       <div>
                         <p className='text-sm font-semibold text-yellow-900'>
                           {alert.type === 'postponed' && '⚠️ Event Postponed'}
                           {alert.type === 'venue-change' && '📍 Venue Changed'}
                           {alert.type === 'cancelled' && '❌ Event Cancelled'}
-                          {!alert.type && '⚠️ Important Notice'}
+                          {(!alert.type ||
+                            alert.type === 'general' ||
+                            !['postponed', 'venue-change', 'cancelled'].includes(alert.type)) &&
+                            '⚠️ Important Notice'}
                         </p>
                         <p className='mt-1 text-xs text-yellow-800'>{alert.message}</p>
                       </div>

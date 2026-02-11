@@ -131,12 +131,12 @@ Ensure:
 
    **Commit Message Guidelines:**
 
-   - **feat:** A new feature (e.g., `feat: add React Chennai meetup on Dec 15`)
-   - **fix:** A bug fix (e.g., `fix: correct date format in events.json`)
-   - **docs:** Documentation changes (e.g., `docs: update contributing guidelines`)
-   - **refactor:** Code restructuring without functionality changes
-   - **test:** Adding or modifying tests
-   - **chore:** Routine tasks (e.g., `chore: update dependencies`)
+   - **feat:** New feature (e.g., `feat: add React Chennai meetup on Dec 15`)
+   - **fix:** Bug fix (e.g., `fix: correct event date format`)
+   - **docs:** Documentation (e.g., `docs: update setup instructions`)
+   - **refactor:** Code restructuring
+   - **test:** Tests
+   - **chore:** Maintenance (e.g., `chore: update dependencies`)
 
 2. Create a Pull Request with:
    - **Title:** Follow the conventional commit format (e.g., `feat: add [Your Event Name]`)

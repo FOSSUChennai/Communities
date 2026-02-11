@@ -1,7 +1,7 @@
 'use client';
 import React, { useEffect, useRef, useState } from 'react';
 import pastEvents from '../../../data/pastevents.json';
-import { MapPin } from '@phosphor-icons/react';
+import { MapPin, Warning } from '@phosphor-icons/react';
 import EmptyEventCard from '../../no-events-card';
 import Image from 'next/image';
 import AddToCalendar from '@/components/AddToCalendar';
@@ -17,6 +17,10 @@ type Event = {
   eventTime: string;
   eventLink: string;
   location: string;
+  alert?: {
+    message: string;
+    type?: 'postponed' | 'venue-change' | 'cancelled' | 'general';
+  };
 };
 
 type EventCardProps = {
@@ -29,6 +33,10 @@ type EventCardProps = {
   link: string;
   logo?: string;
   isMonthly: boolean;
+  alert?: {
+    message: string;
+    type?: 'postponed' | 'venue-change' | 'cancelled' | 'general';
+  };
 };
 
 const Archive = () => {
@@ -122,13 +130,15 @@ const Archive = () => {
     time,
     link,
     logo,
-    isMonthly
+    isMonthly,
+    alert
   }) => {
     const [mousePosition, setMousePosition] = React.useState<{
       x: number;
       y: number;
     } | null>(null);
     const [isOverflowing, setIsOverflowing] = useState(false);
+    const [showAlert, setShowAlert] = useState(false);
     const communityNameRef = useRef<HTMLSpanElement>(null);
 
     useEffect(() => {
@@ -193,21 +203,57 @@ const Archive = () => {
             }}
           />
           <div className='relative flex flex-wrap items-center justify-between gap-2'>
-            {isOverflowing ? (
-              <Tooltip content={communityName}>
+            <div className='flex items-center gap-2'>
+              {isOverflowing ? (
+                <Tooltip content={communityName}>
+                  <div className='rounded-md border-2 border-black bg-white px-2 py-1 text-xs text-black'>
+                    <span ref={communityNameRef} className='block max-w-[200px] truncate'>
+                      {communityName}
+                    </span>
+                  </div>
+                </Tooltip>
+              ) : (
                 <div className='rounded-md border-2 border-black bg-white px-2 py-1 text-xs text-black'>
                   <span ref={communityNameRef} className='block max-w-[200px] truncate'>
                     {communityName}
                   </span>
                 </div>
-              </Tooltip>
-            ) : (
-              <div className='rounded-md border-2 border-black bg-white px-2 py-1 text-xs text-black'>
-                <span ref={communityNameRef} className='block max-w-[200px] truncate'>
-                  {communityName}
-                </span>
-              </div>
-            )}
+              )}
+              {/* Alert Icon - positioned right next to community name badge */}
+              {alert && (
+                <div className='relative'>
+                  <button
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      setShowAlert(!showAlert);
+                    }}
+                    onMouseEnter={() => setShowAlert(true)}
+                    onMouseLeave={() => setShowAlert(false)}
+                    className='relative rounded-full bg-yellow-400 p-1.5 text-yellow-900 shadow-md transition-colors hover:bg-yellow-500'
+                    aria-label='Event alert'
+                  >
+                    <Warning size={16} weight='fill' />
+                  </button>
+
+                  {/* Alert Tooltip */}
+                  {showAlert && (
+                    <div className='absolute left-0 top-8 z-50 w-64 rounded-lg border-2 border-yellow-300 bg-yellow-50 p-3 shadow-lg'>
+                      <div>
+                        <p className='text-sm font-semibold text-yellow-900'>
+                          {alert.type === 'postponed' && '⚠️ Event Postponed'}
+                          {alert.type === 'venue-change' && '📍 Venue Changed'}
+                          {alert.type === 'cancelled' && '❌ Event Cancelled'}
+                          {!alert.type && '⚠️ Important Notice'}
+                        </p>
+                        <p className='mt-1 text-xs text-yellow-800'>{alert.message}</p>
+                      </div>
+                      <div className='absolute -top-2 left-4 h-3 w-3 rotate-45 border-l-2 border-t-2 border-yellow-300 bg-yellow-50' />
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
             {logo && (
               <Image
                 src={logo || ''}
@@ -346,6 +392,7 @@ const Archive = () => {
                 time={event.eventTime}
                 logo={event.communityLogo}
                 isMonthly={true}
+                alert={event.alert}
               />
             ))
           ) : (

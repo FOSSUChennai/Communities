@@ -253,13 +253,13 @@ const Events = () => {
                     >
                       <div>
                         <p className='text-sm font-semibold text-yellow-900'>
-                          {alert.type === 'postponed' && '⚠️ Event Postponed'}
-                          {alert.type === 'venue-change' && '📍 Venue Changed'}
-                          {alert.type === 'cancelled' && '❌ Event Cancelled'}
+                          {alert.type === 'postponed' && 'Event Postponed'}
+                          {alert.type === 'venue-change' && 'Venue Changed'}
+                          {alert.type === 'cancelled' && 'Event Cancelled'}
                           {(!alert.type ||
                             alert.type === 'general' ||
                             !['postponed', 'venue-change', 'cancelled'].includes(alert.type)) &&
-                            '⚠️ Important Notice'}
+                            'Important Notice'}
                         </p>
                         <p className='mt-1 text-xs text-yellow-800'>{alert.message}</p>
                       </div>

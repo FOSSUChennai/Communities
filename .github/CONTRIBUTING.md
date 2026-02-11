@@ -31,13 +31,13 @@ Add your event to the JSON array using this template:
 {
   "eventName": "Your Event Name",
   "eventDescription": "Brief description of the event (max 200 characters)",
-  "eventDate": "2024-02-20", // Format: YYYY-MM-DD
-  "eventTime": "14:30", // 24-hour format: HH:MM
+  "eventDate": "2024-02-20",
+  "eventTime": "14:30",
   "eventVenue": "Full venue address",
   "eventLink": "https://registration-link.com",
   "location": "City Name",
   "communityName": "Your Community Name",
-  "communityLogo": "https://url-to-your-logo.svg", // use imgbb to host the images or change next.config file
+  "communityLogo": "https://url-to-your-logo.svg",
   "alert": {
     // Optional: Add alerts for important updates
     "message": "Important notice about the event",
@@ -45,6 +45,12 @@ Add your event to the JSON array using this template:
   }
 }
 ```
+
+**Field Requirements:**
+
+- `eventDate`: YYYY-MM-DD format
+- `eventTime`: 24-hour format HH:MM
+- `communityLogo`: Use imgbb to host images or add hostname to `next.config.ts`
 
 #### Adding Event Alerts (Optional)
 
@@ -125,7 +131,7 @@ Ensure:
 
    **Commit Message Guidelines:**
 
-   - **feat:** A new feature (e.g., `feat: add new event on June 1st`)
+   - **feat:** A new feature (e.g., `feat: add React Chennai meetup on Dec 15`)
    - **fix:** A bug fix (e.g., `fix: correct date format in events.json`)
    - **docs:** Documentation changes (e.g., `docs: update contributing guidelines`)
    - **refactor:** Code restructuring without functionality changes
@@ -154,13 +160,39 @@ Have ideas to make the platform better? Create an issue with:
 - Use cases
 - Potential implementation details
 
-## 💻 Development Guidelines
+## 💻 Development Setup
 
-- Use TypeScript for all new code
+### Environment Variables
+
+1. Copy `.env.example` to `.env`:
+
+   ```bash
+   cp .env.example .env
+   ```
+
+2. **(Optional)** Generate VAPID keys for push notifications:
+
+   > **Note:** Push notifications are disabled in non-production environments. VAPID keys are only required when `NODE_ENV=production`.
+
+   ```bash
+   npx web-push generate-vapid-keys
+   ```
+
+3. Update `.env` with:
+   - `NEXT_PUBLIC_VAPID_PUBLIC_KEY` - (Optional) Public VAPID key
+   - `VAPID_PUBLIC_KEY` - (Optional) Server-side public key
+   - `VAPID_PRIVATE_KEY` - (Optional) Server-side private key
+   - `GITHUB_TOKEN` - (Optional) For subscription management
+   - `UMAMI_ANALYTICS_ID` - (Optional) Analytics
+
+### Development Guidelines
+
+- Use TypeScript for all code
 - Follow existing code style
-- Write meaningful commit messages
+- Use conventional commits
 - Add comments for complex logic
-- Update documentation as needed
+- Update docs when needed
+- Test locally before PR
 
 ## 🤝 Community Guidelines
 

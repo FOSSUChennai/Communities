@@ -5,6 +5,8 @@ import { MapPin, Warning } from '@phosphor-icons/react';
 import EmptyEventCard from '../../no-events-card';
 import Image from 'next/image';
 import AddToCalendar from '@/components/AddToCalendar';
+import LoadingAnimation from '@/components/LoadingAnimation';
+import { div } from 'framer-motion/client';
 
 type Event = {
   communityName: string;
@@ -43,6 +45,7 @@ const Archive = () => {
   const [events, setEvents] = useState<Event[]>([]);
   const [selectedCommunity, setSelectedCommunity] = useState<string>('all');
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   // Create a date object for start of today
   const today = new Date();
@@ -393,7 +396,9 @@ const Archive = () => {
               />
             ))
           ) : (
-            <EmptyEventCard message='No events scheduled for this month' />
+            <div className='col-span-full mt-10 flex flex-col items-center justify-center'>
+              <LoadingAnimation />
+            </div>
           )}
         </div>
       </section>

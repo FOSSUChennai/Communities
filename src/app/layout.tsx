@@ -1,10 +1,10 @@
 import type { Metadata, Viewport } from 'next';
 import { Geist, Geist_Mono, Inter } from 'next/font/google';
 import './globals.css';
-import { IS_PROD, SITE_URL } from '../lib/constants';
 import UmamiProvider from 'next-umami';
-import Header from '../components/shared/header';
 import Footer from '../components/shared/footer';
+import Header from '../components/shared/header';
+import { IS_PROD, SITE_URL } from '../lib/constants';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -85,7 +85,7 @@ export default function RootLayout({
         {children}
         <Footer />
       </body>
-      {IS_PROD && <UmamiProvider websiteId={webId} />}
+      {IS_PROD && webId && <UmamiProvider websiteId={webId} />}
     </html>
   );
 }

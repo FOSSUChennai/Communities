@@ -329,5 +329,16 @@
     "location": "Madurai",
     "communityName": "CodeonJVM Chennai",
     "communityLogo": "https://podu.pics/RSASP4qyHu"
+  },
+  {
+    "eventName": "Open source Themed Meetup",
+    "eventDescription": "How far will you go for code? Actual hands-on contributions to real-world projects-together",
+    "eventDate": "2026-02-21",
+    "eventTime": "09:00",
+    "eventVenue": "Yuniq, TICEL Biopark Rd,Tharamani,Chennai-600113",
+    "eventLink": "https://www.codesapiens.in/programs",
+    "location": "Chennai",
+    "communityName": "CodeSapiens",
+    "communityLogo": "https://i.ibb.co/bgwW96Mh/logo.png"
   }
 ]

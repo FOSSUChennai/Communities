@@ -221,26 +221,26 @@
     "communityLogo": "https://i.ibb.co/pry2pPVc/TAI-LOGO.png"
   },
   {
-  "eventName": "AI Memory Matters: Build AI apps with Memori without a million tokens",
-  "eventDescription": "Join DevRelSquad X Memori Labs for an engaging panel discussion in Chennai! Learn how to build AI applications efficiently without extensive token usage, featuring industry experts and Q&A sessions to enhance your development knowledge.",
-  "eventDate": "2026-02-07",
-  "eventTime": "11:00",
-  "eventVenue": "Zoominfo Chennai, 11th Floor, Block A, GLOBAL INFOCITY PARK, Kodandarama Nagar, Perungudi, Chennai, Tamil Nadu 600096, India",
-  "eventLink": "https://www.goavo.ai/events/forms/fillup?id=695b7de744664a59dd37b249",
-  "location": "Perungudi, Chennai",
-  "communityName": "DevRelSquad X Memori Labs",
-  "communityLogo": "https://www.devrelsquad.com/assets/Black_Logo-D3q49o8f.svg"
+    "eventName": "AI Memory Matters: Build AI apps with Memori without a million tokens",
+    "eventDescription": "Join DevRelSquad X Memori Labs for an engaging panel discussion in Chennai! Learn how to build AI applications efficiently without extensive token usage, featuring industry experts and Q&A sessions to enhance your development knowledge.",
+    "eventDate": "2026-02-07",
+    "eventTime": "11:00",
+    "eventVenue": "Zoominfo Chennai, 11th Floor, Block A, GLOBAL INFOCITY PARK, Kodandarama Nagar, Perungudi, Chennai, Tamil Nadu 600096, India",
+    "eventLink": "https://www.goavo.ai/events/forms/fillup?id=695b7de744664a59dd37b249",
+    "location": "Perungudi, Chennai",
+    "communityName": "DevRelSquad X Memori Labs",
+    "communityLogo": "https://www.devrelsquad.com/assets/Black_Logo-D3q49o8f.svg"
   },
   {
-  "eventName": "Kotlin & AI - Nexus",
-  "eventDescription": "Join us on 24 Jan for a hands-on KUG Chennai meetup exploring the intersection of Kotlin and AI.",
-  "eventDate": "2026-01-24",
-  "eventTime": "09:00",
-  "eventVenue": "TBD",
-  "eventLink": "https://luma.com/x2eg95bn",
-  "location": "Chennai",
-  "communityName": "Kotlin User Group Chennai",
-  "communityLogo": "https://i.ibb.co/N6q8WqzK/KUG-Board-Logo-1.png"
+    "eventName": "Kotlin & AI - Nexus",
+    "eventDescription": "Join us on 24 Jan for a hands-on KUG Chennai meetup exploring the intersection of Kotlin and AI.",
+    "eventDate": "2026-01-24",
+    "eventTime": "09:00",
+    "eventVenue": "TBD",
+    "eventLink": "https://luma.com/x2eg95bn",
+    "location": "Chennai",
+    "communityName": "Kotlin User Group Chennai",
+    "communityLogo": "https://i.ibb.co/N6q8WqzK/KUG-Board-Logo-1.png"
   },
   {
     "eventName": "[Workshop] Beyond ELK: Elastic Stack in Practice",
@@ -340,5 +340,27 @@
    "location": "Chennai",
    "communityName": "From-Dev-to-Ops",
    "communityLogo": "https://i.ibb.co/KZTKzgt/from-dev-to-ops-logo-900-x-900-px.png"
+  },
+  {
+    "eventName": "Open source Themed Meetup",
+    "eventDescription": "How far will you go for code? Actual hands-on contributions to real-world projects-together",
+    "eventDate": "2026-02-21",
+    "eventTime": "09:00",
+    "eventVenue": "Yuniq, TICEL Biopark Rd,Tharamani,Chennai-600113",
+    "eventLink": "https://www.codesapiens.in/programs",
+    "location": "Chennai",
+    "communityName": "CodeSapiens",
+    "communityLogo": "https://i.ibb.co/bgwW96Mh/logo.png"
+  },
+  {
+    "eventName": "JSLovers Chennai Meetup #9 | AI & JS Edition",
+    "eventDescription": "JSLovers Chennai is back with meetup #9! Expect AI & JS talks, learning, networking, and great community vibes. Don’t miss it on March 7th!",
+    "eventDate": "2026-03-07",
+    "eventTime": "14:00",
+    "eventVenue": "COWRKS Perungudi, 2nd Floor, Sterling Technopolis ,4/293, Old Mahabalipuram Road, Perungudi, Chennai, Tamil Nadu 600096",
+    "eventLink": "https://luma.com/kbsp31bs",
+    "location": "Chennai",
+    "communityName": "JSLovers Chennai",
+    "communityLogo": "https://i.ibb.co/My6JNtNx/jslovers-Logo.png"
   }
 ]

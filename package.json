@@ -17,8 +17,7 @@
     "validate:communities": "node -e \"const communities = require('./src/data/communities.json'); console.log('✅ communities.json is valid JSON with', communities.length, 'communities')\""
   },
   "dependencies": {
-    "@phosphor-icons/react": "^2.1.7",
-    "framer-motion": "^12.4.10",
+    "framer-motion": "^12.34.0",
     "jsonfeed-to-rss": "^3.0.8",
     "next": "15.4.10",
     "next-umami": "^1.0.0",
@@ -32,6 +31,7 @@
     "@commitlint/config-conventional": "^19.6.0",
     "@eslint/eslintrc": "^3.2.0",
     "@eslint/js": "^9.18.0",
+    "@phosphor-icons/react": "^2.1.10",
     "@types/node": "^22",
     "@types/react": "^19",
     "@types/react-dom": "^19",

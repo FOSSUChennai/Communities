@@ -226,14 +226,20 @@ const Events = () => {
             </h3>
 
             <div className='flex-row items-center text-sm text-gray-600'>
-              <div className='flex items-center space-x-2'>
-                <span className={`rounded bg-green-100 px-2 py-0.5 text-xs text-green-800`}>
+              <div className='flex flex-wrap items-center gap-2'>
+                <span
+                  className={`whitespace-nowrap rounded bg-green-100 px-2 py-0.5 text-xs text-green-800`}
+                >
                   {location}
                 </span>
-                <span className={`rounded bg-blue-100 px-2 py-0.5 text-xs text-blue-800`}>
+                <span
+                  className={`whitespace-nowrap rounded bg-blue-100 px-2 py-0.5 text-xs text-blue-800`}
+                >
                   {date}
                 </span>
-                <span className={`rounded bg-yellow-100 px-2 py-0.5 text-xs text-yellow-800`}>
+                <span
+                  className={`whitespace-nowrap rounded bg-yellow-100 px-2 py-0.5 text-xs text-yellow-800`}
+                >
                   {time}
                 </span>
                 <AddToCalendar

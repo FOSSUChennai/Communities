@@ -331,15 +331,15 @@
     "communityLogo": "https://podu.pics/RSASP4qyHu"
   },
   {
-   "eventName": "From-Dev-to-Ops | Devops Community Meetup Feb 14",
-   "eventDescription": "From-Dev-to-Ops is a community of devops, SRE and Platform Engineers who share raw, behind-the-scenes war room experiences — the outages, the quick fixes, the lessons learned, and the systems that broke in a fun, honest, and simple way.",
-   "eventDate": "2026-02-14",
-   "eventTime": "09:30",
-   "eventVenue": "MCC MRF Innovation Park, MCC, East Tambaram, Chennai, Tamil Nadu 600059",
-   "eventLink": "https://luma.com/e15tnkep",
-   "location": "Chennai",
-   "communityName": "From-Dev-to-Ops",
-   "communityLogo": "https://i.ibb.co/KZTKzgt/from-dev-to-ops-logo-900-x-900-px.png"
+    "eventName": "From-Dev-to-Ops | Devops Community Meetup Feb 14",
+    "eventDescription": "From-Dev-to-Ops is a community of devops, SRE and Platform Engineers who share raw, behind-the-scenes war room experiences — the outages, the quick fixes, the lessons learned, and the systems that broke in a fun, honest, and simple way.",
+    "eventDate": "2026-02-14",
+    "eventTime": "09:30",
+    "eventVenue": "MCC MRF Innovation Park, MCC, East Tambaram, Chennai, Tamil Nadu 600059",
+    "eventLink": "https://luma.com/e15tnkep",
+    "location": "Chennai",
+    "communityName": "From-Dev-to-Ops",
+    "communityLogo": "https://i.ibb.co/KZTKzgt/from-dev-to-ops-logo-900-x-900-px.png"
   },
   {
     "eventName": "Open source Themed Meetup",
@@ -362,5 +362,16 @@
     "location": "Chennai",
     "communityName": "JSLovers Chennai",
     "communityLogo": "https://i.ibb.co/My6JNtNx/jslovers-Logo.png"
+  },
+  {
+    "eventName": "techKoodaram Build Day",
+    "eventDescription": "Come with an idea, team up, and go home with an MVP! techKoodaram Build Day is a hands-on event where participants pitch ideas, form teams, and build a working minimum viable product together in one day.",
+    "eventDate": "2026-02-28",
+    "eventTime": "09:30",
+    "eventVenue": "Vaazhai Incubation Centre, SVCET, Puliyangudi",
+    "eventLink": "https://www.theticket9.com/event/techkoodaram-build-day",
+    "location": "Puliyangudi",
+    "communityName": "techKoodaram",
+    "communityLogo": "https://i.ibb.co/DgkH8WG6/techkoodaram.png"
   }
 ]

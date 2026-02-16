@@ -449,7 +449,7 @@
     "website": "https://www.meetup.com/opensearch-project-chennai/",
     "github": "https://github.com/opensearch-project",
     "linkedin": "https://www.linkedin.com/company/opensearch-project/",
-    "twitter:": "https://x.com/OpenSearchProj",
+    "twitter": "https://x.com/OpenSearchProj",
     "slack": "https://opensearch.org/slack/",
     "youtube": "https://www.youtube.com/@OpenSearchProject"
   },
@@ -461,7 +461,7 @@
     "website": "https://codesapiens.in/",
     "github": "https://github.com/Codesapiens-in",
     "linkedin": "https://www.linkedin.com/company/codesapiens-community",
-    "twitter:": "https://x.com/codesapiens_in",
+    "twitter": "https://x.com/codesapiens_in",
     "discord": "https://discord.gg/pzqEPvzn",
     "youtube": "https://www.youtube.com/@codesapiens-in",
     "instagram": "https://www.instagram.com/codesapiens.in/"
@@ -474,5 +474,14 @@
     "website": "https://shebuilds-chennai.tech/",
     "linkedin": "https://www.linkedin.com/company/shebuildshack/",
     "instagram": "https://www.instagram.com/shebuilds_chennai?igsh=MXVndDBsdGwyYjZwNA=="
+  },
+  {
+    "name": "techKoodaram",
+    "logo": "https://i.ibb.co/DgkH8WG6/techkoodaram.png",
+    "description": "techKoodaram is a grassroots tech community based in South Tamil Nadu that brings together students, developers, and tech enthusiasts to learn, share, and build through workshops, talks, collaborative projects, and inclusive networking. It aims to strengthen the local tech ecosystem from towns like Sivakasi to Tenkasi by providing practical guidance, skill development, and community support.",
+    "location": "South Tamil Nadu",
+    "website": "https://www.techkoodaram.in",
+    "linkedin": "https://www.linkedin.com/company/techkoodaram/",
+    "instagram": "https://www.instagram.com/techkoodaram/"
   }
 ]

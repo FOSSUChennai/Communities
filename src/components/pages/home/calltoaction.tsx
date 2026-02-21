@@ -6,33 +6,33 @@ import { useRouter } from 'next/navigation';
 const CallToAction = () => {
   const router = useRouter();
   return (
-    <div className='mx-4 py-12 md:mx-8 lg:mx-16'>
-      <div className='relative rounded-lg bg-[#4CAF50] p-10 shadow-lg md:w-[93%] lg:w-full'>
-        <div className='absolute bottom-0 right-0 hidden translate-x-[72px] md:block'>
+    <section className='py-12'>
+      <div className='relative overflow-hidden rounded-2xl bg-gradient-to-br from-green-600 to-green-500 p-6 shadow-sm sm:p-8 md:overflow-visible md:p-10'>
+        <div className='absolute bottom-0 right-0 hidden md:block md:translate-x-4 lg:translate-x-[72px]'>
           <Image
             src='/rockethalf.png'
             alt='Rocket'
             width={300}
             height={300}
-            className='scale-125'
+            className='drop-shadow-md md:scale-100 lg:scale-125'
             style={{ transformOrigin: 'bottom right' }}
           />
         </div>
 
-        <div className='relative z-10 flex flex-col text-left md:pr-[70px]'>
+        <div className='relative z-10 flex flex-col text-left md:pr-48 lg:pr-64'>
           <div className='max-w-2xl'>
             <h3 className='text-3xl font-semibold text-white md:text-4xl'>
               Know a tech event? <br className='block' />{' '}
-              <span className='text-black'> Share it to help others find and join!</span>
+              <span className='text-gray-950'> Share it to help others find and join!</span>
             </h3>
-            <p className='mt-3 text-lg font-medium text-white/80 drop-shadow-md'>
+            <p className='mt-3 text-lg font-medium text-white/90'>
               Add your event to our list and be a part of the growing tech community.
             </p>
           </div>
 
           <div className='mt-6 flex flex-wrap gap-4'>
             <button
-              className='rounded-lg bg-black px-6 py-3 text-base font-medium text-white transition-all duration-300 hover:scale-105 hover:bg-gray-900 focus:ring focus:ring-gray-400/40 active:scale-95'
+              className='btn btn-primary px-6 py-3 text-base'
               onClick={() =>
                 window.open('https://github.com/fossuchennai/communities/blob/main/CONTRIBUTING.md')
               }
@@ -40,15 +40,15 @@ const CallToAction = () => {
               Contribute
             </button>
             <button
-              className='rounded-lg border border-white/50 bg-transparent px-6 py-3 text-base font-medium text-white transition-all duration-300 hover:scale-105 hover:bg-white/20 focus:ring focus:ring-white/30 active:scale-95'
-              onClick={() => router.push('/communities')}
+              className='btn btn-glass px-6 py-3 text-base'
+              onClick={() => router.push('/Communities')}
             >
               Communities
             </button>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

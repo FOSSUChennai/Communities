@@ -331,15 +331,15 @@
     "communityLogo": "https://podu.pics/RSASP4qyHu"
   },
   {
-   "eventName": "From-Dev-to-Ops | Devops Community Meetup Feb 14",
-   "eventDescription": "From-Dev-to-Ops is a community of devops, SRE and Platform Engineers who share raw, behind-the-scenes war room experiences — the outages, the quick fixes, the lessons learned, and the systems that broke in a fun, honest, and simple way.",
-   "eventDate": "2026-02-14",
-   "eventTime": "09:30",
-   "eventVenue": "MCC MRF Innovation Park, MCC, East Tambaram, Chennai, Tamil Nadu 600059",
-   "eventLink": "https://luma.com/e15tnkep",
-   "location": "Chennai",
-   "communityName": "From-Dev-to-Ops",
-   "communityLogo": "https://i.ibb.co/KZTKzgt/from-dev-to-ops-logo-900-x-900-px.png"
+    "eventName": "From-Dev-to-Ops | Devops Community Meetup Feb 14",
+    "eventDescription": "From-Dev-to-Ops is a community of devops, SRE and Platform Engineers who share raw, behind-the-scenes war room experiences — the outages, the quick fixes, the lessons learned, and the systems that broke in a fun, honest, and simple way.",
+    "eventDate": "2026-02-14",
+    "eventTime": "09:30",
+    "eventVenue": "MCC MRF Innovation Park, MCC, East Tambaram, Chennai, Tamil Nadu 600059",
+    "eventLink": "https://luma.com/e15tnkep",
+    "location": "Chennai",
+    "communityName": "From-Dev-to-Ops",
+    "communityLogo": "https://i.ibb.co/KZTKzgt/from-dev-to-ops-logo-900-x-900-px.png"
   },
   {
     "eventName": "Open source Themed Meetup",
@@ -362,5 +362,16 @@
     "location": "Chennai",
     "communityName": "JSLovers Chennai",
     "communityLogo": "https://i.ibb.co/My6JNtNx/jslovers-Logo.png"
+  },
+  {
+    "eventName": "FOSS United Chennai February Meetup",
+    "eventDescription": "FOSS United Chennai Monthly Meetup",
+    "eventDate": "2026-02-28",
+    "eventTime": "09:00",
+    "eventVenue": "Poshmark, Chetpet",
+    "eventLink": "https://fossunited.org/c/chennai/feb-2026",
+    "location": "Chennai",
+    "communityName": "FOSS United Chennai",
+    "communityLogo": "https://fossunited.org/files/Foss%20United%20Logo%20Black.svg"
   }
 ]

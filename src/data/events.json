@@ -373,5 +373,16 @@
     "location": "Puliyangudi",
     "communityName": "techKoodaram",
     "communityLogo": "https://i.ibb.co/DgkH8WG6/techkoodaram.png"
+    },
+  {
+    "eventName": "FOSS United Chennai February Meetup",
+    "eventDescription": "FOSS United Chennai Monthly Meetup",
+    "eventDate": "2026-02-28",
+    "eventTime": "09:00",
+    "eventVenue": "Poshmark, Chetpet",
+    "eventLink": "https://fossunited.org/c/chennai/feb-2026",
+    "location": "Chennai",
+    "communityName": "FOSS United Chennai",
+    "communityLogo": "https://fossunited.org/files/Foss%20United%20Logo%20Black.svg"
   }
 ]

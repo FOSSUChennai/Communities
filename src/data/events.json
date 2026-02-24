@@ -373,5 +373,16 @@
     "location": "Chennai",
     "communityName": "FOSS United Chennai",
     "communityLogo": "https://fossunited.org/files/Foss%20United%20Logo%20Black.svg"
+  },
+  {
+    "eventName": "SheBuilds Chennai February Meetup",
+    "eventDescription": "Why only listen, when you can build?",
+    "eventDate": "2026-02-28",
+    "eventTime": "09:00",
+    "eventVenue": "Happyfox, Guindy",
+    "eventLink": "https://luma.com/yn75k5kp",
+    "location": "Chennai",
+    "communityName": "Shebuilds Chennai",
+    "communityLogo": "https://shebuilds-chennai.tech/assets/Header_logo-DT1QD6wS.png"
   }
 ]

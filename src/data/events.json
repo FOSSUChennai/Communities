@@ -395,5 +395,16 @@
     "location": "Chennai",
     "communityName": "Shebuilds Chennai",
     "communityLogo": "https://i.ibb.co/mCLbZ2Sb/shebuilds-logo.png"
+  },
+  {
+    "eventName": "Java with Women☕️🧡",
+    "eventDescription": "Code On JVM Chennai is proud to present our Women’s Day Special: ​This isn’t just another meetup. It’s a tribute to the women who architect, debug, and lead the JVM ecosystem every single day. We’re gathering the 'Army of Tech' to celebrate strength, resilience, and the relentless pursuit of excellence in software engineering.",
+    "eventDate": "2026-03-14",
+    "eventTime": "13:00",
+    "eventVenue": "Tekclan Software Solutions PVT. LTD., 4th Floor, PHASE-2, TICEL Biopark Rd, Tharamani, Chennai, Tamil Nadu 600113, India",
+    "eventLink": "https://luma.com/7abzaej9",
+    "location": "Chennai",
+    "communityName": "CodeonJVM Chennai",
+    "communityLogo": "https://podu.pics/64J4nQhJb4"
   }
 ]

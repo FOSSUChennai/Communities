@@ -23,12 +23,12 @@
     "paid": true
   },
   {
-    "eventName": "Digital Dreamers Den (D3) Workshop #1",
+    "eventName": "Digital Dreamers Den (D3) Meetup #6",
     "eventDescription": "Digital Dreamers Den (D3) is a vibrant tech community that brings together AI Full-Stack Developers to build the future. We host events, workshops, and networking opportunities that connect talented engineers with cutting-edge technology and industry leaders.",
-    "eventDate": "2026-01-31",
+    "eventDate": "2026-03-28",
     "eventTime": "14:00",
-    "eventVenue": "YuniQ, 4th Floor, TICEL BIOPARK, 5, CSIR Rd, Phase II, Tharamani, Chennai, Tamil Nadu 600113",
-    "eventLink": "https://d3community.in/workshop-1",
+    "eventVenue": "Tekclan Software Solutions PVT. LTD., 4th Floor, PHASE-2, TICEL Biopark Rd, Tharamani, Chennai, Tamil Nadu 600113, India",
+    "eventLink": "https://luma.com/qsfq2226",
     "location": "Chennai",
     "communityName": "Digital Dreamers Den (D3)",
     "communityLogo": "https://i.ibb.co/Lh1nbgjy/D3-Community-Official-logo.png"
@@ -364,15 +364,15 @@
     "communityLogo": "https://i.ibb.co/My6JNtNx/jslovers-Logo.png"
   },
   {
-   "eventName": "From-Dev-to-Ops | Devops Community Meetup Mar 14",
-   "eventDescription": "From-Dev-to-Ops is a community of devops, SRE and Platform Engineers who share raw, behind-the-scenes war room experiences — the outages, the quick fixes, the lessons learned, and the systems that broke in a fun, honest, and simple way.",
-   "eventDate": "2026-03-14",
-   "eventTime": "09:30",
-   "eventVenue": "Tiger Analytics, 2nd Floor, Campus-5, RMZ Millenia Business Park-II, 143, MGR Main Rd, Kandhanchavadi, Chennai 600096",
-   "eventLink": "https://luma.com/7z96pcrh",
-   "location": "Chennai",
-   "communityName": "From-Dev-to-Ops",
-   "communityLogo": "https://i.ibb.co/KZTKzgt/from-dev-to-ops-logo-900-x-900-px.png"
+    "eventName": "From-Dev-to-Ops | Devops Community Meetup Mar 14",
+    "eventDescription": "From-Dev-to-Ops is a community of devops, SRE and Platform Engineers who share raw, behind-the-scenes war room experiences — the outages, the quick fixes, the lessons learned, and the systems that broke in a fun, honest, and simple way.",
+    "eventDate": "2026-03-14",
+    "eventTime": "09:30",
+    "eventVenue": "Tiger Analytics, 2nd Floor, Campus-5, RMZ Millenia Business Park-II, 143, MGR Main Rd, Kandhanchavadi, Chennai 600096",
+    "eventLink": "https://luma.com/7z96pcrh",
+    "location": "Chennai",
+    "communityName": "From-Dev-to-Ops",
+    "communityLogo": "https://i.ibb.co/KZTKzgt/from-dev-to-ops-logo-900-x-900-px.png"
   },
   {
     "eventName": "FOSS United Chennai February Meetup",

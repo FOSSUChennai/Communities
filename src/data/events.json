@@ -364,15 +364,15 @@
     "communityLogo": "https://i.ibb.co/My6JNtNx/jslovers-Logo.png"
   },
   {
-   "eventName": "From-Dev-to-Ops | Devops Community Meetup Mar 14",
-   "eventDescription": "From-Dev-to-Ops is a community of devops, SRE and Platform Engineers who share raw, behind-the-scenes war room experiences — the outages, the quick fixes, the lessons learned, and the systems that broke in a fun, honest, and simple way.",
-   "eventDate": "2026-03-14",
-   "eventTime": "09:30",
-   "eventVenue": "Tiger Analytics, 2nd Floor, Campus-5, RMZ Millenia Business Park-II, 143, MGR Main Rd, Kandhanchavadi, Chennai 600096",
-   "eventLink": "https://luma.com/7z96pcrh",
-   "location": "Chennai",
-   "communityName": "From-Dev-to-Ops",
-   "communityLogo": "https://i.ibb.co/KZTKzgt/from-dev-to-ops-logo-900-x-900-px.png"
+    "eventName": "From-Dev-to-Ops | Devops Community Meetup Mar 14",
+    "eventDescription": "From-Dev-to-Ops is a community of devops, SRE and Platform Engineers who share raw, behind-the-scenes war room experiences — the outages, the quick fixes, the lessons learned, and the systems that broke in a fun, honest, and simple way.",
+    "eventDate": "2026-03-14",
+    "eventTime": "09:30",
+    "eventVenue": "Tiger Analytics, 2nd Floor, Campus-5, RMZ Millenia Business Park-II, 143, MGR Main Rd, Kandhanchavadi, Chennai 600096",
+    "eventLink": "https://luma.com/7z96pcrh",
+    "location": "Chennai",
+    "communityName": "From-Dev-to-Ops",
+    "communityLogo": "https://i.ibb.co/KZTKzgt/from-dev-to-ops-logo-900-x-900-px.png"
   },
   {
     "eventName": "FOSS United Chennai February Meetup",
@@ -406,5 +406,16 @@
     "location": "Chennai",
     "communityName": "CodeonJVM Chennai",
     "communityLogo": "https://podu.pics/64J4nQhJb4"
+  },
+  {
+    "eventName": "Data AI & Observability",
+    "eventDescription": "",
+    "eventDate": "2026-04-04",
+    "eventTime": "10:00",
+    "eventVenue": "Cloudera India, 4th Floor, Crest, Ascendas, CSIR Rd, Tharamani, Chennai, Tamil Nadu 600113",
+    "eventLink": "https://www.meetup.com/opensearch-project-chennai/events/313691272/",
+    "location": "Chennai",
+    "communityName": "OpenSearch User Group Chennai",
+    "communityLogo": "https://res.cloudinary.com/dfhtr1rwo/image/upload/v1762066985/opensearch_logo_hg3k8s.png"
   }
 ]

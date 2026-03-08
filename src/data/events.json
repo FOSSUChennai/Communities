@@ -406,5 +406,16 @@
     "location": "Chennai",
     "communityName": "CodeonJVM Chennai",
     "communityLogo": "https://podu.pics/64J4nQhJb4"
+  },
+  {
+    "eventName": "Kotlin Buildathon",
+    "eventDescription": "Hosted by KUG Chennai, the Kotlin Buildathon brings together students and professionals for a focused day of ideation, coding, and live demos.",
+    "eventDate": "2026-03-21",
+    "eventTime": "09:30",
+    "eventVenue": "TBD",
+    "eventLink": "https://luma.com/alx6brav",
+    "location": "Chennai",
+    "communityName": "Kotlin User Group Chennai",
+    "communityLogo": "https://i.ibb.co/N6q8WqzK/KUG-Board-Logo-1.png"
   }
 ]

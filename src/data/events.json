@@ -417,5 +417,16 @@
     "location": "Chennai",
     "communityName": "CTOtalk",
     "communityLogo": "https://podu.pics/I_sMHBTcXO"
+  },
+  {
+    "eventName": "MongoDB User Group Chennai: April Meetup - BACK TO BASICS (Join the waitlist)",
+    "eventDescription": "Join us for an exciting in-person meetup where we explore the power of AI and MongoDB! Whether you're a developer, data enthusiast, or just curious about the intersection of AI and databases, this is the perfect place to learn, network, and grow.",
+    "eventDate": "2026-04-04",
+    "eventTime": "14:00",
+    "eventVenue": "Ascendion Office, 8th Floor, Block B, Futura Tech Park, 334, Rajiv Gandhi Salai, OMR, Sholinganallur, Chennai, Tamil Nadu 600119",
+    "eventLink": "https://www.meetup.com/mongodb-usergroup-chennai/events/313715193/",
+    "location": "Chennai",
+    "communityName": "MongoDB User Group Chennai",
+    "communityLogo": "https://i.ibb.co/MkmpSxgY/MugChn.png"
   }
 ]

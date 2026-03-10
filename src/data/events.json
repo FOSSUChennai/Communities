@@ -417,5 +417,20 @@
     "location": "Chennai",
     "communityName": "CTOtalk",
     "communityLogo": "https://podu.pics/I_sMHBTcXO"
+  },
+  {
+  "eventName": "CodeSapiens × She Builds Chennai - Women in Tech March Meetup",
+  "eventDescription": "CodeSapiens × She Builds Chennai March Meetup celebrating Women in Tech. Connect, learn, and grow with women developers through real ideas, skills, and collaboration.",
+  "eventDate": "2026-03-15",
+  "eventTime": "14:30",
+  "eventVenue": "Chennai, Tamil Nadu, India",
+  "eventLink": "https://lu.ma/codesapiens",
+  "location": "Chennai",
+  "communityName": "CodeSapiens",
+  "communityLogo": "https://example.com/logo.svg",
+  "alert": {
+    "message": "Limited seats available. Register early.",
+    "type": "general"
   }
+}
 ]

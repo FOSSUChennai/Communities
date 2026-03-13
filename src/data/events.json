@@ -451,5 +451,16 @@
     "location": "Chennai",
     "communityName": "NexGenCyberWomen",
     "communityLogo": "https://podu.pics/kEIGX0kJFE"
+  },
+  {
+    "eventName": "Data, AI & Observability Meetup",
+    "eventDescription": "Join us for an engaging community gathering where we’ll explore the world of search, data platforms, and observability, and see how OpenSearch powers modern applications at scale. This meetup is a great opportunity to exchange ideas, explore emerging trends, and meet people building modern data and AI systems.",
+    "eventDate": "2026-04-04",
+    "eventTime": "10:00",
+    "eventVenue": "Cloudera India, 4th Floor, Crest, Ascendas, CSIR Rd, Tharamani, Chennai, Tamil Nadu 600113",
+    "eventLink": "https://www.meetup.com/opensearch-project-chennai/events/313691272/",
+    "location": "Chennai",
+    "communityName": "OpenSearch User Group Chennai",
+    "communityLogo": "https://res.cloudinary.com/dfhtr1rwo/image/upload/v1762066985/opensearch_logo_hg3k8s.png"
   }
 ]

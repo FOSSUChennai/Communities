@@ -23,15 +23,15 @@
     "paid": true
   },
   {
-    "eventName": "Digital Dreamers Den (D3) Workshop #1",
+    "eventName": "Digital Dreamers Den (D3) Meetup #6",
     "eventDescription": "Digital Dreamers Den (D3) is a vibrant tech community that brings together AI Full-Stack Developers to build the future. We host events, workshops, and networking opportunities that connect talented engineers with cutting-edge technology and industry leaders.",
-    "eventDate": "2026-01-31",
+    "eventDate": "2026-03-28",
     "eventTime": "14:00",
-    "eventVenue": "YuniQ, 4th Floor, TICEL BIOPARK, 5, CSIR Rd, Phase II, Tharamani, Chennai, Tamil Nadu 600113",
-    "eventLink": "https://d3community.in/workshop-1",
+    "eventVenue": "Tekclan Software Solutions PVT. LTD., 4th Floor, PHASE-2, TICEL Biopark Rd, Tharamani, Chennai, Tamil Nadu 600113, India",
+    "eventLink": "https://luma.com/qsfq2226",
     "location": "Chennai",
     "communityName": "Digital Dreamers Den (D3)",
-    "communityLogo": "https://i.ibb.co/Lh1nbgjy/D3-Community-Official-logo.png"
+    "communityLogo": "https://podu.pics/7cC3FwEqRJ"
   },
   {
     "eventName": "From Dev to Ops | Devops Community Meetup Nov 15",
@@ -364,15 +364,15 @@
     "communityLogo": "https://i.ibb.co/My6JNtNx/jslovers-Logo.png"
   },
   {
-   "eventName": "From-Dev-to-Ops | Devops Community Meetup Mar 14",
-   "eventDescription": "From-Dev-to-Ops is a community of devops, SRE and Platform Engineers who share raw, behind-the-scenes war room experiences — the outages, the quick fixes, the lessons learned, and the systems that broke in a fun, honest, and simple way.",
-   "eventDate": "2026-03-14",
-   "eventTime": "09:30",
-   "eventVenue": "Tiger Analytics, 2nd Floor, Campus-5, RMZ Millenia Business Park-II, 143, MGR Main Rd, Kandhanchavadi, Chennai 600096",
-   "eventLink": "https://luma.com/7z96pcrh",
-   "location": "Chennai",
-   "communityName": "From-Dev-to-Ops",
-   "communityLogo": "https://i.ibb.co/KZTKzgt/from-dev-to-ops-logo-900-x-900-px.png"
+    "eventName": "From-Dev-to-Ops | Devops Community Meetup Mar 14",
+    "eventDescription": "From-Dev-to-Ops is a community of devops, SRE and Platform Engineers who share raw, behind-the-scenes war room experiences — the outages, the quick fixes, the lessons learned, and the systems that broke in a fun, honest, and simple way.",
+    "eventDate": "2026-03-14",
+    "eventTime": "09:30",
+    "eventVenue": "Tiger Analytics, 2nd Floor, Campus-5, RMZ Millenia Business Park-II, 143, MGR Main Rd, Kandhanchavadi, Chennai 600096",
+    "eventLink": "https://luma.com/7z96pcrh",
+    "location": "Chennai",
+    "communityName": "From-Dev-to-Ops",
+    "communityLogo": "https://i.ibb.co/KZTKzgt/from-dev-to-ops-logo-900-x-900-px.png"
   },
   {
     "eventName": "FOSS United Chennai February Meetup",
@@ -408,7 +408,28 @@
     "communityLogo": "https://podu.pics/64J4nQhJb4"
   },
   {
-    "eventName": "Kotlin Buildathon",
+    "eventName": "AI in DevOps Workshop: Building MCP Servers & Incident Troubleshooting",
+    "eventDescription": "This technical, hands-on workshop demonstrates how Kissflow’s DevOps and SRE teams use AI in real production environments — from building internal tooling to diagnosing live incidents.",
+    "eventDate": "2026-04-11",
+    "eventTime": "14:00",
+    "eventVenue": "Kissflow (OrangeScape Technologies), Tower-B, 10th Floor, World Trade Center, 142, Rajiv Gandhi Salai, Perungudi, Chennai, Tamil Nadu 600096",
+    "eventLink": "https://in.explara.com/e/devopswshop?utm_source=theo&utm_medium=WAC&utm_campaign=Mar3",
+    "location": "Chennai",
+    "communityName": "CTOtalk",
+    "communityLogo": "https://podu.pics/I_sMHBTcXO"
+  },
+  {
+    "eventName": "MongoDB User Group Chennai: April Meetup - BACK TO BASICS (Join the waitlist)",
+    "eventDescription": "Join us for an exciting in-person meetup where we explore the power of AI and MongoDB! Whether you're a developer, data enthusiast, or just curious about the intersection of AI and databases, this is the perfect place to learn, network, and grow.",
+    "eventDate": "2026-04-04",
+    "eventTime": "14:00",
+    "eventVenue": "Ascendion Office, 8th Floor, Block B, Futura Tech Park, 334, Rajiv Gandhi Salai, OMR, Sholinganallur, Chennai, Tamil Nadu 600119",
+    "eventLink": "https://www.meetup.com/mongodb-usergroup-chennai/events/313715193/",
+    "location": "Chennai",
+    "communityName": "MongoDB User Group Chennai",
+    "communityLogo": "https://i.ibb.co/MkmpSxgY/MugChn.png"
+  },{
+     "eventName": "Kotlin Buildathon",
     "eventDescription": "Hosted by KUG Chennai, the Kotlin Buildathon brings together students and professionals for a focused day of ideation, coding, and live demos.",
     "eventDate": "2026-03-21",
     "eventTime": "09:30",

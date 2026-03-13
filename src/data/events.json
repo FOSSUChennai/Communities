@@ -408,7 +408,7 @@
     "communityLogo": "https://podu.pics/64J4nQhJb4"
   },
   {
-    "eventName": "AI in DevOps: Hands-on Workshop on Building MCP Servers & Troubleshooting Production Incidents by Kissflow",
+    "eventName": "AI in DevOps Workshop: Building MCP Servers & Incident Troubleshooting",
     "eventDescription": "This technical, hands-on workshop demonstrates how Kissflow’s DevOps and SRE teams use AI in real production environments — from building internal tooling to diagnosing live incidents.",
     "eventDate": "2026-04-11",
     "eventTime": "14:00",
@@ -428,7 +428,19 @@
     "location": "Chennai",
     "communityName": "MongoDB User Group Chennai",
     "communityLogo": "https://i.ibb.co/MkmpSxgY/MugChn.png"
-  }, {
+  },
+  {
+     "eventName": "Kotlin Buildathon",
+    "eventDescription": "Hosted by KUG Chennai, the Kotlin Buildathon brings together students and professionals for a focused day of ideation, coding, and live demos.",
+    "eventDate": "2026-03-21",
+    "eventTime": "09:30",
+    "eventVenue": "Poshmark India Private Limited in Chetpet, Chennai",
+    "eventLink": "https://luma.com/alx6brav",
+    "location": "Chennai",
+    "communityName": "Kotlin User Group Chennai",
+    "communityLogo": "https://i.ibb.co/N6q8WqzK/KUG-Board-Logo-1.png"
+  },
+  {
      {
     "eventName": "NGCW - Community Meetup - AI adoption in cybersecurity",
     "eventDescription": "AI  is no longer experimental in security - its operational,stratgic and transformational. Join us for a series of tech session, panel discussion, to get insights on how AI is utilized in cybersecurity",

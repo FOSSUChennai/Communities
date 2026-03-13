@@ -408,7 +408,7 @@
     "communityLogo": "https://podu.pics/64J4nQhJb4"
   },
   {
-    "eventName": "AI in DevOps: Hands-on Workshop on Building MCP Servers & Troubleshooting Production Incidents by Kissflow",
+    "eventName": "AI in DevOps Workshop: Building MCP Servers & Incident Troubleshooting",
     "eventDescription": "This technical, hands-on workshop demonstrates how Kissflow’s DevOps and SRE teams use AI in real production environments — from building internal tooling to diagnosing live incidents.",
     "eventDate": "2026-04-11",
     "eventTime": "14:00",
@@ -419,18 +419,63 @@
     "communityLogo": "https://podu.pics/I_sMHBTcXO"
   },
   {
-  "eventName": "CodeSapiens × She Builds Chennai - Women in Tech March Meetup",
-  "eventDescription": "CodeSapiens × She Builds Chennai March Meetup celebrating Women in Tech. Connect, learn, and grow with women developers through real ideas, skills, and collaboration.",
-  "eventDate": "2026-03-15",
-  "eventTime": "14:30",
-  "eventVenue": "Chennai, Tamil Nadu, India",
-  "eventLink": "https://lu.ma/codesapiens",
-  "location": "Chennai",
-  "communityName": "CodeSapiens",
-  "communityLogo": "https://example.com/logo.svg",
-  "alert": {
-    "message": "Limited seats available. Register early.",
-    "type": "general"
+    "eventName": "MongoDB User Group Chennai: April Meetup - BACK TO BASICS (Join the waitlist)",
+    "eventDescription": "Join us for an exciting in-person meetup where we explore the power of AI and MongoDB! Whether you're a developer, data enthusiast, or just curious about the intersection of AI and databases, this is the perfect place to learn, network, and grow.",
+    "eventDate": "2026-04-04",
+    "eventTime": "14:00",
+    "eventVenue": "Ascendion Office, 8th Floor, Block B, Futura Tech Park, 334, Rajiv Gandhi Salai, OMR, Sholinganallur, Chennai, Tamil Nadu 600119",
+    "eventLink": "https://www.meetup.com/mongodb-usergroup-chennai/events/313715193/",
+    "location": "Chennai",
+    "communityName": "MongoDB User Group Chennai",
+    "communityLogo": "https://i.ibb.co/MkmpSxgY/MugChn.png"
+  },
+  {
+     "eventName": "Kotlin Buildathon",
+    "eventDescription": "Hosted by KUG Chennai, the Kotlin Buildathon brings together students and professionals for a focused day of ideation, coding, and live demos.",
+    "eventDate": "2026-03-21",
+    "eventTime": "09:30",
+    "eventVenue": "Poshmark India Private Limited in Chetpet, Chennai",
+    "eventLink": "https://luma.com/alx6brav",
+    "location": "Chennai",
+    "communityName": "Kotlin User Group Chennai",
+    "communityLogo": "https://i.ibb.co/N6q8WqzK/KUG-Board-Logo-1.png"
+  },
+  {
+     {
+    "eventName": "NGCW - Community Meetup - AI adoption in cybersecurity",
+    "eventDescription": "AI  is no longer experimental in security - its operational,stratgic and transformational. Join us for a series of tech session, panel discussion, to get insights on how AI is utilized in cybersecurity",
+    "eventDate": "2026-03-28",
+    "eventTime": "09:30",
+    "eventVenue": "Yuniq(Tekclan Software Solutions PVT. LTD.), 4th Floor, PHASE-2, TICEL Biopark Rd, Tharamani, Chennai, Tamil Nadu 600113, India",
+    "eventLink": "https://lnkd.in/g_eQmi-9",
+    "location": "Chennai",
+    "communityName": "NexGenCyberWomen",
+    "communityLogo": "https://podu.pics/kEIGX0kJFE"
+  },
+  {
+    "eventName": "Data, AI & Observability Meetup",
+    "eventDescription": "Join us for an engaging community gathering where we’ll explore the world of search, data platforms, and observability, and see how OpenSearch powers modern applications at scale. This meetup is a great opportunity to exchange ideas, explore emerging trends, and meet people building modern data and AI systems.",
+    "eventDate": "2026-04-04",
+    "eventTime": "10:00",
+    "eventVenue": "Cloudera India, 4th Floor, Crest, Ascendas, CSIR Rd, Tharamani, Chennai, Tamil Nadu 600113",
+    "eventLink": "https://www.meetup.com/opensearch-project-chennai/events/313691272/",
+    "location": "Chennai",
+    "communityName": "OpenSearch User Group Chennai",
+    "communityLogo": "https://res.cloudinary.com/dfhtr1rwo/image/upload/v1762066985/opensearch_logo_hg3k8s.png"
+  },
+  {
+    "eventName": "CodeSapiens × She Builds Chennai - Women in Tech March Meetup",
+    "eventDescription": "CodeSapiens × She Builds Chennai March Meetup celebrating Women in Tech. Connect, learn, and grow with women developers through real ideas, skills, and collaboration.",
+    "eventDate": "2026-03-15",
+    "eventTime": "14:30",
+    "eventVenue": "Chennai, Tamil Nadu, India",
+    "eventLink": "https://lu.ma/codesapiens",
+    "location": "Chennai",
+    "communityName": "CodeSapiens",
+    "communityLogo": "https://res.cloudinary.com/dqudvximt/image/upload/v1756797708/WhatsApp_Image_2025-09-02_at_12.45.18_b15791ea_rnlwrz.jpg",
+    "alert": {
+       "message": "Limited seats available. Register early.",
+       "type": "general"
+    }
   }
-}
 ]

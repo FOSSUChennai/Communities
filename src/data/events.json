@@ -476,5 +476,19 @@
        "message": "Limited seats available. Register early.",
        "type": "general"
     }
+  },
+  {
+  "eventName": "ChennaiFOSS 3.0",
+  "eventDescription": "Annual city FOSS conference",
+  "eventDate": "2026-04-18",
+  "eventTime": "09:00",
+  "eventVenue": "IIT Madras Research Park, Chennai- 600113",
+  "eventLink": "https://fossunited.org/c/chennai/2026",
+  "location": "Chennai",
+  "communityName": "FOSS United Chennai",
+  "communityLogo": "https://podu.pics/zJMSz8RE_Q",
+  "alert": {
+    "message": "Early bird ends soon! Register now to secure your spot.",
+    "type": "general"
   }
 ]

@@ -430,7 +430,7 @@
     "communityLogo": "https://i.ibb.co/MkmpSxgY/MugChn.png"
   },
   {
-     "eventName": "Kotlin Agentic Buildathon by KUG Chennai",
+    "eventName": "Kotlin Agentic Buildathon by KUG Chennai",
     "eventDescription": "Hosted by KUG Chennai, the Kotlin Buildathon brings together students and professionals for a focused day of ideation, coding, and live demos.",
     "eventDate": "2026-03-21",
     "eventTime": "09:30",
@@ -450,6 +450,17 @@
     "location": "Chennai",
     "communityName": "NexGenCyberWomen",
     "communityLogo": "https://podu.pics/kEIGX0kJFE"
+  },
+  {
+    "eventName": "FOSS United Coimbatore x Namma Flutter",
+    "eventDescription": "Join us for insightful talks, hands-on sessions, and networking opportunities that foster community growth and innovation. Whether you're a seasoned contributor or new to FOSS, this meetup is the perfect platform to connect and contribute to open-source.",
+    "eventDate": "2026-03-28",
+    "eventTime": "9:00",
+    "eventVenue": "iamneo.ai, 1205/A, 3rd Floor, SPA SRR Towers, Avinashi Rd, Pappanaickenpalayam, Coimbatore, Tamil Nadu 641037",
+    "eventLink": "https://fossunited.org/c/coimbatore/mar-26",
+    "location": "Coimbatore",
+    "communityName": "FOSS United Coimbatore",
+    "communityLogo": "https://fossunited.org/files/Foss%20United%20Logo%20Black.svg"
   },
   {
     "eventName": "Data, AI & Observability Meetup",
@@ -473,8 +484,8 @@
     "communityName": "CodeSapiens",
     "communityLogo": "https://res.cloudinary.com/dqudvximt/image/upload/v1756797708/WhatsApp_Image_2025-09-02_at_12.45.18_b15791ea_rnlwrz.jpg",
     "alert": {
-       "message": "Limited seats available. Register early.",
-       "type": "general"
+      "message": "Limited seats available. Register early.",
+      "type": "general"
     }
   }
 ]

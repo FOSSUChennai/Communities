@@ -97,11 +97,7 @@ const Events: React.FC = () => {
       filterLocation === "" ||
       event.location.toLowerCase().includes(filterLocation.toLowerCase())
     )
-    .sort((a: Event, b: Event) => {
-      const dateA = new Date(a.eventDate).getTime();
-      const dateB = new Date(b.eventDate).getTime();
-      return dateB - dateA; // Sort by Newest First
-    });
+   
 
   if (!isClient) {
     return <p className="text-center text-gray-500">Loading...</p>;

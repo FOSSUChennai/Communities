@@ -493,13 +493,15 @@
     "eventDescription": "Annual city FOSS conference",
     "eventDate": "2026-04-18",
     "eventTime": "09:00",
+    "eventEndDate": "2026-04-19",
+    "eventEndTime": "17:30",
     "eventVenue": "IC&SR Auditorium, IITM Campus",
     "eventLink": "https://fossunited.org/c/chennai/2026",
     "location": "Chennai",
     "communityName": "FOSS United Chennai",
     "communityLogo": "https://podu.pics/zJMSz8RE_Q",
     "alert": {
-      "message": "Early bird ends soon! Register now to secure your spot.",
+      "message": "Register and secure your spot for the biggest FOSS event of the city!",
       "type": "general"
     }
   }

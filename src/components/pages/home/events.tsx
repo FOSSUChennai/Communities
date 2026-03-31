@@ -62,7 +62,7 @@ const Events = () => {
         .then((response) => {
           if (!response.ok) {
             // If the fetch fails or in development mode, use the local eventsJson
-            setEvents(eventsJson);
+            setEvents(eventsJson as Event[]);
             return null;
           }
           return response.json();
@@ -70,7 +70,7 @@ const Events = () => {
         .then((json) => setEvents(json));
     } else {
       // In development, use the local eventsJson directly
-      setEvents(eventsJson);
+      setEvents(eventsJson as Event[]);
     }
   }, []);
 

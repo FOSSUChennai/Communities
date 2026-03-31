@@ -67,7 +67,11 @@ const Events = () => {
           }
           return response.json();
         })
-        .then((json) => setEvents(json));
+        .then((json) => {
+          if (json) {
+            setEvents(json);
+          }
+        });
     } else {
       // In development, use the local eventsJson directly
       setEvents(eventsJson as Event[]);

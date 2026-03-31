@@ -65,15 +65,19 @@ const Archive = () => {
         .then((response) => {
           if (!response.ok) {
             // If the fetch fails or in development mode, use the local eventsJson
-            setEvents(pastEvents);
+            setEvents(pastEvents as Event[]);
             return null;
           }
           return response.json();
         })
-        .then((json) => setEvents(json));
+        .then((json) => {
+          if (json) {
+            setEvents(json);
+          }
+        });
     } else {
       // In development, use the local eventsJson directly
-      setEvents(pastEvents);
+      setEvents(pastEvents as Event[]);
     }
   }, []);
 

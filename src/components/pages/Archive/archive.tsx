@@ -2,7 +2,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import pastEvents from '../../../data/pastevents.json';
 import { MapPin, Warning } from '@phosphor-icons/react';
-import EmptyEventCard from '../../no-events-card';
 import Image from 'next/image';
 import AddToCalendar from '@/components/AddToCalendar';
 import LoadingAnimation from '@/components/LoadingAnimation';
@@ -48,7 +47,6 @@ const Archive = () => {
   const [events, setEvents] = useState<Event[]>([]);
   const [selectedCommunity, setSelectedCommunity] = useState<string>('all');
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
-  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   // Create a date object for start of today
   const today = new Date();
@@ -67,15 +65,19 @@ const Archive = () => {
         .then((response) => {
           if (!response.ok) {
             // If the fetch fails or in development mode, use the local eventsJson
-            setEvents(pastEvents);
+            setEvents(pastEvents as Event[]);
             return null;
           }
           return response.json();
         })
-        .then((json) => setEvents(json));
+        .then((json) => {
+          if (json) {
+            setEvents(json);
+          }
+        });
     } else {
       // In development, use the local eventsJson directly
-      setEvents(pastEvents);
+      setEvents(pastEvents as Event[]);
     }
   }, []);
 

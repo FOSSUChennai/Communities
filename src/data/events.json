@@ -504,5 +504,22 @@
       "message": "Register and secure your spot for the biggest FOSS event of the city!",
       "type": "general"
     }
+  },
+  {
+    "eventName": "SheBuilds Chennai April Meetup",
+    "eventDescription": "Connect, learn, and grow with women developers and tech enthusiasts. Let's collaborate, share ideas, and empower each other to innovate and lead.",
+    "eventDate": "2026-04-11",
+    "eventTime": "09:00",
+    "eventEndDate": "2026-04-11",
+    "eventEndTime": "14:00",
+    "eventVenue": "Mako IT Lab, 8th Floor, TICEL BIOPARK, TICEL Biopark Rd, Phase II, Tharamani, Chennai, Tamil Nadu 600113",
+    "eventLink": "https://luma.com/g963zdlh",
+    "location": "Chennai",
+    "communityName": "Shebuilds Chennai",
+    "communityLogo": "https://i.ibb.co/mCLbZ2Sb/shebuilds-logo.png",
+    "alert": {
+      "message": "Register early and secure your spots soon! Built by her. Backed by boldness.",
+      "type": "general"
+    }
   }
 ]

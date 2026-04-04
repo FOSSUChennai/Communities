@@ -47,15 +47,12 @@ const Events = () => {
   const [events, setEvents] = useState<Event[]>([]);
   const [filterLocation, setFilterLocation] = useState<string>('');
 
-  // Create a date object for start of today
   const today = new Date();
   today.setHours(0, 0, 0, 0);
 
-  // Create a date object for end of today
   const endOfToday = new Date();
   endOfToday.setHours(23, 59, 59, 999);
 
-  // gets the events.json file from network so that there need not be a manual deploy for each event
   useEffect(() => {
     if (process.env.NODE_ENV !== 'development') {
       fetch(
@@ -63,6 +60,7 @@ const Events = () => {
       )
         .then((response) => {
           if (!response.ok) {
+            // If the fetch fails or in development mode, use the local eventsJson
             setEvents(eventsJson as Event[]);
             return null;
           }
@@ -74,6 +72,7 @@ const Events = () => {
           }
         });
     } else {
+      // In development, use the local eventsJson directly
       setEvents(eventsJson as Event[]);
     }
   }, []);
@@ -82,7 +81,6 @@ const Events = () => {
     filterLocation === '' ||
     event.location.toLowerCase().includes(filterLocation.toLowerCase());
 
-  // sorts all events first rather than grouping into two types and then sorting
   const sortedEvents = events.sort(
     (a, b) => new Date(a.eventDate).getTime() - new Date(b.eventDate).getTime()
   );
@@ -244,7 +242,6 @@ const Events = () => {
                   </span>
                 </div>
               )}
-              {/* Alert Icon - positioned right next to community name badge */}
               {alert && (
                 <div ref={alertContainerRef} className='relative'>
                   <button
@@ -261,7 +258,6 @@ const Events = () => {
                     <Warning size={16} weight='fill' />
                   </button>
 
-                  {/* Alert Tooltip */}
                   {showAlert && (
                     <div
                       className={`absolute top-8 z-50 w-64 rounded-lg border-2 border-yellow-300 bg-yellow-50 p-3 shadow-lg ${

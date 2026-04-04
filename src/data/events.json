@@ -489,18 +489,37 @@
     }
   },
   {
-    "eventName": "ChennaiFOSS 3.0",
+    "eventName": "ChennaiFOSS 2026",
     "eventDescription": "Annual city FOSS conference",
     "eventDate": "2026-04-18",
     "eventTime": "09:00",
-    "eventVenue": "IIT Madras Research Park, Chennai- 600113",
+    "eventEndDate": "2026-04-19",
+    "eventEndTime": "17:30",
+    "eventVenue": "IC&SR Auditorium, IITM Campus",
     "eventLink": "https://fossunited.org/c/chennai/2026",
     "location": "Chennai",
     "communityName": "FOSS United Chennai",
     "communityLogo": "https://podu.pics/zJMSz8RE_Q",
     "alert": {
-        "message": "Early bird ends soon! Register now to secure your spot.",
-        "type": "general"
+      "message": "Register and secure your spot for the biggest FOSS event of the city!",
+      "type": "general"
+    }
+  },
+  {
+    "eventName": "SheBuilds Chennai April Meetup",
+    "eventDescription": "Connect, learn, and grow with women developers and tech enthusiasts. Let's collaborate, share ideas, and empower each other to innovate and lead.",
+    "eventDate": "2026-04-11",
+    "eventTime": "09:00",
+    "eventEndDate": "2026-04-11",
+    "eventEndTime": "14:00",
+    "eventVenue": "Mako IT Lab, 8th Floor, TICEL BIOPARK, TICEL Biopark Rd, Phase II, Tharamani, Chennai, Tamil Nadu 600113",
+    "eventLink": "https://luma.com/g963zdlh",
+    "location": "Chennai",
+    "communityName": "Shebuilds Chennai",
+    "communityLogo": "https://podu.pics/gqDU4H07VM",
+    "alert": {
+      "message": "Register early and secure your spots soon! Built by her. Backed by boldness.",
+      "type": "general"
     }
   }
 ]

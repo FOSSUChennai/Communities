@@ -58,18 +58,18 @@ const fetchEvents = async (): Promise<Event[]> => {
 
     if (!response.ok) {
       console.warn('Failed to fetch events from GitHub, using local events');
-      return localEvents;
+      return localEvents as Event[];
     }
 
     const events = await response.json();
     if (!isValidEventArray(events)) {
       console.warn('Fetched events data is malformed, using local events');
-      return localEvents;
+      return localEvents as Event[];
     }
     return events;
   } catch (error) {
     console.error('Error fetching events from GitHub:', error);
-    return localEvents;
+    return localEvents as Event[];
   }
 };
 

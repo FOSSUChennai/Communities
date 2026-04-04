@@ -3,6 +3,8 @@ export interface Event {
   eventDescription: string;
   eventDate: string;
   eventTime: string;
+  eventEndDate?: string;
+  eventEndTime?: string;
   eventVenue: string;
   eventLink: string;
   location: string;

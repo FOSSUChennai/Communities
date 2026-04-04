@@ -332,6 +332,7 @@ const Events = () => {
                   eventTitle={title}
                   eventVenue={venue}
                   eventDate={date}
+                  eventEndDate={endDate}
                   eventLink={link}
                 />
               </span>

@@ -33,6 +33,8 @@ Add your event to the JSON array using this template:
   "eventDescription": "Brief description of the event (max 200 characters)",
   "eventDate": "2024-02-20",
   "eventTime": "14:30",
+  "eventEndDate": "2024-02-21",
+  "eventEndTime": "17:30",
   "eventVenue": "Full venue address",
   "eventLink": "https://registration-link.com",
   "location": "City Name",
@@ -50,7 +52,31 @@ Add your event to the JSON array using this template:
 
 - `eventDate`: YYYY-MM-DD format
 - `eventTime`: 24-hour format HH:MM
+- `eventEndDate`: Optional. Use for multi-day events (YYYY-MM-DD). Must be same as or later than `eventDate`.
+- `eventEndTime`: Optional. 24-hour format HH:MM
 - `communityLogo`: Use imgbb to host images or add hostname to `next.config.ts`
+
+### Multi-day Events
+
+If your event runs for 2 or more days, add `eventEndDate` (and optionally `eventEndTime`).
+
+```json
+{
+  "eventName": "Open Source Summit Chennai",
+  "eventDescription": "Two-day summit with talks, workshops, and community networking.",
+  "eventDate": "2026-04-12",
+  "eventTime": "09:00",
+  "eventEndDate": "2026-04-13",
+  "eventEndTime": "17:00",
+  "eventVenue": "Chennai Trade Centre",
+  "eventLink": "https://example.com/register",
+  "location": "Chennai",
+  "communityName": "Open Source Chennai",
+  "communityLogo": "https://example.com/logo.png"
+}
+```
+
+For single-day events, keep using `eventDate` and `eventTime` only.
 
 #### Adding Event Alerts (Optional)
 

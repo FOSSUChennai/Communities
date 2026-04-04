@@ -13,7 +13,7 @@ export async function GET() {
     feed_url: `${baseUrl}/rss`,
     description: 'Upcoming tech events in Tamil Nadu',
     items: events
-      .filter((event) => new Date(event.eventDate) >= currentDate)
+      .filter((event) => new Date(event.eventEndDate ?? event.eventDate) >= currentDate)
       .sort((a, b) => new Date(a.eventDate).getTime() - new Date(b.eventDate).getTime())
       .map((event) => ({
         id: event.eventLink,
@@ -22,6 +22,7 @@ export async function GET() {
         content_html: `
           <p>${event.eventDescription}</p>
           <p><strong>Date:</strong> ${event.eventDate}</p>
+          ${event.eventEndDate ? `<p><strong>Ends:</strong> ${event.eventEndDate}</p>` : ''}
           <p><strong>Time:</strong> ${event.eventTime}</p>
           <p><strong>Venue:</strong> ${event.eventVenue}</p>
           <p><strong>Location:</strong> ${event.location}</p>

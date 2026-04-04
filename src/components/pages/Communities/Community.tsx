@@ -13,7 +13,8 @@ import {
   XLogo,
   YoutubeLogo,
   Butterfly,
-  XSquare
+  XSquare,
+  RedditLogo
 } from '@phosphor-icons/react';
 import HoverIcon from './HoverIcon';
 
@@ -32,6 +33,8 @@ type CommunityCardProps = {
   location?: string;
   youtube?: string;
   github?: string;
+  reddit?: string;
+  className?: string;
 };
 
 const CommunityCard = ({
@@ -48,7 +51,9 @@ const CommunityCard = ({
   mastodon,
   telegram,
   youtube,
-  github
+  github,
+  reddit,
+  className
 }: CommunityCardProps) => {
   const [mousePosition, setMousePosition] = React.useState<{ x: number; y: number } | null>(null);
 
@@ -69,16 +74,17 @@ const CommunityCard = ({
     github: { Icon: GithubLogo, color: 'text-black', title: 'GitHub', link: github },
     discord: { Icon: DiscordLogo, color: 'text-indigo-500', title: 'Discord', link: discord },
     twitter: { Icon: XLogo, color: 'text-black', title: 'Twitter', link: twitter },
-    instagram: { Icon: InstagramLogo, color: 'text-pink-600', title: 'Instagram', link: instagram },
+    instagram: { Icon: InstagramLogo, color: 'text-pink-500', title: 'Instagram', link: instagram },
     bluesky: { Icon: Butterfly, color: 'text-blue-400', title: 'Bluesky', link: bluesky },
     mastodon: { Icon: MastodonLogo, color: 'text-purple-600', title: 'Mastodon', link: mastodon },
     telegram: { Icon: TelegramLogo, color: 'text-blue-400', title: 'Telegram', link: telegram },
-    youtube: { Icon: YoutubeLogo, color: 'text-red-600', title: 'Youtube', link: youtube }
+    youtube: { Icon: YoutubeLogo, color: 'text-red-600', title: 'Youtube', link: youtube },
+    reddit: { Icon: RedditLogo, color: 'text-red-600', title: 'Reddit', link: reddit }
   };
 
   return (
-    <div
-      className='group relative block cursor-pointer rounded-lg p-[2px] transition-all duration-300 hover:scale-[1]'
+    <article
+      className={`${className} group relative block rounded-lg p-[2px] transition-all duration-300 hover:scale-[1]`}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
@@ -108,7 +114,7 @@ const CommunityCard = ({
             href={website}
             target='_blank'
             rel='noopener noreferrer'
-            className='mb-4 flex items-center gap-4'
+            className='mb-4 flex flex-shrink-0 items-center gap-4'
           >
             {logo && (
               <Image
@@ -133,24 +139,47 @@ const CommunityCard = ({
             </div>
           </a>
 
-          <p className='line-clamp-5 text-justify text-gray-600'>{description}</p>
+          <p className='line-clamp-5 flex-1 text-justify text-gray-600'>{description}</p>
 
-          <div className='mt-4 flex gap-3 border-t border-gray-100 pt-4 opacity-100 transition-opacity'>
-            {Object.entries(socialLinks).map(([key, { Icon, color, title, link }]) =>
-              eval(key) ? (
+          {/* This creates a line only if social links exist*/}
+          {(twitter ||
+            linkedin ||
+            github ||
+            discord ||
+            instagram ||
+            bluesky ||
+            mastodon ||
+            telegram ||
+            youtube) && <div className='mt-4 flex-shrink-0 border-t border-gray-100' />}
+
+          <div className='mt-4 flex flex-shrink-0 gap-3 opacity-100 transition-opacity'>
+            {Object.entries(socialLinks).map(([key, { Icon, color, title, link }]) => {
+              const socialProps = {
+                linkedin,
+                github,
+                discord,
+                twitter,
+                instagram,
+                bluesky,
+                mastodon,
+                telegram,
+                youtube,
+                reddit
+              } as Record<string, string | undefined>;
+              return socialProps[key] ? (
                 <HoverIcon
                   key={key}
                   Icon={Icon}
-                  link={link ?? ''} // Provide a default value for link
+                  link={link ?? ''}
                   title={title}
                   hoverColor={color}
                 />
-              ) : null
-            )}
+              ) : null;
+            })}
           </div>
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 
@@ -164,8 +193,8 @@ const Community = () => {
   );
 
   return (
-    <main className='mx-4 mt-8 rounded-xl bg-white p-6 md:mx-8 lg:mx-16'>
-      <section className='relative flex flex-col py-2'>
+    <main className='mx-[2%] my-16 flex items-center rounded-xl bg-white p-3 shadow-2xl shadow-black/25 sm:mx-[10%] sm:p-6'>
+      <section className='relative flex w-full flex-col py-2'>
         <div className='mb-8'>
           <h2 className='mb-4 text-3xl font-bold text-gray-900'>Tech Communities in Tamil Nadu</h2>
           <div className='relative'>
@@ -174,6 +203,7 @@ const Community = () => {
               type='text'
               placeholder='Search communities by name or location...'
               className='w-full rounded-lg border border-gray-200 py-2 pl-10 pr-4 focus:border-green-500 focus:outline-none'
+              aria-label='Search communities'
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
@@ -184,23 +214,8 @@ const Community = () => {
           {filteredCommunities
             .sort((a, b) => a.name.localeCompare(b.name))
             .map((community, index) => (
-              <div key={index} className='group relative'>
-                <CommunityCard
-                  name={community.name}
-                  description={community.description}
-                  logo={community.logo}
-                  twitter={community.twitter}
-                  linkedin={community.linkedin}
-                  discord={community.discord}
-                  website={community.website}
-                  location={community.location}
-                  bluesky={community.bluesky}
-                  instagram={community.instagram}
-                  mastodon={community.mastodon}
-                  telegram={community.telegram}
-                  github={community.github}
-                  youtube={community.youtube}
-                />
+              <div key={index} className='group relative h-full'>
+                <CommunityCard className='h-full' {...community} />
               </div>
             ))}
         </div>

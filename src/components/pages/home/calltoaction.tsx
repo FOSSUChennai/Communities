@@ -1,11 +1,13 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 const CallToAction = () => {
+  const router = useRouter();
   return (
-    <div className='m-[12px] px-6 py-12 md:px-16'>
-      <div className='relative rounded-lg bg-[#4CAF50] p-10 shadow-lg'>
+    <div className='mx-4 py-12 md:mx-8 lg:mx-16'>
+      <div className='relative rounded-lg bg-[#4CAF50] p-10 shadow-lg md:w-[93%] lg:w-full'>
         <div className='absolute bottom-0 right-0 hidden translate-x-[72px] md:block'>
           <Image
             src='/rockethalf.png'
@@ -17,11 +19,11 @@ const CallToAction = () => {
           />
         </div>
 
-        <div className='relative z-10 flex flex-col text-left'>
+        <div className='relative z-10 flex flex-col text-left md:pr-[70px]'>
           <div className='max-w-2xl'>
             <h3 className='text-3xl font-semibold text-white md:text-4xl'>
-              Know a tech event? <br className='hidden md:block' /> Share it to help others find and
-              join!
+              Know a tech event? <br className='block' />{' '}
+              <span className='text-black'> Share it to help others find and join!</span>
             </h3>
             <p className='mt-3 text-lg font-medium text-white/80 drop-shadow-md'>
               Add your event to our list and be a part of the growing tech community.
@@ -32,14 +34,14 @@ const CallToAction = () => {
             <button
               className='rounded-lg bg-black px-6 py-3 text-base font-medium text-white transition-all duration-300 hover:scale-105 hover:bg-gray-900 focus:ring focus:ring-gray-400/40 active:scale-95'
               onClick={() =>
-                window.open('https://github.com/FOSSUChennai/Communities/blob/main/CONTRIBUTING.md')
+                window.open('https://github.com/fossuchennai/communities/blob/main/CONTRIBUTING.md')
               }
             >
               Contribute
             </button>
             <button
               className='rounded-lg border border-white/50 bg-transparent px-6 py-3 text-base font-medium text-white transition-all duration-300 hover:scale-105 hover:bg-white/20 focus:ring focus:ring-white/30 active:scale-95'
-              onClick={() => window.open('/Communities')}
+              onClick={() => router.push('/communities')}
             >
               Communities
             </button>

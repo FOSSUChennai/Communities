@@ -38,6 +38,30 @@ const config: NextConfig = {
       {
         protocol: 'https',
         hostname: 'secure.meetupstatic.com'
+      },
+      {
+        protocol: 'https',
+        hostname: 'cisc.club'
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn2.allevents.in'
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.djangoindia.org'
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.devrelsquad.com'
+      },
+      {
+        protocol: 'https',
+        hostname: 'podu.pics'
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.acdchennai.com'
       }
     ]
   }

@@ -486,6 +486,7 @@
     "alert": {
       "message": "Limited seats available. Register early.",
       "type": "general"
+    }  
   },  
   {
     "eventName": "CodeSapiens × She Builds Chennai - Women in Tech March Meetup",

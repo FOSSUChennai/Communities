@@ -474,6 +474,20 @@
     "communityLogo": "https://res.cloudinary.com/dfhtr1rwo/image/upload/v1762066985/opensearch_logo_hg3k8s.png"
   },
   {
+    "eventName": "From-Dev-to-Ops | Devops Community Meetup Apr 11",
+    "eventDescription": "From-Dev-to-Ops is a community of devops, SRE and Platform Engineers who share raw, behind-the-scenes war room experiences — the outages, the quick fixes, the lessons learned, and the systems that broke in a fun, honest, and simple way.",
+    "eventDate": "2026-04-11",
+    "eventTime": "09:30",
+    "eventVenue": "Sagent, DLF Porur, 1/124, Mount Poonamallee Rd, Manapakkam, Chennai, Tamil Nadu 600089",
+    "eventLink": "https://luma.com/rb1bqtax",
+    "location": "Chennai",
+    "communityName": "From-Dev-to-Ops",
+    "communityLogo": "https://i.ibb.co/KZTKzgt/from-dev-to-ops-logo-900-x-900-px.png"
+    "alert": {
+      "message": "Limited seats available. Register early.",
+      "type": "general"
+  },  
+  {
     "eventName": "CodeSapiens × She Builds Chennai - Women in Tech March Meetup",
     "eventDescription": "CodeSapiens × She Builds Chennai March Meetup celebrating Women in Tech. Connect, learn, and grow with women developers through real ideas, skills, and collaboration.",
     "eventDate": "2026-03-15",

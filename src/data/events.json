@@ -521,5 +521,18 @@
       "message": "Register early and secure your spots soon! Built by her. Backed by boldness.",
       "type": "general"
     }
+  },
+    {
+    "eventName": "Build2Learn Meetup #35",
+    "eventDescription": "Welcome to build2learn - Where Innovation Meets Community",
+    "eventDate": "2026-04-11",
+    "eventTime": "09:30",
+    "eventEndDate": "2026-04-11",
+    "eventEndTime": "14:00",
+    "eventVenue": "Freshworks, GLOBAL INFOCITY PARK, Perungudi, Chennai",
+    "eventLink": "https://events.build2learn.in/",
+    "location": "Chennai",
+    "communityName": "Build2Learn",
+    "communityLogo": "https://i.ibb.co/CBsgh43/bxOxo5O.png"
   }
 ]

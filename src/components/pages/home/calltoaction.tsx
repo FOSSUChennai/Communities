@@ -10,7 +10,7 @@ const CallToAction = () => {
         <div className='absolute bottom-0 right-0 hidden translate-x-[72px] md:block'>
           <Image
             src='/rockethalf.png'
-            alt='Rocket'
+            alt='Rocket illustration beside community contribution section'
             width={300}
             height={300}
             className='scale-125'
@@ -33,6 +33,8 @@ const CallToAction = () => {
             <a
               href='https://github.com/fossuchennai/communities/blob/main/CONTRIBUTING.md'
               target='_blank'
+              rel='noopener noreferrer'
+              aria-label='Open contribution guide for submitting tech events'
               className='rounded-lg bg-black px-6 py-3 text-base font-medium text-white transition-all duration-300 hover:scale-105 hover:bg-gray-900 focus:ring focus:ring-gray-400/40 active:scale-95'
             >
               Contribute

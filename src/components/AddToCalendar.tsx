@@ -37,8 +37,16 @@ const AddToCalendar: React.FC<AddToCalendarProps> = ({
   };
 
   return (
-    <button onClick={handleRedirect}>
-      <Image src={Add2Calendar} alt='CalendarIcon' style={{ width: '20px', height: '20px' }} />
+    <button
+      type='button'
+      onClick={handleRedirect}
+      aria-label={`Add ${eventTitle} on ${eventDate} to Google Calendar`}
+    >
+      <Image
+        src={Add2Calendar}
+        alt='Add this event to Google Calendar'
+        style={{ width: '20px', height: '20px' }}
+      />
     </button>
   );
 };

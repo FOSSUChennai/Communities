@@ -199,7 +199,7 @@ const Events = () => {
             {logo && (
               <Image
                 src={logo}
-                alt={`${title} logo`}
+                alt={`${communityName} community logo`}
                 width={24}
                 height={24}
                 className='rounded-sm object-cover filter transition-all duration-300 hover:filter-none'
@@ -207,7 +207,13 @@ const Events = () => {
             )}
           </div>
 
-          <a href={link} target='_blank' rel='noopener noreferrer' className='block'>
+          <a
+            href={link}
+            target='_blank'
+            rel='noopener noreferrer'
+            className='block'
+            aria-label={`View event details for ${title}`}
+          >
             <h3
               className={`mb-2 mt-3 text-xl font-medium text-black transition-all duration-300`}
               style={{

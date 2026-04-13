@@ -15,7 +15,7 @@ const Hero = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: 'easeOut' }}
         >
-          <h1 className='relative text-4xl font-semibold leading-tight text-black md:text-[68px] lg:text-[74px]'>
+          <h2 className='relative text-4xl font-semibold leading-tight text-black md:text-[68px] lg:text-[74px]'>
             {`Don't `}
             <motion.span
               className='relative z-20'
@@ -35,7 +35,7 @@ const Hero = () => {
             >
               meetup
             </motion.span>
-          </h1>
+          </h2>
           <motion.p
             className='mt-4 text-[20px] text-gray-600'
             initial={{ opacity: 0, y: 20 }}

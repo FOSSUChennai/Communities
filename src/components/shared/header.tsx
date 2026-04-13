@@ -15,6 +15,7 @@ export default function Header() {
           href='/rss'
           className='inline-flex items-center rounded-lg px-4 py-2 text-sm text-black shadow transition duration-200 hover:text-gray-700'
           target='_blank'
+          aria-label='Open RSS feed for Tamil Nadu tech events'
         >
           <RssSimple size={24} />
         </Link>

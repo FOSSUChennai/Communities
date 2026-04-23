@@ -26,12 +26,16 @@
     "eventName": "Digital Dreamers Den (D3) Anniversary - Meetup #7",
     "eventDescription": "Digital Dreamers Den (D3) is a vibrant tech community that brings together AI Full-Stack Developers to build the future. We host events, workshops, and networking opportunities that connect talented engineers with cutting-edge technology and industry leaders.",
     "eventDate": "2026-05-09",
-    "eventTime": "14:00",
+    "eventTime": "13:30",
     "eventVenue": "Tekclan Software Solutions PVT. LTD., 4th Floor, PHASE-2, TICEL Biopark Rd, Tharamani, Chennai, Tamil Nadu 600113, India",
     "eventLink": "https://luma.com/5jkpoleg",
     "location": "Chennai",
     "communityName": "Digital Dreamers Den (D3)",
-    "communityLogo": "https://podu.pics/K3Hbv3raG1"
+    "communityLogo": "https://podu.pics/K3Hbv3raG1",
+    "alert": {
+      "message": "Event timing is changed from 2:00 PM to 1:30 PM",
+      "type": "general"
+    }
   },
   {
     "eventName": "From Dev to Ops | Devops Community Meetup Nov 15",

@@ -96,7 +96,7 @@ src/
 ## 🤝 Contributing
 
 We welcome contributions from everyone!
-Check out our [Contributing Guide](CONTRIBUTING.md) to get started.
+Check out our [Contributing Guide](.github/CONTRIBUTING.md) to get started.
 Keep an eye on the issues tab for a mix of beginner friendly issues aswell as game changing issues that you can help the community by contributing.
 
 Pointers to keep in mind is:

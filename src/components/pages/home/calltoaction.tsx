@@ -34,7 +34,9 @@ const CallToAction = () => {
             <button
               className='rounded-lg bg-black px-6 py-3 text-base font-medium text-white transition-all duration-300 hover:scale-105 hover:bg-gray-900 focus:ring focus:ring-gray-400/40 active:scale-95'
               onClick={() =>
-                window.open('https://github.com/fossuchennai/communities/blob/main/CONTRIBUTING.md')
+                window.open(
+                  'https://github.com/FOSSUChennai/Communities/blob/main/.github/CONTRIBUTING.md'
+                )
               }
             >
               Contribute

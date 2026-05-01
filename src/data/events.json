@@ -564,5 +564,16 @@
     "location": "Chennai",
     "communityName": "Chennai React",
     "communityLogo": "https://avatars.githubusercontent.com/u/175532518"
+  },
+  {
+    "eventName": "CODE BREW!",
+    "eventDescription": "Code On JVM Chennai presents Code Brew - An Open Source Java Buildathon",
+    "eventDate": "2026-05-09",
+    "eventTime": "9:30",
+    "eventVenue": "Genesys Cloud Services India Private Limited | Plot No.40, 7th Floor, Global Infocity Park, Block C, MGR, Anna Nedunchalai, Perungudi, Chennai, Tamil Nadu 600096",
+    "eventLink": "https://luma.com/bvludi9k",
+    "location": "Chennai",
+    "communityName": "CodeonJVM Chennai",
+    "communityLogo": "https://i.ibb.co/3YRw7XCd/Logo-1-Black.jpg"
   }
 ]

@@ -553,5 +553,16 @@
     "location": "Chennai",
     "communityName": "Build2Learn",
     "communityLogo": "https://i.ibb.co/CBsgh43/bxOxo5O.png"
+  },
+    {
+    "eventName": "Chennai React Meetup #17",
+    "eventDescription": "This is our second meetup of 2026. This meetup is extra special because we are collaborating with React Nexus conference, Bangalore.",
+    "eventDate": "2026-05-16",
+    "eventTime": "13:30",
+    "eventVenue": "Multi Purpose Hall in the basement of CapitaLand(Ascendas) Phase 2 (Crest)",
+    "eventLink": "https://lnkd.in/g9mH7Q4f",
+    "location": "Chennai",
+    "communityName": "Chennai React",
+    "communityLogo": "https://avatars.githubusercontent.com/u/175532518"
   }
 ]

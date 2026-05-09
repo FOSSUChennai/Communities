@@ -26,12 +26,16 @@
     "eventName": "Digital Dreamers Den (D3) Anniversary - Meetup #7",
     "eventDescription": "Digital Dreamers Den (D3) is a vibrant tech community that brings together AI Full-Stack Developers to build the future. We host events, workshops, and networking opportunities that connect talented engineers with cutting-edge technology and industry leaders.",
     "eventDate": "2026-05-09",
-    "eventTime": "14:00",
+    "eventTime": "13:30",
     "eventVenue": "Tekclan Software Solutions PVT. LTD., 4th Floor, PHASE-2, TICEL Biopark Rd, Tharamani, Chennai, Tamil Nadu 600113, India",
     "eventLink": "https://luma.com/5jkpoleg",
     "location": "Chennai",
     "communityName": "Digital Dreamers Den (D3)",
-    "communityLogo": "https://podu.pics/K3Hbv3raG1"
+    "communityLogo": "https://podu.pics/K3Hbv3raG1",
+    "alert": {
+      "message": "Event timing is changed from 2:00 PM to 1:30 PM",
+      "type": "general"
+    }
   },
   {
     "eventName": "From Dev to Ops | Devops Community Meetup Nov 15",
@@ -549,5 +553,38 @@
     "location": "Chennai",
     "communityName": "Build2Learn",
     "communityLogo": "https://i.ibb.co/CBsgh43/bxOxo5O.png"
+  },
+  {
+    "eventName": "Chennai React Meetup #17",
+    "eventDescription": "This is our second meetup of 2026. This meetup is extra special because we are collaborating with React Nexus conference, Bangalore.",
+    "eventDate": "2026-05-16",
+    "eventTime": "13:30",
+    "eventVenue": "Multi Purpose Hall in the basement of CapitaLand(Ascendas) Phase 2 (Crest)",
+    "eventLink": "https://luma.com/dsjsgthe",
+    "location": "Chennai",
+    "communityName": "Chennai React",
+    "communityLogo": "https://avatars.githubusercontent.com/u/175532518"
+  },
+  {
+    "eventName": "CODE BREW!",
+    "eventDescription": "Code On JVM Chennai presents Code Brew - An Open Source Java Buildathon",
+    "eventDate": "2026-05-09",
+    "eventTime": "9:30",
+    "eventVenue": "Genesys Cloud Services India Private Limited | Plot No.40, 7th Floor, Global Infocity Park, Block C, MGR, Anna Nedunchalai, Perungudi, Chennai, Tamil Nadu 600096",
+    "eventLink": "https://luma.com/bvludi9k",
+    "location": "Chennai",
+    "communityName": "CodeonJVM Chennai",
+    "communityLogo": "https://i.ibb.co/3YRw7XCd/Logo-1-Black.jpg"
+  }
+    {
+    "eventName": "ODYSSEY",
+    "eventDescription": "It is a tech event, bringing together visionary speakers, cutting-edge technologies, and a vibrant community of data and AI enthusiasts in Chennai.",
+    "eventDate": "2026-05-16",
+    "eventTime": "9:30",
+    "eventVenue": "FORD GTBC, Eloct SEZ, Sholinganallur, Chennai, Tamil Nadu 600119",
+    "eventLink": "https://chennaidatacircle.in/odyssey",
+    "location": "Chennai",
+    "communityName": "Chennaidatacircle",
+    "communityLogo": ""
   }
 ]

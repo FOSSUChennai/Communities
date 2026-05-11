@@ -75,5 +75,16 @@
     "location": "Chennai",
     "communityName": "Namma Flutter",
     "communityLogo": "https://avatars.githubusercontent.com/u/176333249"
+  },
+  {
+    "eventName": "From Dev to Ops | Devops Community Meetup May 16",
+    "eventDescription": "From Dev to Ops is a community of devops practitioners who share raw, behind-the-scenes war room experiences — the outages, the quick fixes, the lessons learned, and the systems that broke in a fun, honest, and simple way.",
+    "eventDate": "2026-05-16",
+    "eventTime": "09:30",
+    "eventVenue": "MCC MRF Innovation Park, MCC, East Tambaram, Chennai, Tamil Nadu 600059",
+    "eventLink": "https://luma.com/vhuicj7f",
+    "location": "Chennai",
+    "communityName": "From Dev to Ops",
+    "communityLogo": "https://i.ibb.co/KZTKzgt/from-dev-to-ops-logo-900-x-900-px.png"
   }
 ]

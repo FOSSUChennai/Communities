@@ -586,5 +586,16 @@
     "location": "Chennai",
     "communityName": "Chennaidatacircle",
     "communityLogo": ""
+  },
+    {
+    "eventName": "SheBuilds Chennai May Meetup",
+    "eventDescription": "For the women, by the women — fostering connection, learning, and growth in tech.",
+    "eventDate": "2026-05-30",
+    "eventTime": "9:00",
+    "eventVenue": "Yuniq(Tekclan Software Solutions PVT. LTD.), 4th Floor, PHASE-2, TICEL Biopark Rd, Tharamani, Chennai, Tamil Nadu 600113, India",
+    "eventLink": "https://luma.com/bnaljef7",
+    "location": "Chennai",
+    "communityName": "Shebuilds Chennai",
+    "communityLogo": "https://podu.pics/gqDU4H07VM"
   }
 ]

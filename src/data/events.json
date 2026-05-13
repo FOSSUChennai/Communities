@@ -1,5 +1,16 @@
 [
   {
+    "eventName": "Chennaipy April Meetup",
+    "eventDescription": "Chennaipy is back with meetup! Expect Python talks, learning, networking, and great community vibes. Don't miss it on April 7th!",
+    "eventDate": "2026-04-25",
+    "eventTime": "15:00",
+    "eventVenue": "Makers Tribe | 391A, 3rd Floor Nehru Nagar, IGP Bus Stop, OMR Land Mark, opposite to Hotel Turyaa, above Saravana Bhavan, Chennai, Tamil Nadu 600041",
+    "eventLink": "https://www.meetup.com/chennaipy/events/314258528/rsvp/",
+    "location": "Chennai",
+    "communityName": "Chennaipy",
+    "communityLogo": "https://podu.pics/SxTQzeJge6"
+  },
+  {
     "eventName": "ILUGC Monthly Meet - November 8",
     "eventDescription": "ILUGC Monthly Meet - November 8",
     "eventDate": "2025-11-08",

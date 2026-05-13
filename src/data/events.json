@@ -597,5 +597,16 @@
     "location": "Chennai",
     "communityName": "Shebuilds Chennai",
     "communityLogo": "https://podu.pics/gqDU4H07VM"
+  },
+  {
+    "eventName": "May FOSS Meetup",
+    "eventDescription": "FOSS United Chennai Monthly Meetup - May 2026",
+    "eventDate": "2026-05-23",
+    "eventTime": "09:00",
+    "eventVenue": "YuniQ, 4th Floor, TICEL BIOPARK, 5, CSIR Rd, Phase II, Tharamani, Chennai, Tamil Nadu 600113",
+    "eventLink": "https://fossunited.org/c/chennai/may-26",
+    "location": "Chennai",
+    "communityName": "FOSS United Chennai",
+    "communityLogo": "https://fossunited.org/files/Foss%20United%20Logo%20Black.svg"
   }
 ]

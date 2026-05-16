@@ -587,7 +587,7 @@
     "communityName": "Chennaidatacircle",
     "communityLogo": ""
   },
-    {
+  {
     "eventName": "SheBuilds Chennai May Meetup",
     "eventDescription": "For the women, by the women — fostering connection, learning, and growth in tech.",
     "eventDate": "2026-05-30",
@@ -599,16 +599,16 @@
     "communityLogo": "https://podu.pics/gqDU4H07VM"
   },
   {
-     "eventName": "GenAI + Agents with Elasticsearch",
-     "eventDescription": "This session explores observability for AI agents, including decision tracking, debugging, performance measurement, and real-world patterns for building reliable production-ready agentic systems with AI agents, LLMs, RAG, and search infrastructure.",
-     "eventDate": "2026-05-23",
-     "eventTime": "10:00",
-     "eventVenue": "SQ1 Security Technology Private Limited: 2nd Floor Block B, International Tech Park, Futura Tech Park, Rajiv Gandhi Salai, OMR, Sholinganallur, Chennai, Tamil Nadu 600119",
-     "eventLink": "https://luma.com/pp5u3zu3",
-     "location": "Chennai",
-     "communityName": "Elastic Chennai User Group",
-     "communityLogo": "https://i.ibb.co/XkLjmzG5/Chennai-Badge-Template.png"
-   },
+    "eventName": "GenAI + Agents with Elasticsearch",
+    "eventDescription": "This session explores observability for AI agents, including decision tracking, debugging, performance measurement, and real-world patterns for building reliable production-ready agentic systems with AI agents, LLMs, RAG, and search infrastructure.",
+    "eventDate": "2026-05-23",
+    "eventTime": "10:00",
+    "eventVenue": "SQ1 Security Technology Private Limited: 2nd Floor Block B, International Tech Park, Futura Tech Park, Rajiv Gandhi Salai, OMR, Sholinganallur, Chennai, Tamil Nadu 600119",
+    "eventLink": "https://luma.com/pp5u3zu3",
+    "location": "Chennai",
+    "communityName": "Elastic Chennai User Group",
+    "communityLogo": "https://i.ibb.co/XkLjmzG5/Chennai-Badge-Template.png"
+  },
   {
     "eventName": "May FOSS Meetup",
     "eventDescription": "FOSS United Chennai Monthly Meetup - May 2026",
@@ -619,5 +619,16 @@
     "location": "Chennai",
     "communityName": "FOSS United Chennai",
     "communityLogo": "https://fossunited.org/files/Foss%20United%20Logo%20Black.svg"
+  },
+  {
+    "eventName": "JSLovers Chennai x MongoDB - Meetup #10",
+    "eventDescription": "JSLovers Chennai is back with meetup #10! Expect talks on JS, MongoDB, AI, learning, networking, and great community vibes. Don’t miss it on May 30th, 2026!",
+    "eventDate": "2026-05-30",
+    "eventTime": "14:00",
+    "eventVenue": "YuniQ, 4th Floor, TICEL BIOPARK, 5, CSIR Rd, Phase II, Tharamani, Chennai, Tamil Nadu 600113",
+    "eventLink": "https://luma.com/vvrilt96",
+    "location": "Chennai",
+    "communityName": "JSLovers Chennai",
+    "communityLogo": "https://i.ibb.co/My6JNtNx/jslovers-Logo.png"
   }
 ]

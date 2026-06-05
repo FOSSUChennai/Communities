@@ -12,16 +12,26 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
+    let ticking = false;
+    let rAFId: number;
+
     const handleScroll = () => {
-      if (window.scrollY > 20) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
+      if (!ticking) {
+        rAFId = requestAnimationFrame(() => {
+          setIsScrolled(window.scrollY > 20);
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (rAFId) {
+        cancelAnimationFrame(rAFId);
+      }
+    };
   }, []);
 
   return (
@@ -59,13 +69,7 @@ export default function Header() {
           </span>
         </Link>
         <div className='flex h-full items-center space-x-4'>
-          {/* Always show PushSubscribe on mobile, only on desktop if sm+ */}
-          <span className='flex sm:hidden'>
-            <PushSubscribe isScrolled={isScrolled} />
-          </span>
-          <span className='hidden sm:flex'>
-            <PushSubscribe isScrolled={isScrolled} />
-          </span>
+          <PushSubscribe isScrolled={isScrolled} />
           <GitHubButton isScrolled={isScrolled} />
           <Link
             href='/rss'

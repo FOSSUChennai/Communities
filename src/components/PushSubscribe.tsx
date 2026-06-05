@@ -1,25 +1,27 @@
 'use client';
 import React, { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { BellIcon, BellRingingIcon, XIcon } from '@phosphor-icons/react';
 
 interface PushSubscribeProps {
   className?: string;
+  isScrolled?: boolean;
 }
 
-const PushSubscribe: React.FC<PushSubscribeProps> = ({ className = '' }) => {
+const PushSubscribe: React.FC<PushSubscribeProps> = ({ className = '', isScrolled }) => {
   const [isSupported, setIsSupported] = useState(false);
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [showPrompt, setShowPrompt] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [isMounted, setIsMounted] = useState(false);
 
   // VAPID public key - you'll need to generate this
-  if (!process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY) {
-    throw new Error(
-      'Environment variable NEXT_PUBLIC_VAPID_PUBLIC_KEY is required but not set. Please set it to a valid VAPID public key.'
-    );
-  }
-  const VAPID_PUBLIC_KEY = process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY;
+  const VAPID_PUBLIC_KEY = process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY || '';
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   useEffect(() => {
     const checkSubscriptionStatus = async () => {
@@ -79,6 +81,11 @@ const PushSubscribe: React.FC<PushSubscribeProps> = ({ className = '' }) => {
     setError(null);
 
     try {
+      if (!VAPID_PUBLIC_KEY) {
+        throw new Error(
+          'VAPID public key is not configured. Please set the NEXT_PUBLIC_VAPID_PUBLIC_KEY environment variable.'
+        );
+      }
       // Request permission
       const permission = await Notification.requestPermission();
       if (permission !== 'granted') {
@@ -165,79 +172,91 @@ const PushSubscribe: React.FC<PushSubscribeProps> = ({ className = '' }) => {
 
   return (
     <>
-      {/* Notification Prompt */}
-      {showPrompt && !isSubscribed && (
-        <div className='fixed bottom-4 right-4 z-50 max-w-sm rounded-lg border border-gray-200 bg-white p-4 shadow-lg'>
-          <div className='flex items-start justify-between'>
-            <div className='flex items-start space-x-3'>
-              <BellIcon className='mt-0.5 h-6 w-6 text-green-500' />
-              <div>
-                <h4 className='font-medium text-gray-900'>Stay Updated!</h4>
-                <p className='mt-1 text-sm text-gray-600'>
-                  Get notified about new tech events in Tamil Nadu
-                </p>
-              </div>
-            </div>
-            <button
-              onClick={() => setShowPrompt(false)}
-              className='text-gray-400 hover:text-gray-600'
-            >
-              <XIcon className='h-5 w-5' />
-            </button>
-          </div>
-          <div className='mt-3 flex space-x-2'>
-            <button
-              onClick={subscribeToNotifications}
-              disabled={isLoading}
-              className='flex-1 rounded bg-green-500 px-3 py-2 text-sm font-medium text-white hover:bg-green-600 disabled:opacity-50'
-            >
-              {isLoading ? 'Enabling...' : 'Enable'}
-            </button>
-            <button
-              onClick={() => setShowPrompt(false)}
-              className='flex-1 rounded bg-gray-100 px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-200'
-            >
-              Later
-            </button>
-          </div>
-        </div>
-      )}
-
       {/* Notification Button */}
       <button
         onClick={isSubscribed ? unsubscribeFromNotifications : subscribeToNotifications}
         disabled={isLoading}
-        className={`flex items-center space-x-2 rounded-lg px-4 py-2 font-medium transition-colors ${
-          isSubscribed
-            ? 'bg-green-100 text-green-700 hover:bg-green-200'
-            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+        className={`flex items-center space-x-2 rounded-lg px-4 py-2 font-medium transition-colors duration-200 ${
+          isScrolled
+            ? isSubscribed
+              ? 'border border-green-200/30 bg-green-100 text-green-700 hover:bg-green-200'
+              : 'bg-black/5 text-black hover:bg-black/10'
+            : isSubscribed
+              ? 'bg-green-100 text-green-700 hover:bg-green-200'
+              : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
         } disabled:opacity-50 ${className}`}
         title={isSubscribed ? 'Unsubscribe from notifications' : 'Subscribe to notifications'}
       >
         {isSubscribed ? <BellRingingIcon className='h-5 w-5' /> : <BellIcon className='h-5 w-5' />}
-        <span className='hidden text-sm sm:inline'>
+        <span className='whitespace-nowrap text-sm'>
           {isLoading ? 'Loading...' : isSubscribed ? 'Notifications On' : 'Get Notifications'}
         </span>
       </button>
 
-      {/* Error Message */}
-      {error && (
-        <div className='fixed bottom-4 right-4 z-50 max-w-sm rounded-lg border border-red-200 bg-red-50 p-4'>
-          <div className='flex items-start space-x-2'>
-            <div className='mt-0.5 h-5 w-5 text-red-400'>⚠️</div>
-            <div>
-              <h4 className='font-medium text-red-800'>Error</h4>
-              <p className='mt-1 text-sm text-red-600'>{error}</p>
-            </div>
-          </div>
-          <button
-            onClick={() => setError(null)}
-            className='mt-2 text-sm text-red-600 hover:text-red-800'
-          >
-            Dismiss
-          </button>
-        </div>
-      )}
+      {/* Render popups via React Portal to document.body to prevent layout/transform stacking issues */}
+      {isMounted &&
+        typeof window !== 'undefined' &&
+        createPortal(
+          <>
+            {/* Notification Prompt */}
+            {showPrompt && !isSubscribed && (
+              <div className='fixed bottom-4 right-4 z-50 max-w-sm rounded-lg border border-gray-200 bg-white p-4 shadow-lg'>
+                <div className='flex items-start justify-between'>
+                  <div className='flex items-start space-x-3'>
+                    <BellIcon className='mt-0.5 h-6 w-6 text-green-500' />
+                    <div>
+                      <h4 className='font-medium text-gray-900'>Stay Updated!</h4>
+                      <p className='mt-1 text-sm text-gray-600'>
+                        Get notified about new tech events in Tamil Nadu
+                      </p>
+                    </div>
+                  </div>
+                  <button
+                    onClick={() => setShowPrompt(false)}
+                    className='text-gray-400 hover:text-gray-600'
+                  >
+                    <XIcon className='h-5 w-5' />
+                  </button>
+                </div>
+                <div className='mt-3 flex space-x-2'>
+                  <button
+                    onClick={subscribeToNotifications}
+                    disabled={isLoading}
+                    className='flex-1 rounded bg-green-500 px-3 py-2 text-sm font-medium text-white hover:bg-green-600 disabled:opacity-50'
+                  >
+                    {isLoading ? 'Enabling...' : 'Enable'}
+                  </button>
+                  <button
+                    onClick={() => setShowPrompt(false)}
+                    className='flex-1 rounded bg-gray-100 px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-200'
+                  >
+                    Later
+                  </button>
+                </div>
+              </div>
+            )}
+
+            {/* Error Message */}
+            {error && (
+              <div className='fixed bottom-4 right-4 z-50 max-w-sm rounded-lg border border-red-200 bg-red-50 p-4'>
+                <div className='flex items-start space-x-2'>
+                  <div className='mt-0.5 h-5 w-5 text-red-400'>⚠️</div>
+                  <div>
+                    <h4 className='font-medium text-red-800'>Error</h4>
+                    <p className='mt-1 text-sm text-red-600'>{error}</p>
+                  </div>
+                </div>
+                <button
+                  onClick={() => setError(null)}
+                  className='mt-2 text-sm text-red-600 hover:text-red-800'
+                >
+                  Dismiss
+                </button>
+              </div>
+            )}
+          </>,
+          document.body
+        )}
     </>
   );
 };

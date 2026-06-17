@@ -663,5 +663,16 @@
     "location": "Chennai",
     "communityName": "TossConf 2026",
     "communityLogo": "https://i.ibb.co/350BQ0mG/tossconf.png"
+  },
+  {
+    "eventName": "Java June Meetup",
+    "eventDescription": "Join us for an engaging Java meetup where we dive deep into the latest features, best practices, and real-world applications of Java development. Whether you're a seasoned developer or just starting out, there's something for everyone.",
+    "eventDate": "2026-06-27",
+    "eventTime": "09:00",
+    "eventVenue": "Contentstack India Pvt. Ltd,5th Floor, WorkEZ, Helix.21, Guru Nanak College Rd, above West side, Indira Gandhi Nagar, Velachery, Chennai, Tamil Nadu 600042, India",
+    "eventLink": "https://luma.com/x5tvs3xb",
+    "location": "Chennai",
+    "communityName": "CodeonJVM Chennai",
+    "communityLogo": "https://i.ibb.co/3YRw7XCd/Logo-1-Black.jpg"
   }
 ]

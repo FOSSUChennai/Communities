@@ -159,14 +159,15 @@
   },
   {
     "name": "Digital Dreamers Den (D3)",
-    "logo": "https://i.ibb.co/Lh1nbgjy/D3-Community-Official-logo.png",
-    "description": "Digital Dreamers Den (D3) is a vibrant tech community that brings together AI Full-Stack Developers to build the future. We host events, workshops, and networking opportunities that connect talented engineers with cutting-edge technology and industry leaders.",
+    "logo": "https://podu.pics/3bjvlRL2v1",
+    "description": "A vibrant tech community bringing AI and Full-Stack Engineers together to build the future. We host events, workshops, and networking opportunities that connect talented engineers with cutting-edge technology and industry leaders.",
     "location": "Chennai",
-    "twitter": "https://d3community.in/x",
-    "website": "https://d3community.in",
-    "instagram": "https://d3community.in/instagram",
-    "linkedin": "https://d3community.in/linkedin",
-    "youtube": "https://d3community.in/youtube"
+    "twitter": "https://digitaldreamersden.in/x",
+    "website": "https://digitaldreamersden.in/",
+    "instagram": "https://digitaldreamersden.in/instagram",
+    "linkedin": "https://digitaldreamersden.in/linkedin",
+    "youtube": "https://digitaldreamersden.in/youtube",
+    "github": "https://digitaldreamersden.in/github"
   },
   {
     "name": "MongoDB User Group Chennai",
@@ -467,7 +468,7 @@
     "instagram": "https://www.instagram.com/codesapiens.in/"
   },
   {
-    "name": "Shebuilds Chennai",
+    "name": "SheBuilds Chennai",
     "logo": "https://i.ibb.co/mCLbZ2Sb/shebuilds-logo.png",
     "description": "Our vision is to bring women-in-tech together to collaborate, share, grow and in the process empower women in tech to innovate and lead.",
     "location": "Chennai",

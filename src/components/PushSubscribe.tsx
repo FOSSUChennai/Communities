@@ -176,7 +176,7 @@ const PushSubscribe: React.FC<PushSubscribeProps> = ({ className = '', isScrolle
       <button
         onClick={isSubscribed ? unsubscribeFromNotifications : subscribeToNotifications}
         disabled={isLoading}
-        className={`flex items-center space-x-2 rounded-lg px-4 py-2 font-medium transition-colors duration-200 ${
+        className={`flex items-center gap-2 rounded-lg px-3 py-2 font-medium transition-colors duration-200 sm:px-4 ${
           isScrolled
             ? isSubscribed
               ? 'border border-green-200/30 bg-green-100 text-green-700 hover:bg-green-200 dark:border-green-800/30 dark:bg-green-900/30 dark:text-green-400 dark:hover:bg-green-900/50'
@@ -186,9 +186,10 @@ const PushSubscribe: React.FC<PushSubscribeProps> = ({ className = '', isScrolle
               : 'bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-white/10 dark:text-gray-300 dark:hover:bg-white/20'
         } disabled:opacity-50 ${className}`}
         title={isSubscribed ? 'Unsubscribe from notifications' : 'Subscribe to notifications'}
+        aria-label={isSubscribed ? 'Unsubscribe from notifications' : 'Subscribe to notifications'}
       >
         {isSubscribed ? <BellRingingIcon className='h-5 w-5' /> : <BellIcon className='h-5 w-5' />}
-        <span className='whitespace-nowrap text-sm'>
+        <span className='hidden whitespace-nowrap text-sm sm:inline'>
           {isLoading ? 'Loading...' : isSubscribed ? 'Notifications On' : 'Get Notifications'}
         </span>
       </button>
@@ -214,6 +215,7 @@ const PushSubscribe: React.FC<PushSubscribeProps> = ({ className = '', isScrolle
                   <button
                     onClick={() => setShowPrompt(false)}
                     className='text-gray-400 hover:text-gray-600 dark:text-gray-500 dark:hover:text-gray-300'
+                    aria-label='Close prompt'
                   >
                     <XIcon className='h-5 w-5' />
                   </button>

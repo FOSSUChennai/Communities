@@ -1,10 +1,12 @@
 import { NextResponse } from 'next/server';
-import events from '@/data/events.json';
+import eventsData from '@/data/events.json';
 import jsonfeedToRss from 'jsonfeed-to-rss';
+import { Event } from '@/types/event';
 
 export async function GET() {
   const baseUrl = 'https://tamilnadu.tech';
   const currentDate = new Date();
+  const events = eventsData as Event[];
 
   const jsonFeed = {
     version: 'https://jsonfeed.org/version/1',

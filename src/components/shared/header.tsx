@@ -27,6 +27,7 @@ export default function Header() {
     };
 
     window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Sync scroll position on mount
     return () => {
       window.removeEventListener('scroll', handleScroll);
       if (rAFId) {
@@ -69,13 +70,13 @@ export default function Header() {
             />
           </span>
         </Link>
-        <div className='flex h-full items-center space-x-4'>
+        <div className='flex h-full items-center gap-2 sm:gap-4'>
           <PushSubscribe isScrolled={isScrolled} />
           <GitHubButton isScrolled={isScrolled} />
           <ThemeToggle isScrolled={isScrolled} />
           <Link
             href='/rss'
-            className={`inline-flex items-center rounded-lg px-4 py-2 text-sm transition duration-200 ${
+            className={`inline-flex items-center rounded-lg px-3 py-2 text-sm transition duration-200 sm:px-4 ${
               isScrolled
                 ? 'bg-black/5 text-black hover:bg-black/10 dark:bg-white/10 dark:text-white dark:hover:bg-white/20'
                 : 'bg-white text-black shadow hover:text-gray-700 dark:bg-white/10 dark:text-white dark:hover:bg-white/20'

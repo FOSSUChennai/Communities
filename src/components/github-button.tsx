@@ -29,7 +29,7 @@ const GitHubButton = ({ isScrolled }: { isScrolled?: boolean }) => {
       href={repoUrl}
       target='_blank'
       rel='noopener noreferrer'
-      className={`inline-flex items-center rounded-lg px-4 py-2 transition duration-200 ${
+      className={`inline-flex items-center rounded-lg px-2.5 py-2 transition duration-200 sm:px-4 ${
         isScrolled
           ? 'bg-black/5 text-black hover:bg-black/10 dark:bg-white/10 dark:text-white dark:hover:bg-white/20'
           : 'bg-white text-black shadow hover:bg-gray-100 dark:bg-white/10 dark:text-white dark:hover:bg-white/20'
@@ -39,7 +39,7 @@ const GitHubButton = ({ isScrolled }: { isScrolled?: boolean }) => {
       <span className='hidden text-sm font-medium sm:inline'>
         {stars !== null ? `Contribute ${stars} ⭐` : 'Loading...'}
       </span>
-      <span className='text-sm font-medium sm:hidden'>
+      <span className='whitespace-nowrap text-sm font-medium sm:hidden'>
         {stars !== null ? `${stars} ⭐` : 'Loading...'}
       </span>
     </a>

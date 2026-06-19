@@ -1,12 +1,21 @@
 'use client';
+
+import { useEffect } from 'react';
+
 type PageProps = {
   error: Error & { digest?: string };
   reset: () => void;
 };
+
 export default function ErrorPage(props: PageProps) {
   const { error, reset } = props;
 
-  // TODO: Need to add a custom error page
+  useEffect(() => {
+    // Log the error to an error reporting service or console
+    console.error('Captured runtime error:', error);
+  }, [error]);
+
+  const isDev = process.env.NODE_ENV === 'development';
 
   return (
     <div className='h-content space-y-4 px-2 py-8'>
@@ -15,7 +24,7 @@ export default function ErrorPage(props: PageProps) {
         Oops! Something went wrong. Try again
       </button>
       <p className='break-words rounded-md bg-zinc-100 p-4 dark:bg-zinc-800 dark:text-gray-300'>
-        {error.message}
+        {isDev ? error.message : 'An unexpected error occurred. Please try again later.'}
       </p>
     </div>
   );

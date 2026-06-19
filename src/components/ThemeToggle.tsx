@@ -9,7 +9,22 @@ interface ThemeToggleProps {
 }
 
 const ThemeToggle: React.FC<ThemeToggleProps> = ({ isScrolled }) => {
-  const { theme, toggleTheme } = useTheme();
+  const { theme, toggleTheme, mounted } = useTheme();
+
+  if (!mounted) {
+    return (
+      <button
+        className={`relative inline-flex items-center rounded-lg px-3 py-2 transition duration-200 ${
+          isScrolled
+            ? 'bg-black/5 text-black hover:bg-black/10 dark:bg-white/10 dark:text-white'
+            : 'bg-white text-black shadow hover:bg-gray-100 dark:bg-white/10 dark:text-white'
+        }`}
+        style={{ width: '44px', height: '40px' }}
+        aria-hidden='true'
+        disabled
+      />
+    );
+  }
 
   return (
     <button

@@ -15,7 +15,7 @@ export default function NotFoundPage() {
         404 Not Found
       </h1>
       <Link
-        className='bg-gradient-to-r from-blue-700 to-blue-500 bg-clip-text text-2xl font-bold text-transparent hover:text-blue-700'
+        className='bg-gradient-to-r from-blue-700 to-blue-500 bg-clip-text text-2xl font-bold text-transparent hover:text-blue-700 dark:from-blue-400 dark:to-blue-300 dark:hover:text-blue-400'
         href='/'
       >
         Go back home

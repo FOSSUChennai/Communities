@@ -10,11 +10,13 @@ export default function ErrorPage(props: PageProps) {
 
   return (
     <div className='h-content space-y-4 px-2 py-8'>
-      <h1 className='text-2xl font-bold'>Something went wrong!</h1>
-      <button onClick={reset} type='button'>
+      <h1 className='text-2xl font-bold dark:text-white'>Something went wrong!</h1>
+      <button onClick={reset} type='button' className='dark:text-gray-300'>
         Oops! Something went wrong. Try again
       </button>
-      <p className='break-words rounded-md bg-zinc-100 p-4 dark:bg-zinc-800'>{error.message}</p>
+      <p className='break-words rounded-md bg-zinc-100 p-4 dark:bg-zinc-800 dark:text-gray-300'>
+        {error.message}
+      </p>
     </div>
   );
 }

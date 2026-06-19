@@ -31,11 +31,11 @@ const GitHubButton = ({ isScrolled }: { isScrolled?: boolean }) => {
       rel='noopener noreferrer'
       className={`inline-flex items-center rounded-lg px-4 py-2 transition duration-200 ${
         isScrolled
-          ? 'bg-black/5 text-black hover:bg-black/10'
-          : 'bg-white text-black shadow hover:bg-gray-100'
+          ? 'bg-black/5 text-black hover:bg-black/10 dark:bg-white/10 dark:text-white dark:hover:bg-white/20'
+          : 'bg-white text-black shadow hover:bg-gray-100 dark:bg-white/10 dark:text-white dark:hover:bg-white/20'
       }`}
     >
-      <Image src={githubIcon} alt='Github star icon' className='mr-2 h-5 w-5' />
+      <Image src={githubIcon} alt='Github star icon' className='mr-2 h-5 w-5 dark:invert' />
       <span className='hidden text-sm font-medium sm:inline'>
         {stars !== null ? `Contribute ${stars} ⭐` : 'Loading...'}
       </span>

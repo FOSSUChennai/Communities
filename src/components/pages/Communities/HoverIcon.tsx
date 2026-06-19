@@ -25,7 +25,7 @@ const HoverIcon: FC<HoverIconProps> = ({ Icon, link, title, hoverColor }) => {
       href={link}
       target='_blank'
       rel='noopener noreferrer'
-      className={`text-gray-600 transition-colors ${getHoverClass()}`}
+      className={`text-gray-600 transition-colors dark:text-gray-400 ${getHoverClass()}`}
       title={title}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}

@@ -1,10 +1,12 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono, Inter } from 'next/font/google';
+import Script from 'next/script';
 import './globals.css';
 import { IS_PROD, SITE_URL } from '../lib/constants';
 import UmamiProvider from 'next-umami';
 import Header from '../components/shared/header';
 import Footer from '../components/shared/footer';
+import { ThemeProvider } from '../components/ThemeProvider';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -71,15 +73,19 @@ export default function RootLayout({
 }>) {
   const webId = process.env.UMAMI_ANALYTICS_ID;
   return (
-    <html lang='en'>
+    <html lang='en' suppressHydrationWarning>
       {/* removed the head tag, next will add it automatically ( LCP from above 2.5 to below 2.5  ) - adding head manually will be like overriding or bypassing the optimized head from next */}
 
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} mx-auto max-w-[1120px] bg-[#fafafa] antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} mx-auto max-w-[1120px] bg-[#fafafa] antialiased dark:bg-[#0f0f0f] dark:text-gray-100`}
       >
-        <Header />
-        {children}
-        <Footer />
+        {/* FOUC prevention: loads before React hydration to set dark class immediately */}
+        <Script src='/theme-init.js' strategy='beforeInteractive' />
+        <ThemeProvider>
+          <Header />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
       {IS_PROD && <UmamiProvider websiteId={webId} />}
     </html>

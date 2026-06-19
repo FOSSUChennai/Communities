@@ -180,7 +180,7 @@ const Archive = () => {
             WebkitMaskComposite: 'xor'
           }}
         />
-        <div className='relative h-full rounded-lg border-2 border-[rgb(229,231,235)] bg-white p-4 shadow-sm transition-shadow hover:border-[rgb(255,255,255,0.5)] hover:shadow-md'>
+        <div className='relative h-full rounded-lg border-2 border-[rgb(229,231,235)] bg-white p-4 shadow-sm transition-shadow hover:border-[rgb(255,255,255,0.5)] hover:shadow-md dark:border-[#2a2a2a] dark:bg-[#1a1a1a] dark:hover:border-[#3a3a3a]'>
           <div
             className='pointer-events-none absolute -inset-px opacity-0 transition-opacity duration-300 group-hover:opacity-50'
             style={{
@@ -192,14 +192,14 @@ const Archive = () => {
           <div className='relative flex flex-wrap items-center justify-between gap-2'>
             {isOverflowing ? (
               <Tooltip content={communityName}>
-                <div className='rounded-md border-2 border-black bg-white px-2 py-1 text-xs text-black'>
+                <div className='rounded-md border-2 border-black bg-white px-2 py-1 text-xs text-black dark:border-white dark:bg-[#1a1a1a] dark:text-white'>
                   <span ref={communityNameRef} className='block max-w-[200px] truncate'>
                     {communityName}
                   </span>
                 </div>
               </Tooltip>
             ) : (
-              <div className='rounded-md border-2 border-black bg-white px-2 py-1 text-xs text-black'>
+              <div className='rounded-md border-2 border-black bg-white px-2 py-1 text-xs text-black dark:border-white dark:bg-[#1a1a1a] dark:text-white'>
                 <span ref={communityNameRef} className='block max-w-[200px] truncate'>
                   {communityName}
                 </span>
@@ -218,7 +218,7 @@ const Archive = () => {
 
           <a href={link} target='_blank' rel='noopener noreferrer' className='block'>
             <h3
-              className={`mb-2 mt-3 text-xl font-medium text-black transition-all duration-300`}
+              className={`mb-2 mt-3 text-xl font-medium text-black transition-all duration-300 dark:text-white`}
               style={{
                 height: `${isMonthly ? monthlyCardHeight : upcomingCardHeight}px`,
                 overflow: 'hidden'
@@ -228,15 +228,21 @@ const Archive = () => {
               {title}
             </h3>
 
-            <div className='flex-row items-center text-sm text-gray-600'>
+            <div className='flex-row items-center text-sm text-gray-600 dark:text-gray-400'>
               <div className='flex items-center space-x-2'>
-                <span className={`rounded bg-green-100 px-2 py-0.5 text-xs text-green-800`}>
+                <span
+                  className={`rounded bg-green-100 px-2 py-0.5 text-xs text-green-800 dark:bg-green-900/30 dark:text-green-400`}
+                >
                   {location}
                 </span>
-                <span className={`rounded bg-blue-100 px-2 py-0.5 text-xs text-blue-800`}>
+                <span
+                  className={`rounded bg-blue-100 px-2 py-0.5 text-xs text-blue-800 dark:bg-blue-900/30 dark:text-blue-400`}
+                >
                   {date}
                 </span>
-                <span className={`rounded bg-yellow-100 px-2 py-0.5 text-xs text-yellow-800`}>
+                <span
+                  className={`rounded bg-yellow-100 px-2 py-0.5 text-xs text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400`}
+                >
                   {time}
                 </span>
                 <AddToCalendar
@@ -260,10 +266,10 @@ const Archive = () => {
   };
 
   return (
-    <main className='mx-4 rounded-xl bg-white p-6 md:mx-8 lg:mx-16'>
+    <main className='mx-4 rounded-xl bg-white p-6 dark:bg-[#1a1a1a] md:mx-8 lg:mx-16'>
       <section>
         <h2 className='mb-3 text-lg font-normal'>
-          <span className='text-[30px] font-semibold text-black'>archive</span>
+          <span className='text-[30px] font-semibold text-black dark:text-white'>archive</span>
         </h2>
 
         {/* Filter and Sort Controls */}
@@ -271,14 +277,17 @@ const Archive = () => {
           <div className='flex flex-wrap items-center gap-4'>
             {/* Community Filter Dropdown */}
             <div className='flex items-center gap-2'>
-              <label htmlFor='communityFilter' className='text-sm font-medium text-gray-700'>
+              <label
+                htmlFor='communityFilter'
+                className='text-sm font-medium text-gray-700 dark:text-gray-300'
+              >
                 Filter by Community:
               </label>
               <select
                 id='communityFilter'
                 value={selectedCommunity}
                 onChange={(e) => setSelectedCommunity(e.target.value)}
-                className='rounded-md border border-gray-300 bg-white px-3 py-2 text-sm focus:border-green-500 focus:outline-none focus:ring-1 focus:ring-green-500'
+                className='rounded-md border border-gray-300 bg-white px-3 py-2 text-sm focus:border-green-500 focus:outline-none focus:ring-1 focus:ring-green-500 dark:border-[#2a2a2a] dark:bg-[#1a1a1a] dark:text-white'
               >
                 <option value='all'>All Communities</option>
                 {uniqueCommunities.map((community) => (
@@ -291,24 +300,26 @@ const Archive = () => {
 
             {/* Sort Order Controls */}
             <div className='flex items-center gap-2'>
-              <span className='text-sm font-medium text-gray-700'>Sort by Date:</span>
-              <div className='flex overflow-hidden rounded-md border border-gray-300'>
+              <span className='text-sm font-medium text-gray-700 dark:text-gray-300'>
+                Sort by Date:
+              </span>
+              <div className='flex overflow-hidden rounded-md border border-gray-300 dark:border-[#2a2a2a]'>
                 <button
                   onClick={() => setSortOrder('asc')}
                   className={`px-3 py-2 text-sm font-medium transition-colors ${
                     sortOrder === 'asc'
                       ? 'bg-green-500 text-white'
-                      : 'bg-white text-gray-700 hover:bg-gray-50'
+                      : 'bg-white text-gray-700 hover:bg-gray-50 dark:bg-[#1a1a1a] dark:text-gray-300 dark:hover:bg-[#2a2a2a]'
                   }`}
                 >
                   Ascending
                 </button>
                 <button
                   onClick={() => setSortOrder('desc')}
-                  className={`border-l border-gray-300 px-3 py-2 text-sm font-medium transition-colors ${
+                  className={`border-l border-gray-300 px-3 py-2 text-sm font-medium transition-colors dark:border-[#2a2a2a] ${
                     sortOrder === 'desc'
                       ? 'bg-green-500 text-white'
-                      : 'bg-white text-gray-700 hover:bg-gray-50'
+                      : 'bg-white text-gray-700 hover:bg-gray-50 dark:bg-[#1a1a1a] dark:text-gray-300 dark:hover:bg-[#2a2a2a]'
                   }`}
                 >
                   Descending
@@ -318,7 +329,7 @@ const Archive = () => {
           </div>
 
           {/* Results count */}
-          <div className='text-sm text-gray-600'>
+          <div className='text-sm text-gray-600 dark:text-gray-400'>
             {monthlyEvents.length} event{monthlyEvents.length !== 1 ? 's' : ''} found
           </div>
         </div>
@@ -364,9 +375,9 @@ function Tooltip({ content, children }: TooltipProps) {
         {children}
       </div>
       {showTooltip && (
-        <div className='absolute -top-12 left-1/2 z-50 -translate-x-1/2 transform whitespace-nowrap rounded-md border-2 border-gray-800 bg-gray-100 px-2 py-1 text-xs text-gray-800 shadow-lg'>
+        <div className='absolute -top-12 left-1/2 z-50 -translate-x-1/2 transform whitespace-nowrap rounded-md border-2 border-gray-800 bg-gray-100 px-2 py-1 text-xs text-gray-800 shadow-lg dark:border-gray-600 dark:bg-[#2a2a2a] dark:text-gray-200'>
           {content}
-          <div className='absolute -bottom-1 left-1/2 h-2 w-2 -translate-x-1/2 rotate-45 transform bg-gray-100' />
+          <div className='absolute -bottom-1 left-1/2 h-2 w-2 -translate-x-1/2 rotate-45 transform bg-gray-100 dark:bg-[#2a2a2a]' />
         </div>
       )}
     </div>

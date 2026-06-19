@@ -99,7 +99,7 @@ const CommunityCard = ({
           WebkitMaskComposite: 'xor'
         }}
       />
-      <div className='relative h-full rounded-lg border-2 border-[rgb(229,231,235)] bg-white p-4 shadow-sm transition-shadow hover:border-[rgb(255,255,255,0.5)] hover:shadow-md'>
+      <div className='relative h-full rounded-lg border-2 border-[rgb(229,231,235)] bg-white p-4 shadow-sm transition-shadow hover:border-[rgb(255,255,255,0.5)] hover:shadow-md dark:border-[#2a2a2a] dark:bg-[#1a1a1a] dark:hover:border-[#3a3a3a]'>
         <div
           className='pointer-events-none absolute -inset-px opacity-0 transition-opacity duration-300 group-hover:opacity-50'
           style={{
@@ -128,18 +128,22 @@ const CommunityCard = ({
             )}
             <div>
               <h3
-                className='line-clamp-2 break-words text-xl font-semibold text-gray-900'
+                className='line-clamp-2 break-words text-xl font-semibold text-gray-900 dark:text-white'
                 title={name}
               >
                 {name}
               </h3>
-              <span className={`rounded bg-green-100 px-2 py-0.5 text-xs text-green-800`}>
+              <span
+                className={`rounded bg-green-100 px-2 py-0.5 text-xs text-green-800 dark:bg-green-900/30 dark:text-green-400`}
+              >
                 {location}
               </span>
             </div>
           </a>
 
-          <p className='line-clamp-5 flex-1 text-justify text-gray-600'>{description}</p>
+          <p className='line-clamp-5 flex-1 text-justify text-gray-600 dark:text-gray-400'>
+            {description}
+          </p>
 
           {/* This creates a line only if social links exist*/}
           {(twitter ||
@@ -150,7 +154,9 @@ const CommunityCard = ({
             bluesky ||
             mastodon ||
             telegram ||
-            youtube) && <div className='mt-4 flex-shrink-0 border-t border-gray-100' />}
+            youtube) && (
+            <div className='mt-4 flex-shrink-0 border-t border-gray-100 dark:border-[#2a2a2a]' />
+          )}
 
           <div className='mt-4 flex flex-shrink-0 gap-3 opacity-100 transition-opacity'>
             {Object.entries(socialLinks).map(([key, { Icon, color, title, link }]) =>
@@ -181,16 +187,18 @@ const Community = () => {
   );
 
   return (
-    <main className='mx-[2%] my-16 flex items-center rounded-xl bg-white p-3 shadow-2xl shadow-black/25 sm:mx-[10%] sm:p-6'>
+    <main className='mx-[2%] my-16 flex items-center rounded-xl bg-white p-3 shadow-2xl shadow-black/25 dark:bg-[#1a1a1a] dark:shadow-black/50 sm:mx-[10%] sm:p-6'>
       <section className='relative flex w-full flex-col py-2'>
         <div className='mb-8'>
-          <h2 className='mb-4 text-3xl font-bold text-gray-900'>Tech Communities in Tamil Nadu</h2>
+          <h2 className='mb-4 text-3xl font-bold text-gray-900 dark:text-white'>
+            Tech Communities in Tamil Nadu
+          </h2>
           <div className='relative'>
             <MagnifyingGlass className='absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400' />
             <input
               type='text'
               placeholder='Search communities by name or location...'
-              className='w-full rounded-lg border border-gray-200 py-2 pl-10 pr-4 focus:border-green-500 focus:outline-none'
+              className='w-full rounded-lg border border-gray-200 py-2 pl-10 pr-4 focus:border-green-500 focus:outline-none dark:border-[#2a2a2a] dark:bg-[#0f0f0f] dark:text-white dark:placeholder-gray-500'
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />

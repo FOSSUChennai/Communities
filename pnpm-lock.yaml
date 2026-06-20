@@ -21,8 +21,8 @@ importers:
         specifier: 15.4.10
         version: 15.4.10(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       next-umami:
-        specifier: ^1.0.0
-        version: 1.0.0(next@15.4.10(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+        specifier: ^2.0.3
+        version: 2.0.3(next@15.4.10(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       react:
         specifier: ^19.2.3
         version: 19.2.3
@@ -1320,6 +1320,7 @@ packages:
   git-raw-commits@4.0.0:
     resolution: {integrity: sha512-ICsMM1Wk8xSGMowkOmPrzo2Fgmfo4bMHLNX6ytHjajRJUqvHOw/TFapQ+QG75c3X/tTDDhOSRPGC52dDbNM8FQ==}
     engines: {node: '>=16'}
+    deprecated: This package is no longer maintained. For the JavaScript API, please use @conventional-changelog/git-client instead.
     hasBin: true
 
   glob-parent@5.1.2:
@@ -1768,9 +1769,9 @@ packages:
   natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
 
-  next-umami@1.0.0:
-    resolution: {integrity: sha512-bwq2nuH1vE0zBRkT/6pKznlKsDv6BwTWGfOFcSf0hLT3ua3OJHMVpB3Ws3GiCKl69Exan++PX05wNvfrDvfTmQ==}
-    engines: {node: '>=16.0.0'}
+  next-umami@2.0.3:
+    resolution: {integrity: sha512-ZQsye+G6Lws8MQqgX2PUQG6oCwrH5VRQV8Li/lBSnRUWn3z6BGA+hAt3gjJv3gy+j80lMT2H/PX81vSYAUWf+g==}
+    engines: {node: '>=18.17.0'}
     peerDependencies:
       next: '>=13.0.0'
       react: '>=18.0.0'
@@ -4266,7 +4267,7 @@ snapshots:
 
   natural-compare@1.4.0: {}
 
-  next-umami@1.0.0(next@15.4.10(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(react-dom@19.2.3(react@19.2.3))(react@19.2.3):
+  next-umami@2.0.3(next@15.4.10(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(react-dom@19.2.3(react@19.2.3))(react@19.2.3):
     dependencies:
       next: 15.4.10(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       react: 19.2.3

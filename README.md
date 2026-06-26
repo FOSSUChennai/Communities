@@ -4,7 +4,7 @@ A central hub for discovering and engaging with technology communities and event
 
 ## 🎯 About
 
-tamilNadu.tech serves as a bridge connecting various tech communities, events, and enthusiasts throughout Tamil Nadu. Whether you're a student, professional, or tech enthusiast, this platform helps you:
+tamilnadu.tech serves as a bridge connecting various tech communities, events, and enthusiasts throughout Tamil Nadu. Whether you're a student, professional, or tech enthusiast, this platform helps you:
 
 - Discover upcoming tech events, meetups, and workshops
 - Connect with local tech communities

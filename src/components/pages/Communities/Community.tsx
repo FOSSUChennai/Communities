@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import communities from '../../../data/communities.json';
 import Image from 'next/image';
 import {
@@ -185,47 +185,131 @@ const CommunityCard = ({
 
 const Community = () => {
   const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCity, setSelectedCity] = useState('Select city');
 
-  const filteredCommunities = communities.filter(
-    (community) =>
-      community.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      community.location.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'k') {
+        event.preventDefault();
+        inputRef.current?.focus();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
+  const cities = [
+    'Select city',
+    ...new Set(
+      communities
+        .map((community) => community.location)
+        .filter(Boolean)
+        .sort()
+    )
+  ];
+
+  const filteredCommunities = communities
+    .filter((community) => {
+      const query = searchQuery.toLowerCase();
+
+      const matchesSearch =
+        community.name.toLowerCase().includes(query) ||
+        community.location.toLowerCase().includes(query) ||
+        community.description.toLowerCase().includes(query);
+
+      const matchesCity = selectedCity === 'Select city' || community.location === selectedCity;
+
+      return matchesSearch && matchesCity;
+    })
+    .sort((a, b) => a.name.localeCompare(b.name));
+
+  const clearFilters = () => {
+    setSearchQuery('');
+    setSelectedCity('Select city');
+  };
 
   return (
     <main className='mx-[2%] my-16 flex items-center rounded-xl bg-white p-3 shadow-2xl shadow-black/25 sm:mx-[10%] sm:p-6'>
       <section className='relative flex w-full flex-col py-2'>
         <div className='mb-8'>
-          <h2 className='mb-4 text-3xl font-bold text-gray-900'>Tech Communities in Tamil Nadu</h2>
-          <div className='relative'>
-            <MagnifyingGlass className='absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400' />
-            <input
-              type='text'
-              placeholder='Search communities by name or location...'
-              className='w-full rounded-lg border border-gray-200 py-2 pl-10 pr-4 focus:border-green-500 focus:outline-none'
-              aria-label='Search communities'
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-            />
+          <h2 className='mb-2 text-3xl font-bold text-gray-900'>Tech Communities in Tamil Nadu</h2>
+
+          <p className='mb-6 text-gray-500'>
+            Discover and explore tech communities across Tamil Nadu.
+          </p>
+
+          <div className='flex flex-col gap-4 lg:flex-row lg:items-center'>
+            {/* Search */}
+            <div className='relative flex-1'>
+              <MagnifyingGlass className='absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400' />
+
+              <input
+                ref={inputRef}
+                type='text'
+                placeholder='Search community...'
+                aria-label='Search communities'
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className='w-full rounded-lg border border-gray-200 py-2.5 pl-10 pr-20 focus:border-green-500 focus:outline-none'
+              />
+
+              <span className='absolute right-3 top-1/2 hidden -translate-y-1/2 rounded border bg-gray-100 px-2 py-1 text-xs text-gray-500 md:block'>
+                Ctrl + K
+              </span>
+            </div>
+
+            {/* City Filter */}
+            <div className='flex flex-col'>
+              <select
+                id='city-filter'
+                value={selectedCity}
+                onChange={(e) => setSelectedCity(e.target.value)}
+                className='rounded-lg border border-gray-200 px-4 py-2.5 focus:border-green-500 focus:outline-none'
+              >
+                {cities.map((city) => (
+                  <option key={city} value={city}>
+                    {city}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div className='text-sm text-gray-500'>
+              <span className='font-semibold text-black'>{filteredCommunities.length}</span>{' '}
+              {filteredCommunities.length === 1 ? 'community' : 'communities'}
+            </div>
           </div>
         </div>
 
         <div className='grid gap-6 md:grid-cols-1 lg:grid-cols-2'>
-          {filteredCommunities
-            .sort((a, b) => a.name.localeCompare(b.name))
-            .map((community, index) => (
-              <div key={index} className='group relative h-full'>
-                <CommunityCard className='h-full' {...community} />
-              </div>
-            ))}
+          {filteredCommunities.map((community, index) => (
+            <div key={index} className='group relative h-full'>
+              <CommunityCard className='h-full' {...community} />
+            </div>
+          ))}
         </div>
 
         {filteredCommunities.length === 0 && (
           <div className='flex h-full flex-col items-center justify-center'>
             <XSquare size={100} className='mb-4 text-gray-400' weight='light' />
-            <p className='mt-6 text-center text-lg text-gray-500'>
-              No communities found matching your search.
-            </p>
+            <div className='mt-6 text-center'>
+              <p className='text-lg font-semibold text-gray-700'>No communities found</p>
+
+              <p className='mt-2 text-gray-500'>
+                Try a different search term or choose another city.
+              </p>
+
+              <button
+                onClick={clearFilters}
+                className='mt-5 rounded-lg bg-green-600 px-5 py-2 text-white transition hover:bg-green-700'
+              >
+                Reset Filters
+              </button>
+            </div>
           </div>
         )}
       </section>

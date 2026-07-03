@@ -258,12 +258,15 @@ const Community = () => {
               />
 
               <span className='absolute right-3 top-1/2 hidden -translate-y-1/2 rounded border bg-gray-100 px-2 py-1 text-xs text-gray-500 md:block'>
-                Ctrl + K
+                Ctrl/Cmd + K
               </span>
             </div>
 
             {/* City Filter */}
             <div className='flex flex-col'>
+              <label htmlFor='city-filter' className='sr-only'>
+                Filter communities by city
+              </label>
               <select
                 id='city-filter'
                 value={selectedCity}
@@ -286,8 +289,8 @@ const Community = () => {
         </div>
 
         <div className='grid gap-6 md:grid-cols-1 lg:grid-cols-2'>
-          {filteredCommunities.map((community, index) => (
-            <div key={index} className='group relative h-full'>
+          {filteredCommunities.map((community) => (
+            <div key={community.website ?? community.name} className='group relative h-full'>
               <CommunityCard className='h-full' {...community} />
             </div>
           ))}

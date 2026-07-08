@@ -7,7 +7,7 @@ interface PushSubscribeProps {
 }
 
 const PushSubscribe: React.FC<PushSubscribeProps> = ({ className = '' }) => {
-  const [isSupported, setIsSupported] = useState(false);
+  const [isSupported, setIsSupported] = useState(true);
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [showPrompt, setShowPrompt] = useState(false);

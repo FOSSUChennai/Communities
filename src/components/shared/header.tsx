@@ -7,7 +7,7 @@ import Logo from '../../../public/logo.webp';
 import Icon from '../../app/favicon.ico';
 import { RssSimple } from '@phosphor-icons/react';
 
-export default function Header() {
+export default function Header({ githubStars = null }: { githubStars?: number | null }) {
   return (
     <nav className='flex w-full items-center justify-between bg-[#fafafa] px-4 py-4 text-black md:px-8 lg:px-16'>
       <Link href='/' className='flex h-full items-center text-xl font-semibold'>
@@ -33,7 +33,7 @@ export default function Header() {
         <span className='hidden sm:flex'>
           <PushSubscribe />
         </span>
-        <GitHubButton />
+        <GitHubButton initialStars={githubStars} />
         <Link
           href='/rss'
           className='inline-flex items-center rounded-lg px-4 py-2 text-sm text-black shadow transition duration-200 hover:text-gray-700'

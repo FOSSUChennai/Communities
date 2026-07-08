@@ -20,7 +20,9 @@ const GitHubButton = ({ initialStars = null }: { initialStars?: number | null })
         throw new Error('Failed to fetch repository data');
       }
       const data = await response.json();
-      setStarCount(data.stargazers_count);
+      if (typeof data.stargazers_count === 'number') {
+        setStarCount(data.stargazers_count);
+      }
       setIsLoading(false);
     } catch (error) {
       console.error('Error fetching star count:', error);
@@ -39,15 +41,19 @@ const GitHubButton = ({ initialStars = null }: { initialStars?: number | null })
       <span className='hidden text-sm font-medium sm:inline' style={{ minWidth: '120px' }}>
         {isLoading ? (
           <span className='inline-block h-4 w-full animate-pulse rounded bg-gray-200'></span>
-        ) : (
+        ) : stars !== null ? (
           `Contribute ${stars} ⭐`
+        ) : (
+          'Contribute ⭐'
         )}
       </span>
       <span className='text-sm font-medium sm:hidden' style={{ minWidth: '48px' }}>
         {isLoading ? (
           <span className='inline-block h-4 w-full animate-pulse rounded bg-gray-200'></span>
-        ) : (
+        ) : stars !== null ? (
           `${stars} ⭐`
+        ) : (
+          '⭐'
         )}
       </span>
     </a>

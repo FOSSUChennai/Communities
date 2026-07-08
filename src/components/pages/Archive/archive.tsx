@@ -113,9 +113,9 @@ const Archive = ({ initialEvents = [] }: { initialEvents?: Event[] }) => {
 
         <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3'>
           {pastEventsList.length > 0 ? (
-            pastEventsList.map((event, index) => (
+            pastEventsList.map((event) => (
               <EventCard
-                key={index}
+                key={event.eventLink || `${event.eventDate}-${event.eventName}`}
                 communityName={event.communityName}
                 location={event.location}
                 title={event.eventName}

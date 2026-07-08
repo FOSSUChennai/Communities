@@ -18,6 +18,20 @@ type Event = {
   };
 };
 
+function isValidEventArray(data: unknown): data is Event[] {
+  return (
+    Array.isArray(data) &&
+    data.every(
+      (item) =>
+        item &&
+        typeof item === 'object' &&
+        typeof (item as Event).eventName === 'string' &&
+        typeof (item as Event).eventDate === 'string' &&
+        typeof (item as Event).eventVenue === 'string'
+    )
+  );
+}
+
 async function getPastEvents(): Promise<Event[]> {
   if (process.env.NODE_ENV === 'development') {
     return pastEvents as Event[];
@@ -26,12 +40,13 @@ async function getPastEvents(): Promise<Event[]> {
   try {
     const response = await fetch(
       'https://raw.githubusercontent.com/FOSSUChennai/Communities/refs/heads/main/src/data/pastevents.json',
-      { next: { revalidate: 3600 } }
+      { next: { revalidate: 3600 }, signal: AbortSignal.timeout(5000) }
     );
     if (!response.ok) {
       return pastEvents as Event[];
     }
-    return (await response.json()) as Event[];
+    const data = await response.json();
+    return isValidEventArray(data) ? data : (pastEvents as Event[]);
   } catch (error) {
     console.error('Error fetching past events:', error);
     return pastEvents as Event[];

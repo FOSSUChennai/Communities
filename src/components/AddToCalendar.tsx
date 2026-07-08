@@ -29,9 +29,18 @@ const AddToCalendar: React.FC<AddToCalendarProps> = ({
     return updatedDate;
   };
 
+  const parseLocalDate = (value: string): Date => {
+    const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(value.trim());
+    if (match) {
+      const [, year, month, day] = match;
+      return new Date(Number(year), Number(month) - 1, Number(day));
+    }
+    return new Date(value);
+  };
+
   const getCalendarUrl = (): string => {
-    const startDate = new Date(eventDate);
-    const inclusiveEndDate = eventEndDate ? new Date(eventEndDate) : startDate;
+    const startDate = parseLocalDate(eventDate);
+    const inclusiveEndDate = eventEndDate ? parseLocalDate(eventEndDate) : startDate;
     const exclusiveEndDate = addDays(inclusiveEndDate, 1);
 
     const params = new URLSearchParams({

@@ -109,11 +109,7 @@ const EventCard: React.FC<EventCardProps> = ({
   };
 
   const validateAndFormatVenue = (venue: string): string => {
-    return venue
-      .trim()
-      .split(' ')
-      .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
-      .join(' ');
+    return venue.trim();
   };
 
   const formattedDate = endDate && endDate !== date ? `${date} to ${endDate}` : date;
@@ -163,17 +159,23 @@ const EventCard: React.FC<EventCardProps> = ({
               </div>
             )}
             {alert && (
-              <div ref={alertContainerRef} className='relative'>
+              <div
+                ref={alertContainerRef}
+                className='relative'
+                onMouseEnter={() => setShowAlert(true)}
+                onMouseLeave={() => setShowAlert(false)}
+              >
                 <button
                   onClick={(e) => {
                     e.preventDefault();
                     e.stopPropagation();
                     setShowAlert(!showAlert);
                   }}
-                  onMouseEnter={() => setShowAlert(true)}
-                  onMouseLeave={() => setShowAlert(false)}
+                  onFocus={() => setShowAlert(true)}
+                  onBlur={() => setShowAlert(false)}
                   className='relative rounded-full bg-yellow-400 p-1.5 text-yellow-900 shadow-md transition-colors hover:bg-yellow-500'
                   aria-label='Event alert'
+                  aria-expanded={showAlert}
                 >
                   <Warning size={16} weight='fill' />
                 </button>

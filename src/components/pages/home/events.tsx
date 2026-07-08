@@ -46,13 +46,16 @@ const Events = () => {
           if (json) {
             setEvents(json);
           }
+        })
+        .catch(() => {
+          setEvents(eventsJson as Event[]);
         });
     } else {
       setEvents(eventsJson as Event[]);
     }
   }, []);
 
-  const sortedEvents = events.sort(
+  const sortedEvents = [...events].sort(
     (a, b) => new Date(a.eventDate).getTime() - new Date(b.eventDate).getTime()
   );
 
@@ -79,7 +82,7 @@ const Events = () => {
   const renderEventCards = (eventList: Event[]) =>
     eventList.map((event, index) => (
       <motion.div
-        key={index}
+        key={event.eventLink || `${event.eventDate}-${event.eventName}`}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: index * 0.1 }}

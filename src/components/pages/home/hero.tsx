@@ -13,8 +13,7 @@ const Hero = () => {
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{
           opacity: 1,
-          scale: 1,
-          filter: ['blur(140px)', 'blur(200px)']
+          scale: 1
         }}
         transition={{
           duration: 2,

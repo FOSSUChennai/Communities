@@ -27,14 +27,14 @@ const CallToAction = () => {
             <h3 className='text-2xl font-semibold text-black md:text-xl'>
               Share it to help others find and join!
             </h3>
-            <p className='text-md leading-relaxed text-white/80'>
+            <p className='text-base leading-relaxed text-white/80'>
               Add your event to our list and be a part of the growing tech community.
             </p>
           </div>
 
           <div className='mt-8 flex flex-wrap gap-6'>
             <button
-              className='text-md rounded-lg bg-black px-8 py-4 font-semibold text-white transition-all duration-300 hover:scale-105 hover:bg-gray-900 focus:ring focus:ring-gray-400/40 active:scale-95'
+              className='rounded-lg bg-black px-8 py-4 text-base font-semibold text-white transition-all duration-300 hover:scale-105 hover:bg-gray-900 focus:ring focus:ring-gray-400/40 active:scale-95'
               onClick={() =>
                 window.open(
                   'https://github.com/FOSSUChennai/Communities/blob/main/.github/CONTRIBUTING.md'

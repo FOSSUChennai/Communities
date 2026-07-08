@@ -71,7 +71,8 @@ export const viewport: Viewport = {
 async function getGitHubStars(): Promise<number | null> {
   try {
     const response = await fetch('https://api.github.com/repos/fossuchennai/communities', {
-      next: { revalidate: 3600 }
+      next: { revalidate: 3600 },
+      signal: AbortSignal.timeout(5000)
     });
     if (!response.ok) {
       return null;

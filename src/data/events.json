@@ -734,5 +734,20 @@
     "location": "Chennai",
     "communityName": "Tech4Good Community",
     "communityLogo": "https://podu.pics/LFmvh1XKaL"
+  },
+  {
+    "eventName": "Into the Void 2.0",
+    "eventDescription": "A national-level Capture the Flag (CTF) competition with online prelims and offline grand finals, challenging participants across diverse cybersecurity domains.",
+    "eventDate": "2026-07-18",
+    "eventTime": "09:00",
+    "eventVenue": "Chennai Institute of Technology, Sarathy Nagar, Kundrathur, Chennai, Tamil Nadu 600069",
+    "eventLink": "https://void.exploitx.org",
+    "location": "Chennai",
+    "communityName": "ExploitX",
+    "communityLogo": "https://podu.pics/W5QuJhfjne",
+    "alert": {
+      "message": "Prelims: 18 July 2026 | 12 Hours | Online &  Finals: 30-31 July 2026 | 24 Hours | Offline at CIT Chennai",
+      "type": "general"
+    }
   }
 ]

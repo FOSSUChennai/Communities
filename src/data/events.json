@@ -734,5 +734,16 @@
     "location": "Chennai",
     "communityName": "Tech4Good Community",
     "communityLogo": "https://podu.pics/LFmvh1XKaL"
+  },
+  {
+    "eventName": "Hands-On: Build Agentic Workflows and Searchable Apps with Elasticsearch, Jina, and Agent-to-Agent Communication",
+    "eventDescription": "In this hands-on, code-along workshop, you'll combine A2A (Agent-to-Agent) protocol, Jina Embeddings, and Elastic Agent Builder to create agentic workflows that run on top of Elasticsearch. Step by step, You'll turn your data into searchable vectors, wire agents together, and ship a working application by the end of the session.",
+    "eventDate": "2026-07-08",
+    "eventTime": "10:00",
+    "eventVenue": "SQ1 Security Technology Private Limited: 2nd Floor Block B, International Tech Park, Futura Tech Park, Rajiv Gandhi Salai, OMR, Sholinganallur, Chennai, Tamil Nadu 600119",
+    "eventLink": "https://luma.com/you-x2s5",
+    "location": "Chennai",
+    "communityName": "Elastic Chennai User Group",
+    "communityLogo": "https://i.ibb.co/XkLjmzG5/Chennai-Badge-Template.png"
   }
 ]

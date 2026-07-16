@@ -736,6 +736,21 @@
     "communityLogo": "https://podu.pics/LFmvh1XKaL"
   },
   {
+    "eventName": "Into the Void 2.0",
+    "eventDescription": "A national-level Capture the Flag (CTF) competition with online prelims and offline grand finals, challenging participants across diverse cybersecurity domains.",
+    "eventDate": "2026-07-30",
+    "eventTime": "09:00",
+    "eventVenue": "Chennai Institute of Technology, Sarathy Nagar, Kundrathur, Chennai, Tamil Nadu 600069",
+    "eventLink": "https://void.exploitx.org",
+    "location": "Chennai",
+    "communityName": "ExploitX",
+    "communityLogo": "https://podu.pics/W5QuJhfjne",
+    "alert": {
+      "message": "Prelims: 18 July 2026 | 12 Hours | Online &  Finals: 30-31 July 2026 | 24 Hours | Offline at CIT Chennai",
+      "type": "general"
+    }
+  },
+    {
     "eventName": "Hands-On: Build Agentic Workflows and Searchable Apps with Elasticsearch, Jina, and Agent-to-Agent Communication",
     "eventDescription": "In this hands-on, code-along workshop, you'll combine A2A (Agent-to-Agent) protocol, Jina Embeddings, and Elastic Agent Builder to create agentic workflows that run on top of Elasticsearch. Step by step, You'll turn your data into searchable vectors, wire agents together, and ship a working application by the end of the session.",
     "eventDate": "2026-08-08",
@@ -745,5 +760,16 @@
     "location": "Chennai",
     "communityName": "Elastic Chennai User Group",
     "communityLogo": "https://i.ibb.co/XkLjmzG5/Chennai-Badge-Template.png"
+  },
+    {
+    "eventName": "FOSS United Chennai X From Dev to Ops",
+    "eventDescription": "FOSS United Chennai Monthly meetup X From Dev to Ops - August 2026",
+    "eventDate": "2026-08-01",
+    "eventTime": "9:00",
+    "eventVenue": "Ideas2IT Technology Services Private Limited",
+    "eventLink": "https://fossunited.org/c/chennai/august-26",
+    "location": "Chennai",
+    "communityName": "FOSS United Chennai",
+    "communityLogo": "https://fossunited.org/files/Foss%20United%20Logo%20Black.svg"
   }
 ]

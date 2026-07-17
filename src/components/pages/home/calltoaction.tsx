@@ -34,6 +34,7 @@ const CallToAction = () => {
               href='https://github.com/fossuchennai/communities/blob/main/CONTRIBUTING.md'
               target='_blank'
               rel='noopener noreferrer'
+              rel='noopener noreferrer'
               aria-label='Open contribution guide for submitting tech events'
               className='rounded-lg bg-black px-6 py-3 text-base font-medium text-white transition-all duration-300 hover:scale-105 hover:bg-gray-900 focus:ring focus:ring-gray-400/40 active:scale-95'
             >

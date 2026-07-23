@@ -486,8 +486,8 @@
     "alert": {
       "message": "Limited seats available. Register early.",
       "type": "general"
-    }  
-  },  
+    }
+  },
   {
     "eventName": "CodeSapiens × She Builds Chennai - Women in Tech March Meetup",
     "eventDescription": "CodeSapiens × She Builds Chennai March Meetup celebrating Women in Tech. Connect, learn, and grow with women developers through real ideas, skills, and collaboration.",
@@ -537,7 +537,7 @@
       "type": "general"
     }
   },
-    {
+  {
     "eventName": "Build2Learn Meetup #35",
     "eventDescription": "Welcome to build2learn - Where Innovation Meets Community",
     "eventDate": "2026-04-11",
@@ -549,5 +549,28 @@
     "location": "Chennai",
     "communityName": "Build2Learn",
     "communityLogo": "https://i.ibb.co/CBsgh43/bxOxo5O.png"
+  },
+  {
+    "eventName": "Chennaipy - July Meetup",
+
+    "eventDescription": "An Afternoon with Chennai's Own Python Community",
+
+    "eventDate": "2026-07-25",
+
+    "eventTime": "15:00",
+
+    "eventEndDate": "2026-07-25",
+
+    "eventEndTime": "18:00",
+
+    "eventVenue": "2nd Floor, Ragula Tech Park, Type I, I/16, Dr. VSI Estate (Phase 1, Thiruvanmiyur, Chennai, Tamil Nadu 600041",
+
+    "eventLink": "https://www.meetup.com/chennaipy/events/315709344/",
+
+    "location": "Chennai",
+
+    "communityName": "Chennaipy",
+
+    "communityLogo": "https://podu.pics/1bqCHXuxnY"
   }
 ]

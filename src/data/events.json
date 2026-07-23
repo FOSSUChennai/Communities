@@ -750,7 +750,7 @@
       "type": "general"
     }
   },
-    {
+  {
     "eventName": "Hands-On: Build Agentic Workflows and Searchable Apps with Elasticsearch, Jina, and Agent-to-Agent Communication",
     "eventDescription": "In this hands-on, code-along workshop, you'll combine A2A (Agent-to-Agent) protocol, Jina Embeddings, and Elastic Agent Builder to create agentic workflows that run on top of Elasticsearch. Step by step, You'll turn your data into searchable vectors, wire agents together, and ship a working application by the end of the session.",
     "eventDate": "2026-08-08",
@@ -761,7 +761,7 @@
     "communityName": "Elastic Chennai User Group",
     "communityLogo": "https://i.ibb.co/XkLjmzG5/Chennai-Badge-Template.png"
   },
-    {
+  {
     "eventName": "FOSS United Chennai X From Dev to Ops",
     "eventDescription": "FOSS United Chennai Monthly meetup X From Dev to Ops - August 2026",
     "eventDate": "2026-08-01",
@@ -771,5 +771,18 @@
     "location": "Chennai",
     "communityName": "FOSS United Chennai",
     "communityLogo": "https://fossunited.org/files/Foss%20United%20Logo%20Black.svg"
+  },
+  {
+    "eventName": "Chennaipy - July Meetup",
+    "eventDescription": "An Afternoon with Chennai's Own Python Community",
+    "eventDate": "2026-07-25",
+    "eventTime": "15:00",
+    "eventEndDate": "2026-07-25",
+    "eventEndTime": "18:00",
+    "eventVenue": "Zilogic Systems Pvt Ltd - Block III, 2nd Floor, Ragula Tech Park, Type I, I/16, Dr. VSI Estate (Phase 1), Thiruvanmiyur, Chennai, Tamil Nadu 600041",
+    "eventLink": "https://www.meetup.com/chennaipy/events/315709344/",
+    "location": "Chennai",
+    "communityName": "Chennaipy",
+    "communityLogo": "https://podu.pics/1bqCHXuxnY"
   }
 ]

@@ -13,7 +13,7 @@ tamilNadu.tech serves as a bridge connecting various tech communities, events, a
 
 ## 💡 Looking to Add Your Event?
 
-Have an upcoming tech event in Tamil Nadu? Adding it is simple! Check out our [event submission guide](CONTRIBUTING.md#-adding-events-most-common-contribution) in the Contributing Guide. It's a straightforward process using a JSON template - no complex coding required!
+Have an upcoming tech event in Tamil Nadu? Adding it is simple! Check out our [event submission guide](.github/CONTRIBUTING.md#-adding-events-most-common-contribution) in the Contributing Guide. It's a straightforward process using a JSON template - no complex coding required!
 
 ## 💡 Why Contribute?
 
@@ -96,7 +96,7 @@ src/
 ## 🤝 Contributing
 
 We welcome contributions from everyone!
-Check out our [Contributing Guide](CONTRIBUTING.md) to get started.
+Check out our [Contributing Guide](.github/CONTRIBUTING.md) to get started.
 Keep an eye on the issues tab for a mix of beginner friendly issues aswell as game changing issues that you can help the community by contributing.
 
 Pointers to keep in mind is:

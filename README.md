@@ -121,12 +121,6 @@ This platform supports web push notifications for event updates:
   <img src="https://contrib.rocks/image?repo=fossuchennai/communities" />
 </a>
 
-## ⭐ Star History
-
-Go put a star 😤
-
-[![Star History Chart](https://api.star-history.com/svg?repos=FOSSUChennai/Communities&type=Date)](https://www.star-history.com/#FOSSUChennai/Communities&Date)
-
 ## 📝 License
 
 This project is licensed under the terms of the GPL 3.0 license.

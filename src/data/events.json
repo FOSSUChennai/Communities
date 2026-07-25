@@ -771,5 +771,16 @@
     "location": "Chennai",
     "communityName": "FOSS United Chennai",
     "communityLogo": "https://fossunited.org/files/Foss%20United%20Logo%20Black.svg"
+  },
+  {
+    "eventName": "0xCON",
+    "eventDescription": "0xCON Cyber Security Summit 2026 is ExploitX's flagship cybersecurity conference, bringing together industry experts, researchers, students, and security professionals for a day of insightful talks, hands-on workshops, Cyber Villages, and meaningful networking.",
+    "eventDate": "2026-08-01",
+    "eventTime": "09:00",
+    "eventVenue": "Chennai Institute of Technology, Sarathy Nagar, Kundrathur, Chennai, Tamil Nadu 600069",
+    "eventLink": "https://0xcon.exploitx.org",
+    "location": "Chennai",
+    "communityName": "ExploitX",
+    "communityLogo": "https://podu.pics/W5QuJhfjne"
   }
 ]

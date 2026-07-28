@@ -793,5 +793,17 @@
     "location": "Chennai",
     "communityName": "BrowserStack Software Testing and QA Meetup Group - Chennai",
     "communityLogo": "https://podu.pics/NWDcUQyZ9M"
+  },
+  {
+    "eventName": "Google I/O Extended Chennai 2026",
+    "eventDescription": "GDG Chennai and WTM Chennai bring Google I/O home! Join us for Google I/O Extended Chennai 2026 — a day of talks on Gemini 3.5, agentic AI, Android, and the biggest launches from I/O 2026, hosted in partnership with Ford.",
+    "eventDate": "2026-08-01",
+    "eventTime": "09:00",
+    "eventEndTime": "17:30",
+    "eventVenue": "Ford Global Technology & Business Center Sholinganallur, Chennai, TN 600119",
+    "eventLink": "https://gdg.community.dev/events/details/google-gdg-chennai-presents-google-io-extended-chennai-2026/",
+    "location": "Chennai",
+    "communityName": "Google Developer Group Chennai",
+    "communityLogo": "https://podu.pics/FacbnJ117W"
   }
 ]

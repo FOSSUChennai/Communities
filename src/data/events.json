@@ -793,7 +793,7 @@
     "location": "Chennai",
     "communityName": "BrowserStack Software Testing and QA Meetup Group - Chennai",
     "communityLogo": "https://podu.pics/NWDcUQyZ9M"
-  },
+  }
   {
     "eventName": "Google I/O Extended Chennai 2026",
     "eventDescription": "GDG Chennai and WTM Chennai bring Google I/O home! Join us for Google I/O Extended Chennai 2026 — a day of talks on Gemini 3.5, agentic AI, Android, and the biggest launches from I/O 2026, hosted in partnership with Ford.",
@@ -806,4 +806,16 @@
     "communityName": "Google Developer Group Chennai",
     "communityLogo": "https://podu.pics/FacbnJ117W"
   }
+  {
+    "eventName": "Typedcoders - 3.0",
+    "eventDescription": "TypedCoders Community Meetup – July Edition",
+    "eventDate": "2026-08-08",
+    "eventTime": "13:00",
+    "eventEndTime": "17:30",
+    "eventVenue": "Talentship - TSI Technologies Private Limited. 4th Floor, Prestige Cosmopolitan 38, Sardar Patel Rd, Little Mount, Guindy, Chennai, Greater Chennai, Tamil Nadu 600015",
+    "eventLink": "https://luma.com/f5lwl2zz?tk=rjAl9G",
+    "location": "Guindy, Chennai",
+    "communityName": "TypedCoders",
+    "communityLogo": "https://podu.pics/Y8Rx-umoz9"
+  },
 ]

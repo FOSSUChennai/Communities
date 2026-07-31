@@ -828,5 +828,17 @@
     "location": "Guindy, Chennai",
     "communityName": "TypedCoders",
     "communityLogo": "https://podu.pics/Y8Rx-umoz9"
+  },
+  {
+    "eventName": "ILUGC - August Meetup'26",
+    "eventDescription": "Indian Linux User Group Chennai - August Meetup'26",
+    "eventDate": "2026-08-08",
+    "eventTime": "15:00",
+    "eventEndTime": "17:00",
+    "eventVenue": "Classroom No.3, Aerospace Engineering, Indian Institute of Technology Madras, Chennai, Tamil Nadu 600036",
+    "eventLink": "https://www.meetup.com/ilug-c/events/315918644/?utm_medium=referral&utm_campaign=share-btn_savedevents_share_modal&utm_source=link&utm_version=v2&member_id=479864043",
+    "location": "Classroom No.3, Aerospace Engineering, Indian Institute of Technology Madras, Chennai, Tamil Nadu 600036",
+    "communityName": "ILUGC",
+    "communityLogo": "https://podu.pics/fhXzZRB-vP"
   }
 ]

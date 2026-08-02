@@ -840,5 +840,17 @@
     "location": "Classroom No.3, Aerospace Engineering, Indian Institute of Technology Madras, Chennai, Tamil Nadu 600036",
     "communityName": "ILUGC",
     "communityLogo": "https://podu.pics/fhXzZRB-vP"
+  },
+  {
+    "eventName": "From Copilot to Agentic Dev & .NET: The Azure AI Era | Skillup Tamilnadu Session 8",
+    "eventDescription": "This event is a Microsoft Azure AI-focused session in Chennai titled From Copilot to Agentic Dev & .NET, featuring expert talks on AI-driven development, Azure Foundry, and the future of .NET, open to developers across all technology backgrounds.",
+    "eventDate": "2026-08-08",
+    "eventTime": "09:30",
+    "eventEndTime": "13:30",
+    "eventVenue": "UPS India Technology Center",
+    "eventLink": "https://www.meetup.com/azure-developer-community-chennai/events/315532378/?eventOrigin=home_page_upcoming_events%24all",
+    "location": "UPS India Technology Center, One Paramount, Mount Poonamallee Rd, Porur, Chennai, Greater Chennai, Tamil Nadu 600116. (located in RMZ Software Park,Pvt Ltd.)",
+    "communityName": "Azure Developer Community Tamilnadu",
+    "communityLogo": "https://podu.pics/ib_DGjze85"
   }
 ]

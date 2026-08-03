@@ -21,6 +21,7 @@ type Event = {
     message: string;
     type?: 'postponed' | 'venue-change' | 'cancelled' | 'general';
   };
+  paid?: boolean;
 };
 
 type EventCardProps = {
@@ -39,6 +40,7 @@ type EventCardProps = {
     message: string;
     type?: 'postponed' | 'venue-change' | 'cancelled' | 'general';
   };
+  paid?: boolean;
 };
 
 const Events = () => {
@@ -79,7 +81,7 @@ const Events = () => {
   }, []);
 
   // sorts all events first rather than grouping into two types and then sorting
-  const sortedEvents = events.sort(
+  const sortedEvents = [...events].sort(
     (a, b) => new Date(a.eventDate).getTime() - new Date(b.eventDate).getTime()
   );
 
@@ -131,7 +133,8 @@ const Events = () => {
     link,
     logo,
     isMonthly,
-    alert
+    alert,
+    paid
   }) => {
     const [mousePosition, setMousePosition] = React.useState<{
       x: number;
@@ -322,6 +325,15 @@ const Events = () => {
               <span className={`rounded bg-blue-100 px-2 py-0.5 text-xs text-blue-800`}>
                 {formattedDate}
               </span>
+              {typeof paid === 'boolean' && (
+                <span
+                  className={`rounded px-2 py-0.5 text-xs ${
+                    paid ? 'bg-red-100 text-red-800' : 'bg-emerald-100 text-emerald-800'
+                  }`}
+                >
+                  {paid ? 'PAID' : 'FREE'}
+                </span>
+              )}
               <span className={`rounded bg-yellow-100 px-2 py-0.5 text-xs text-yellow-800`}>
                 {formattedTime}
               </span>
@@ -376,6 +388,7 @@ const Events = () => {
                 logo={event.communityLogo}
                 isMonthly={true}
                 alert={event.alert}
+                paid={event.paid}
               />
             ))
           ) : (
@@ -405,6 +418,7 @@ const Events = () => {
                 logo={event.communityLogo}
                 isMonthly={false}
                 alert={event.alert}
+                paid={event.paid}
               />
             ))
           ) : (

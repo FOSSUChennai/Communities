@@ -5,24 +5,7 @@ import { MapPin, Warning } from '@phosphor-icons/react';
 import EmptyEventCard from '../../no-events-card';
 import Image from 'next/image';
 import AddToCalendar from '@/components/AddToCalendar';
-
-type Event = {
-  communityName: string;
-  communityLogo: string;
-  eventName: string;
-  eventDate: string;
-  eventEndDate?: string;
-  eventVenue: string;
-  eventTime: string;
-  eventEndTime?: string;
-  eventLink: string;
-  location: string;
-  alert?: {
-    message: string;
-    type?: 'postponed' | 'venue-change' | 'cancelled' | 'general';
-  };
-  paid?: boolean;
-};
+import type { Event } from '@/types/event';
 
 type EventCardProps = {
   communityName: string;

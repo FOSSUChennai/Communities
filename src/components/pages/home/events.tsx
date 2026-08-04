@@ -45,15 +45,14 @@ const Events = () => {
   const [monthlyCardHeight, setMonthlyCardHeight] = useState<number>(0);
   const [upcomingCardHeight, setUpcomingCardHeight] = useState<number>(0);
   const [events, setEvents] = useState<Event[]>([]);
-  // Create a date object for start of today
+  const [filterLocation, setFilterLocation] = useState<string>('');
+
   const today = new Date();
   today.setHours(0, 0, 0, 0);
 
-  // Create a date object for end of today
   const endOfToday = new Date();
   endOfToday.setHours(23, 59, 59, 999);
 
-  // gets the events.json file from network so that there need not be a manual deploy for each event
   useEffect(() => {
     if (process.env.NODE_ENV !== 'development') {
       fetch(
@@ -78,7 +77,10 @@ const Events = () => {
     }
   }, []);
 
-  // sorts all events first rather than grouping into two types and then sorting
+  const matchesLocation = (event: Event) =>
+    filterLocation === '' ||
+    event.location.toLowerCase().includes(filterLocation.toLowerCase());
+
   const sortedEvents = events.sort(
     (a, b) => new Date(a.eventDate).getTime() - new Date(b.eventDate).getTime()
   );
@@ -91,15 +93,18 @@ const Events = () => {
     return (
       eventDate.getMonth() === today.getMonth() &&
       eventDate.getFullYear() === today.getFullYear() &&
-      eventEndDate >= today
+      eventEndDate >= today &&
+      matchesLocation(event)
     );
   });
 
   const upcomingEvents = sortedEvents.filter((event) => {
     const eventDate = new Date(event.eventDate);
     return (
-      eventDate > endOfToday && // Compare with end of today
-      (eventDate.getMonth() !== today.getMonth() || eventDate.getFullYear() !== today.getFullYear())
+      eventDate > endOfToday &&
+      (eventDate.getMonth() !== today.getMonth() ||
+        eventDate.getFullYear() !== today.getFullYear()) &&
+      matchesLocation(event)
     );
   });
 
@@ -131,7 +136,7 @@ const Events = () => {
     link,
     logo,
     isMonthly,
-    alert
+    alert,
   }) => {
     const [mousePosition, setMousePosition] = React.useState<{
       x: number;
@@ -175,12 +180,11 @@ const Events = () => {
       const rect = e.currentTarget.getBoundingClientRect();
       setMousePosition({
         x: e.clientX - rect.left,
-        y: e.clientY - rect.top
+        y: e.clientY - rect.top,
       });
     };
 
     const validateAndFormatVenue = (venue: string): string => {
-      // Trim extra spaces and convert to Proper Case
       return venue
         .trim()
         .split(' ')
@@ -209,7 +213,7 @@ const Events = () => {
               : 'none',
             maskImage: 'linear-gradient(#000 0 0)',
             maskComposite: 'exclude',
-            WebkitMaskComposite: 'xor'
+            WebkitMaskComposite: 'xor',
           }}
         />
         <div className='relative h-full rounded-lg border-2 border-[rgb(229,231,235)] bg-white p-4 shadow-sm transition-shadow hover:border-[rgb(255,255,255,0.5)] hover:shadow-md'>
@@ -218,7 +222,7 @@ const Events = () => {
             style={{
               background: mousePosition
                 ? `radial-gradient(300px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(74, 222, 128, 0.2), transparent 40%)`
-                : 'none'
+                : 'none',
             }}
           />
           <div className='relative flex flex-wrap items-center justify-between gap-2'>
@@ -238,7 +242,6 @@ const Events = () => {
                   </span>
                 </div>
               )}
-              {/* Alert Icon - positioned right next to community name badge */}
               {alert && (
                 <div ref={alertContainerRef} className='relative'>
                   <button
@@ -255,7 +258,6 @@ const Events = () => {
                     <Warning size={16} weight='fill' />
                   </button>
 
-                  {/* Alert Tooltip */}
                   {showAlert && (
                     <div
                       className={`absolute top-8 z-50 w-64 rounded-lg border-2 border-yellow-300 bg-yellow-50 p-3 shadow-lg ${
@@ -303,10 +305,10 @@ const Events = () => {
             aria-label={`View details for ${title} event`}
           >
             <h3
-              className={`mb-2 mt-3 text-xl font-medium text-black transition-all duration-300`}
+              className='mb-2 mt-3 text-xl font-medium text-black transition-all duration-300'
               style={{
                 height: `${isMonthly ? monthlyCardHeight : upcomingCardHeight}px`,
-                overflow: 'hidden'
+                overflow: 'hidden',
               }}
               title={title}
             >
@@ -316,13 +318,13 @@ const Events = () => {
 
           <div className='flex-row items-center text-sm text-gray-600'>
             <div className='flex flex-wrap items-center gap-2'>
-              <span className={`rounded bg-green-100 px-2 py-0.5 text-xs text-green-800`}>
+              <span className='rounded bg-green-100 px-2 py-0.5 text-xs text-green-800'>
                 {location}
               </span>
-              <span className={`rounded bg-blue-100 px-2 py-0.5 text-xs text-blue-800`}>
+              <span className='rounded bg-blue-100 px-2 py-0.5 text-xs text-blue-800'>
                 {formattedDate}
               </span>
-              <span className={`rounded bg-yellow-100 px-2 py-0.5 text-xs text-yellow-800`}>
+              <span className='rounded bg-yellow-100 px-2 py-0.5 text-xs text-yellow-800'>
                 {formattedTime}
               </span>
               <span className='shrink-0'>
@@ -356,9 +358,20 @@ const Events = () => {
   return (
     <main className='mx-4 rounded-xl bg-white p-6 md:mx-8 lg:mx-16'>
       <section>
-        <h2 className='mb-3 text-lg font-normal'>
-          <span className='text-[30px] font-semibold text-black'>this month</span>
-        </h2>
+        <div className='mb-4 flex items-center justify-between'>
+          <h2 className='text-lg font-normal'>
+            <span className='text-[30px] font-semibold text-black'>this month</span>
+          </h2>
+          <input
+            type='text'
+            aria-label='Filter events by location'
+            placeholder='Filter by location'
+            value={filterLocation}
+            onChange={(e) => setFilterLocation(e.target.value)}
+            className='w-full max-w-[200px] rounded-md border-2 border-[#28a745] p-2 transition-all focus:border-[#1e7e34] focus:outline-none'
+          />
+        </div>
+
         <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3'>
           {monthlyEvents.length > 0 ? (
             monthlyEvents.map((event, index) => (

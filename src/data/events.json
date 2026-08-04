@@ -857,12 +857,24 @@
     "eventName": "DevOps Community Meetup Aug 22",
     "eventDescription": "DevOps Community Meetup Aug 22 from Dev to Ops Community, Chennai",
     "eventDate": "2026-08-22",
-    "eventTime": "09:30",
-    "eventEndTime": "12:30",
+    "eventTime": "09:30 AM",
+    "eventEndTime": "12:30 PM",
     "eventVenue": "Chennai One IT SEZ 200 Feet Radial Rd, MCN Nagar Extension, Thoraipakkam, Chennai, Tamil Nadu 600097, India",
     "eventLink": "https://luma.com/xpsbal0x?tk=6AWSFw",
     "location": "Chennai One IT SEZ 200 Feet Radial Rd, MCN Nagar Extension, Thoraipakkam, Chennai, Tamil Nadu 600097, India",
     "communityName": "From-Dev-to-Ops",
     "communityLogo": "https://podu.pics/z0-yPO_KvJ"
+  },
+    {
+    "eventName": "August Meetup!",
+    "eventDescription": "August Meetup! from CodeOnJVM Chennai Community, Chennai",
+    "eventDate": "2026-08-15",
+    "eventTime": "09:00 AM",
+    "eventEndTime": "2:00 PM",
+    "eventVenue": "Contentstack India Pvt. Ltd.",
+    "eventLink": "https://luma.com/xpsbal0x?tk=6AWSFw",
+    "location": "5th Floor, WorkEZ, Helix.21, Guru Nanak College Rd, above West side, Indira Gandhi Nagar, Velachery, Chennai, Greater Chennai, Tamil Nadu 600042",
+    "communityName": "CodeonJVM Chennai",
+    "communityLogo": "https://podu.pics/r3R234UOLO"
   }
 ]

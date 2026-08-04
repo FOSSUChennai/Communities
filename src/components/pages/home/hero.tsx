@@ -8,6 +8,19 @@ import RocketUpdated from '../../../../public/rocket.webp';
 const Hero = () => {
   return (
     <div className='relative z-10 my-16 mb-48 flex items-start bg-[#fafafa] px-4 md:px-8 lg:px-16'>
+      <motion.div
+        className='absolute left-[15%] top-[10%] z-0 h-[350px] w-[350px] rounded-full bg-[#7eff5f]/75 blur-[140px] md:left-[18%] md:top-[7%] md:h-[406px] md:w-[406px] md:blur-[200px]'
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{
+          opacity: 1,
+          scale: 1
+        }}
+        transition={{
+          duration: 2,
+          ease: 'easeOut'
+        }}
+      />
+
       <div className='container relative mx-auto flex flex-col items-center justify-between px-4 text-center md:flex-row md:text-left'>
         <motion.div
           className='z-10 max-w-2xl'
@@ -36,6 +49,7 @@ const Hero = () => {
               meetup
             </motion.span>
           </h1>
+
           <motion.p
             className='mt-4 text-[20px] text-gray-600'
             initial={{ opacity: 0, y: 20 }}
@@ -45,9 +59,10 @@ const Hero = () => {
             meet. network. share
           </motion.p>
         </motion.div>
+
         <motion.div
           className='z-10'
-          initial={{ opacity: 0.1, x: 50 }} // ( why ) - this is for LCP making, 0 to 0.1 will treat the image as painted and won't go under repainting
+          initial={{ opacity: 0.1, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: 'easeOut' }}
         >
@@ -62,12 +77,6 @@ const Hero = () => {
           />
         </motion.div>
       </div>
-      <motion.div
-        className='absolute left-[15%] top-[10%] z-0 h-[350px] w-[350px] rounded-full bg-[#7eff5f]/75 blur-[140px] md:left-[18%] md:top-[7%] md:h-[406px] md:w-[406px] md:blur-[200px]'
-        initial={{ opacity: 0, scale: 0.5 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1, ease: 'easeOut' }}
-      />
     </div>
   );
 };

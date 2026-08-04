@@ -68,12 +68,30 @@ export const viewport: Viewport = {
   initialScale: 1
 };
 
-export default function RootLayout({
+async function getGitHubStars(): Promise<number | null> {
+  try {
+    const response = await fetch('https://api.github.com/repos/fossuchennai/communities', {
+      next: { revalidate: 3600 },
+      signal: AbortSignal.timeout(5000)
+    });
+    if (!response.ok) {
+      return null;
+    }
+    const data = await response.json();
+    return typeof data.stargazers_count === 'number' ? data.stargazers_count : null;
+  } catch (error) {
+    console.error('Error fetching star count:', error);
+    return null;
+  }
+}
+
+export default async function RootLayout({
   children
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   const webId = process.env.UMAMI_ANALYTICS_ID;
+  const githubStars = await getGitHubStars();
   return (
     <html lang='en'>
       {/* removed the head tag, next will add it automatically ( LCP from above 2.5 to below 2.5  ) - adding head manually will be like overriding or bypassing the optimized head from next */}
@@ -81,7 +99,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} mx-auto max-w-[1120px] bg-[#fafafa] antialiased`}
       >
-        <Header />
+        <Header githubStars={githubStars} />
         {children}
         <Footer />
       </body>

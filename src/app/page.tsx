@@ -1,5 +1,5 @@
 import dynamic from 'next/dynamic';
-import CallToAction from '../components/pages/home/calltoaction';
+import CallToAction from '../components/pages/home/cta';
 import Events from '../components/pages/home/events';
 
 const Hero = dynamic(() => import('../components/pages/home/hero'), {});

@@ -7,7 +7,7 @@ interface PushSubscribeProps {
 }
 
 const PushSubscribe: React.FC<PushSubscribeProps> = ({ className = '' }) => {
-  const [isSupported, setIsSupported] = useState(false);
+  const [isSupported, setIsSupported] = useState(true);
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [showPrompt, setShowPrompt] = useState(false);
@@ -33,8 +33,11 @@ const PushSubscribe: React.FC<PushSubscribeProps> = ({ className = '' }) => {
     };
 
     if (typeof window !== 'undefined') {
-      setIsSupported('serviceWorker' in navigator && 'PushManager' in window);
-      checkSubscriptionStatus();
+      const supported = 'serviceWorker' in navigator && 'PushManager' in window;
+      setIsSupported(supported);
+      if (supported) {
+        checkSubscriptionStatus();
+      }
 
       // Show prompt after 5 seconds delay if not subscribed
       const showTimer = setTimeout(() => {

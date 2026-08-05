@@ -65,7 +65,7 @@ export async function POST(request: NextRequest) {
     const githubResponse = await dispatchToGitHub(subscriptionPayload);
 
     if (!githubResponse.ok) {
-      console.error('GitHub dispatch failed:', await githubResponse.text());
+      console.error('GitHub dispatch failed:', await githubResponse.text()); // ← already here
       return NextResponse.json({ error: 'Failed to save subscription' }, { status: 500 });
     }
 

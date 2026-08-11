@@ -876,5 +876,17 @@
     "location": "Velachery, Chennai",
     "communityName": "CodeonJVM Chennai",
     "communityLogo": "https://podu.pics/r3R234UOLO"
-  }
+  },
+  {
+    "eventName": "Build2Learn #37 Meetup",
+    "eventDescription": "Build2Learn where innovation meets community - August edition",
+    "eventDate": "2026-08-29",
+    "eventTime": "09:30 AM",
+    "eventEndTime": "2:00 PM",
+    "eventVenue": "Grootan Technologies Pvt Ltd, 1st Floor, Bhaggyam Yukti, 87, Industrial Estate, Perungudi, Chennai, Tamil Nadu 600096",
+    "eventLink": "https://events.build2learn.in/",
+    "location": "Perungudi, Chennai",
+    "communityName": "Build2Learn",
+    "communityLogo": "https://www.podu.pics/ddT2CTFU_t"
+    }
 ]

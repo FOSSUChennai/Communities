@@ -900,5 +900,17 @@
     "location": "Chennai",
     "communityName": "CodeSapiens",
     "communityLogo": "https://podu.pics/5UwCWhjNXF"
+  },
+  {
+    "eventName": "Flutter South India 2026",
+    "eventDescription": "A community-led day for Flutter and Dart developers, happening 10 October 2026 in Chennai.",
+    "eventDate": "2026-10-10",
+    "eventTime": "09:00",
+    "eventVenue": "Venue TBA, Chennai",
+    "eventLink": "https://southindia.nammaflutter.com/",
+    "location": "Chennai",
+    "communityName": "Namma Flutter",
+    "communityLogo": "https://avatars.githubusercontent.com/u/176333249",
+    "paid": true
   }
 ]

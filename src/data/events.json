@@ -924,5 +924,17 @@
     "communityName": "Namma Flutter",
     "communityLogo": "https://avatars.githubusercontent.com/u/176333249",
     "paid": true
+  },
+  {
+    "eventName": "Figma Make-a-thon Chennai 2026",
+    "eventDescription": "A 75-minute, non-competitive build session using Figma Make. Participants use two random words and free AI credits to prompt a browser-ready app with mentor support.",
+    "eventDate": "2026-08-29",
+    "eventTime": "09:30",
+    "eventEndTime": "12:30",
+    "eventVenue": "Zifo Technologie 6th Floor, Block 2, DLF SEZ IT Park, 1/124, Mount Poonamallee Road, Ramapuram Chennai 600089",
+    "eventLink": "https://friends.figma.com/events/details/figma-chennai-presents-figma-make-a-thon-chennai-2026/",
+    "location": "D.L.F Cyber City (DLF IT Park) Chennai",
+    "communityName": "Friends of Figma",
+    "communityLogo": "https://podu.pics/8Xan9cRTQL"
   }
 ]

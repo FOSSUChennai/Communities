@@ -938,9 +938,9 @@
     "communityLogo": "https://podu.pics/8Xan9cRTQL"
   },
   {
-    "eventName": "Devops Community Meetup Sep 19",
-    "eventDescription": "DevOps Community Meetup sep 19 from Dev to Ops Community, Chennai",
-    "eventDate": "2026-09-19",
+    "eventName": "From Dev to ops Sep Community Meet",
+    "eventDescription": "A chennai born community for DevOps, SRE, Platform Engineering, and Observability.",
+    "eventDate": "2026-09-26",
     "eventTime": "09:30",
     "eventEndTime": "12:30",
     "eventVenue": "Sopra Steria, G-2, Sipcot It Park, 2, Egattur, Tamil Nadu 603103",
@@ -962,10 +962,10 @@
   },
   {
     "eventName": "FOSS United Chennai September Meet",
-    "eventDescription": "FOSS United Chennai September Month Meetup on Sep 12",
-    "eventDate": "2026-09-12",
-    "eventTime": "09:00",
-    "eventEndTime": "12:30 PM",
+    "eventDescription": "Monthly foss united chennai meetup on sept 19th",
+    "eventDate": "2026-09-19",
+    "eventTime": "01:30 PM",
+    "eventEndTime": "05:30 PM",
     "eventVenue": "Ideas2IT Technology Services Private Limited,C50 & C51, Water Works Rd, SIDCO Industrial Estate, Guindy, Chennai, Tamil Nadu 600032",
     "eventLink": "https://fossunited.org/c/chennai/sept-26",
     "location": "Guindy, Chennai",

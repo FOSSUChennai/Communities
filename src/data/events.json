@@ -1019,5 +1019,17 @@
     "communityName": "Google Developer Group Chennai",
     "communityLogo": "https://i.ibb.co/ynkrJnD4/gdglogo-0229df09.png",
     "paid": true
+  },
+  {
+    "eventName": "OpenSearch × AAIF: Where Search Meets Agents",
+    "eventDescription": "OpenSearch and the Agentic AI Foundation are helping shape the future of how intelligent tools and AI agents are built, discovered, and scaled. Join us for an exciting community gathering featuring talks from hands-on practitioners, industry experts, and community members sharing their knowledge and real-world experiences",
+    "eventDate": "2026-09-12",
+    "eventTime": "10:00 AM",
+    "eventEndTime": "01:00 PM",
+    "eventVenue": "Freshworks, GLOBAL INFOCITY PARK, Perungudi, Chennai, Tamil Nadu 600096",
+    "eventLink": "https://www.meetup.com/opensearch-project-chennai/events/316386483/",
+    "location": "Perungudi,Chennai",
+    "communityName": "OpenSearch User Group Chennai",
+    "communityLogo": "https://res.cloudinary.com/dfhtr1rwo/image/upload/v1762066985/opensearch_logo_hg3k8s.png"
   }
 ]

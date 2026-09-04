@@ -1021,6 +1021,18 @@
     "paid": true
   },
   {
+    "eventName": "DATUM 2026: EARTHWISE",
+    "eventDescription": "​DATUM 2026: EARTHWISE is organised by the Centre for Analytics Excellence (CAE), Loyola Institute of Business Administration (LIBA), Chennai, in collaboration with Indian Data Club, with Codebasics as the Knowledge Partner and Chennai Data Circle as the Community Partner.",
+    "eventDate": "2026-09-12",
+    "eventTime": "8:30 AM",
+    "eventEndTime": "1:00 PM",
+    "eventVenue": "LIBA (Loyola Institute of Business Administration), Loyola College Campus, No: 1, Sterling Rd, Nungambakkam, Chennai, Tamil Nadu 600034",
+    "eventLink": "https://luma.com/sj2jfag6",
+    "location": "Loyola College Campus, Chennai",
+    "communityName": "Chennai Data Circle",
+    "communityLogo": "https://podu.pics/yPVWwz5Xyt"
+  },
+  {
     "eventName": "OpenSearch × AAIF: Where Search Meets Agents",
     "eventDescription": "OpenSearch and the Agentic AI Foundation are helping shape the future of how intelligent tools and AI agents are built, discovered, and scaled. Join us for an exciting community gathering featuring talks from hands-on practitioners, industry experts, and community members sharing their knowledge and real-world experiences",
     "eventDate": "2026-09-12",

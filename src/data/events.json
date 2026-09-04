@@ -918,7 +918,7 @@
     "eventDescription": "A community-led day for Flutter and Dart developers, happening 10 October 2026 in Chennai.",
     "eventDate": "2026-10-10",
     "eventTime": "09:00",
-    "eventVenue": "Venue TBA, Chennai",
+    "eventVenue": "Geetham Hall, SRM Institute of Science and Technology Ramapuram, Bharathi Salai, Ramapuram, Chennai - 600089",
     "eventLink": "https://southindia.nammaflutter.com/",
     "location": "Chennai",
     "communityName": "Namma Flutter",
@@ -983,5 +983,65 @@
     "location": "Thiruvanmiyur,Chennai",
     "communityName": "Notion Chennai",
     "communityLogo": "https://podu.pics/kp8FIr6Lnk"
+  },
+  {
+    "eventName": "Stack Flow@Chennai - Working Professional Meetup",
+    "eventDescription": "​Join StackFlow in Chennai, an exclusive HackBriven-hosted meetup exploring AI, AI Agents, DevOps, and Cloud Security. Engage with peers, gain insights from experts, and expand your network through focused technical sessions.",
+    "eventDate": "2026-09-20",
+    "eventTime": "10:00 AM",
+    "eventEndTime": "4:00 PM",
+    "eventVenue": "Ideas2IT Technology Services Private Limited,C50 & C51, Water Works Rd, Thiru Vi Ka Industrial Estate, SIDCO Industrial Estate, Guindy, Chennai, Tamil Nadu 600032",
+    "eventLink": "https://luma.com/06epsmno?tk=tCCBf7",
+    "location": "Guindy,Chennai",
+    "communityName": "HackBriven",
+    "communityLogo": "https://podu.pics/MXLhZmq7vc"
+  },
+  {
+    "eventName": "Chennai React Meetup #18",
+    "eventDescription": "Chennai React Meetup #18​",
+    "eventDate": "2026-09-19",
+    "eventTime": "01:30 PM",
+    "eventEndTime": "5:00 PM",
+    "eventVenue": "Walmart Global Tech WM Global Technology Services India Private Limited Tower 1, 1st, 2nd, 3rd & 4th floor International tech park, Survey no. 141, Radial IT Park Private Limited, 14A, 200 Feet Radial Rd, Zamin Pallavaram, Arulmurugan Nagar, Chennai, Tamil Nadu 600117, India",
+    "eventLink": "https://luma.com/49bulo2m?tk=ky7FrN",
+    "location": "Pallavaram,Chennai",
+    "communityName": "Chennai React!",
+    "communityLogo": "https://avatars.githubusercontent.com/u/175532518"
+  },
+  {
+    "eventName": "DevFest 2026 Chennai",
+    "eventDescription": "DevFest is one of the largest and most inclusive community-led technology conferences worldwide! Every year, Google Developer Groups host DevFests, where attendees explore developer tools, learn from Google Developer Experts, and connect with other tech enthusiasts from their local community.",
+    "eventDate": "2026-10-17",
+    "eventTime": "09:00",
+    "eventVenue": "IIT Madras Research Park, MGR Film City Road, Kanagam, Tharamani, Chennai – 600 113",
+    "eventLink": "https://devfest.gdgchennai.in/",
+    "location": "IITM Research Park,Chennai",
+    "communityName": "Google Developer Group Chennai",
+    "communityLogo": "https://i.ibb.co/ynkrJnD4/gdglogo-0229df09.png",
+    "paid": true
+  },
+  {
+    "eventName": "DATUM 2026: EARTHWISE",
+    "eventDescription": "​DATUM 2026: EARTHWISE is organised by the Centre for Analytics Excellence (CAE), Loyola Institute of Business Administration (LIBA), Chennai, in collaboration with Indian Data Club, with Codebasics as the Knowledge Partner and Chennai Data Circle as the Community Partner.",
+    "eventDate": "2026-09-12",
+    "eventTime": "8:30 AM",
+    "eventEndTime": "1:00 PM",
+    "eventVenue": "LIBA (Loyola Institute of Business Administration), Loyola College Campus, No: 1, Sterling Rd, Nungambakkam, Chennai, Tamil Nadu 600034",
+    "eventLink": "https://luma.com/sj2jfag6",
+    "location": "Loyola College Campus, Chennai",
+    "communityName": "Chennai Data Circle",
+    "communityLogo": "https://podu.pics/yPVWwz5Xyt"
+  },
+  {
+    "eventName": "OpenSearch × AAIF: Where Search Meets Agents",
+    "eventDescription": "OpenSearch and the Agentic AI Foundation are helping shape the future of how intelligent tools and AI agents are built, discovered, and scaled. Join us for an exciting community gathering featuring talks from hands-on practitioners, industry experts, and community members sharing their knowledge and real-world experiences",
+    "eventDate": "2026-09-12",
+    "eventTime": "10:00 AM",
+    "eventEndTime": "01:00 PM",
+    "eventVenue": "Freshworks, Vijay Shanthi Block-B, GLOBAL INFOCITY PARK, 40, MGR Main Rd, Kodandarama Nagar, Perungudi, Chennai, Tamil Nadu 600096",
+    "eventLink": "https://www.meetup.com/opensearch-project-chennai/events/316386483/",
+    "location": "Perungudi,Chennai",
+    "communityName": "OpenSearch User Group Chennai",
+    "communityLogo": "https://res.cloudinary.com/dfhtr1rwo/image/upload/v1762066985/opensearch_logo_hg3k8s.png"
   }
 ]

@@ -1055,5 +1055,41 @@
     "location": "Perungudi,Chennai",
     "communityName": "OpenSearch User Group Chennai",
     "communityLogo": "https://res.cloudinary.com/dfhtr1rwo/image/upload/v1762066985/opensearch_logo_hg3k8s.png"
+  },
+  {
+    "eventName": "AI, Work & Everything In Between",
+    "eventDescription": "A gathering for professionals curious about how AI is changing the way we work. Explore practical applications, challenges, and new perspectives.",
+    "eventDate": "2026-09-12",
+    "eventTime": "10:30 AM",
+    "eventEndTime": "01:00 PM",
+    "eventVenue": "To be announced",
+    "eventLink": "https://luma.com/2tgkan8m",
+    "location": "Chennai",
+    "communityName": "SheBuilds Chennai",
+    "communityLogo": "https://i.ibb.co/mCLbZ2Sb/shebuilds-logo.png"
+  },
+  {
+    "eventName": "ShePitch Conference",
+    "eventDescription": "A premier conference and pitch platform empowering women entrepreneurs and innovators to showcase ideas, gain mentorship, and connect with investors.",
+    "eventDate": "2026-09-19",
+    "eventTime": "09:00 AM",
+    "eventEndTime": "04:00 PM",
+    "eventVenue": "Jeppiaar Nagar, Rajiv Gandhi Salai, Kamaraj Nagar, Semmancheri, Chennai, Tamil Nadu 600119",
+    "eventLink": "https://www.shepitch.com/conference",
+    "location": "Jeppiaar University",
+    "communityName": "SheBuilds Chennai",
+    "communityLogo": "https://i.ibb.co/mCLbZ2Sb/shebuilds-logo.png"
+  },
+  {
+    "eventName": "SheBuilds Chennai October Meetup",
+    "eventDescription": "Connect, learn, and grow with women developers and tech enthusiasts. Collaborate, share ideas, and empower each other to innovate and lead.",
+    "eventDate": "2026-10-10",
+    "eventTime": "09:30 AM",
+    "eventEndTime": "01:00 PM",
+    "eventVenue": "6th & 7th Floor, No. 49, K.P, Natwest Viceroy, Velachery, Major Mukund Varadharajan Rd, Pallikaranai, Chennai, Tamil Nadu 600100",
+    "eventLink": "https://luma.com/sc9wpbri",
+    "location": "TechnoRUCS",
+    "communityName": "SheBuilds Chennai",
+    "communityLogo": "https://i.ibb.co/mCLbZ2Sb/shebuilds-logo.png"
   }
 ]

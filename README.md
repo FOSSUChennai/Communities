@@ -105,6 +105,7 @@ Pointers to keep in mind is:
 - if its a bug fix or a minor code change, please describe what your change does.
 - if its a feature request, please provide a detailed description and if UI feature, please do provide a mockup.
 - if updating events.json, please make sure you add the hostname for the image to next.config.ts file in the root directory.
+- PLEASE NO DARK THEME 😭
 
 ## 🔔 Push Notifications
 

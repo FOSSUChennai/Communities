@@ -1,4 +1,16 @@
 [
+   {
+    "eventName": "Build2Learn #38 Meetup",
+    "eventDescription": "Build2Learn where innovation meets community - September edition",
+    "eventDate": "2026-09-19",
+    "eventTime": "09:30 AM",
+    "eventEndTime": "2:00 PM",
+    "eventVenue": "Ideas2IT Technology Services, C50 & C51, Water Works Rd, Thiru Vi Ka Industrial Estate, SIDCO Industrial Estate, Guindy, Chennai, Tamil Nadu 600032",
+    "eventLink": "https://events.build2learn.in/",
+    "location": "Guindy, Chennai",
+    "communityName": "Build2Learn",
+    "communityLogo": "https://podu.pics/ddT2CTFU_t"
+  },
   {
     "eventName": "Linux & Omarchy Meetup - Chennai",
     "eventDescription": "A community-driven Linux & Omarchy meetup in Chennai for Linux users, FOSS enthusiasts, developers, and tinkerers to share setups, learn, and build together.",

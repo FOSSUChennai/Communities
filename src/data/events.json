@@ -1,5 +1,16 @@
 [
   {
+    "eventName": "AI in Action: RAG, Chatbots & Agents with MongoDB",
+    "eventDescription": "Join us for an exciting in-person meetup where we explore the RAG, Chatbots & Agents with MongoDB! Whether you're a developer, data enthusiast, or just curious about the intersection of AI and databases, this is the perfect place to learn, network, and grow.",
+    "eventDate": "2026-09-26",
+    "eventTime": "01:00 PM",
+    "eventVenue": "Zoominfo office, 11th Floor, A, GLOBAL INFOCITY PARK, Kodandarama Nagar, Perungudi, Chennai, Tamil Nadu 600096",
+    "eventLink": "https://www.meetup.com/mongodb-usergroup-chennai/events/316460911/",
+    "location": "Perungudi, Chennai",
+    "communityName": "MongoDB User Group Chennai",
+    "communityLogo": "https://i.ibb.co/MkmpSxgY/MugChn.png"
+  },
+  {
     "eventName": "Linux & Omarchy Meetup - Chennai",
     "eventDescription": "A community-driven Linux & Omarchy meetup in Chennai for Linux users, FOSS enthusiasts, developers, and tinkerers to share setups, learn, and build together.",
     "eventDate": "2026-10-03",

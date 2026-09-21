@@ -1,4 +1,16 @@
 [
+    {
+    "eventName": "Context Design: What Your AI Doesn't Know About Your Users",
+    "eventDescription": "This hands-on workshop teaches product teams how to use Context Design and MCP to turn user research into real-time constraints, preventing AI from generating generic screens and ensuring it designs for how actual users work. You can find more information from the provider's official resources.",
+    "eventDate": "2026-09-26",
+    "eventTime": "09:30",
+    "eventEndTime": "12:30",
+    "eventVenue": "Yuniq, TICEL Bio Park, Tharamani, Chennai",
+    "eventLink": "https://friends.figma.com/events/details/figma-chennai-presents-context-design-what-your-ai-doesnt-know-about-your-users/",
+    "location": "TICEL BIOPARK, Taramani",
+    "communityName": "Friends of Figma",
+    "communityLogo": "https://podu.pics/8Xan9cRTQL"
+  },
   {
     "eventName": "Build2Learn #38 Meetup",
     "eventDescription": "Build2Learn where innovation meets community - September edition",

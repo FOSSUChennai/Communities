@@ -1,5 +1,17 @@
 [
-    {
+  {
+    "eventName": "October Meetup: Tamilnadu Java User Group",
+    "eventDescription": "​We’re bringing together an exciting lineup of top-notch engineers and community speakers — from JVM engineers to AI engineers — for a full-day technical community meetup in Madurai!",
+    "eventDate": "2026-10-02",
+    "eventTime": "09:30 AM",
+    "eventEndTime": "05:00 PM",
+    "eventVenue": "Dot Com Infoway, I Floor, Vaigai Colony, Plot No. 3, 80 Feet Rd, opp. to Ambika Theatre, Anna Nagar, Madurai, Tamil Nadu 625020",
+    "eventLink": "https://luma.com/okjqahv6",
+    "location": "Madurai",
+    "communityName": "Tamilnadu Java User Group",
+    "communityLogo": "https://www.podu.pics/L3OUlKCN3b"
+  },
+  {
     "eventName": "Context Design: What Your AI Doesn't Know About Your Users",
     "eventDescription": "Hands-on workshop showing product teams how Context Design and MCP turn user research into real-time constraints for AI-powered interfaces.",
     "eventDate": "2026-09-26",

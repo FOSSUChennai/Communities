@@ -1,4 +1,16 @@
 [
+    {
+    "eventName": "Shipaton: Road to Devfest - Kotlin Edition",
+    "eventDescription": "​Shipaton is all about building and shipping real apps. The Chennai edition is a local, in-person opportunity to build alongside the community, collaborate with fellow developers, and turn your ideas into something you can actually demo.",
+    "eventDate": "2026-10-10",
+    "eventTime": "09:30",
+    "eventEndTime": "12:30",
+    "eventVenue": "TBA",
+    "eventLink": "https://luma.com/mprx0ocg",
+    "location": "TBA",
+    "communityName": "Kotlin User Group Chennai",
+    "communityLogo": "https://podu.pics/8Xan9cRTQL"
+  },
   {
     "eventName": "October Meetup: Tamilnadu Java User Group",
     "eventDescription": "​We’re bringing together an exciting lineup of top-notch engineers and community speakers — from JVM engineers to AI engineers — for a full-day technical community meetup in Madurai!",

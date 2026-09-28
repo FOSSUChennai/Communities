@@ -1,5 +1,17 @@
 [
   {
+    "eventName": "From Dev to Ops | Devops Community Meetup Oct 10",
+    "eventDescription": "From Dev to Ops is a community of devops practitioners who share raw, behind-the-scenes war room experiences — the outages, the quick fixes, the lessons learned, and the systems that broke in a fun, honest, and simple way.",
+    "eventDate": "2025-10-10",
+    "eventTime": "09:30 AM",
+    "eventEndTime": "12:30 PM",
+    "eventVenue": "Ideas2IT Technology Services Private Limited, C50 & C51, Water Works Rd, Thiru Vi Ka Industrial Estate, SIDCO Industrial Estate, Guindy, Chennai, Tamil Nadu 600032",
+    "eventLink": "https://luma.com/jnsu815e?tk=wqH1lf",
+    "location": "Guindy, Chennai",
+    "communityName": "FromDevtoOps",
+    "communityLogo": "https://podu.pics/z0-yPO_KvJ"
+  },
+  {
     "eventName": "October Meetup: Tamilnadu Java User Group",
     "eventDescription": "​We’re bringing together an exciting lineup of top-notch engineers and community speakers — from JVM engineers to AI engineers — for a full-day technical community meetup in Madurai!",
     "eventDate": "2026-10-02",

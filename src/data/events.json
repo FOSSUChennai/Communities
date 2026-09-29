@@ -1,5 +1,17 @@
 [
-    {
+  {
+    "eventName": "Cloud Native Chennai - October 2026 Meetup",
+    "eventDescription": "Join us for an in-person event to learn about Cloud Native projects and concepts. you will also have the opportunity to network with your peers, exchange best practices, and learn from real-world use cases. Whether you are just starting your cloud journey or you are already using Cloud Native, this event is a must-attend for anyone interested in unlocking the power of Cloud Native.",
+    "eventDate": "2026-10-10",
+    "eventTime": "02:00 PM",
+    "eventEndTime": "04:30 PM",
+    "eventVenue": "Workday India Private Ltd, Campus 1C, Millenia Business Park, Phase 1, MGR Salai St, Kandhanchavadi, Perungudi, Chennai, Tamil Nadu 600096, India",
+    "eventLink": "https://ocgroups.dev/cncf/group/96ne96f/event/pre83n8",
+    "location": "Perungudi, Chennai",
+    "communityName": "Cloud Native Chennai",
+    "communityLogo": "https://podu.pics/I9Qxx6UUPQ"
+  },
+  {
     "eventName": "Shipaton: Road to Devfest - Kotlin Edition",
     "eventDescription": "​Shipaton is all about building and shipping real apps. The Chennai edition is a local, in-person opportunity to build alongside the community, collaborate with fellow developers, and turn your ideas into something you can actually demo.",
     "eventDate": "2026-10-10",

@@ -104,7 +104,8 @@ Pointers to keep in mind is:
 - if its an UI change, please include Output image
 - if its a bug fix or a minor code change, please describe what your change does.
 - if its a feature request, please provide a detailed description and if UI feature, please do provide a mockup.
-- if updating events.json, please make sure you add the hostname for the image to next.config.ts file in the root directory.
+- if updating events.json, communities.json, or pastevents.json with a new image host, please add the hostname to next.config.ts in the root directory.
+- Friends of Figma Chennai and Coimbatore currently use the shared official Friends of Figma lockup because no chapter-specific asset is stored in this repository.
 - PLEASE NO DARK THEME 😭
 
 ## 🔔 Push Notifications

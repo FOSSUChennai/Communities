@@ -10,6 +10,7 @@ export interface Event {
   location: string;
   communityName: string;
   communityLogo: string;
+  paid?: boolean;
   alert?: {
     message: string;
     type?: 'postponed' | 'venue-change' | 'cancelled' | 'general';

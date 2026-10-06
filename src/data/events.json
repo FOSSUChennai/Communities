@@ -1,5 +1,123 @@
 [
   {
+    "eventName": "DevFest on Campus Chennai",
+    "eventDescription": "DevFest on Campus 2026 by GDG Chennai brings students an exciting tech event with a hackathon and a technical showcase. Teams will solve real-world problems in public services using AI solutions, fostering innovation and bridging student ideas with the tech community. Join to create impactful applications and engage with cutting-edge technology.",
+    "eventDate": "2026-10-10",
+    "eventTime": "10:00 AM",
+    "eventEndTime": "5:00 PM",
+    "eventVenue": "St Joseph's College Of Engineering, Off Old Mahabalipuram Road ,Chennai, TN 600119",
+    "eventLink": "https://gdg.community.dev/events/details/google-gdg-chennai-presents-devfest-on-campus-chennai/cohost-gdg-chennai",
+    "location": "Semmancheri, Chennai",
+    "communityName": "Google Developer Group Chennai",
+    "communityLogo": "https://i.ibb.co/ynkrJnD4/gdglogo-0229df09.png"
+  },
+  {
+    "eventName": "Cloud Native Chennai - October 2026 Meetup",
+    "eventDescription": "Join us for an in-person event to learn about Cloud Native projects and concepts. you will also have the opportunity to network with your peers, exchange best practices, and learn from real-world use cases. Whether you are just starting your cloud journey or you are already using Cloud Native, this event is a must-attend for anyone interested in unlocking the power of Cloud Native.",
+    "eventDate": "2026-10-10",
+    "eventTime": "02:00 PM",
+    "eventEndTime": "04:30 PM",
+    "eventVenue": "Workday India Private Ltd, Campus 1C, Millenia Business Park, Phase 1, MGR Salai St, Kandhanchavadi, Perungudi, Chennai, Tamil Nadu 600096, India",
+    "eventLink": "https://ocgroups.dev/cncf/group/96ne96f/event/pre83n8",
+    "location": "Perungudi, Chennai",
+    "communityName": "Cloud Native Chennai",
+    "communityLogo": "https://podu.pics/I9Qxx6UUPQ"
+  },
+  {
+    "eventName": "Shipaton: Road to Devfest - Kotlin Edition",
+    "eventDescription": "​Shipaton is all about building and shipping real apps. The Chennai edition is a local, in-person opportunity to build alongside the community, collaborate with fellow developers, and turn your ideas into something you can actually demo.",
+    "eventDate": "2026-10-10",
+    "eventTime": "09:30",
+    "eventEndTime": "12:30",
+    "eventVenue": "TBA",
+    "eventLink": "https://luma.com/mprx0ocg",
+    "location": "TBA",
+    "communityName": "Kotlin User Group Chennai",
+    "communityLogo": "https://podu.pics/QO0Jn0UEjB"
+  },
+  {
+    "eventName": "FromDevtoOps | DevOps Community Meetup Oct 10",
+    "eventDescription": "From Dev to Ops is a community of DevOps practitioners sharing raw war-room experiences, quick fixes, lessons learned, and broken systems in a fun, honest, and simple way.",
+    "eventDate": "2026-10-10",
+    "eventTime": "09:30 AM",
+    "eventEndTime": "12:30 PM",
+    "eventVenue": "Ideas2IT Technology Services Private Limited, C50 & C51, Water Works Rd, Thiru Vi Ka Industrial Estate, SIDCO Industrial Estate, Guindy, Chennai, Tamil Nadu 600032",
+    "eventLink": "https://luma.com/jnsu815e?tk=wqH1lf",
+    "location": "Guindy, Chennai",
+    "communityName": "FromDevtoOps",
+    "communityLogo": "https://podu.pics/z0-yPO_KvJ"
+  },
+  {
+    "eventName": "October Meetup: Tamilnadu Java User Group",
+    "eventDescription": "​We’re bringing together an exciting lineup of top-notch engineers and community speakers — from JVM engineers to AI engineers — for a full-day technical community meetup in Madurai!",
+    "eventDate": "2026-10-02",
+    "eventTime": "09:30 AM",
+    "eventEndTime": "05:00 PM",
+    "eventVenue": "Dot Com Infoway, I Floor, Vaigai Colony, Plot No. 3, 80 Feet Rd, opp. to Ambika Theatre, Anna Nagar, Madurai, Tamil Nadu 625020",
+    "eventLink": "https://luma.com/okjqahv6",
+    "location": "Madurai",
+    "communityName": "Tamilnadu Java User Group",
+    "communityLogo": "https://podu.pics/L3OUlKCN3b"
+  },
+  {
+    "eventName": "Context Design: What Your AI Doesn't Know About Your Users",
+    "eventDescription": "Hands-on workshop showing product teams how Context Design and MCP turn user research into real-time constraints for AI-powered interfaces.",
+    "eventDate": "2026-09-26",
+    "eventTime": "09:30",
+    "eventEndTime": "12:30",
+    "eventVenue": "Yuniq, TICEL Bio Park, Tharamani, Chennai",
+    "eventLink": "https://friends.figma.com/events/details/figma-chennai-presents-context-design-what-your-ai-doesnt-know-about-your-users/",
+    "location": "TICEL BIOPARK, Taramani",
+    "communityName": "Friends of Figma",
+    "communityLogo": "https://podu.pics/8Xan9cRTQL"
+  },
+  {
+    "eventName": "Build2Learn #38 Meetup",
+    "eventDescription": "Build2Learn where innovation meets community - September edition",
+    "eventDate": "2026-09-19",
+    "eventTime": "09:30 AM",
+    "eventEndTime": "2:00 PM",
+    "eventVenue": "Ideas2IT Technology Services, C50 & C51, Water Works Rd, Thiru Vi Ka Industrial Estate, SIDCO Industrial Estate, Guindy, Chennai, Tamil Nadu 600032",
+    "eventLink": "https://events.build2learn.in/",
+    "location": "Guindy, Chennai",
+    "communityName": "Build2Learn",
+    "communityLogo": "https://podu.pics/ddT2CTFU_t"
+  },
+  {  
+    "eventName": "AI in Action: RAG, Chatbots & Agents with MongoDB",
+    "eventDescription": "Join us for an exciting in-person meetup where we explore the RAG, Chatbots & Agents with MongoDB! Whether you're a developer, data enthusiast, or just curious about the intersection of AI and databases, this is the perfect place to learn, network, and grow.",
+    "eventDate": "2026-09-26",
+    "eventTime": "01:00 PM",
+    "eventVenue": "Zoominfo office, 11th Floor, A, GLOBAL INFOCITY PARK, Kodandarama Nagar, Perungudi, Chennai, Tamil Nadu 600096",
+    "eventLink": "https://www.meetup.com/mongodb-usergroup-chennai/events/316460911/",
+    "location": "Perungudi, Chennai",
+    "communityName": "MongoDB User Group Chennai",
+    "communityLogo": "https://i.ibb.co/MkmpSxgY/MugChn.png"
+  },
+  {
+    "eventName": "Linux & Omarchy Meetup - Chennai",
+    "eventDescription": "A community-driven Linux & Omarchy meetup in Chennai for Linux users, FOSS enthusiasts, developers, and tinkerers to share setups, learn, and build together.",
+    "eventDate": "2026-10-02",
+    "eventTime": "09:30 AM",
+    "eventEndTime": "12:30 PM",
+    "eventVenue": "Rotticious Cafe, 111, Thiruvanmiyur, beach, Kottivakkam, Chennai, Tamil Nadu 600041",
+    "eventLink": "https://luma.com/8oycaeov",
+    "location": "Thiruvanmiyur, Chennai",
+    "communityName": "Omarchy Chennai",
+    "communityLogo": "https://podu.pics/VlnW2bQwPX"
+  },
+  {
+    "eventName": "AI Careers Mixer: Chennai Edition!",
+    "eventDescription": "AI Careers Mixer - August 2",
+    "eventDate": "2026-08-01",
+    "eventTime": "13:00",
+    "eventVenue": "Perungudi, Chennai",
+    "eventLink": "https://www.goavo.ai/events/forms/fillup?id=6a61d1d7a7d095fcd981f354&utm_source=referral&utm_medium=personal_invite&utm_campaign=community_referral&utm_code=25a27701d29e",
+    "location": "Chennai",
+    "communityName": "DevRelSquad",
+    "communityLogo": "https://www.devrelsquad.com/assets/Black_Logo-D3q49o8f.svg"
+  },
+  {
     "eventName": "ILUGC Monthly Meet - November 8",
     "eventDescription": "ILUGC Monthly Meet - November 8",
     "eventDate": "2025-11-08",
@@ -36,6 +154,17 @@
       "message": "Event timing is changed from 2:00 PM to 1:30 PM",
       "type": "general"
     }
+  },
+  {
+    "eventName": "Digital Dreamers Den (D3) - Meetup #8",
+    "eventDescription": "Digital Dreamers Den (D3) is a vibrant tech community that brings together AI Full-Stack Developers to build the future. We host events, workshops, and networking opportunities that connect talented engineers with cutting-edge technology and industry leaders.",
+    "eventDate": "2026-07-04",
+    "eventTime": "13:30",
+    "eventVenue": "Freshworks, GLOBAL INFOCITY PARK, Perungudi, Chennai, Tamil Nadu 600096",
+    "eventLink": "https://luma.com/1h3k66yn",
+    "location": "Chennai",
+    "communityName": "Digital Dreamers Den (D3)",
+    "communityLogo": "https://podu.pics/K3Hbv3raG1"
   },
   {
     "eventName": "From Dev to Ops | Devops Community Meetup Nov 15",
@@ -210,8 +339,8 @@
     "eventVenue": "Rajalakshmi Engineering College",
     "eventLink": "https://luma.com/vs98di4e",
     "location": "Chennai",
-    "communityName": "Shebuilds Chennai",
-    "communityLogo": "https://i.ibb.co/mCLbZ2Sb/shebuilds-logo.png"
+    "communityName": "SheBuilds Chennai",
+    "communityLogo": "https://podu.pics/nn-IyxWRb8"
   },
   {
     "eventName": "The AI Connect (TAI) 3.0",
@@ -397,8 +526,8 @@
     "eventVenue": "Happyfox, Guindy",
     "eventLink": "https://luma.com/yn75k5kp",
     "location": "Chennai",
-    "communityName": "Shebuilds Chennai",
-    "communityLogo": "https://i.ibb.co/mCLbZ2Sb/shebuilds-logo.png"
+    "communityName": "SheBuilds Chennai",
+    "communityLogo": "https://podu.pics/nn-IyxWRb8"
   },
   {
     "eventName": "Java with Women☕️🧡",
@@ -534,8 +663,8 @@
     "eventVenue": "Mako IT Lab, 8th Floor, TICEL BIOPARK, TICEL Biopark Rd, Phase II, Tharamani, Chennai, Tamil Nadu 600113",
     "eventLink": "https://luma.com/g963zdlh",
     "location": "Chennai",
-    "communityName": "Shebuilds Chennai",
-    "communityLogo": "https://podu.pics/gqDU4H07VM",
+    "communityName": "SheBuilds Chennai",
+    "communityLogo": "https://podu.pics/nn-IyxWRb8",
     "alert": {
       "message": "Register early and secure your spots soon! Built by her. Backed by boldness.",
       "type": "general"
@@ -587,7 +716,7 @@
     "communityName": "Chennaidatacircle",
     "communityLogo": ""
   },
-    {
+  {
     "eventName": "SheBuilds Chennai May Meetup",
     "eventDescription": "For the women, by the women — fostering connection, learning, and growth in tech.",
     "eventDate": "2026-05-30",
@@ -595,8 +724,19 @@
     "eventVenue": "Yuniq(Tekclan Software Solutions PVT. LTD.), 4th Floor, PHASE-2, TICEL Biopark Rd, Tharamani, Chennai, Tamil Nadu 600113, India",
     "eventLink": "https://luma.com/bnaljef7",
     "location": "Chennai",
-    "communityName": "Shebuilds Chennai",
-    "communityLogo": "https://podu.pics/gqDU4H07VM"
+    "communityName": "SheBuilds Chennai",
+    "communityLogo": "https://podu.pics/nn-IyxWRb8"
+  },
+  {
+    "eventName": "GenAI + Agents with Elasticsearch",
+    "eventDescription": "This session explores observability for AI agents, including decision tracking, debugging, performance measurement, and real-world patterns for building reliable production-ready agentic systems with AI agents, LLMs, RAG, and search infrastructure.",
+    "eventDate": "2026-05-23",
+    "eventTime": "10:00",
+    "eventVenue": "SQ1 Security Technology Private Limited: 2nd Floor Block B, International Tech Park, Futura Tech Park, Rajiv Gandhi Salai, OMR, Sholinganallur, Chennai, Tamil Nadu 600119",
+    "eventLink": "https://luma.com/pp5u3zu3",
+    "location": "Chennai",
+    "communityName": "Elastic Chennai User Group",
+    "communityLogo": "https://i.ibb.co/XkLjmzG5/Chennai-Badge-Template.png"
   },
   {
      "eventName": "GenAI + Agents with Elasticsearch",
@@ -619,5 +759,456 @@
     "location": "Chennai",
     "communityName": "FOSS United Chennai",
     "communityLogo": "https://fossunited.org/files/Foss%20United%20Logo%20Black.svg"
+  },
+  {
+    "eventName": "JSLovers Chennai x MongoDB - Meetup #10",
+    "eventDescription": "JSLovers Chennai is back with meetup #10! Expect talks on JS, MongoDB, AI, learning, networking, and great community vibes. Don’t miss it on May 30th, 2026!",
+    "eventDate": "2026-05-30",
+    "eventTime": "14:00",
+    "eventVenue": "YuniQ, 4th Floor, TICEL BIOPARK, 5, CSIR Rd, Phase II, Tharamani, Chennai, Tamil Nadu 600113",
+    "eventLink": "https://luma.com/vvrilt96",
+    "location": "Chennai",
+    "communityName": "JSLovers Chennai",
+    "communityLogo": "https://i.ibb.co/My6JNtNx/jslovers-Logo.png"
+  },
+  {
+    "eventName": "Search Reimagined: AI, Speed & Reliability",
+    "eventDescription": "Explore the future of search with AI-powered capabilities, faster results, and reliable systems built for modern applications.",
+    "eventDate": "2026-06-20",
+    "eventTime": "10:00",
+    "eventVenue": "Genesys Cloud Services India Private Limited | Plot No.40, 7th Floor, Global Infocity Park, Block C, MGR, Anna Nedunchalai, Perungudi, Chennai, Tamil Nadu 600096",
+    "eventLink": "https://www.meetup.com/opensearch-project-chennai/events/315050068",
+    "location": "Chennai",
+    "communityName": "OpenSearch User Group Chennai",
+    "communityLogo": "https://res.cloudinary.com/dfhtr1rwo/image/upload/v1762066985/opensearch_logo_hg3k8s.png"
+  },
+  {
+    "eventName": "தமிழ் கட்டற்ற மென்பொருள் மாநாடு 2026 | TOSSConf 2026",
+    "eventDescription": "Join the largest gathering of Tamil Open Source developers, creators, and localization enthusiasts. Building privacy-first tools, translation frameworks, and computing freedom for the next generation. ",
+    "eventDate": "2026-07-23",
+    "eventTime": "09:00",
+    "eventVenue": "St. Joseph's Institute of Technology, Old Mamallapuram Road (OMR)Kamaraj Nagar, SemmancheriChennai, Tamil Nadu 600119",
+    "eventLink": "https://tossconf26.kaniyam.com",
+    "location": "Chennai",
+    "communityName": "TossConf 2026",
+    "communityLogo": "https://i.ibb.co/350BQ0mG/tossconf.png"
+  },
+  {
+    "eventName": "Java June Meetup",
+    "eventDescription": "Join us for an engaging Java meetup where we dive deep into the latest features, best practices, and real-world applications of Java development. Whether you're a seasoned developer or just starting out, there's something for everyone.",
+    "eventDate": "2026-06-27",
+    "eventTime": "09:00",
+    "eventVenue": "Contentstack India Pvt. Ltd,5th Floor, WorkEZ, Helix.21, Guru Nanak College Rd, above West side, Indira Gandhi Nagar, Velachery, Chennai, Tamil Nadu 600042, India",
+    "eventLink": "https://luma.com/x5tvs3xb",
+    "location": "Chennai",
+    "communityName": "CodeonJVM Chennai",
+    "communityLogo": "https://i.ibb.co/3YRw7XCd/Logo-1-Black.jpg"
+  },
+  {
+    "eventName": "HER Second Innings",
+    "eventDescription": "An art and journaling session for women in career break, women entrepreneurs and senior professionals.",
+    "eventDate": "2026-06-21",
+    "eventTime": "16:00",
+    "eventEndTime": "18:00",
+    "eventVenue": "Wasted 360 Solutions, T. Nagar",
+    "eventLink": "https://luma.com/8swe0z6p",
+    "location": "Chennai",
+    "communityName": "SheBuilds Chennai",
+    "communityLogo": "https://podu.pics/nn-IyxWRb8"
+  },
+  {
+    "eventName": "SheBuilds Chennai Hack",
+    "eventDescription": "Women-only hackathon for students, professionals & entrepreneurs. Form teams of 2-4 and submit idea PPT. Top 50 shortlisted teams proceed to the 24-hour grand finale on Aug 1-2.",
+    "eventDate": "2026-08-01",
+    "eventTime": "09:00",
+    "eventEndDate": "2026-08-02",
+    "eventVenue": "Rajalakshmi Engineering College, Chennai",
+    "eventLink": "https://shebuildschennai.in",
+    "location": "Chennai",
+    "communityName": "SheBuilds Chennai",
+    "communityLogo": "https://podu.pics/nn-IyxWRb8"
+  },
+  {
+    "eventName": "Build //localhost: Coimbatore",
+    "eventDescription": "Join for Microsoft Build highlights, great conversations, and food. An official event redelivery by Global AI Community.",
+    "eventDate": "2026-06-27",
+    "eventTime": "10:00",
+    "eventEndTime": "14:00",
+    "eventVenue": "Kovan Labs, Coimbatore, India",
+    "eventLink": "https://globalai.community/e/mn0l6guq",
+    "location": "Coimbatore",
+    "communityName": "Global AI Coimbatore",
+    "communityLogo": "https://podu.pics/pX688b3q5G"
+  },
+  {
+    "eventName": "Build //localhost: Erode",
+    "eventDescription": "Join for Microsoft Build highlights, great conversations, and food. An official event redelivery by Global AI Community.",
+    "eventDate": "2026-06-27",
+    "eventTime": "10:00",
+    "eventEndTime": "13:00",
+    "eventVenue": "Nandha Engineering College, Erode, India",
+    "eventLink": "https://globalai.community/e/x8js786g",
+    "location": "Erode",
+    "communityName": "Global AI Villupuram",
+    "communityLogo": "https://podu.pics/pX688b3q5G"
+  },
+  {
+    "eventName": "Insight Out Chennai",
+    "eventDescription": "Insight Out Chennai by Tech4Good Community.",
+    "eventDate": "2026-06-27",
+    "eventTime": "10:00",
+    "eventEndTime": "16:30",
+    "eventVenue": "Spendflo Office, Alandur (Guindy), Chennai",
+    "eventLink": "https://kuruk.am/insight-out",
+    "location": "Chennai",
+    "communityName": "Tech4Good Community",
+    "communityLogo": "https://podu.pics/LFmvh1XKaL"
+  },
+  {
+    "eventName": "Into the Void 2.0",
+    "eventDescription": "A national-level Capture the Flag (CTF) competition with online prelims and offline grand finals, challenging participants across diverse cybersecurity domains.",
+    "eventDate": "2026-07-30",
+    "eventTime": "09:00",
+    "eventVenue": "Chennai Institute of Technology, Sarathy Nagar, Kundrathur, Chennai, Tamil Nadu 600069",
+    "eventLink": "https://void.exploitx.org",
+    "location": "Chennai",
+    "communityName": "ExploitX",
+    "communityLogo": "https://podu.pics/W5QuJhfjne",
+    "alert": {
+      "message": "Prelims: 18 July 2026 | 12 Hours | Online &  Finals: 30-31 July 2026 | 24 Hours | Offline at CIT Chennai",
+      "type": "general"
+    }
+  },
+  {
+    "eventName": "Hands-On: Build Agentic Workflows and Searchable Apps with Elasticsearch, Jina, and Agent-to-Agent Communication",
+    "eventDescription": "In this hands-on, code-along workshop, you'll combine A2A (Agent-to-Agent) protocol, Jina Embeddings, and Elastic Agent Builder to create agentic workflows that run on top of Elasticsearch. Step by step, You'll turn your data into searchable vectors, wire agents together, and ship a working application by the end of the session.",
+    "eventDate": "2026-08-08",
+    "eventTime": "10:00",
+    "eventVenue": "SQ1 Security Technology Private Limited: 2nd Floor Block B, International Tech Park, Futura Tech Park, Rajiv Gandhi Salai, OMR, Sholinganallur, Chennai, Tamil Nadu 600119",
+    "eventLink": "https://luma.com/you-x2s5",
+    "location": "Chennai",
+    "communityName": "Elastic Chennai User Group",
+    "communityLogo": "https://i.ibb.co/XkLjmzG5/Chennai-Badge-Template.png"
+  },
+  {
+    "eventName": "FOSS United Chennai X From Dev to Ops",
+    "eventDescription": "FOSS United Chennai Monthly meetup X From Dev to Ops - August 2026",
+    "eventDate": "2026-08-01",
+    "eventTime": "9:00",
+    "eventVenue": "Ideas2IT Technology Services Private Limited",
+    "eventLink": "https://fossunited.org/c/chennai/august-26",
+    "location": "Chennai",
+    "communityName": "FOSS United Chennai",
+    "communityLogo": "https://fossunited.org/files/Foss%20United%20Logo%20Black.svg"
+  },
+  {
+    "eventName": "0xCON",
+    "eventDescription": "0xCON Cyber Security Summit 2026 is ExploitX's flagship cybersecurity conference, bringing together industry experts, researchers, students, and security professionals for a day of insightful talks, hands-on workshops, Cyber Villages, and meaningful networking.",
+    "eventDate": "2026-08-01",
+    "eventTime": "09:00",
+    "eventVenue": "Chennai Institute of Technology, Sarathy Nagar, Kundrathur, Chennai, Tamil Nadu 600069",
+    "eventLink": "https://0xcon.exploitx.org",
+    "location": "Chennai",
+    "communityName": "ExploitX",
+    "communityLogo": "https://podu.pics/W5QuJhfjne"
+  },
+  {
+    "eventName": "BrowserStack QA In-Person Meetup Chennai - August 2026",
+    "eventDescription": "Join QA professionals and tech leaders for expert talks on AI-driven quality engineering, advanced API testing, and modern QA strategies with networking opportunities.",
+    "eventDate": "2026-08-08",
+    "eventTime": "10:30",
+    "eventVenue": "Aris, Block 10 (WeWork), 1/124 Mount Poonamallee Rd, Manapakkam, Chennai, Tamil Nadu 600089",
+    "eventLink": "https://www.meetup.com/browserstack-software-testing-and-qa-meetup-group-chennai/events/",
+    "location": "Chennai",
+    "communityName": "BrowserStack Software Testing and QA Meetup Group - Chennai",
+    "communityLogo": "https://podu.pics/NWDcUQyZ9M"
+  },
+  {
+    "eventName": "Google I/O Extended Chennai 2026",
+    "eventDescription": "GDG Chennai and WTM Chennai bring Google I/O home! Join us for Google I/O Extended Chennai 2026 — a day of talks on Gemini 3.5, agentic AI, Android, and the biggest launches from I/O 2026, hosted in partnership with Ford.",
+    "eventDate": "2026-08-01",
+    "eventTime": "09:00",
+    "eventEndTime": "17:30",
+    "eventVenue": "Ford Global Technology & Business Center Sholinganallur, Chennai, TN 600119",
+    "eventLink": "https://gdg.community.dev/events/details/google-gdg-chennai-presents-google-io-extended-chennai-2026/",
+    "location": "Chennai",
+    "communityName": "Google Developer Group Chennai",
+    "communityLogo": "https://podu.pics/FacbnJ117W"
+  },
+  {
+    "eventName": "Typedcoders - 3.0",
+    "eventDescription": "TypedCoders Community Meetup – August Edition",
+    "eventDate": "2026-08-08",
+    "eventTime": "13:00",
+    "eventEndTime": "17:30",
+    "eventVenue": "Talentship - TSI Technologies Private Limited. 4th Floor, Prestige Cosmopolitan 38, Sardar Patel Rd, Little Mount, Guindy, Chennai, Greater Chennai, Tamil Nadu 600015",
+    "eventLink": "https://luma.com/f5lwl2zz?tk=rjAl9G",
+    "location": "Guindy, Chennai",
+    "communityName": "TypedCoders",
+    "communityLogo": "https://podu.pics/Y8Rx-umoz9"
+  },
+  {
+    "eventName": "ILUGC - August Meetup'26",
+    "eventDescription": "Indian Linux User Group Chennai - August Meetup'26. Use this link also if you want to RSVP https://ilugc.in/",
+    "eventDate": "2026-08-08",
+    "eventTime": "15:00",
+    "eventEndTime": "17:00",
+    "eventVenue": "Classroom No.3, Aerospace Engineering, Indian Institute of Technology Madras, Chennai, Tamil Nadu 600036",
+    "eventLink": "https://www.meetup.com/ilug-c/events/315918644/?utm_medium=referral&utm_campaign=share-btn_savedevents_share_modal&utm_source=link&utm_version=v2&member_id=479864043",
+    "location": "IIT Madras, Chennai",
+    "communityName": "ILUGC",
+    "communityLogo": "https://podu.pics/fhXzZRB-vP"
+  },
+  {
+    "eventName": "From Copilot to Agentic Dev & .NET: The Azure AI Era | Skillup Tamilnadu Session 8",
+    "eventDescription": "This event is a Microsoft Azure AI-focused session in Chennai titled From Copilot to Agentic Dev & .NET, featuring expert talks on AI-driven development, Azure Foundry, and the future of .NET, open to developers across all technology backgrounds.",
+    "eventDate": "2026-08-08",
+    "eventTime": "09:30",
+    "eventEndTime": "13:30",
+    "eventVenue": "UPS India Technology Center",
+    "eventLink": "https://www.meetup.com/azure-developer-community-chennai/events/315532378/?eventOrigin=home_page_upcoming_events%24all",
+    "location": "Chennai",
+    "communityName": "Azure Developer Community Tamilnadu",
+    "communityLogo": "https://podu.pics/ib_DGjze85"
+  },
+  {
+    "eventName": "DevOps Community Meetup Aug 22",
+    "eventDescription": "DevOps Community Meetup Aug 22 from Dev to Ops Community, Chennai",
+    "eventDate": "2026-08-22",
+    "eventTime": "09:30 AM",
+    "eventEndTime": "12:30 PM",
+    "eventVenue": "Chennai One IT SEZ 200 Feet Radial Rd, MCN Nagar Extension, Thoraipakkam, Chennai, Tamil Nadu 600097, India",
+    "eventLink": "https://luma.com/xpsbal0x?tk=6AWSFw",
+    "location": "Thoraipakkam, Chennai",
+    "communityName": "From-Dev-to-Ops",
+    "communityLogo": "https://podu.pics/z0-yPO_KvJ"
+  },
+  {
+    "eventName": "August Meetup!",
+    "eventDescription": "August Meetup! from CodeOnJVM Chennai Community, Chennai",
+    "eventDate": "2026-08-15",
+    "eventTime": "09:00 AM",
+    "eventEndTime": "2:00 PM",
+    "eventVenue": "Contentstack India Pvt. Ltd. 5th Floor, WorkEZ, Helix.21, Guru Nanak College Rd, above West side, Indira Gandhi Nagar, Velachery, Chennai, Greater Chennai, Tamil Nadu 600042",
+    "eventLink": "https://luma.com/2lb63il2",
+    "location": "Velachery, Chennai",
+    "communityName": "CodeonJVM Chennai",
+    "communityLogo": "https://podu.pics/r3R234UOLO"
+  },
+  {
+    "eventName": "Build2Learn #37 Meetup",
+    "eventDescription": "Build2Learn where innovation meets community - August edition",
+    "eventDate": "2026-08-29",
+    "eventTime": "09:30 AM",
+    "eventEndTime": "2:00 PM",
+    "eventVenue": "Grootan Technologies Pvt Ltd, 1st Floor, Bhaggyam Yukti, 87, Industrial Estate, Perungudi, Chennai, Tamil Nadu 600096",
+    "eventLink": "https://events.build2learn.in/",
+    "location": "Perungudi, Chennai",
+    "communityName": "Build2Learn",
+    "communityLogo": "https://podu.pics/ddT2CTFU_t"
+  },
+  {
+    "eventName": "AUGUST'S FREEDOM CALL",
+    "eventDescription": "CodeSapiens August Meetup 2026 - AUGUST'S FREEDOM CALL. Connect, learn, and grow with developers through real ideas, skills, and collaboration.",
+    "eventDate": "2026-08-15",
+    "eventTime": "09:00 AM",
+    "eventEndTime": "1:00 PM",
+    "eventVenue": "TBD",
+    "eventLink": "https://luma.com/gg2dotzl",
+    "location": "Chennai",
+    "communityName": "CodeSapiens",
+    "communityLogo": "https://podu.pics/5UwCWhjNXF"
+  },
+  {
+    "eventName": "Agentics Foundation: SLMs gotta get Fit: Chennai Edition",
+    "eventDescription": "Hands-on builder session training 1B–3B Small Language Models with reinforcement learning using OpenEnv and arcade-style game environments.",
+    "eventDate": "2026-08-29",
+    "eventTime": "11:00 AM",
+    "eventEndTime": "03:00 PM",
+    "eventVenue": "Ideas2IT Technology Services Private Limited, Thiru Vi Ka Industrial Estate, Guindy, Chennai",
+    "eventLink": "https://luma.com/nz7x290b",
+    "location": "Guindy, Chennai",
+    "communityName": "Agentics Foundation",
+    "communityLogo": "https://i.ibb.co/hrx1Cs9/image-2.png"
+  },
+  {
+    "eventName": "Flutter South India 2026",
+    "eventDescription": "A community-led day for Flutter and Dart developers, happening 10 October 2026 in Chennai.",
+    "eventDate": "2026-10-10",
+    "eventTime": "09:00",
+    "eventVenue": "Geetham Hall, SRM Institute of Science and Technology Ramapuram, Bharathi Salai, Ramapuram, Chennai - 600089",
+    "eventLink": "https://southindia.nammaflutter.com/",
+    "location": "Chennai",
+    "communityName": "Namma Flutter",
+    "communityLogo": "https://avatars.githubusercontent.com/u/176333249",
+    "paid": true
+  },
+  {
+    "eventName": "Figma Make-a-thon Chennai 2026",
+    "eventDescription": "A 75-minute, non-competitive build session using Figma Make. Participants use two random words and free AI credits to prompt a browser-ready app with mentor support.",
+    "eventDate": "2026-08-29",
+    "eventTime": "09:30",
+    "eventEndTime": "12:30",
+    "eventVenue": "Zifo Technologie 6th Floor, Block 2, DLF SEZ IT Park, 1/124, Mount Poonamallee Road, Ramapuram Chennai 600089",
+    "eventLink": "https://friends.figma.com/events/details/figma-chennai-presents-figma-make-a-thon-chennai-2026/",
+    "location": "D.L.F Cyber City (DLF IT Park) Chennai",
+    "communityName": "Friends of Figma",
+    "communityLogo": "https://podu.pics/8Xan9cRTQL"
+  },
+  {
+    "eventName": "From Dev to ops Sep Community Meet",
+    "eventDescription": "A chennai born community for DevOps, SRE, Platform Engineering, and Observability.",
+    "eventDate": "2026-09-26",
+    "eventTime": "09:30",
+    "eventEndTime": "12:30",
+    "eventVenue": "Sopra Steria, G-2, Sipcot It Park, 2, Egattur, Tamil Nadu 603103",
+    "eventLink": "https://luma.com/dwz40jiz?tk=X2giHo",
+    "location": "Siruseri IT Park!",
+    "communityName": "fromDevtoOps",
+    "communityLogo": "https://podu.pics/z0-yPO_KvJ"
+  },
+  {
+    "eventName": "Digital Dreamers Den (D3) Meetup #9",
+    "eventDescription": "Digital Dreamers Den (D3) is a vibrant tech community that brings together AI Full-Stack Developers to build the future. We host events, workshops, and networking opportunities that connect talented engineers with cutting-edge technology and industry leaders.",
+    "eventDate": "2026-09-05",
+    "eventTime": "13:30",
+    "eventVenue": "Freshworks, GLOBAL INFOCITY PARK, Perungudi, Chennai, Tamil Nadu 600096",
+    "eventLink": "https://luma.com/l0fltoqm",
+    "location": "Chennai",
+    "communityName": "Digital Dreamers Den (D3)",
+    "communityLogo": "https://podu.pics/K3Hbv3raG1"
+  },
+  {
+    "eventName": "FOSS United Chennai September Meet",
+    "eventDescription": "Monthly foss united chennai meetup on sept 19th",
+    "eventDate": "2026-09-19",
+    "eventTime": "01:30 PM",
+    "eventEndTime": "05:30 PM",
+    "eventVenue": "Ideas2IT Technology Services Private Limited,C50 & C51, Water Works Rd, SIDCO Industrial Estate, Guindy, Chennai, Tamil Nadu 600032",
+    "eventLink": "https://fossunited.org/c/chennai/sept-26",
+    "location": "Guindy, Chennai",
+    "communityName": "FOSS United Chennai",
+    "communityLogo": "https://podu.pics/JddEqT0QmX"
+  },
+  {
+    "eventName": "Build Your PKM System with Notion",
+    "eventDescription": " intro to building a Personal Knowledge Management (PKM) system on Notion Chennai Meetup September 26",
+    "eventDate": "2026-09-26",
+    "eventTime": "3:30 PM",
+    "eventEndTime": "5:30 PM",
+    "eventVenue": "Cyces Innovation Labs LLP, Type II, M-2, Dr. Vasi Estate, Phase II, Thiruvanmiyur, Chennai, Greater Chennai, Tamil Nadu 600041",
+    "eventLink": "https://luma.com/notion-sep-2026?tk=BHv3AG",
+    "location": "Thiruvanmiyur,Chennai",
+    "communityName": "Notion Chennai",
+    "communityLogo": "https://podu.pics/kp8FIr6Lnk"
+  },
+  {
+    "eventName": "Stack Flow@Chennai - Working Professional Meetup",
+    "eventDescription": "​Join StackFlow in Chennai, an exclusive HackBriven-hosted meetup exploring AI, AI Agents, DevOps, and Cloud Security. Engage with peers, gain insights from experts, and expand your network through focused technical sessions.",
+    "eventDate": "2026-09-20",
+    "eventTime": "10:00 AM",
+    "eventEndTime": "4:00 PM",
+    "eventVenue": "Ideas2IT Technology Services Private Limited,C50 & C51, Water Works Rd, Thiru Vi Ka Industrial Estate, SIDCO Industrial Estate, Guindy, Chennai, Tamil Nadu 600032",
+    "eventLink": "https://luma.com/06epsmno?tk=tCCBf7",
+    "location": "Guindy,Chennai",
+    "communityName": "HackBriven",
+    "communityLogo": "https://podu.pics/MXLhZmq7vc"
+  },
+  {
+    "eventName": "Chennai React Meetup #18",
+    "eventDescription": "Chennai React Meetup #18​",
+    "eventDate": "2026-09-19",
+    "eventTime": "01:30 PM",
+    "eventEndTime": "5:00 PM",
+    "eventVenue": "Walmart Global Tech WM Global Technology Services India Private Limited Tower 1, 1st, 2nd, 3rd & 4th floor International tech park, Survey no. 141, Radial IT Park Private Limited, 14A, 200 Feet Radial Rd, Zamin Pallavaram, Arulmurugan Nagar, Chennai, Tamil Nadu 600117, India",
+    "eventLink": "https://luma.com/49bulo2m?tk=ky7FrN",
+    "location": "Pallavaram,Chennai",
+    "communityName": "Chennai React!",
+    "communityLogo": "https://avatars.githubusercontent.com/u/175532518"
+  },
+  {
+    "eventName": "DevFest 2026 Chennai",
+    "eventDescription": "DevFest is one of the largest and most inclusive community-led technology conferences worldwide! Every year, Google Developer Groups host DevFests, where attendees explore developer tools, learn from Google Developer Experts, and connect with other tech enthusiasts from their local community.",
+    "eventDate": "2026-10-17",
+    "eventTime": "09:00",
+    "eventVenue": "IIT Madras Research Park, MGR Film City Road, Kanagam, Tharamani, Chennai – 600 113",
+    "eventLink": "https://devfest.gdgchennai.in/",
+    "location": "IITM Research Park,Chennai",
+    "communityName": "Google Developer Group Chennai",
+    "communityLogo": "https://i.ibb.co/ynkrJnD4/gdglogo-0229df09.png",
+    "paid": true
+  },
+  {
+    "eventName": "DATUM 2026: EARTHWISE",
+    "eventDescription": "​DATUM 2026: EARTHWISE is organised by the Centre for Analytics Excellence (CAE), Loyola Institute of Business Administration (LIBA), Chennai, in collaboration with Indian Data Club, with Codebasics as the Knowledge Partner and Chennai Data Circle as the Community Partner.",
+    "eventDate": "2026-09-12",
+    "eventTime": "8:30 AM",
+    "eventEndTime": "1:00 PM",
+    "eventVenue": "LIBA (Loyola Institute of Business Administration), Loyola College Campus, No: 1, Sterling Rd, Nungambakkam, Chennai, Tamil Nadu 600034",
+    "eventLink": "https://luma.com/sj2jfag6",
+    "location": "Loyola College Campus, Chennai",
+    "communityName": "Chennai Data Circle",
+    "communityLogo": "https://podu.pics/yPVWwz5Xyt"
+  },
+  {
+    "eventName": "OpenSearch × AAIF: Where Search Meets Agents",
+    "eventDescription": "OpenSearch and the Agentic AI Foundation are helping shape the future of how intelligent tools and AI agents are built, discovered, and scaled. Join us for an exciting community gathering featuring talks from hands-on practitioners, industry experts, and community members sharing their knowledge and real-world experiences",
+    "eventDate": "2026-09-12",
+    "eventTime": "10:00 AM",
+    "eventEndTime": "01:00 PM",
+    "eventVenue": "Freshworks, Vijay Shanthi Block-B, GLOBAL INFOCITY PARK, 40, MGR Main Rd, Kodandarama Nagar, Perungudi, Chennai, Tamil Nadu 600096",
+    "eventLink": "https://www.meetup.com/opensearch-project-chennai/events/316386483/",
+    "location": "Perungudi,Chennai",
+    "communityName": "OpenSearch User Group Chennai",
+    "communityLogo": "https://res.cloudinary.com/dfhtr1rwo/image/upload/v1762066985/opensearch_logo_hg3k8s.png"
+  },
+  {
+    "eventName": "AI, Work & Everything In Between",
+    "eventDescription": "A gathering for professionals curious about how AI is changing the way we work. Explore practical applications, challenges, and new perspectives.",
+    "eventDate": "2026-09-12",
+    "eventTime": "10:30 AM",
+    "eventEndTime": "01:00 PM",
+    "eventVenue": "To be announced",
+    "eventLink": "https://luma.com/2tgkan8m",
+    "location": "Chennai",
+    "communityName": "SheBuilds Chennai",
+    "communityLogo": "https://podu.pics/nn-IyxWRb8"
+  },
+  {
+    "eventName": "ShePitch Conference",
+    "eventDescription": "A premier conference and pitch platform empowering women entrepreneurs and innovators to showcase ideas, gain mentorship, and connect with investors.",
+    "eventDate": "2026-09-19",
+    "eventTime": "09:00 AM",
+    "eventEndTime": "04:00 PM",
+    "eventVenue": "Jeppiaar Nagar, Rajiv Gandhi Salai, Kamaraj Nagar, Semmancheri, Chennai, Tamil Nadu 600119",
+    "eventLink": "https://www.shepitch.com/conference",
+    "location": "Jeppiaar University",
+    "communityName": "SheBuilds Chennai",
+    "communityLogo": "https://podu.pics/nn-IyxWRb8"
+  },
+  {
+    "eventName": "SheBuilds Chennai October Meetup",
+    "eventDescription": "Connect, learn, and grow with women developers and tech enthusiasts. Collaborate, share ideas, and empower each other to innovate and lead.",
+    "eventDate": "2026-10-10",
+    "eventTime": "09:30 AM",
+    "eventEndTime": "01:00 PM",
+    "eventVenue": "6th & 7th Floor, No. 49, K.P, Natwest Viceroy, Velachery, Major Mukund Varadharajan Rd, Pallikaranai, Chennai, Tamil Nadu 600100",
+    "eventLink": "https://luma.com/sc9wpbri",
+    "location": "TechnoRUCS",
+    "communityName": "SheBuilds Chennai",
+    "communityLogo": "https://podu.pics/nn-IyxWRb8"
+  },
+  {
+    "eventName": "SciPy India 2026",
+    "eventDescription": "SciPy India's fourteenth edition brings talks, tutorials and open source work in scientific Python to IIT Madras. Workshops on the 19th, main conference on the 20th.",
+    "eventDate": "2026-12-19",
+    "eventTime": "08:30",
+    "eventEndDate": "2026-12-20",
+    "eventEndTime": "18:00",
+    "eventVenue": "Department of Physics (Dec 19 workshops) & IC&SR Building (Dec 20 conference), Indian Institute of Technology Madras, Chennai 600036, Tamil Nadu",
+    "eventLink": "https://scipy.in/2026/",
+    "location": "IIT Madras,Chennai",
+    "communityName": "SciPy India",
+    "communityLogo": "https://podu.pics/jbVnWl-Gw6"
   }
 ]

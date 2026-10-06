@@ -62,7 +62,11 @@ const config: NextConfig = {
       {
         protocol: 'https',
         hostname: 'www.acdchennai.com'
-      }
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.lumacdn.com'
+      },
     ]
   }
 };

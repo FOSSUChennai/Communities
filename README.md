@@ -105,6 +105,7 @@ Pointers to keep in mind is:
 - if its a bug fix or a minor code change, please describe what your change does.
 - if its a feature request, please provide a detailed description and if UI feature, please do provide a mockup.
 - if updating events.json, please make sure you add the hostname for the image to next.config.ts file in the root directory.
+- PLEASE NO DARK THEME 😭
 
 ## 🔔 Push Notifications
 
@@ -120,12 +121,6 @@ This platform supports web push notifications for event updates:
 <a href="https://github.com/fossuchennai/communities/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=fossuchennai/communities" />
 </a>
-
-## ⭐ Star History
-
-Go put a star 😤
-
-[![Star History Chart](https://api.star-history.com/svg?repos=FOSSUChennai/Communities&type=Date)](https://www.star-history.com/#FOSSUChennai/Communities&Date)
 
 ## 📝 License
 

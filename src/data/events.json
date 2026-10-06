@@ -1199,5 +1199,18 @@
     "location": "IIT Madras,Chennai",
     "communityName": "SciPy India",
     "communityLogo": "https://podu.pics/jbVnWl-Gw6"
-  }
+  },
+  {
+  "eventName": "Bharat Builds Tour - SRM Ramapuram",
+  "eventDescription": "A 12-hour hackathon at SRM Ramapuram in collaboration with AWS, featuring prizes worth 1 crore across the Bharat Builds Tour, along with employement opportunities, mentorship, and networking with AWS professionals.",
+  "eventDate": "2026-10-24",
+  "eventTime": "08:00",
+  "eventEndDate": "2026-10-24",
+  "eventEndTime": "20:00",
+  "eventVenue": "SRM Institute of Science and Technology, Ramapuram, Chennai",
+  "eventLink": "https://luma.com/bb3",
+  "location": "Chennai",
+  "communityName": "SkyNet",
+  "communityLogo": "https://res.cloudinary.com/winvz8rq/image/upload/f_auto,q_auto/1000128410"
+}
 ]

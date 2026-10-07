@@ -12,6 +12,18 @@
     "communityLogo": "https://podu.pics/yD-8Cc-jw4"
   },
   {
+    "eventName": "Hacktoberfest Hack Day Chennai x Commit Culture",
+    "eventDescription": "otaku.dev is a hands-on Hacktoberfest Hack Day organized by Commit Culture. Explore open-source and open-weight AI, build your own AI-powered project, and compete in the Best Open-Source AI Project challenge. Open to university students.",
+    "eventDate": "2026-10-24",
+    "eventTime": "09:00",
+    "eventEndTime": "18:00",
+    "eventVenue": "Vels Institute of Science, Technology & Advanced Studies (VISTAS), PV Vaithiyalingam Rd, Velan Nagar, Krishnapuram, Pallavaram, Chennai, Tamil Nadu 600117",
+    "eventLink": "https://events.mlh.io/events/15455-hacktoberfest-hack-day-chennai-x-commit-culture",
+    "location": "Pallavaram, Chennai",
+    "communityName": "Commit Culture",
+    "communityLogo": "https://i.ibb.co/gLZ0csYZ/cocu.jpg"
+  },
+  {
     "eventName": "DevFest on Campus Chennai",
     "eventDescription": "DevFest on Campus 2026 by GDG Chennai brings students an exciting tech event with a hackathon and a technical showcase. Teams will solve real-world problems in public services using AI solutions, fostering innovation and bridging student ideas with the tech community. Join to create impactful applications and engage with cutting-edge technology.",
     "eventDate": "2026-10-10",
@@ -1211,5 +1223,16 @@
     "location": "IIT Madras,Chennai",
     "communityName": "SciPy India",
     "communityLogo": "https://podu.pics/jbVnWl-Gw6"
+  },
+  {
+    "eventName": "From Search to Agents: Building RAG and Agentic Workflows",
+    "eventDescription": "Hands-on workshop on building AI applications with Elasticsearch. Learn how keyword, semantic, and hybrid search power RAG systems and agents, with practical guidance on building smarter retrieval for your own data.",
+    "eventDate": "2026-10-10",
+    "eventTime": "10:00",
+    "eventVenue": "Ideas2IT Technology Services Private Limited, C50 & C51, Water Works Rd, Thiru Vi Ka Industrial Estate, SIDCO Industrial Estate, Guindy, Chennai, Tamil Nadu 600032",
+    "eventLink": "https://luma.com/sa20680r",
+    "location": "SIDCO Industrial Estate, Guindy, Chennai",
+    "communityName": "Elastic Chennai User Group",
+    "communityLogo": "https://i.ibb.co/XkLjmzG5/Chennai-Badge-Template.png"
   }
 ]

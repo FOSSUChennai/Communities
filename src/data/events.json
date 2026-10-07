@@ -1199,5 +1199,16 @@
     "location": "IIT Madras,Chennai",
     "communityName": "SciPy India",
     "communityLogo": "https://podu.pics/jbVnWl-Gw6"
+  },
+  {
+    "eventName": "From Search to Agents: Building RAG and Agentic Workflows",
+    "eventDescription": "Hands-on workshop on building AI applications with Elasticsearch. Learn how keyword, semantic, and hybrid search power RAG systems and agents, with practical guidance on building smarter retrieval for your own data.",
+    "eventDate": "2026-10-10",
+    "eventTime": "10:00",
+    "eventVenue": "Ideas2IT Technology Services Private Limited, C50 & C51, Water Works Rd, Thiru Vi Ka Industrial Estate, SIDCO Industrial Estate, Guindy, Chennai, Tamil Nadu 600032",
+    "eventLink": "https://luma.com/sa20680r",
+    "location": "SIDCO Industrial Estate, Guindy, Chennai",
+    "communityName": "Elastic Chennai User Group",
+    "communityLogo": "https://i.ibb.co/XkLjmzG5/Chennai-Badge-Template.png"
   }
 ]

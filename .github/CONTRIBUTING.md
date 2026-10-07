@@ -54,7 +54,7 @@ Add your event to the JSON array using this template:
 - `eventTime`: 24-hour format HH:MM
 - `eventEndDate`: Optional. Use for multi-day events (YYYY-MM-DD). Must be same as or later than `eventDate`.
 - `eventEndTime`: Optional. 24-hour format HH:MM
-- `communityLogo`: Use imgbb to host images or add hostname to `next.config.ts`
+- `communityLogo`: Use podu.pics for new logo images. If using a different host, add its hostname to `next.config.ts`
 
 ### Multi-day Events
 

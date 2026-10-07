@@ -67,6 +67,10 @@ const config: NextConfig = {
         protocol: 'https',
         hostname: 'images.lumacdn.com'
       },
+      {
+        protocol: 'https',
+        hostname: 'mlhusercontent.com'
+      },
     ]
   }
 };

@@ -1,5 +1,17 @@
 [
   {
+    "eventName": "AI FOR ALL: Hacktoberfest 2026 Open Source Meetup",
+    "eventDescription": "Join MLH, OS.dev, and Sapiens Campus for AI FOR ALL. Learn, build, connect, and contribute to open source and AI this Hacktoberfest.",
+    "eventDate": "2026-10-24",
+    "eventTime": "11:00 AM",
+    "eventEndTime": "04:00 PM",
+    "eventVenue": "Workday India Private Ltd, Campus 1C, Millenia Business Park, Phase 1, MGR Salai St, Kandhanchavadi, Perungudi, Chennai, Tamil Nadu 600096, India",
+    "eventLink": "https://events.mlh.io/events/15262-hacktoberfest-meetup-chennai-x-os-community-sapiens-campus/register",
+    "location": "Perungudi, Chennai",
+    "communityName": "OS.dev x Sapiens Campus",
+    "communityLogo": "https://mlhusercontent.com/logos/events/01a0d93e-de36-6804-ec3f-5de9269f734a/ai-for-all__a2dec7779e9a.png"
+  },
+  {
     "eventName": "DevFest on Campus Chennai",
     "eventDescription": "DevFest on Campus 2026 by GDG Chennai brings students an exciting tech event with a hackathon and a technical showcase. Teams will solve real-world problems in public services using AI solutions, fostering innovation and bridging student ideas with the tech community. Join to create impactful applications and engage with cutting-edge technology.",
     "eventDate": "2026-10-10",

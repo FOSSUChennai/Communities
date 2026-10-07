@@ -1,5 +1,17 @@
 [
   {
+    "eventName": "AI FOR ALL: Hacktoberfest 2026 Open Source Meetup",
+    "eventDescription": "Join MLH, OS.dev, and Sapiens Campus for AI FOR ALL. Learn, build, connect, and contribute to open source and AI this Hacktoberfest.",
+    "eventDate": "2026-10-24",
+    "eventTime": "11:00 AM",
+    "eventEndTime": "04:00 PM",
+    "eventVenue": "Workday India Private Ltd, Campus 1C, Millenia Business Park, Phase 1, MGR Salai St, Kandhanchavadi, Perungudi, Chennai, Tamil Nadu 600096, India",
+    "eventLink": "https://events.mlh.io/events/15262-hacktoberfest-meetup-chennai-x-os-community-sapiens-campus/register",
+    "location": "Perungudi, Chennai",
+    "communityName": "OS.dev x Sapiens Campus",
+    "communityLogo": "https://podu.pics/yD-8Cc-jw4"
+  },
+  {
     "eventName": "Hacktoberfest Hack Day Chennai x Commit Culture",
     "eventDescription": "otaku.dev is a hands-on Hacktoberfest Hack Day organized by Commit Culture. Explore open-source and open-weight AI, build your own AI-powered project, and compete in the Best Open-Source AI Project challenge. Open to university students.",
     "eventDate": "2026-10-24",

@@ -1,5 +1,17 @@
 [
   {
+    "eventName": "BrowserStack Software Testing and QA Meetup Group - Chennai",
+    "eventDescription": "Join us for an exclusive gathering of Quality Assurance professionals, engineers, and tech leaders in the heart of Chennai.",
+    "eventDate": "2026-10-31",
+    "eventTime": "10:30 AM",
+    "eventEndTime": "01:30 PM",
+    "eventVenue": "To be announced",
+    "eventLink": "https://www.meetup.com/browserstack-software-testing-and-qa-meetup-group-chennai/events/317025710/?eventOrigin=group_upcoming_events",
+    "location": "Chennai",
+    "communityName": "BrowserStack Community Chennai",
+    "communityLogo": "https://podu.pics/u5OKuWtNsJ"
+  },
+  {
     "eventName": "AI FOR ALL: Hacktoberfest 2026 Open Source Meetup",
     "eventDescription": "Join MLH, OS.dev, and Sapiens Campus for AI FOR ALL. Learn, build, connect, and contribute to open source and AI this Hacktoberfest.",
     "eventDate": "2026-10-24",
@@ -107,7 +119,7 @@
     "communityName": "Build2Learn",
     "communityLogo": "https://podu.pics/ddT2CTFU_t"
   },
-  {  
+  {
     "eventName": "AI in Action: RAG, Chatbots & Agents with MongoDB",
     "eventDescription": "Join us for an exciting in-person meetup where we explore the RAG, Chatbots & Agents with MongoDB! Whether you're a developer, data enthusiast, or just curious about the intersection of AI and databases, this is the perfect place to learn, network, and grow.",
     "eventDate": "2026-09-26",

@@ -10,25 +10,25 @@ importers:
     dependencies:
       '@phosphor-icons/react':
         specifier: ^2.1.7
-        version: 2.1.10(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+        version: 2.1.10(react-dom@19.2.3(react@19.3.0))(react@19.3.0)
       framer-motion:
         specifier: ^12.42.2
-        version: 12.42.2(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+        version: 12.42.2(react-dom@19.2.3(react@19.3.0))(react@19.3.0)
       jsonfeed-to-rss:
         specifier: ^3.0.8
         version: 3.0.8
       next:
         specifier: 16.3.4
-        version: 16.3.4(@babel/core@7.29.7)(@types/node@22.19.3)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+        version: 16.3.4(@babel/core@7.29.7)(@types/node@22.19.3)(react-dom@19.2.3(react@19.3.0))(react@19.3.0)
       next-umami:
         specifier: ^1.0.0
-        version: 1.0.0(next@16.3.4(@babel/core@7.29.7)(@types/node@22.19.3)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+        version: 1.0.0(next@16.3.4(@babel/core@7.29.7)(@types/node@22.19.3)(react-dom@19.2.3(react@19.3.0))(react@19.3.0))(react-dom@19.2.3(react@19.3.0))(react@19.3.0)
       react:
-        specifier: ^19.2.3
-        version: 19.2.3
+        specifier: ^19.3.0
+        version: 19.3.0
       react-dom:
         specifier: ^19.2.3
-        version: 19.2.3(react@19.2.3)
+        version: 19.2.3(react@19.3.0)
       rss:
         specifier: ^1.2.2
         version: 1.2.2
@@ -53,10 +53,10 @@ importers:
         version: 22.19.3
       '@types/react':
         specifier: ^19
-        version: 19.2.7
+        version: 19.3.0
       '@types/react-dom':
         specifier: ^19
-        version: 19.2.3(@types/react@19.2.7)
+        version: 19.2.3(@types/react@19.3.0)
       '@types/rss':
         specifier: ^0.0.32
         version: 0.0.32
@@ -626,8 +626,8 @@ packages:
     peerDependencies:
       '@types/react': ^19.2.0
 
-  '@types/react@19.2.7':
-    resolution: {integrity: sha512-MWtvHrGZLFttgeEj28VXHxpmwYbor/ATPYbBfSFZEIRK0ecCFLl2Qo55z52Hss+UV9CRN7trSeq1zbgx7YDWWg==}
+  '@types/react@19.3.0':
+    resolution: {integrity: sha512-N0rFCuH9YoxG9/m61l9MfpJKfmLOVU0em7ipIz6TRgSSkvReLB9vL85GB+yr8Bs5leqpvg96JSwF4ZS1s4viQg==}
 
   '@types/rss@0.0.32':
     resolution: {integrity: sha512-2oKNqKyUY4RSdvl5eZR1n2Q9yvw3XTe3mQHsFPn9alaNBxfPnbXBtGP8R0SV8pK1PrVnLul0zx7izbm5/gF5Qw==}
@@ -2158,8 +2158,8 @@ packages:
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
 
-  react@19.2.3:
-    resolution: {integrity: sha512-Ku/hhYbVjOQnXDZFv2+RibmLFGwFdeeKHFcOTlrt7xplBnya5OGn/hIRDsqDiSUcfORsDC7MPxwork8jBwsIWA==}
+  react@19.3.0:
+    resolution: {integrity: sha512-E8LUcbtBWt20bbl2YoHfx4ZDBdxVTfOKtCZn9cDSJ4l6/nuoApcpIBcj47t2wZoVX8g2ZHuMHbiShgCR1T5Sog==}
     engines: {node: '>=0.10.0'}
 
   read-cache@1.0.0:
@@ -3076,10 +3076,10 @@ snapshots:
 
   '@nolyfill/is-core-module@1.0.39': {}
 
-  '@phosphor-icons/react@2.1.10(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
+  '@phosphor-icons/react@2.1.10(react-dom@19.2.3(react@19.3.0))(react@19.3.0)':
     dependencies:
-      react: 19.2.3
-      react-dom: 19.2.3(react@19.2.3)
+      react: 19.3.0
+      react-dom: 19.2.3(react@19.3.0)
 
   '@rtsao/scc@1.1.0': {}
 
@@ -3110,11 +3110,11 @@ snapshots:
     dependencies:
       undici-types: 6.21.0
 
-  '@types/react-dom@19.2.3(@types/react@19.2.7)':
+  '@types/react-dom@19.2.3(@types/react@19.3.0)':
     dependencies:
-      '@types/react': 19.2.7
+      '@types/react': 19.3.0
 
-  '@types/react@19.2.7':
+  '@types/react@19.3.0':
     dependencies:
       csstype: 3.2.3
 
@@ -4110,14 +4110,14 @@ snapshots:
     dependencies:
       is-callable: 1.2.7
 
-  framer-motion@12.42.2(react-dom@19.2.3(react@19.2.3))(react@19.2.3):
+  framer-motion@12.42.2(react-dom@19.2.3(react@19.3.0))(react@19.3.0):
     dependencies:
       motion-dom: 12.42.2
       motion-utils: 12.39.0
       tslib: 2.8.1
     optionalDependencies:
-      react: 19.2.3
-      react-dom: 19.2.3(react@19.2.3)
+      react: 19.3.0
+      react-dom: 19.2.3(react@19.3.0)
 
   fsevents@2.3.3:
     optional: true
@@ -4578,22 +4578,22 @@ snapshots:
 
   natural-compare@1.4.0: {}
 
-  next-umami@1.0.0(next@16.3.4(@babel/core@7.29.7)(@types/node@22.19.3)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(react-dom@19.2.3(react@19.2.3))(react@19.2.3):
+  next-umami@1.0.0(next@16.3.4(@babel/core@7.29.7)(@types/node@22.19.3)(react-dom@19.2.3(react@19.3.0))(react@19.3.0))(react-dom@19.2.3(react@19.3.0))(react@19.3.0):
     dependencies:
-      next: 16.3.4(@babel/core@7.29.7)(@types/node@22.19.3)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      react: 19.2.3
-      react-dom: 19.2.3(react@19.2.3)
+      next: 16.3.4(@babel/core@7.29.7)(@types/node@22.19.3)(react-dom@19.2.3(react@19.3.0))(react@19.3.0)
+      react: 19.3.0
+      react-dom: 19.2.3(react@19.3.0)
 
-  next@16.3.4(@babel/core@7.29.7)(@types/node@22.19.3)(react-dom@19.2.3(react@19.2.3))(react@19.2.3):
+  next@16.3.4(@babel/core@7.29.7)(@types/node@22.19.3)(react-dom@19.2.3(react@19.3.0))(react@19.3.0):
     dependencies:
       '@next/env': 16.3.4
       '@swc/helpers': 0.5.23
       baseline-browser-mapping: 2.11.21
       caniuse-lite: 1.0.30001810
       postcss: 8.5.23
-      react: 19.2.3
-      react-dom: 19.2.3(react@19.2.3)
-      styled-jsx: 5.1.6(@babel/core@7.29.7)(react@19.2.3)
+      react: 19.3.0
+      react-dom: 19.2.3(react@19.3.0)
+      styled-jsx: 5.1.6(@babel/core@7.29.7)(react@19.3.0)
     optionalDependencies:
       '@next/swc-darwin-arm64': 16.3.4
       '@next/swc-darwin-x64': 16.3.4
@@ -4789,14 +4789,14 @@ snapshots:
 
   queue-microtask@1.2.3: {}
 
-  react-dom@19.2.3(react@19.2.3):
+  react-dom@19.2.3(react@19.3.0):
     dependencies:
-      react: 19.2.3
+      react: 19.3.0
       scheduler: 0.27.0
 
   react-is@16.13.1: {}
 
-  react@19.2.3: {}
+  react@19.3.0: {}
 
   read-cache@1.0.0:
     dependencies:
@@ -5095,10 +5095,10 @@ snapshots:
     dependencies:
       boundary: 2.0.0
 
-  styled-jsx@5.1.6(@babel/core@7.29.7)(react@19.2.3):
+  styled-jsx@5.1.6(@babel/core@7.29.7)(react@19.3.0):
     dependencies:
       client-only: 0.0.1
-      react: 19.2.3
+      react: 19.3.0
     optionalDependencies:
       '@babel/core': 7.29.7
 

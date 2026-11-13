@@ -65,9 +65,9 @@
     "eventDate": "2026-10-10",
     "eventTime": "09:30",
     "eventEndTime": "12:30",
-    "eventVenue": "TBA",
+    "eventVenue": "Tidel Park - Solaris",
     "eventLink": "https://luma.com/mprx0ocg",
-    "location": "TBA",
+    "location": "Tidel Park - Solaris",
     "communityName": "Kotlin User Group Chennai",
     "communityLogo": "https://podu.pics/QO0Jn0UEjB"
   },
@@ -288,7 +288,7 @@
     "eventLink": "https://luma.com/1l2wraih",
     "location": "Chennai",
     "communityName": "JSLovers Chennai",
-    "communityLogo": "https://i.ibb.co/My6JNtNx/jslovers-Logo.png"
+    "communityLogo": "https://podu.pics/zXR6Njiu2i"
   },
   {
     "eventName": "December FOSS Meetup",
@@ -530,7 +530,7 @@
     "eventLink": "https://luma.com/kbsp31bs",
     "location": "Chennai",
     "communityName": "JSLovers Chennai",
-    "communityLogo": "https://i.ibb.co/My6JNtNx/jslovers-Logo.png"
+    "communityLogo": "https://podu.pics/zXR6Njiu2i"
   },
   {
     "eventName": "From-Dev-to-Ops | Devops Community Meetup Mar 14",
@@ -794,7 +794,7 @@
     "eventLink": "https://luma.com/vvrilt96",
     "location": "Chennai",
     "communityName": "JSLovers Chennai",
-    "communityLogo": "https://i.ibb.co/My6JNtNx/jslovers-Logo.png"
+    "communityLogo": "https://podu.pics/zXR6Njiu2i"
   },
   {
     "eventName": "Search Reimagined: AI, Speed & Reliability",
@@ -1246,5 +1246,31 @@
     "location": "SIDCO Industrial Estate, Guindy, Chennai",
     "communityName": "Elastic Chennai User Group",
     "communityLogo": "https://i.ibb.co/XkLjmzG5/Chennai-Badge-Template.png"
-  }
+  },
+  {
+   "eventName": "Bharat Builds Tour - SRM Ramapuram",
+   "eventDescription": "A 12-hour hackathon at SRM Ramapuram in collaboration with AWS, featuring prizes worth 1 crore across the Bharat Builds Tour, along with employement opportunities, mentorship, and networking with AWS professionals.",
+   "eventDate": "2026-10-24",
+   "eventTime": "08:00",
+   "eventEndDate": "2026-10-24",
+   "eventEndTime": "20:00",
+   "eventVenue": "SRM Institute of Science and Technology, Ramapuram, Chennai",
+   "eventLink": "https://luma.com/bb3",
+   "location": "Chennai",
+   "communityName": "SkyNet",
+   "communityLogo": "https://res.cloudinary.com/winvz8rq/image/upload/f_auto,q_auto/1000128410"
+ },
+ {
+  "eventName": "Digital Dreamers Den (D3) Meetup #10",
+  "eventDescription": "Digital Dreamers Den (D3) is a vibrant tech community that brings together AI Full-Stack Developers to build the future. We host events, workshops, and networking opportunities that connect talented engineers with cutting-edge technology and industry leaders.",
+  "eventDate": "2026-11-28",
+  "eventTime": "09:00",
+  "eventEndDate": "2026-11-28",
+  "eventEndTime": "13:00",
+  "eventVenue": "YuniQ, 4th Floor, TICEL BIOPARK, 5, CSIR Rd, Phase II, Tharamani, Chennai, Tamil Nadu 600113",
+  "eventLink": "https://digitaldreamersden.in/meetup-10",
+  "location": "Chennai",
+  "communityName": "Digital Dreamers Den (D3)",
+  "communityLogo": "https://podu.pics/K3Hbv3raG1"
+ }
 ]

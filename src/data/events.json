@@ -1,5 +1,17 @@
 [
   {
+    "eventName": "CLASS 102 - THE UNWRITTEN MANUAL",
+    "eventDescription": "Half-day Sapiens Campus session with conversations, activities, mentorship launch, and community connections for navigating college life.",
+    "eventDate": "2026-11-29",
+    "eventTime": "09:00",
+    "eventEndTime": "13:00",
+    "eventVenue": "EmpowerED Careers, Sai Pride, Guindy, Chennai",
+    "eventLink": "https://luma.com/oai0ysy0",
+    "location": "Guindy, Chennai",
+    "communityName": "Sapiens Campus",
+    "communityLogo": "https://podu.pics/Eu_aWpPMNh"
+  },
+  {
     "eventName": "BrowserStack Software Testing and QA Meetup Group - Chennai",
     "eventDescription": "Join us for an exclusive gathering of Quality Assurance professionals, engineers, and tech leaders in the heart of Chennai.",
     "eventDate": "2026-10-31",

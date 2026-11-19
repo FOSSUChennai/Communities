@@ -1,5 +1,16 @@
 [
   {
+    "eventName": "November FOSS Meetup",
+    "eventDescription": "FOSS United Chennai Monthly Meetup - Novemeber 2025",
+    "eventDate": "2026-11-28",
+    "eventTime": "9:30",
+    "eventVenue": "Deckzi Solutions, Kotivakkam",
+    "eventLink": "https://fossunited.org/c/chennai/nov-26",
+    "location": "Chennai",
+    "communityName": "FOSS United Chennai",
+    "communityLogo": "https://fossunited.org/files/Foss%20United%20Logo%20Black.svg"
+  },
+  {
     "eventName": "MongoDB Usergroup: Beyond Prompts: Building Smarter AI Agents",
     "eventDescription": "MongoDB User Group Chennai is back with another exciting meetup! This time, we're exploring the world of AI Agents and what's beyond basic prompts and chatbots.",
     "eventDate": "2026-12-05",

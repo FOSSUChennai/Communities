@@ -1,5 +1,29 @@
 [
   {
+    "eventName": "MongoDB Usergroup: Beyond Prompts: Building Smarter AI Agents",
+    "eventDescription": "MongoDB User Group Chennai is back with another exciting meetup! This time, we're exploring the world of AI Agents and what's beyond basic prompts and chatbots.",
+    "eventDate": "2026-12-05",
+    "eventTime": "09:00",
+    "eventEndTime": "14:00",
+    "eventVenue": "YuniQ, Taramani, Chennai",
+    "eventLink": "https://luma.com/h12dqpo9",
+    "location": "Taramani, Chennai",
+    "communityName": "MongoDB User Group Chennai",
+    "communityLogo": "https://1000logos.net/wp-content/uploads/2020/09/MongoDB-Logo.jpg"
+  },
+  {
+    "eventName": "CLASS 102 - THE UNWRITTEN MANUAL",
+    "eventDescription": "Half-day Sapiens Campus session with conversations, activities, mentorship launch, and community connections for navigating college life.",
+    "eventDate": "2026-11-29",
+    "eventTime": "09:00",
+    "eventEndTime": "13:00",
+    "eventVenue": "EmpowerED Careers, Sai Pride, Guindy, Chennai",
+    "eventLink": "https://luma.com/oai0ysy0",
+    "location": "Guindy, Chennai",
+    "communityName": "Sapiens Campus",
+    "communityLogo": "https://podu.pics/Eu_aWpPMNh"
+  },
+  {
     "eventName": "BrowserStack Software Testing and QA Meetup Group - Chennai",
     "eventDescription": "Join us for an exclusive gathering of Quality Assurance professionals, engineers, and tech leaders in the heart of Chennai.",
     "eventDate": "2026-10-31",
@@ -1246,6 +1270,18 @@
     "location": "SIDCO Industrial Estate, Guindy, Chennai",
     "communityName": "Elastic Chennai User Group",
     "communityLogo": "https://i.ibb.co/XkLjmzG5/Chennai-Badge-Template.png"
+  },
+  {
+    "eventName": "SheBuilds Chennai November Meetup - Cybersecurity For All",
+    "eventDescription": "Cybersecurity is everyone’s responsibility. Join us to explore real-world cyber threats, everyday vulnerabilities, and what really happens behind the screens!",
+    "eventDate": "2026-11-28",
+    "eventTime": "09:00 AM",
+    "eventEndTime": "02:00 PM",
+    "eventVenue": "Ideas2IT Technology Services Private Limited, SIDCO Industrial Estate, Guindy, Chennai",
+    "eventLink": "https://luma.com/dprjx6l1",
+    "location": "Guindy, Chennai",
+    "communityName": "SheBuilds Chennai",
+    "communityLogo": "https://podu.pics/sAUVjEN0EA"
   },
   {
    "eventName": "Bharat Builds Tour - SRM Ramapuram",

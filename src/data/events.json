@@ -1,5 +1,40 @@
 [
   {
+    "eventName": "November FOSS Meetup",
+    "eventDescription": "FOSS United Chennai Monthly Meetup - Novemeber 2025",
+    "eventDate": "2026-11-28",
+    "eventTime": "9:30",
+    "eventVenue": "Deckzi Solutions, Kotivakkam",
+    "eventLink": "https://fossunited.org/c/chennai/nov-26",
+    "location": "Chennai",
+    "communityName": "FOSS United Chennai",
+    "communityLogo": "https://fossunited.org/files/Foss%20United%20Logo%20Black.svg"
+  },
+  {
+    "eventName": "MongoDB Usergroup: Beyond Prompts: Building Smarter AI Agents",
+    "eventDescription": "MongoDB User Group Chennai is back with another exciting meetup! This time, we're exploring the world of AI Agents and what's beyond basic prompts and chatbots.",
+    "eventDate": "2026-12-05",
+    "eventTime": "09:00",
+    "eventEndTime": "14:00",
+    "eventVenue": "YuniQ, Taramani, Chennai",
+    "eventLink": "https://luma.com/h12dqpo9",
+    "location": "Taramani, Chennai",
+    "communityName": "MongoDB User Group Chennai",
+    "communityLogo": "https://podu.pics/iQm1vaHVzG"
+  },
+  {
+    "eventName": "CLASS 102 - THE UNWRITTEN MANUAL",
+    "eventDescription": "Half-day Sapiens Campus session with conversations, activities, mentorship launch, and community connections for navigating college life.",
+    "eventDate": "2026-11-29",
+    "eventTime": "09:00",
+    "eventEndTime": "13:00",
+    "eventVenue": "EmpowerED Careers, Sai Pride, Guindy, Chennai",
+    "eventLink": "https://luma.com/oai0ysy0",
+    "location": "Guindy, Chennai",
+    "communityName": "Sapiens Campus",
+    "communityLogo": "https://podu.pics/Eu_aWpPMNh"
+  },
+  {
     "eventName": "BrowserStack Software Testing and QA Meetup Group - Chennai",
     "eventDescription": "Join us for an exclusive gathering of Quality Assurance professionals, engineers, and tech leaders in the heart of Chennai.",
     "eventDate": "2026-10-31",
@@ -65,9 +100,9 @@
     "eventDate": "2026-10-10",
     "eventTime": "09:30",
     "eventEndTime": "12:30",
-    "eventVenue": "TBA",
+    "eventVenue": "Tidel Park - Solaris",
     "eventLink": "https://luma.com/mprx0ocg",
-    "location": "TBA",
+    "location": "Tidel Park - Solaris",
     "communityName": "Kotlin User Group Chennai",
     "communityLogo": "https://podu.pics/QO0Jn0UEjB"
   },
@@ -288,7 +323,7 @@
     "eventLink": "https://luma.com/1l2wraih",
     "location": "Chennai",
     "communityName": "JSLovers Chennai",
-    "communityLogo": "https://i.ibb.co/My6JNtNx/jslovers-Logo.png"
+    "communityLogo": "https://podu.pics/zXR6Njiu2i"
   },
   {
     "eventName": "December FOSS Meetup",
@@ -530,7 +565,7 @@
     "eventLink": "https://luma.com/kbsp31bs",
     "location": "Chennai",
     "communityName": "JSLovers Chennai",
-    "communityLogo": "https://i.ibb.co/My6JNtNx/jslovers-Logo.png"
+    "communityLogo": "https://podu.pics/zXR6Njiu2i"
   },
   {
     "eventName": "From-Dev-to-Ops | Devops Community Meetup Mar 14",
@@ -794,7 +829,7 @@
     "eventLink": "https://luma.com/vvrilt96",
     "location": "Chennai",
     "communityName": "JSLovers Chennai",
-    "communityLogo": "https://i.ibb.co/My6JNtNx/jslovers-Logo.png"
+    "communityLogo": "https://podu.pics/zXR6Njiu2i"
   },
   {
     "eventName": "Search Reimagined: AI, Speed & Reliability",
@@ -1258,5 +1293,31 @@
     "location": "Guindy, Chennai",
     "communityName": "SheBuilds Chennai",
     "communityLogo": "https://podu.pics/sAUVjEN0EA"
-  }
+  },
+  {
+   "eventName": "Bharat Builds Tour - SRM Ramapuram",
+   "eventDescription": "A 12-hour hackathon at SRM Ramapuram in collaboration with AWS, featuring prizes worth 1 crore across the Bharat Builds Tour, along with employement opportunities, mentorship, and networking with AWS professionals.",
+   "eventDate": "2026-10-24",
+   "eventTime": "08:00",
+   "eventEndDate": "2026-10-24",
+   "eventEndTime": "20:00",
+   "eventVenue": "SRM Institute of Science and Technology, Ramapuram, Chennai",
+   "eventLink": "https://luma.com/bb3",
+   "location": "Chennai",
+   "communityName": "SkyNet",
+   "communityLogo": "https://res.cloudinary.com/winvz8rq/image/upload/f_auto,q_auto/1000128410"
+ },
+ {
+  "eventName": "Digital Dreamers Den (D3) Meetup #10",
+  "eventDescription": "Digital Dreamers Den (D3) is a vibrant tech community that brings together AI Full-Stack Developers to build the future. We host events, workshops, and networking opportunities that connect talented engineers with cutting-edge technology and industry leaders.",
+  "eventDate": "2026-11-28",
+  "eventTime": "09:00",
+  "eventEndDate": "2026-11-28",
+  "eventEndTime": "13:00",
+  "eventVenue": "YuniQ, 4th Floor, TICEL BIOPARK, 5, CSIR Rd, Phase II, Tharamani, Chennai, Tamil Nadu 600113",
+  "eventLink": "https://digitaldreamersden.in/meetup-10",
+  "location": "Chennai",
+  "communityName": "Digital Dreamers Den (D3)",
+  "communityLogo": "https://podu.pics/K3Hbv3raG1"
+ }
 ]
